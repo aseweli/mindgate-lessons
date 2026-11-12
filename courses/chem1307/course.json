@@ -1,0 +1,38 @@
+{
+  "id": "chem1307",
+  "code": "CHEM 1307",
+  "title": "Principles of Chemistry I",
+  "term": "Fall 2026 · D01 · Thursday sessions 3:30–4:50 PM (Zoom)",
+  "accent": "#f85149",
+  "textbook": {"title": "General Chemistry", "authors": "Vining, Young, Day, Botch", "edition": "1st", "publisher": "Cengage (MindTap)"},
+  "rules": {
+    "calculator": true,
+    "exact_answers": false,
+    "fact_sheet": true,
+    "notes": "Grade: 40% MindTap homework, 10% Thursday sessions, 30% three midterms, 20% final. Exams are online multiple choice with an SAT-approved calculator and the online Fact Sheet."
+  },
+  "notes": "Taught out of book order: chapters 1–4, then 10, 5, 6, then 7–9, then 11. Unit titles for chapters 1–6 and 10 are inferred from the syllabus learning outcomes; check them against MindTap.",
+  "units": [
+    {"id": "ch01", "title": "Ch. 1 · Measurement, units and significant figures", "lessons": []},
+    {"id": "ch02", "title": "Ch. 2 · Atoms, ions and naming compounds", "lessons": []},
+    {"id": "ch03", "title": "Ch. 3 · The mole, formulas and stoichiometry", "lessons": []},
+    {"id": "ch04", "title": "Ch. 4 · Reactions in solution (precipitation, acid–base, redox)", "lessons": []},
+    {"id": "ch10", "title": "Ch. 10 · Gases", "lessons": []},
+    {"id": "ch05", "title": "Ch. 5 · Thermochemistry", "lessons": []},
+    {"id": "ch06", "title": "Ch. 6 · Quantum theory and electronic structure", "lessons": []},
+    {"id": "ch07", "title": "Ch. 7 · Atomic electron configurations and periodic trends", "lessons": []},
+    {"id": "ch08", "title": "Ch. 8 · Bonding and molecular structure", "lessons": []},
+    {"id": "ch09", "title": "Ch. 9 · Valence bond theory and molecular orbital theory", "lessons": []},
+    {"id": "ch11", "title": "Ch. 11 · Intermolecular forces and liquids", "lessons": []}
+  ],
+  "exams": [
+    {"id": "exam1", "title": "Exam 1", "opens": "2026-09-24T20:00", "closes": "2026-09-26T20:00", "after_unit": "ch04", "covers_text": "Chapters 1–4", "format_text": "30 multiple choice · 90 min · online with Respondus · calculator + Fact Sheet"},
+    {"id": "exam2", "title": "Exam 2", "opens": "2026-10-22T20:00", "closes": "2026-10-24T20:00", "after_unit": "ch06", "covers_text": "Chapters 10, 5, 6", "format_text": "30 multiple choice · 90 min · online with Respondus · calculator + Fact Sheet"},
+    {"id": "exam3", "title": "Exam 3", "opens": "2026-11-19T20:00", "closes": "2026-11-21T20:00", "after_unit": "ch09", "covers_text": "Chapters 7–9", "format_text": "30 multiple choice · 90 min · online with Respondus · calculator + Fact Sheet"},
+    {"id": "final", "title": "Final exam", "opens": "2026-12-03T20:00", "closes": "2026-12-05T20:00", "after_unit": "ch11", "covers_text": "Cumulative: chapters 1–11", "format_text": "50 multiple choice · 150 min · online with Respondus · calculator + Fact Sheet"}
+  ],
+  "fact_sheet": null,
+  "resources": [
+    {"title": "Cengage login (MindTap)", "url": "https://login.cengage.com/cb/"}
+  ]
+}

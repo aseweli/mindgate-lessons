@@ -79,6 +79,9 @@ write LaTeX normally (`$\frac{1}{2}$`). That is why long text belongs in `.md` f
 ```
 
 Exams take one of `"week_of"`, `"at"`, or `"opens"` + `"closes"` (ISO dates). `"after_unit"` places the exam marker in the sidebar.
+`"covers_units"` lists the units a **practice exam** draws problems from, `"practice": {"questions": 30, "minutes": 90}`
+sets its size and time (default: the course's `"practice_defaults"`), and `"cumulative": true` marks a final.
+A problem can opt out of practice exams with `"exam": false` (for example a long Lewis-structure walkthrough).
 
 ---
 

@@ -1,0 +1,43 @@
+{
+  "title": "One-sided blowup",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check the sign of $2-x$.",
+    "To the left it is positive.",
+    "A positive numerator divided by a small positive value grows."
+  ],
+  "solution": "$2-x\\to0^+$, so the quotient tends to $+\\infty$.",
+  "statement": "Evaluate $\\lim_{x\\to2^-}4/(2-x)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "INF",
+      "feedback": [
+        {
+          "answer": "-INF",
+          "message": "A positive numerator divided by a small positive value grows."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "INF"
+      ],
+      "wrong": [
+        "-INF"
+      ]
+    }
+  }
+}

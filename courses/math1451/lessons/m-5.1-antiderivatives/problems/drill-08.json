@@ -1,0 +1,39 @@
+{
+  "title": "Polynomial and exponential mix",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Integrate term by term.",
+    "The power rule cancels the coefficient 5.",
+    "Keep the minus sign on the exponential."
+  ],
+  "solution": "The antiderivative family is $x^5-e^x+C$.",
+  "statement": "Find $\\int (5x^4-e^x)\\,dx$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "x^5-exp(x)",
+      "feedback": [
+        {
+          "answer": "x^5+exp(x)",
+          "message": "Keep the minus sign on the exponential."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(x^5-exp(x))+4+C"
+      ],
+      "wrong": [
+        "(x^5+exp(x))+C"
+      ]
+    }
+  }
+}

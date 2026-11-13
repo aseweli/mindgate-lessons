@@ -1,0 +1,43 @@
+{
+  "title": "Add missing interval",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Split the longer integral at 1.",
+    "The forward integral from 1 to 3 is $8-11$.",
+    "The question reverses the endpoints."
+  ],
+  "solution": "$\\int_3^1 f=-\\int_1^3f=-(8-11)=3$.",
+  "statement": "If $\\int_{-2}^3 f=8$ and $\\int_{-2}^1 f=11$, compute $\\int_3^1 f$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3",
+      "feedback": [
+        {
+          "answer": "-3",
+          "message": "The question reverses the endpoints."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3)/2"
+      ],
+      "wrong": [
+        "-3"
+      ]
+    }
+  }
+}

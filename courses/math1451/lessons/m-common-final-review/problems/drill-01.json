@@ -1,0 +1,43 @@
+{
+  "title": "Removable limit",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Factor both polynomials.",
+    "Cancel $x-3$ for nearby inputs.",
+    "Evaluate $(x+3)/(x+1)$ at 3."
+  ],
+  "solution": "The denominator is $(x-3)(x+1)$, so the limit is $6/4=3/2$.",
+  "statement": "Evaluate $\\lim_{x\\to3}(x^2-9)/(x^2-2x-3)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3/2",
+      "feedback": [
+        {
+          "answer": "1",
+          "message": "Evaluate $(x+3)/(x+1)$ at 3."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3/2)/2"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

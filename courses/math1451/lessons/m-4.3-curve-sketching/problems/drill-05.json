@@ -1,0 +1,43 @@
+{
+  "title": "No concavity switch",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use the sign on both sides.",
+    "The second derivative is $12(x-4)^2$.",
+    "It stays positive on either side of 4."
+  ],
+  "solution": "Concavity is up on both sides of 4, so the graph has no inflection point.",
+  "statement": "Find the inflection input for $f(x)=(x-4)^4$, or enter DNE.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "DNE",
+      "feedback": [
+        {
+          "answer": "4",
+          "message": "It stays positive on either side of 4."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "DNE"
+      ],
+      "wrong": [
+        "4"
+      ]
+    }
+  }
+}

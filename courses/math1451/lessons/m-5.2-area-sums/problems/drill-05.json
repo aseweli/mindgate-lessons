@@ -1,0 +1,43 @@
+{
+  "title": "Square sum limit",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use $x_i=2i/n$.",
+    "Square the height and multiply by $2/n$.",
+    "Apply the sum of squares formula."
+  ],
+  "solution": "$R_n=(8/n^3)n(n+1)(2n+1)/6\\to8/3$.",
+  "statement": "Use right rectangles to find the area under $x^2$ on $[0,2]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "8/3",
+      "feedback": [
+        {
+          "answer": "4/3",
+          "message": "Apply the sum of squares formula."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(8/3)/2"
+      ],
+      "wrong": [
+        "4/3"
+      ]
+    }
+  }
+}

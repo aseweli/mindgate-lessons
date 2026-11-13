@@ -1,0 +1,56 @@
+{
+  "title": "Reverse and scale an integral",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "v": {
+      "int": [
+        2,
+        9
+      ]
+    },
+    "k": {
+      "int": [
+        2,
+        6
+      ]
+    }
+  },
+  "hints": [
+    "Take the constant outside.",
+    "The two integrals have opposite orientations.",
+    "Multiply by the negative of the given integral."
+  ],
+  "solution": "$\\int_4^1 [$k]f=-[$k]\\int_1^4 f=-[$k]\\cdot[$v]$.",
+  "statement": "If $\\int_1^4 f(x)\\,dx=[$v]$, find $\\int_4^1 [$k]f(x)\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-k*v",
+      "feedback": [
+        {
+          "answer": "k*v",
+          "message": "Multiply by the negative of the given integral."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(-[$v])*[$k]"
+      ],
+      "wrong": [
+        "[$v]*[$k]"
+      ]
+    }
+  }
+}

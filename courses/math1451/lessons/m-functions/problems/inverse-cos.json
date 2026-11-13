@@ -1,0 +1,43 @@
+{
+  "title": "Principal range of cosine",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Compute the cosine first.",
+    "$\\cos(5\\pi/3)=1/2$.",
+    "Choose the angle in $[0,\\pi]$."
+  ],
+  "solution": "$\\cos(\\pi/3)=1/2$ and $\\pi/3\\in[0,\\pi]$.",
+  "statement": "Evaluate $\\arccos(\\cos(5\\pi/3))$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "pi/3",
+      "feedback": [
+        {
+          "answer": "5*pi/3",
+          "message": "Choose the angle in $[0,\\pi]$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(pi/3)/2"
+      ],
+      "wrong": [
+        "5*pi/3"
+      ]
+    }
+  }
+}

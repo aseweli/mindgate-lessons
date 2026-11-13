@@ -1,0 +1,43 @@
+{
+  "title": "Rational function extrema",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Compute the derivative.",
+    "$f^\\prime=1-9/x^2$.",
+    "Compare $f(1),f(3),f(6)$."
+  ],
+  "solution": "The outputs are $10,6,15/2$, so the minimum value is 6.",
+  "statement": "Find the absolute minimum value of $x+9/x$ on $[1,6]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "6",
+      "feedback": [
+        {
+          "answer": "3",
+          "message": "Compare $f(1),f(3),f(6)$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(6)/2"
+      ],
+      "wrong": [
+        "3"
+      ]
+    }
+  }
+}

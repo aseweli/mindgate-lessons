@@ -1,0 +1,210 @@
+{
+  "id": "m-4.4-asymptotes",
+  "title": "Asymptotes and limits at infinity",
+  "short": "Asymptotes and end behavior",
+  "section": "4.4",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Distinguish holes, vertical asymptotes and end behavior, and sketch a rational function.",
+  "tags": [
+    "exam3"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Hole",
+              "A finite limiting point missing from the graph."
+            ],
+            [
+              "End behavior",
+              "The separate limits as $x$ goes to $+\\infty$ and $-\\infty$."
+            ],
+            [
+              "Slant asymptote",
+              "A nonhorizontal line the graph approaches at an end."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "rational-asymptotes.svg",
+          "alt": "Rational graph with an open point at (1, negative 1), a vertical asymptote at x equals 3, and a horizontal asymptote at y equals 1.",
+          "caption": "The original function $(x^2-1)/((x-1)(x-3))$ excludes both 1 and 3. The graph uses an open point at the canceled exclusion.",
+          "width": 640
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Horizontal asymptote",
+              "latex": "\\lim_{x\\to\\pm\\infty}f(x)=L",
+              "note": "Either end can have its own limit."
+            },
+            {
+              "label": "Slant asymptote",
+              "latex": "\\lim_{x\\to\\pm\\infty}[f(x)-(mx+b)]=0",
+              "note": "Use polynomial division for rational functions."
+            },
+            {
+              "label": "Radical factor",
+              "latex": "\\sqrt{x^2}=|x|",
+              "note": "At negative infinity, |x|/x = -1."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "A zero denominator may cancel to a hole. The sign at negative infinity can differ. Avoid replacing $\\sqrt{x^2}$ with $x$ on negative inputs."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "State one-sided limits at poles and both end limits when relevant. For slant asymptotes, show the quotient and the vanishing remainder."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "WqRPFvZWF0k",
+          "title": "Curve sketching and rational asymptotes",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "7:00",
+          "focus": "Write down the domain restrictions before sketching each branch."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "A hole and a vertical asymptote",
+          "problem": "Analyze $f(x)=(x^2-1)/((x-1)(x-3))$.",
+          "answer": "Hole $(1,-1)$, vertical $x=3$, horizontal $y=1$.",
+          "steps": [
+            {
+              "title": "Factor",
+              "md": "$f=(x+1)/(x-3)$ for $x\\ne1,3$.",
+              "why": "The original denominator excludes both inputs."
+            },
+            {
+              "title": "Analyze finite exclusions",
+              "md": "At 1 the reduced limit is $-1$. At 3 the left limit is $-\\infty$ and the right is $+\\infty$.",
+              "why": "The numerator near 3 is positive and the denominator switches sign."
+            },
+            {
+              "title": "Analyze ends",
+              "md": "$(x+1)/(x-3)=1+4/(x-3)\\to1$ at both ends.",
+              "why": "The remainder vanishes."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Slant asymptote",
+          "problem": "Find the slant asymptote of $(x^2+1)/(x-2)$.",
+          "answer": "$y=x+2$.",
+          "steps": [
+            {
+              "title": "Divide",
+              "md": "$(x^2+1)/(x-2)=x+2+5/(x-2)$.",
+              "why": "The quotient isolates the linear growth."
+            },
+            {
+              "title": "Take the difference",
+              "md": "The remainder $5/(x-2)$ tends to 0 at both ends.",
+              "why": "The difference test identifies the line."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "leading-ratio",
+            "drill-03",
+            "drill-04",
+            "hole-y",
+            "slant-division",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "What distinguishes a hole from a vertical asymptote?",
+              "A finite limit versus at least one infinite one-sided limit."
+            ],
+            [
+              "How do you get a rational slant line?",
+              "Use the linear quotient from polynomial division."
+            ],
+            [
+              "What is $\\sqrt{x^2}/x$ when $x<0$?",
+              "$-1$."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Track original domain restrictions.",
+            "Give separate one-sided and end limits.",
+            "Identify horizontal and slant asymptotes."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

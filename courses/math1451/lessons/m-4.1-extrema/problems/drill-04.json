@@ -1,0 +1,43 @@
+{
+  "title": "Critical number at a cusp",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "A critical point can have no derivative.",
+    "$f^\\prime=(2/3)(x-3)^{-1/3}$ for $x\\ne3$.",
+    "The function is still defined at 3."
+  ],
+  "solution": "The derivative never vanishes and is undefined at 3. The function is defined there, so 3 is critical.",
+  "statement": "Find the critical number of $f(x)=(x-3)^{2/3}$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "The function is still defined at 3."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3)/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

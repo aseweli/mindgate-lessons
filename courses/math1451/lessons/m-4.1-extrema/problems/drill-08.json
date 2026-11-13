@@ -1,0 +1,43 @@
+{
+  "title": "Cubic minimum",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Solve $3x^2-12=0$.",
+    "Test $-3,-2,2,3$.",
+    "Compare the function values at all four candidates."
+  ],
+  "solution": "The values are $9,16,-16,-9$, respectively. The minimum is $-16$ at 2.",
+  "statement": "Find the absolute minimum value of $x^3-12x$ on $[-3,3]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-16",
+      "feedback": [
+        {
+          "answer": "-9",
+          "message": "Compare the function values at all four candidates."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-16)/2"
+      ],
+      "wrong": [
+        "-9"
+      ]
+    }
+  }
+}

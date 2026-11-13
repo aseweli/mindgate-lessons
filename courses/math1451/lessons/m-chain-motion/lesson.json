@@ -1,0 +1,186 @@
+{
+  "id": "m-chain-motion",
+  "title": "Rectilinear motion and the chain rule",
+  "short": "Motion and chain rule",
+  "section": "3.4–3.5",
+  "minutes": 35,
+  "difficulty": 2,
+  "objective": "Differentiate nested functions and interpret position, velocity, speed and acceleration.",
+  "tags": [
+    "exam2"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Speed",
+              "Magnitude of velocity."
+            ],
+            [
+              "Displacement",
+              "Final position minus initial position."
+            ],
+            [
+              "Composition",
+              "One function applied to another."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Chain rule",
+              "latex": "\\frac{d}{dx}f(g(x))=f^\\prime(g(x))g^\\prime(x)",
+              "note": "One factor per layer."
+            },
+            {
+              "label": "Motion",
+              "latex": "v=s^\\prime,\\quad a=s^{\\prime\\prime},\\quad \\mathrm{speed}=|v|",
+              "note": "Velocity and speed have the same units."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Keep the inner derivative, apply the product rule when needed, and split distance at direction changes."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Mark the times where velocity is zero and show signs before deciding where a particle reverses or speeds up."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "4zJ6fl1Xakg",
+          "title": "Position, velocity and acceleration",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Record the units for position, velocity and acceleration and track the sign of motion."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Product with an inner function",
+          "problem": "Differentiate $x\\cos(3x^2)$.",
+          "answer": "$\\cos(3x^2)-6x^2\\sin(3x^2)$.",
+          "steps": [
+            {
+              "title": "Start outside",
+              "md": "$1\\cdot\\cos(3x^2)+x(\\cos(3x^2))^\\prime$.",
+              "why": "The outer operation is a product."
+            },
+            {
+              "title": "Finish the chain",
+              "md": "$(\\cos(3x^2))^\\prime=-\\sin(3x^2)\\cdot6x$.",
+              "why": "The inside is $3x^2$."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Distance through a turn",
+          "problem": "For $s(t)=t^2-4t$, find total distance on $[0,5]$.",
+          "answer": "$13$ distance units.",
+          "steps": [
+            {
+              "title": "Find the turn",
+              "md": "$v(t)=2t-4$, negative before 2 and positive after.",
+              "why": "Position reverses at $t=2$."
+            },
+            {
+              "title": "Add magnitudes",
+              "md": "$s(0)=0$, $s(2)=-4$, $s(5)=5$. Distance is $4+9=13$.",
+              "why": "Displacement of 5 misses the first leg."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "inner-factor",
+            "drill-03",
+            "position-displacement",
+            "double-chain"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "What is acceleration?",
+              "The derivative of velocity."
+            ],
+            [
+              "When does speed increase?",
+              "Velocity and acceleration have the same nonzero sign."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Differentiate all layers.",
+            "Find when position reverses.",
+            "Distinguish distance from displacement."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-04",
+            "drill-05"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

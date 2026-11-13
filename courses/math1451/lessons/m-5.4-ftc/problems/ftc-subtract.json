@@ -1,0 +1,56 @@
+{
+  "title": "Subtract the lower endpoint",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        7
+      ]
+    },
+    "b": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Find the primitive.",
+    "Use $ax^2$.",
+    "Evaluate at $b$ and subtract its value at 1."
+  ],
+  "solution": "$[[$a]x^2]_1^{[$b]}=[$a]([$b]^2-1)$.",
+  "statement": "Evaluate $\\int_1^{[$b]} 2\\cdot[$a]x\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "a*(b^2-1)",
+      "feedback": [
+        {
+          "answer": "a*b^2",
+          "message": "Evaluate at $b$ and subtract its value at 1."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$a]*[$b]^2-[$a]"
+      ],
+      "wrong": [
+        "[$a]*[$b]^2"
+      ]
+    }
+  }
+}

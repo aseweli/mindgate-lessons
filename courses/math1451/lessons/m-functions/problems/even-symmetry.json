@@ -1,0 +1,56 @@
+{
+  "title": "Evaluate using parity",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        9
+      ]
+    },
+    "b": {
+      "int": [
+        1,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Even functions have symmetry.",
+    "Reflect across the $y$-axis.",
+    "The reflected point has the same output."
+  ],
+  "solution": "By evenness, $f(-[$a])=f([$a])=[$b]$.",
+  "statement": "An even function satisfies $f([$a])=[$b]$. Find $f(-[$a])$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "b",
+      "feedback": [
+        {
+          "answer": "-b",
+          "message": "The reflected point has the same output."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$b]+0"
+      ],
+      "wrong": [
+        "-[$b]"
+      ]
+    }
+  }
+}

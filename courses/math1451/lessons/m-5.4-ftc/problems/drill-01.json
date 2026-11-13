@@ -1,0 +1,43 @@
+{
+  "title": "Polynomial evaluation",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Integrate each term.",
+    "$F=x^3-2x^2$.",
+    "Subtract $F(1)$ even though $F(2)=0$."
+  ],
+  "solution": "$F(2)-F(1)=0-(-1)=1$.",
+  "statement": "Compute $\\int_1^2 (3x^2-4x)\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "1",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Subtract $F(1)$ even though $F(2)=0$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(1)/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

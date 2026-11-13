@@ -1,0 +1,50 @@
+{
+  "title": "Slope at an exact angle",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        10
+      ]
+    }
+  },
+  "hints": [
+    "Differentiate before plugging in the angle.",
+    "Cosine differentiates to negative sine.",
+    "Use $\\sin(\\pi/6)=1/2$."
+  ],
+  "solution": "$f^\\prime(\\pi/6)=-[$a]\\sin(\\pi/6)=-[$a]/2$.",
+  "statement": "Find the tangent slope to $f(x)=[$a]\\cos x$ at $x=\\pi/6$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-a/2",
+      "feedback": [
+        {
+          "answer": "a/2",
+          "message": "Use $\\sin(\\pi/6)=1/2$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "-[$a]*sin(pi/6)"
+      ],
+      "wrong": [
+        "[$a]/2"
+      ]
+    }
+  }
+}

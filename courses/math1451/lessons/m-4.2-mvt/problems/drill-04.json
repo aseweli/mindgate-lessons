@@ -1,0 +1,43 @@
+{
+  "title": "Two valid points",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Compute the secant slope.",
+    "It equals 4.",
+    "Take the positive square root after solving $3c^2=4$."
+  ],
+  "solution": "$3c^2=(8-(-8))/4=4$. Both roots are interior, and the positive one is $2/\\sqrt3$.",
+  "statement": "For $x^3$ on $[-2,2]$, find the positive MVT input.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2/sqrt(3)",
+      "feedback": [
+        {
+          "answer": "2/3",
+          "message": "Take the positive square root after solving $3c^2=4$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(2/sqrt(3))/2"
+      ],
+      "wrong": [
+        "2/3"
+      ]
+    }
+  }
+}

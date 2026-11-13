@@ -1,0 +1,45 @@
+{
+  "title": "Recover the initial value",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Integrate termwise.",
+    "At 1 the power contributes 1 and the log contributes 0.",
+    "Solve $1+C=5$."
+  ],
+  "solution": "$F=x^3-4\\ln x+C$ and $C=4$.",
+  "statement": "If $F^\\prime(x)=3x^2-4/x$ for $x>0$ and $F(1)=5$, find $F(x)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "x^3-4*ln(x)+4",
+      "feedback": [
+        {
+          "answer": "x^3-4*ln(x)+5",
+          "message": "Solve $1+C=5$."
+        }
+      ],
+      "vars": {
+        "x": [
+          1,
+          4
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(x^3-4*ln(x)+4) + x - x"
+      ],
+      "wrong": [
+        "x^3-4*ln(x)+5"
+      ]
+    }
+  }
+}

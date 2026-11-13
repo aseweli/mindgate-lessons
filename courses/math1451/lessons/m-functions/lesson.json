@@ -1,0 +1,197 @@
+{
+  "id": "m-functions",
+  "title": "Functions, lines, graphs and trigonometry",
+  "short": "Functions and trig",
+  "section": "1.1–1.5",
+  "minutes": 35,
+  "difficulty": 2,
+  "objective": "Read a graph, build a line or parametric curve, and work exactly with functions and inverses.",
+  "tags": [
+    "exam1"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Domain",
+              "Allowed inputs."
+            ],
+            [
+              "Range",
+              "Outputs actually attained."
+            ],
+            [
+              "Secant",
+              "Line through two points on a graph."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Average rate",
+              "latex": "\\frac{f(b)-f(a)}{b-a}",
+              "note": "Slope of the secant through the endpoints."
+            },
+            {
+              "label": "Point-slope",
+              "latex": "y-y_0=m(x-x_0)",
+              "note": "Requires a finite slope."
+            },
+            {
+              "label": "Unit circle",
+              "latex": "\\cos^2\\theta+\\sin^2\\theta=1",
+              "note": "Use quadrant signs."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Keep holes after cancellation. $\\sin^{-1}x=\\arcsin x$, whereas $1/\\sin x=\\csc x$. An inverse interchanges domain and range."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Show the domain restrictions, write radians exactly, and distinguish a line from a restricted segment."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "Tmdrjs9xufc",
+          "title": "Transformations of functions",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Track the difference between changes to the input and changes to the output."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Composition domain",
+          "problem": "Find the domain of $\\sqrt{(x-2)/(x+1)}$.",
+          "answer": "$(-\\infty,-1)\\cup[2,\\infty)$.",
+          "steps": [
+            {
+              "title": "Find boundaries",
+              "md": "The quotient changes sign only at $-1$ and $2$.",
+              "why": "The denominator and numerator control the sign."
+            },
+            {
+              "title": "Test intervals",
+              "md": "The quotient is positive on $(-\\infty,-1)$ and $(2,\\infty)$ and negative between.",
+              "why": "Choose one test point in each region."
+            },
+            {
+              "title": "Check endpoints",
+              "md": "Exclude $-1$ and include $2$.",
+              "why": "Zero under the square root is allowed."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Inverse trig",
+          "problem": "Find $\\arcsin(\\sin(5\\pi/6))$.",
+          "answer": "$\\pi/6$.",
+          "steps": [
+            {
+              "title": "Evaluate sine",
+              "md": "$\\sin(5\\pi/6)=1/2$.",
+              "why": "Quadrant II has positive sine."
+            },
+            {
+              "title": "Choose the principal angle",
+              "md": "$\\arcsin(1/2)=\\pi/6$.",
+              "why": "The output of arcsine must be in its principal range."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "secant",
+            "even-symmetry",
+            "line",
+            "param",
+            "inverse",
+            "line-intercept"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "Horizontal line test?",
+              "Every horizontal line intersects the graph at most once."
+            ],
+            [
+              "What does a negative slope mean?",
+              "The line falls as x increases."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Find a composition domain.",
+            "Convert a parameterization to a line.",
+            "Use exact trig and principal ranges."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "exact-trig",
+            "domain",
+            "inverse-cos"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

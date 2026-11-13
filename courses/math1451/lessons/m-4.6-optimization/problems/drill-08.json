@@ -1,0 +1,43 @@
+{
+  "title": "Non-square open-top box",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use $V=x(16-2x)(10-2x)$.",
+    "$V^\\prime=160-104x+12x^2$.",
+    "Only the smaller root of $3x^2-26x+40=0$ is in $(0,5)$."
+  ],
+  "solution": "The roots are $(13\\pm7)/3$. Only $x=2$ is feasible in the interior. Both endpoints give zero and the interior volume is positive.",
+  "statement": "Cut equal squares from a 16-by-10 sheet. Find the interior cut size that maximizes the open box volume.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "(13-sqrt(49))/3",
+      "feedback": [
+        {
+          "answer": "5",
+          "message": "Only the smaller root of $3x^2-26x+40=0$ is in $(0,5)$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*((13-sqrt(49))/3)/2"
+      ],
+      "wrong": [
+        "5"
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Find the optimal output",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use two perpendicular sides and one parallel side.",
+    "$A=w(80-2w)$.",
+    "Find the maximizing width, then evaluate $A$."
+  ],
+  "solution": "$A^\\prime=80-4w$ vanishes at $w=20$. Both endpoints give zero, and $A(20)=20(40)=800$.",
+  "statement": "A rectangle beside a river uses 80 m of fence for three sides. Find the maximum area in m$^2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "800",
+      "feedback": [
+        {
+          "answer": "400",
+          "message": "Find the maximizing width, then evaluate $A$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(800)/2"
+      ],
+      "wrong": [
+        "400"
+      ]
+    }
+  }
+}

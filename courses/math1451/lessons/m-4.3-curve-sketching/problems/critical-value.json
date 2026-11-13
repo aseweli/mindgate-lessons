@@ -1,0 +1,50 @@
+{
+  "title": "Local minimum value",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        7
+      ]
+    }
+  },
+  "hints": [
+    "Find both stationary inputs.",
+    "The positive input is the local minimum by the second derivative test.",
+    "Evaluate the original cubic at the positive input."
+  ],
+  "solution": "$f^\\prime=3(x^2-[$a]^2)$. At $x=[$a]$, $f^{\\prime\\prime}=6\\cdot[$a]>0$ and $f([$a])=-2\\cdot[$a]^3$.",
+  "statement": "Find the local minimum value of $f(x)=x^3-3([$a])^2x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-2*a^3",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "Evaluate the original cubic at the positive input."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$a]^3-3*[$a]^3"
+      ],
+      "wrong": [
+        "[$a]"
+      ]
+    }
+  }
+}

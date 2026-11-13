@@ -1,0 +1,43 @@
+{
+  "title": "A nonzero numerator",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check the actual numerator limit.",
+    "It is 2, so direct L’Hôpital does not apply.",
+    "Use the negative denominator sign."
+  ],
+  "solution": "The numerator stays positive and $x\\to0^-$, so the limit is $-\\infty$.",
+  "statement": "Evaluate $\\lim_{x\\to0^-}(2+\\sin x)/x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-INF",
+      "feedback": [
+        {
+          "answer": "1",
+          "message": "Use the negative denominator sign."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "-INF"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

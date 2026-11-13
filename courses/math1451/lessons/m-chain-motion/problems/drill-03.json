@@ -1,0 +1,39 @@
+{
+  "title": "Arctangent chain",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use the inverse tangent derivative.",
+    "Keep the full inside squared.",
+    "Multiply by 2."
+  ],
+  "solution": "$(\\arctan u)^\\prime=u^\\prime/(1+u^2)$ with $u=2x-1$.",
+  "statement": "Differentiate $\\arctan(2x-1)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "2/(1+(2*x-1)^2)",
+      "feedback": [
+        {
+          "answer": "1/(1+(2*x-1)^2)",
+          "message": "Multiply by 2."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(2/(1+(2*x-1)^2)) + x - x"
+      ],
+      "wrong": [
+        "1/(1+(2*x-1)^2)"
+      ]
+    }
+  }
+}

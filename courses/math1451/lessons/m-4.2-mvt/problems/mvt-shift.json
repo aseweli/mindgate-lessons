@@ -1,0 +1,56 @@
+{
+  "title": "MVT point on a shifted interval",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        1,
+        4
+      ]
+    },
+    "b": {
+      "int": [
+        7,
+        12
+      ]
+    }
+  },
+  "hints": [
+    "The polynomial satisfies both hypotheses.",
+    "The secant slope simplifies to the sum of the endpoints.",
+    "Set $2c=a+b$."
+  ],
+  "solution": "$\\big(([$b]^2+3)-([$a]^2+3)\\big)/([$b]-[$a])=[$b]+[$a]$. Thus $c=([$a]+[$b])/2$.",
+  "statement": "Find the MVT point for $f(x)=x^2+3$ on $[[$a],[$b]]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "(a+b)/2",
+      "feedback": [
+        {
+          "answer": "(b-a)/2",
+          "message": "Set $2c=a+b$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(([$b]^2-[$a]^2)/([$b]-[$a]))/2"
+      ],
+      "wrong": [
+        "([$b]-[$a])/2"
+      ]
+    }
+  }
+}

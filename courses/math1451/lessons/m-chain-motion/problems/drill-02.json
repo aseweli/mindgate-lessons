@@ -1,0 +1,39 @@
+{
+  "title": "Nested logarithm",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Start with the log.",
+    "Divide by its argument.",
+    "The derivative of $e^{3x}$ includes 3."
+  ],
+  "solution": "The argument differentiates to $3e^{3x}$, so $f^\\prime=3e^{3x}/(1+e^{3x})$.",
+  "statement": "Differentiate $\\ln(1+e^{3x})$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "3*exp(3*x)/(1+exp(3*x))",
+      "feedback": [
+        {
+          "answer": "exp(3*x)/(1+exp(3*x))",
+          "message": "The derivative of $e^{3x}$ includes 3."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(3*exp(3*x)/(1+exp(3*x))) + x - x"
+      ],
+      "wrong": [
+        "exp(3*x)/(1+exp(3*x))"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Trig signs",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Recognize both derivative pairs.",
+    "The derivative of cosine is negative sine.",
+    "Secant squared integrates to tangent."
+  ],
+  "solution": "The result is $-2\\cos x+\\tan x+C$.",
+  "statement": "Find $\\int(2\\sin x+\\sec^2 x)\\,dx$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "-2*cos(x)+tan(x)",
+      "feedback": [
+        {
+          "answer": "2*cos(x)+tan(x)",
+          "message": "Secant squared integrates to tangent."
+        }
+      ],
+      "vars": {
+        "x": [
+          -1,
+          1
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(-2*cos(x)+tan(x))+4+C"
+      ],
+      "wrong": [
+        "(2*cos(x)+tan(x))+C"
+      ]
+    }
+  }
+}

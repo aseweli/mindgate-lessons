@@ -1,0 +1,194 @@
+{
+  "id": "m-4.2-mvt",
+  "title": "Rolle’s theorem and the Mean Value Theorem",
+  "short": "Mean Value Theorem",
+  "section": "4.2",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Verify theorem hypotheses, compute every eligible point, and use derivative bounds.",
+  "tags": [
+    "exam3"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Secant slope",
+              "Average rate of change across the interval."
+            ],
+            [
+              "Rolle’s theorem",
+              "MVT with equal endpoint values and an interior point with zero derivative."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "MVT",
+              "latex": "f^\\prime(c)=\\frac{f(b)-f(a)}{b-a},\\quad a<c<b",
+              "note": "Check continuity and differentiability."
+            },
+            {
+              "label": "Derivative bounds",
+              "latex": "m(b-a)\\le f(b)-f(a)\\le M(b-a)",
+              "note": "For a<b and MVT hypotheses."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Do not set $f(c)$ equal to the secant slope. A corner in the open interval breaks the hypothesis. Discard endpoints and outside roots."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Use the theorem name and both hypotheses before solving for $c$. For a bounds question, show the interval length."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "SL2RobwU_M4",
+          "title": "Mean Value Theorem",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "5:00",
+          "focus": "Pause after the secant slope and find the tangent input yourself."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Match a secant",
+          "problem": "Find the MVT point for $\\sqrt x$ on $[0,9]$.",
+          "answer": "$c=9/4$.",
+          "steps": [
+            {
+              "title": "Check hypotheses",
+              "md": "$\\sqrt{x}$ is continuous on $[0,9]$ and differentiable for $0<x<9$.",
+              "why": "The derivative at zero is unnecessary."
+            },
+            {
+              "title": "Solve",
+              "md": "The secant slope is $1/3$, so $1/(2\\sqrt c)=1/3$.",
+              "why": "The tangent slope must equal the secant slope."
+            },
+            {
+              "title": "Check interval",
+              "md": "$\\sqrt c=3/2$ gives $c=9/4\\in(0,9)$.",
+              "why": "The theorem requires an interior input."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Use a speed bound",
+          "problem": "A differentiable sensor position has $2\\le s^\\prime(t)\\le5$ on $(1,4)$ and is continuous on $[1,4]$. Bound $s(4)-s(1)$.",
+          "answer": "$6\\le s(4)-s(1)\\le15$.",
+          "steps": [
+            {
+              "title": "Apply MVT",
+              "md": "$s(4)-s(1)=3s^\\prime(c)$ for some $c\\in(1,4)$.",
+              "why": "The interval length is 3."
+            },
+            {
+              "title": "Multiply bounds",
+              "md": "$3(2)\\le3s^\\prime(c)\\le3(5)$.",
+              "why": "Multiplication by a positive interval length preserves inequalities."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "mvt-parabola",
+            "drill-03",
+            "drill-04",
+            "mvt-shift",
+            "rolle-half-period",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "MVT hypotheses?",
+              "Continuous on the closed interval and differentiable on the open interval."
+            ],
+            [
+              "What does Rolle add?",
+              "$f(a)=f(b)$, making the secant slope zero."
+            ],
+            [
+              "What proves uniqueness of a root?",
+              "One approach is a derivative of strictly one sign on the interval."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "State both hypotheses.",
+            "Find all interior MVT points.",
+            "Translate derivative bounds into change bounds."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

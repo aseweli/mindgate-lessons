@@ -1,0 +1,43 @@
+{
+  "title": "Geometric signed integral",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Split at the zero $x=3$.",
+    "Areas are $9/2$ and $1/2$.",
+    "The larger region lies below the axis."
+  ],
+  "solution": "The signed integral is $-9/2+1/2=-4$.",
+  "statement": "Use geometry to compute $\\int_0^4(x-3)\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-4",
+      "feedback": [
+        {
+          "answer": "5",
+          "message": "The larger region lies below the axis."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-4)/2"
+      ],
+      "wrong": [
+        "5"
+      ]
+    }
+  }
+}

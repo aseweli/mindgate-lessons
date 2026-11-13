@@ -1,0 +1,43 @@
+{
+  "title": "Interior corner",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check the slope on each side.",
+    "Slopes are $-1$ and $1$.",
+    "At 2 the derivative is undefined."
+  ],
+  "solution": "No differentiable interior point has slope zero. The differentiability hypothesis for Rolle’s theorem fails at 2.",
+  "statement": "Find an interior point with $f^\\prime(c)=0$ for $f(x)=|x-2|$ on $[0,4]$, or enter DNE.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "DNE",
+      "feedback": [
+        {
+          "answer": "2",
+          "message": "At 2 the derivative is undefined."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "DNE"
+      ],
+      "wrong": [
+        "2"
+      ]
+    }
+  }
+}

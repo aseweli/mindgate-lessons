@@ -1,0 +1,43 @@
+{
+  "title": "Maximum possible change",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Apply MVT to the full interval.",
+    "The secant slope has magnitude at most 7.",
+    "Multiply by the interval length of 4."
+  ],
+  "solution": "MVT gives $|f(6)-f(2)|=4|f^\\prime(c)|\\le28$. A linear function with slope 7 attains the bound.",
+  "statement": "If $|f^\\prime(x)|\\le7$ on $(2,6)$ and $f$ is continuous on $[2,6]$, find the sharp upper bound for $|f(6)-f(2)|$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "28",
+      "feedback": [
+        {
+          "answer": "7",
+          "message": "Multiply by the interval length of 4."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(28)/2"
+      ],
+      "wrong": [
+        "7"
+      ]
+    }
+  }
+}

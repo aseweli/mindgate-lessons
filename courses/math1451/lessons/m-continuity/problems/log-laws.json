@@ -1,0 +1,43 @@
+{
+  "title": "Use the log power rule",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Write both numbers as powers of 2.",
+    "Set $4^x=8$.",
+    "Equate exponents $2x=3$."
+  ],
+  "solution": "$4^x=2^{2x}=2^3$, hence $x=3/2$.",
+  "statement": "Evaluate $\\log_4(8)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3/2",
+      "feedback": [
+        {
+          "answer": "2/3",
+          "message": "Equate exponents $2x=3$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3/2)/2"
+      ],
+      "wrong": [
+        "2/3"
+      ]
+    }
+  }
+}

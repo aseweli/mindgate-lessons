@@ -1,0 +1,50 @@
+{
+  "title": "Critical-point sign test",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        7
+      ]
+    }
+  },
+  "hints": [
+    "Differentiate first.",
+    "$f^\\prime=3x^2-3a^2$.",
+    "Solve $x^2=a^2$ and keep the positive root."
+  ],
+  "solution": "The critical inputs are $\\pm[$a]$. The positive one is $[$a]$.",
+  "statement": "Find the positive critical number of $f(x)=x^3-3([$a])^2x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "a^2",
+          "message": "Solve $x^2=a^2$ and keep the positive root."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "sqrt([$a]^2)"
+      ],
+      "wrong": [
+        "[$a]^2"
+      ]
+    }
+  }
+}

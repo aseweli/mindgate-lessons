@@ -1,0 +1,231 @@
+{
+  "id": "m-4.6-optimization",
+  "title": "Optimization with physical constraints",
+  "short": "Optimization",
+  "section": "4.6",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Translate a word problem into a one-variable objective, then prove the requested optimum.",
+  "tags": [
+    "exam3"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Objective",
+              "Quantity to maximize or minimize."
+            ],
+            [
+              "Constraint",
+              "Relationship restricting the legal dimensions or inputs."
+            ],
+            [
+              "Feasible domain",
+              "Inputs allowed by the model."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Rectangular area",
+              "latex": "A=w\\ell",
+              "note": "Derive the fence constraint from the diagram."
+            },
+            {
+              "label": "Open box volume",
+              "latex": "V=x(L-2x)(W-2x)",
+              "note": "The cut removes x at both ends of each side."
+            },
+            {
+              "label": "Squared distance",
+              "latex": "D^2=(x-a)^2+(y-b)^2",
+              "note": "Substitute the curve for y and minimize the simpler function."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Include every side described by the problem. Find the physical interval before classifying stationary points. Report the quantity requested and show why your answer is global."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Write the diagram, constraint, one-variable objective, feasible domain and verification. A derivative equal to zero is one line of the solution."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "lx8RcYcYVuU",
+          "title": "Optimization problems",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "8:00",
+          "focus": "Write the constraint and objective independently before watching the derivative step."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Fence along a river",
+          "problem": "Use 120 m of fence for three sides of a rectangle along a straight river. Maximize area.",
+          "answer": "$w=30$ m, $\\ell=60$ m, maximum area $1800$ m$^2$.",
+          "steps": [
+            {
+              "title": "Write the constraint",
+              "md": "$2w+\\ell=120$ and $0\\le w\\le60$.",
+              "why": "Only the side along the river is unfenced."
+            },
+            {
+              "title": "Build the objective",
+              "md": "$A(w)=w(120-2w)$.",
+              "why": "The derivative now uses one independent dimension."
+            },
+            {
+              "title": "Optimize",
+              "md": "$A^\\prime=120-4w$ vanishes at 30. The endpoints both give zero area.",
+              "why": "Comparing all candidates proves a global maximum."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Minimize material for a cylinder",
+          "problem": "A closed cylinder holds $54\\pi$ cm$^3$. Find the radius and height that minimize surface area.",
+          "answer": "$r=3$ cm, $h=6$ cm.",
+          "steps": [
+            {
+              "title": "Eliminate height",
+              "md": "$h=54/r^2$ and $S(r)=2\\pi r^2+108\\pi/r$ for $r>0$.",
+              "why": "Both circular caps are included."
+            },
+            {
+              "title": "Find the stationary point",
+              "md": "$S^\\prime=4\\pi(r^3-27)/r^2$, so $r=3$.",
+              "why": "The denominator is positive and the numerator crosses zero."
+            },
+            {
+              "title": "Prove and interpret",
+              "md": "The derivative changes from negative to positive across 3. Then $h=54/9=6$.",
+              "why": "The whole positive domain is covered by the sign test."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Closest point on a parabola",
+          "problem": "Find the points on $y=x^2$ nearest to $(0,3)$.",
+          "answer": "$(\\pm\\sqrt{5/2},5/2)$.",
+          "steps": [
+            {
+              "title": "Write squared distance",
+              "md": "$D^2=x^2+(x^2-3)^2$.",
+              "why": "Minimizing the square preserves the order of distances."
+            },
+            {
+              "title": "Find candidates",
+              "md": "$(D^2)^\\prime=2x(2x^2-5)$, so $x=0,\\pm\\sqrt{5/2}$.",
+              "why": "All real inputs are legal."
+            },
+            {
+              "title": "Compare",
+              "md": "Squared distance is 9 at zero and $11/4$ at the other two. It tends to infinity at both ends.",
+              "why": "The two equal smaller values are global minima."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "wall-fence",
+            "drill-03",
+            "drill-04",
+            "square-cut",
+            "fixed-sum",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "What comes before differentiating?",
+              "One-variable objective and its feasible domain."
+            ],
+            [
+              "Why minimize squared distance?",
+              "Square root increases on nonnegative inputs."
+            ],
+            [
+              "How do you prove a global optimum on an open domain?",
+              "Use signs across the full domain or end behavior plus candidate comparison."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Draw and label the model.",
+            "Eliminate variables using a constraint.",
+            "Prove the global result and give dimensions with units."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

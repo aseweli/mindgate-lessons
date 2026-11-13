@@ -1,0 +1,43 @@
+{
+  "title": "Acceleration at an instant",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Acceleration takes two derivatives.",
+    "$v=3t^2-12t+7$.",
+    "Evaluate $6t-12$ at 3."
+  ],
+  "solution": "$a(3)=6(3)-12=6$.",
+  "statement": "For $s(t)=t^3-6t^2+7t$, find acceleration at $t=3$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "6",
+      "feedback": [
+        {
+          "answer": "-2",
+          "message": "Evaluate $6t-12$ at 3."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(6)/2"
+      ],
+      "wrong": [
+        "-2"
+      ]
+    }
+  }
+}

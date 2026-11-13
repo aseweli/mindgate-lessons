@@ -1,0 +1,43 @@
+{
+  "title": "Second implicit derivative",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Differentiate $x+yy^\\prime=0$ again.",
+    "$1+(y^\\prime)^2+yy^{\\prime\\prime}=0$.",
+    "Use $y^\\prime=-3/4$."
+  ],
+  "solution": "$y^{\\prime\\prime}=-(1+9/16)/4=-25/64$.",
+  "statement": "Find $y^{\\prime\\prime}$ on $x^2+y^2=25$ at $(3,4)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-25/64",
+      "feedback": [
+        {
+          "answer": "-1/4",
+          "message": "Use $y^\\prime=-3/4$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-25/64)/2"
+      ],
+      "wrong": [
+        "-1/4"
+      ]
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "id": "m-exam-3-review",
+  "title": "Exam III mixed written review",
+  "short": "Exam III mixed review",
+  "section": "4.1–5.3",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Select a method from an unlabeled problem and write a complete no-calculator solution.",
+  "tags": [
+    "exam3"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Candidate",
+              "An input eligible for comparison. An extremum is the value attained."
+            ],
+            [
+              "Justification",
+              "The hypothesis, sign change, or comparison that makes the result follow."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Closed interval",
+              "latex": "\\text{test }f(a),\\, f(b),\\, f(c)\\text{ for every interior critical }c",
+              "note": "Compare values."
+            },
+            {
+              "label": "Rectangle sum",
+              "latex": "\\sum_{i=1}^n f(a+i\\Delta x)\\Delta x",
+              "note": "Right endpoints on a uniform partition."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Do not carry a method over by habit. The request for a rate, a value, an input, or an area determines the form of the answer."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Show enough work to earn method credit even if the arithmetic goes wrong. Mark skipped parts and come back after a first pass."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "One function, three questions",
+          "problem": "For $f(x)=x^3-3x$ on $[0,2]$, find the absolute minimum, find an MVT input, and decide whether there is an interior inflection.",
+          "answer": "Minimum $-2$ at $1$, MVT point $2/\\sqrt3$, no interior inflection.",
+          "steps": [
+            {
+              "title": "Extrema",
+              "md": "$f^\\prime=3x^2-3$; compare $f(0)=0$, $f(1)=-2$, $f(2)=2$.",
+              "why": "Closed-interval extrema need all candidates."
+            },
+            {
+              "title": "MVT",
+              "md": "A polynomial satisfies the hypotheses. The secant slope is 1, so $3c^2-3=1$ gives $c=2/\\sqrt3$.",
+              "why": "Use the positive solution inside the interval."
+            },
+            {
+              "title": "Concavity",
+              "md": "$f^{\\prime\\prime}=6x$ is positive throughout $(0,2)$.",
+              "why": "There is no interior concavity change."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "A sum, a sign, and a check",
+          "problem": "Use right rectangles to evaluate the signed integral of $f(x)=2x-3$ over $[0,2]$.",
+          "answer": "$-2$.",
+          "steps": [
+            {
+              "title": "Build the sum",
+              "md": "$R_n=(2/n)\\sum_{i=1}^n(4i/n-3)$.",
+              "why": "The sample is $2i/n$ and the width is $2/n$."
+            },
+            {
+              "title": "Evaluate",
+              "md": "$R_n=4(n+1)/n-6\\to -2$.",
+              "why": "The limit can be negative because the lower region is larger."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "drill-03",
+            "drill-04",
+            "drill-05",
+            "drill-06"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "When is a derivative sign chart needed?",
+              "Use it to classify behavior or prove global optimality."
+            ],
+            [
+              "What do endpoints contribute?",
+              "They are candidate inputs for a closed-interval extremum."
+            ],
+            [
+              "How do you check an antiderivative?",
+              "Differentiate and verify initial data if given."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Identify the method before looking at formulas.",
+            "Write a hypothesis or verification line.",
+            "Review the signs and exact values."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-07",
+            "drill-08",
+            "drill-09"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

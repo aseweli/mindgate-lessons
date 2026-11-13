@@ -1,0 +1,39 @@
+{
+  "title": "Variable lower bound",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Reverse the integral or use the lower-bound rule.",
+    "Substitute $3x$ for $t$.",
+    "Multiply by $-3$."
+  ],
+  "solution": "The upper bound is fixed, and the lower term is $-e^{(3x)^2}(3)$.",
+  "statement": "Differentiate $\\int_{3x}^2 e^{t^2}\\,dt$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "-3*exp(9*x^2)",
+      "feedback": [
+        {
+          "answer": "3*exp(9*x^2)",
+          "message": "Multiply by $-3$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(-3*exp(9*x^2)) + x - x"
+      ],
+      "wrong": [
+        "3*exp(9*x^2)"
+      ]
+    }
+  }
+}

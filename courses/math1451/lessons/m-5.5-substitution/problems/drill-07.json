@@ -1,0 +1,39 @@
+{
+  "title": "Replace the leftover x",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Let $u=x+2$.",
+    "Rewrite $x=u-2$.",
+    "Integrate $u^3-2u^2$."
+  ],
+  "solution": "$\\int(u-2)u^2du=u^4/4-2u^3/3+C$. Back-substitute $u=x+2$.",
+  "statement": "Find $\\int x(x+2)^2\\,dx$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "(x+2)^4/4-2*(x+2)^3/3",
+      "feedback": [
+        {
+          "answer": "(x+2)^4/4",
+          "message": "Integrate $u^3-2u^2$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "((x+2)^4/4-2*(x+2)^3/3)+4+C"
+      ],
+      "wrong": [
+        "((x+2)^4/4)+C"
+      ]
+    }
+  }
+}

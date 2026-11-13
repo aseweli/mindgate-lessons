@@ -1,0 +1,43 @@
+{
+  "title": "Nondifferentiable minimum",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "An absolute value cannot go below zero.",
+    "Solve $3x-6=0$.",
+    "Enter the input, which differs from the minimum value."
+  ],
+  "solution": "$x=2$ is in the interval and gives the smallest possible value, $4$.",
+  "statement": "Give the input where $|3x-6|+4$ attains its minimum on $[0,5]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2",
+      "feedback": [
+        {
+          "answer": "4",
+          "message": "Enter the input, which differs from the minimum value."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(2)/2"
+      ],
+      "wrong": [
+        "4"
+      ]
+    }
+  }
+}

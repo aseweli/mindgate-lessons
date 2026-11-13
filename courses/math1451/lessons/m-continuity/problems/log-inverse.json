@@ -1,0 +1,56 @@
+{
+  "title": "Use the inverse relation",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        8
+      ]
+    },
+    "b": {
+      "int": [
+        3,
+        9
+      ]
+    }
+  },
+  "hints": [
+    "Both log arguments must be positive.",
+    "Natural log is one-to-one.",
+    "Set $x-a=b$ and solve."
+  ],
+  "solution": "$x-[$a]=[$b]$ implies $x=[$a]+[$b]$, which satisfies the log domain.",
+  "statement": "Solve $\\ln(x-[$a])=\\ln([$b])$ for $x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "a+b",
+      "feedback": [
+        {
+          "answer": "b-a",
+          "message": "Set $x-a=b$ and solve."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$b]+[$a]"
+      ],
+      "wrong": [
+        "[$b]-[$a]"
+      ]
+    }
+  }
+}

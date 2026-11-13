@@ -1,0 +1,39 @@
+{
+  "title": "Trig and exponential product",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use the product rule.",
+    "The exponential differentiates to itself.",
+    "Include both products."
+  ],
+  "solution": "$e^x\\sin x+e^x\\cos x$.",
+  "statement": "Differentiate $e^x\\sin x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "exp(x)*(sin(x)+cos(x))",
+      "feedback": [
+        {
+          "answer": "exp(x)*cos(x)",
+          "message": "Include both products."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(exp(x)*(sin(x)+cos(x))) + x - x"
+      ],
+      "wrong": [
+        "exp(x)*cos(x)"
+      ]
+    }
+  }
+}

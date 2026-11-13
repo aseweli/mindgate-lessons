@@ -1,0 +1,43 @@
+{
+  "title": "Implicit product",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use the product rule for $xy$.",
+    "$y+xy^\\prime+2yy^\\prime=0$.",
+    "Collect both terms involving the slope."
+  ],
+  "solution": "$(x+2y)y^\\prime=-y$, so $y^\\prime=-2/5$.",
+  "statement": "Find $dy/dx$ at $(1,2)$ if $xy+y^2=6$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-2/5",
+      "feedback": [
+        {
+          "answer": "-1/2",
+          "message": "Collect both terms involving the slope."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-2/5)/2"
+      ],
+      "wrong": [
+        "-1/2"
+      ]
+    }
+  }
+}

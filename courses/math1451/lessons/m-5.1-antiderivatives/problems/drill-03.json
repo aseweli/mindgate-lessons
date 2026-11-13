@@ -1,0 +1,39 @@
+{
+  "title": "Exponential base",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Differentiate $4^x$ to see the factor you need to undo.",
+    "The factor is $\\ln4$.",
+    "Divide by $\\ln4$."
+  ],
+  "solution": "$4^x/\\ln4+C$ differentiates to $4^x$.",
+  "statement": "Find $\\int 4^x\\,dx$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "4^x/ln(4)",
+      "feedback": [
+        {
+          "answer": "4^x",
+          "message": "Divide by $\\ln4$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(4^x/ln(4))+4+C"
+      ],
+      "wrong": [
+        "(4^x)+C"
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Net area on a sloping line",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Split at the zero 2.",
+    "Use triangle base-height formulas on both sides.",
+    "Sum positive areas."
+  ],
+  "solution": "The left triangle has area $2(4)/2=4$ and the right triangle has area $1(2)/2=1$. Total area is 5.",
+  "statement": "Find the total geometric area between $y=2x-4$ and the axis on $[0,3]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "5",
+      "feedback": [
+        {
+          "answer": "-3",
+          "message": "Sum positive areas."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(5)/2"
+      ],
+      "wrong": [
+        "-3"
+      ]
+    }
+  }
+}

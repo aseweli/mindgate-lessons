@@ -1,0 +1,56 @@
+{
+  "title": "Exact midpoint sum for a line",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        7
+      ]
+    },
+    "b": {
+      "int": [
+        2,
+        9
+      ]
+    }
+  },
+  "hints": [
+    "The width is $1/2$.",
+    "The midpoints are $1/4,3/4,5/4,7/4$.",
+    "Their average is 1, and total width is 2."
+  ],
+  "solution": "The mean height is $[$a]+[$b]$ by linearity. Multiplying by width 2 gives $2([$a]+[$b])$.",
+  "statement": "For $f(x)=[$a]x+[$b]$ on $[0,2]$, find the midpoint sum with four rectangles.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2*(a+b)",
+      "feedback": [
+        {
+          "answer": "a+b",
+          "message": "Their average is 1, and total width is 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*[$a]+2*[$b]"
+      ],
+      "wrong": [
+        "[$a]+[$b]"
+      ]
+    }
+  }
+}

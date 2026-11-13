@@ -1,0 +1,50 @@
+{
+  "title": "Right sum for a line",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "n": {
+      "int": [
+        2,
+        9
+      ]
+    }
+  },
+  "hints": [
+    "The width is $4/n$.",
+    "The right samples are $4i/n$ for $i=1$ through $n$.",
+    "Use $\\sum i=n(n+1)/2$ after multiplying by the width."
+  ],
+  "solution": "$R_n=(16/n^2)\\sum i=8(n+1)/n$. Substitute $n=[$n]$.",
+  "statement": "Use $[$n]$ equal rectangles and right endpoints for $f(x)=x$ on $[0,4]$. Find the sum.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "8*(n+1)/n",
+      "feedback": [
+        {
+          "answer": "8*(n-1)/n",
+          "message": "Use $\\sum i=n(n+1)/2$ after multiplying by the width."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(16/[$n]^2)*([$n]*([$n]+1)/2)"
+      ],
+      "wrong": [
+        "8*([$n]-1)/[$n]"
+      ]
+    }
+  }
+}

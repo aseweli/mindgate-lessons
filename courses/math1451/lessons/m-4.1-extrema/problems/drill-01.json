@@ -1,0 +1,43 @@
+{
+  "title": "Endpoint maximum",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Find the vertex and endpoints.",
+    "Evaluate at $-1,2,5$.",
+    "Choose the largest output."
+  ],
+  "solution": "$f(-1)=5$, $f(2)=-4$, $f(5)=5$. Both endpoints attain 5.",
+  "statement": "Find the absolute maximum value of $x^2-4x$ on $[-1,5]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "5",
+      "feedback": [
+        {
+          "answer": "-4",
+          "message": "Choose the largest output."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(5)/2"
+      ],
+      "wrong": [
+        "-4"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Average rate on a parabola",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "b": {
+      "int": [
+        3,
+        9
+      ]
+    }
+  },
+  "hints": [
+    "Use a difference quotient.",
+    "Square both endpoints.",
+    "Factor the difference of squares."
+  ],
+  "solution": "$\\frac{[$b]^2-1}{[$b]-1}=[$b]+1$.",
+  "statement": "Find the average rate of change of $x^2$ on $[1,[$b]]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "b+1",
+      "feedback": [
+        {
+          "answer": "b-1",
+          "message": "Factor the numerator before canceling."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "([$b]^2-1)/([$b]-1)"
+      ],
+      "wrong": [
+        "[$b]-1"
+      ]
+    }
+  }
+}

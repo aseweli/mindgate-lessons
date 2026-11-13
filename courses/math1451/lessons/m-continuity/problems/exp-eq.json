@@ -1,0 +1,43 @@
+{
+  "title": "Solve an exponential equation",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Take natural logs.",
+    "You get $2x-1=\\ln7$.",
+    "Add 1 before dividing by 2."
+  ],
+  "solution": "$2x-1=\\ln7$, hence $x=(\\ln7+1)/2$.",
+  "statement": "Solve $e^{2x-1}=7$ for $x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "(ln(7)+1)/2",
+      "feedback": [
+        {
+          "answer": "ln(7)/2",
+          "message": "Add 1 before dividing by 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*((ln(7)+1)/2)/2"
+      ],
+      "wrong": [
+        "ln(7)/2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Evaluate a definite integral",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        7
+      ]
+    },
+    "b": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Use an antiderivative.",
+    "The new power is 2.",
+    "Evaluate $ax^2/2$ at both endpoints."
+  ],
+  "solution": "$[([$a]/2)x^2]_0^{[$b]}=[$a]\\cdot[$b]^2/2$.",
+  "statement": "Compute $\\int_0^{[$b]} [$a]x\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "a*b^2/2",
+      "feedback": [
+        {
+          "answer": "a*b^2",
+          "message": "Evaluate $ax^2/2$ at both endpoints."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "([$b]^2/2)*[$a]"
+      ],
+      "wrong": [
+        "[$a]*[$b]^2"
+      ]
+    }
+  }
+}

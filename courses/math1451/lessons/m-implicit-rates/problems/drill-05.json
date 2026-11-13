@@ -1,0 +1,43 @@
+{
+  "title": "Changing angle of elevation",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use $\\theta=\\arctan(12/x)$.",
+    "$\\dot\\theta=-12\\dot x/(x^2+144)$.",
+    "The angle decreases as distance increases."
+  ],
+  "solution": "At $x=5$, $\\dot\\theta=-12(5)/(25+144)=-60/169$.",
+  "statement": "A drone moves horizontally away at $5$ m/s at fixed height 12 m. When its horizontal distance is 5 m, find the observer’s angle rate in rad/s.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-60/169",
+      "feedback": [
+        {
+          "answer": "60/169",
+          "message": "The angle decreases as distance increases."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-60/169)/2"
+      ],
+      "wrong": [
+        "60/169"
+      ]
+    }
+  }
+}

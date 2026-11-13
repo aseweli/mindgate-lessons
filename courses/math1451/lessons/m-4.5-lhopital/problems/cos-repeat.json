@@ -1,0 +1,50 @@
+{
+  "title": "Repeated derivative quotient",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        7
+      ]
+    }
+  },
+  "hints": [
+    "The original form is $0/0$.",
+    "The first derivative quotient is $a\\sin(ax)/(2x)$.",
+    "It is still $0/0$, and the second derivative introduces another factor of $a$."
+  ],
+  "solution": "After two valid applications the expression is $[$a]^2\\cos([$a]x)/2\\to[$a]^2/2$.",
+  "statement": "Evaluate $\\lim_{x\\to0}(1-\\cos([$a]x))/x^2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "a^2/2",
+      "feedback": [
+        {
+          "answer": "a/2",
+          "message": "It is still $0/0$, and the second derivative introduces another factor of $a$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "([$a]*[$a])/2"
+      ],
+      "wrong": [
+        "[$a]/2"
+      ]
+    }
+  }
+}

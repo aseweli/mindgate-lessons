@@ -1,0 +1,43 @@
+{
+  "title": "Limit with midpoint samples",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Separate the constant term.",
+    "Use $\\sum(i-\tfrac12)=n^2/2$.",
+    "The constant contributes 1."
+  ],
+  "solution": "Every sum equals $1+(1/n^2)(n(n+1)/2-n/2)=3/2$.",
+  "statement": "Evaluate $\\lim_{n\\to\\infty}\\sum_{i=1}^n (1+(i-\\tfrac12)/n)/n$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3/2",
+      "feedback": [
+        {
+          "answer": "1/2",
+          "message": "The constant contributes 1."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3/2)/2"
+      ],
+      "wrong": [
+        "1/2"
+      ]
+    }
+  }
+}

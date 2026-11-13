@@ -1,0 +1,43 @@
+{
+  "title": "FTC at an instant",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "There is no need to integrate the square root.",
+    "The upper bound equals 2 at 1.",
+    "Its rate of change is 3 at 1."
+  ],
+  "solution": "$H^\\prime(x)=3x^2\\sqrt{1+(1+x^3)^2}$. At 1 this is $3\\sqrt5$.",
+  "statement": "If $H(x)=\\int_0^{1+x^3}\\sqrt{1+t^2}\\,dt$, compute $H^\\prime(1)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3*sqrt(5)",
+      "feedback": [
+        {
+          "answer": "sqrt(5)",
+          "message": "Its rate of change is 3 at 1."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3*sqrt(5))/2"
+      ],
+      "wrong": [
+        "sqrt(5)"
+      ]
+    }
+  }
+}

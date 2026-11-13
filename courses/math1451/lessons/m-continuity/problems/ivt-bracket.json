@@ -1,0 +1,43 @@
+{
+  "title": "Find a sign-change bracket",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "A polynomial is continuous.",
+    "Check $f(1)$ and $f(2)$.",
+    "Look for opposite signs."
+  ],
+  "solution": "$f(1)=-7$ and $f(2)=1$. The IVT gives a zero in $(1,2)$, and $f^\\prime=3x^2+1>0$ makes it unique.",
+  "statement": "For $f(x)=x^3+x-9$, enter the smaller of the two consecutive positive integer endpoints that bracket its root.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "1",
+      "feedback": [
+        {
+          "answer": "2",
+          "message": "Look for opposite signs."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(1)/2"
+      ],
+      "wrong": [
+        "2"
+      ]
+    }
+  }
+}

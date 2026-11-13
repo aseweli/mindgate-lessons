@@ -1,0 +1,43 @@
+{
+  "title": "Secant equals tangent",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check both MVT hypotheses.",
+    "The secant slope is $(17-5)/6=2$.",
+    "Set $2c=2$."
+  ],
+  "solution": "The polynomial meets the hypotheses, and $c=1$ is interior.",
+  "statement": "Find the MVT point for $f(x)=x^2+1$ on $[-2,4]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "1",
+      "feedback": [
+        {
+          "answer": "2",
+          "message": "Set $2c=2$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(1)/2"
+      ],
+      "wrong": [
+        "2"
+      ]
+    }
+  }
+}

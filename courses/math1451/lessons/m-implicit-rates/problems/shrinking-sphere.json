@@ -1,0 +1,56 @@
+{
+  "title": "Negative radius rate",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "r": {
+      "int": [
+        2,
+        8
+      ]
+    },
+    "v": {
+      "int": [
+        1,
+        4
+      ]
+    }
+  },
+  "hints": [
+    "Use $V=4\\pi r^3/3$.",
+    "Differentiate in time.",
+    "The stated shrinking rate means $dr/dt<0$."
+  ],
+  "solution": "$\\dot V=4\\pi r^2\\dot r=-4\\pi([$r])^2([$v])$.",
+  "statement": "A sphere has radius $[$r]$ cm and shrinks at $[$v]$ cm/s in radius. Find $dV/dt$ in cm$^3$/s.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-4*pi*r^2*v",
+      "feedback": [
+        {
+          "answer": "4*pi*r^2*v",
+          "message": "The stated shrinking rate means $dr/dt<0$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(-[$v])*4*pi*[$r]^2"
+      ],
+      "wrong": [
+        "[$v]*4*pi*[$r]^2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Radical with denominator",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check the root.",
+    "The root requires $x\\ge3$.",
+    "Exclude the denominator zero."
+  ],
+  "solution": "The root allows $x=3$ and the denominator excludes $x=5$. The domain is $[3,5)\\cup(5,\\infty)$.",
+  "statement": "Find the domain of $\\sqrt{x-3}/(x-5)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "interval",
+      "value": "[3,5) U (5,inf)",
+      "feedback": [
+        {
+          "answer": "[3,inf)",
+          "message": "Exclude the denominator zero."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[3,5) U (5,inf)"
+      ],
+      "wrong": [
+        "[3,inf)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Trig evaluation",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Reverse the sine and cosine derivatives.",
+    "Use $2\\sin x+\\cos x$.",
+    "Subtract the lower value of 1."
+  ],
+  "solution": "$F(\\pi/2)=2$ and $F(0)=1$, so the integral is 1.",
+  "statement": "Compute $\\int_0^{\\pi/2} (2\\cos x-\\sin x)\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "1",
+      "feedback": [
+        {
+          "answer": "3",
+          "message": "Subtract the lower value of 1."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(1)/2"
+      ],
+      "wrong": [
+        "3"
+      ]
+    }
+  }
+}

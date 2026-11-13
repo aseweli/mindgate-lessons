@@ -1,0 +1,45 @@
+{
+  "title": "Reciprocal powers",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Rewrite as powers.",
+    "Use $3x^{-2}+2x^{1/2}$.",
+    "Multiply each coefficient by its exponent."
+  ],
+  "solution": "$-6x^{-3}+x^{-1/2}$.",
+  "statement": "Differentiate $3/x^2+2\\sqrt x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "-6/x^3+1/sqrt(x)",
+      "feedback": [
+        {
+          "answer": "-6/x^3+2/sqrt(x)",
+          "message": "Multiply each coefficient by its exponent."
+        }
+      ],
+      "vars": {
+        "x": [
+          1,
+          5
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(-6/x^3+1/sqrt(x)) + x - x"
+      ],
+      "wrong": [
+        "-6/x^3+2/sqrt(x)"
+      ]
+    }
+  }
+}

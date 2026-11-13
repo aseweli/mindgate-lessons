@@ -25,42 +25,67 @@
       "title": "Functions, graphs and trigonometry (1.1–1.5)",
       "from": "2026-08-24",
       "to": "2026-09-11",
-      "lessons": []
+      "lessons": [
+        "m-functions"
+      ]
     },
     {
       "id": "u2",
       "title": "Limits and continuity (2.1–2.4)",
       "from": "2026-09-14",
       "to": "2026-09-23",
-      "lessons": []
+      "lessons": [
+        "m-limits",
+        "m-continuity"
+      ]
     },
     {
       "id": "u3",
       "title": "Differentiation (3.1–3.7)",
       "from": "2026-09-28",
       "to": "2026-10-16",
-      "lessons": []
+      "lessons": [
+        "m-derivative-rules",
+        "m-chain-motion",
+        "m-implicit-rates"
+      ]
     },
     {
       "id": "u4",
-      "title": "Applications of derivatives, basic antiderivatives (4.1–4.6, 5.1–5.2)",
+      "title": "Exam III · Derivative applications and first integrals (4.1–5.3)",
       "from": "2026-10-19",
       "to": "2026-11-06",
-      "lessons": []
+      "lessons": [
+        "m-4.1-extrema",
+        "m-4.2-mvt",
+        "m-4.3-curve-sketching",
+        "m-4.4-asymptotes",
+        "m-4.5-lhopital",
+        "m-4.6-optimization",
+        "m-5.1-antiderivatives",
+        "m-5.2-area-sums",
+        "m-5.3-definite-integral",
+        "m-exam-3-review"
+      ]
     },
     {
       "id": "u5",
-      "title": "Antiderivatives and definite integration (5.3–5.5)",
+      "title": "Integration for the final (5.4–5.5)",
       "from": "2026-11-09",
       "to": "2026-11-30",
-      "lessons": []
+      "lessons": [
+        "m-5.4-ftc",
+        "m-5.5-substitution"
+      ]
     },
     {
       "id": "u6",
       "title": "Final review (2.1–5.5)",
       "from": "2026-11-30",
       "to": "2026-12-02",
-      "lessons": []
+      "lessons": [
+        "m-common-final-review"
+      ]
     }
   ],
   "exams": [
@@ -288,5 +313,6 @@
       "title": "TTU Supplemental Instruction",
       "url": "http://www.depts.ttu.edu/soar/SI/"
     }
-  ]
+  ],
+  "notes": "**Start here for Exam III:** work through §§4.1–4.6 and §§5.1–5.2, then try §5.3, which the syllabus lists tentatively. For the common final, finish §§5.4–5.5 and use the cumulative review. Write exact answers and show your setup on paper before submitting each answer."
 }

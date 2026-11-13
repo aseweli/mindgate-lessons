@@ -1,0 +1,58 @@
+{
+  "title": "Exponential substitution with a constant",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        5
+      ]
+    },
+    "b": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Take the exponent as $u$.",
+    "The differential includes $2ax$.",
+    "The constant remaining in front of the integral is $b/(2a)$."
+  ],
+  "solution": "$\\int [$b]x e^{[$a]x^2}\\,dx=\\frac{[$b]}{2\\cdot[$a]}\\int e^u\\,du=\\frac{[$b]}{2\\cdot[$a]}e^{[$a]x^2}+C$.",
+  "statement": "Find $\\int [$b]x e^{[$a]x^2}\\,dx$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "b*exp(a*x^2)/(2*a)",
+      "feedback": [
+        {
+          "answer": "b*exp(a*x^2)/a",
+          "message": "The constant remaining in front of the integral is $b/(2a)$."
+        }
+      ],
+      "vars": {
+        "x": [
+          -1,
+          1
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "([$b]/(2*[$a]))*exp([$a]*x^2)+C"
+      ],
+      "wrong": [
+        "([$b]/[$a])*exp([$a]*x^2)+C"
+      ]
+    }
+  }
+}

@@ -224,7 +224,8 @@ which would show `+ -3` when b is negative).
 ### 5.3 Answer boxes
 
 `[_____]{id}`: the number of underscores sets the width. `[_]{id}` for choice, multi and lewis answers. Boxes must be
-**outside** `$...$`.
+**outside** `$...$`. Put each box on its own line (or its own lettered part, `a) ... [___]{a}`), not in the middle of a
+sentence: the app shows the correct answer right under each box in reviews, which reads badly mid-sentence.
 
 ### 5.4 Expressions (in `value`, `expr`, `formula`, and what students type)
 
@@ -265,6 +266,9 @@ Ions: write the charge with `^` for numbers (`SO4^2-`, `Fe^3+`); a bare `+`/`-` 
 ---
 
 ## 7. Course-specific rules
+
+Note for both courses: the unit titles for CHEM 1307 chapters 1–6 and 10 were inferred from the syllabus learning
+outcomes. Check them against MindTap's table of contents and fix `course.json` if they differ.
 
 **MATH 1451** (no calculators on exams): set `"exact": true` on problems with numeric answers and use exact values
 (`sqrt(3)/2`, `pi/6`, `ln(2)`). Use `formula` for derivatives, `formula_c` for antiderivatives, `interval` for

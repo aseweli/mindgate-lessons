@@ -20,7 +20,7 @@
     "questions": 30,
     "minutes": 90
   },
-  "notes": "Taught out of book order: chapters 1–4, then 10, 5, 6, then 7–9, then 11. Unit titles for chapters 1–6 and 10 are inferred from the syllabus learning outcomes; check them against MindTap.",
+  "notes": "Taught out of book order: chapters 1–4, then 10, 5 and 6, then 7–9, then 11.",
   "units": [
     {
       "id": "ch01",

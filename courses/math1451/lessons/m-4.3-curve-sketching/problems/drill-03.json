@@ -1,0 +1,43 @@
+{
+  "title": "Local maximum value",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Find the stationary inputs.",
+    "The first derivative changes from positive to negative at $-1$.",
+    "Evaluate the function at the input."
+  ],
+  "solution": "$f^\\prime=3(x^2-1)$ switches $+\\to-$ at $-1$. Then $f(-1)=2$.",
+  "statement": "Find the local maximum value of $x^3-3x$ on $\\mathbb R$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2",
+      "feedback": [
+        {
+          "answer": "-1",
+          "message": "Evaluate the function at the input."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(2)/2"
+      ],
+      "wrong": [
+        "-1"
+      ]
+    }
+  }
+}

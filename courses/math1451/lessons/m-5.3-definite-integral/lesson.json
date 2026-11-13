@@ -1,0 +1,205 @@
+{
+  "id": "m-5.3-definite-integral",
+  "title": "Riemann sums and the definite integral",
+  "short": "Signed definite integrals",
+  "section": "5.3",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Interpret a definite integral as signed accumulation, use its properties, and distinguish net change from total area.",
+  "tags": [
+    "exam3"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Signed accumulation",
+              "Total above the axis minus total below."
+            ],
+            [
+              "Dummy variable",
+              "The input name inside the integral. Changing it does not change a definite integral."
+            ],
+            [
+              "Mesh",
+              "The largest width in a partition."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "signed-area.svg",
+          "alt": "The line y equals x minus 1 makes a triangle of signed area negative 2 below the axis and a triangle of signed area positive 2 above.",
+          "caption": "For $f(x)=x-1$ on $[-1,3]$, the signed integral is 0 and the geometric area is 4.",
+          "width": 640
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Definition",
+              "latex": "\\int_a^b f(x)\\,dx=\\lim_{\\max\\Delta x_i\\to0}\\sum_i f(x_i^*)\\Delta x_i",
+              "note": "When the limit exists independent of sampling."
+            },
+            {
+              "label": "Split and reverse",
+              "latex": "\\int_a^b f=\\int_a^c f+\\int_c^b f,\\quad \\int_b^a f=-\\int_a^b f",
+              "note": "Keep the orientation."
+            },
+            {
+              "label": "Total area",
+              "latex": "A=\\int_a^b |f(x)|\\,dx",
+              "note": "Split at sign changes to evaluate by hand."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "An integral can be negative. Reversing the bounds changes the sign. Do not treat the index as the sample point unless the width and interval make that valid."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "The syllabus lists this section tentatively for Exam III. Be ready to convert sums to integrals, use geometry and signs, and apply integral properties."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "AkUa9Fkz2rw",
+          "title": "Riemann sums and accumulation",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "8:00",
+          "focus": "Connect the width and height of each rectangle to the integral notation."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Net and total area",
+          "problem": "Use geometry for $f(x)=x-1$ on $[-1,3]$. Find both the integral and total area.",
+          "answer": "Integral $0$, total area $4$.",
+          "steps": [
+            {
+              "title": "Split at the zero",
+              "md": "$x=1$ divides the interval into two triangles, each with base and height 2.",
+              "why": "The sign changes at the intercept."
+            },
+            {
+              "title": "Use signs",
+              "md": "Net is $-2+2=0$ and total is $2+2=4$.",
+              "why": "Geometric area uses magnitudes."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Combine given integrals",
+          "problem": "If $\\int_0^4 f=11$ and $\\int_2^4 f=7$, find $\\int_2^0 3f$.",
+          "answer": "$-12$.",
+          "steps": [
+            {
+              "title": "Split",
+              "md": "$\\int_0^2 f=11-7=4$.",
+              "why": "Additivity recovers the missing interval."
+            },
+            {
+              "title": "Reverse and scale",
+              "md": "$\\int_2^0 3f=-3\\int_0^2 f=-12$.",
+              "why": "Orientation and constant factors affect the signed result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "orientation",
+            "drill-03",
+            "drill-04",
+            "interval-difference",
+            "odd-shift",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "Why can an integral be zero when area is positive?",
+              "Positive and negative regions can cancel."
+            ],
+            [
+              "What changes when bounds reverse?",
+              "The sign."
+            ],
+            [
+              "What does an odd function integrate to on a symmetric interval?",
+              "Zero when integrable."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Recognize an integral from a sum.",
+            "Use geometry and orientation.",
+            "Distinguish displacement from distance."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

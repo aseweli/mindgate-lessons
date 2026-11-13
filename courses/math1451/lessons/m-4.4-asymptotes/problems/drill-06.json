@@ -1,0 +1,43 @@
+{
+  "title": "Rationalize at infinity",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Multiply by the conjugate.",
+    "The numerator becomes $6x$.",
+    "After dividing by $x$, the denominator tends to 2."
+  ],
+  "solution": "$\\frac{6x}{\\sqrt{x^2+6x}+x}=\\frac6{\\sqrt{1+6/x}+1}\\to3$.",
+  "statement": "Evaluate $\\lim_{x\\to+\\infty}(\\sqrt{x^2+6x}-x)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3",
+      "feedback": [
+        {
+          "answer": "6",
+          "message": "After dividing by $x$, the denominator tends to 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3)/2"
+      ],
+      "wrong": [
+        "6"
+      ]
+    }
+  }
+}

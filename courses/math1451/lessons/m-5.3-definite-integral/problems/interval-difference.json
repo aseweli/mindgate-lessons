@@ -1,0 +1,56 @@
+{
+  "title": "Recover a missing piece",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "p": {
+      "int": [
+        3,
+        8
+      ]
+    },
+    "q": {
+      "int": [
+        9,
+        15
+      ]
+    }
+  },
+  "hints": [
+    "Split the total at 2.",
+    "Write total as first piece plus second piece.",
+    "Subtract the known first piece."
+  ],
+  "solution": "$\\int_2^6 f=\\int_0^6 f-\\int_0^2 f=[$p]-[$q]$.",
+  "statement": "If $\\int_0^6 f(x)\\,dx=[$p]$ and $\\int_0^2 f(x)\\,dx=[$q]$, find $\\int_2^6 f(x)\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "p-q",
+      "feedback": [
+        {
+          "answer": "p+q",
+          "message": "Subtract the known first piece."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$p]+(-[$q])"
+      ],
+      "wrong": [
+        "[$p]+[$q]"
+      ]
+    }
+  }
+}

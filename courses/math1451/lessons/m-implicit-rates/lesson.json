@@ -1,0 +1,182 @@
+{
+  "id": "m-implicit-rates",
+  "title": "Implicit differentiation and related rates",
+  "short": "Implicit and related rates",
+  "section": "3.6–3.7",
+  "minutes": 35,
+  "difficulty": 2,
+  "objective": "Find slopes on implicit curves and model related quantities as functions of time.",
+  "tags": [
+    "exam2"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Implicit curve",
+              "An equation relating coordinates without necessarily expressing one as an explicit function of the other."
+            ],
+            [
+              "Related rates",
+              "Rates coupled by a geometric or physical constraint."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Implicit chain",
+              "latex": "\\frac{d}{dx}(y^n)=ny^{n-1}y^\\prime",
+              "note": "Treat y as a function of x."
+            },
+            {
+              "label": "Pythagorean constraint",
+              "latex": "x^2+y^2=L^2\\ \\Rightarrow\\ x\\dot{x}+y\\dot{y}=0",
+              "note": "Fixed L."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Attach $y^\\prime$ to derivatives through $y$. Substitute changing lengths after differentiation. Keep signs and units."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Write the differentiated constraint before substituting numbers. For an implicit tangent, evaluate the slope at the given point."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "I9mVUo-bhM8",
+          "title": "Introduction to related rates",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Write the constraint, differentiate, then insert the snapshot values."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Tangent on a circle",
+          "problem": "Find the tangent slope to $x^2+y^2=25$ at $(3,-4)$.",
+          "answer": "$3/4$.",
+          "steps": [
+            {
+              "title": "Differentiate",
+              "md": "$2x+2yy^\\prime=0$.",
+              "why": "The derivative of $y^2$ uses the chain rule."
+            },
+            {
+              "title": "Isolate and substitute",
+              "md": "$y^\\prime=-x/y=-3/(-4)$.",
+              "why": "The denominator is nonzero at the point."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Sliding ladder",
+          "problem": "A 13-ft ladder has its base 5 ft out and moving outward at 2 ft/s. Find the rate of change of the height.",
+          "answer": "$-5/6$ ft/s.",
+          "steps": [
+            {
+              "title": "Find the height",
+              "md": "$y=\\sqrt{169-25}=12$.",
+              "why": "The constraint is $x^2+y^2=169$."
+            },
+            {
+              "title": "Differentiate then plug in",
+              "md": "$2x\\dot x+2y\\dot y=0$, so $\\dot y=-5(2)/12$.",
+              "why": "The ladder length is fixed and the height varies."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "circle-rate",
+            "drill-03",
+            "shrinking-sphere",
+            "ellipse-slope"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "When do you substitute snapshot values?",
+              "After differentiating, except for quantities constant throughout the motion."
+            ],
+            [
+              "What is the derivative of $xy$?",
+              "$y+xy^\\prime$."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Collect and solve for $y^\\prime$.",
+            "Differentiate a geometric constraint in time.",
+            "Interpret the sign and report units."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-04",
+            "drill-05"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

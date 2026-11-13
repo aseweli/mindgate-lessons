@@ -1,0 +1,43 @@
+{
+  "title": "Negative end of a radical",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Factor $x^2$ inside the radical.",
+    "Take $|x|$ outside.",
+    "Use $|x|/x=-1$ for negative $x$."
+  ],
+  "solution": "$(|x|/x)\\sqrt{9+2/x^2}\\to-3$.",
+  "statement": "Evaluate $\\lim_{x\\to-\\infty}\\sqrt{9x^2+2}/x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-3",
+      "feedback": [
+        {
+          "answer": "3",
+          "message": "Use $|x|/x=-1$ for negative $x$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-3)/2"
+      ],
+      "wrong": [
+        "3"
+      ]
+    }
+  }
+}

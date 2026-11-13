@@ -1,0 +1,199 @@
+{
+  "id": "m-5.1-antiderivatives",
+  "title": "Antiderivatives, initial values and motion",
+  "short": "Antiderivatives",
+  "section": "5.1",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Reverse derivative rules, solve initial-value problems, and check by differentiation.",
+  "tags": [
+    "exam3"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Antiderivative",
+              "Any differentiable $F$ with derivative $f$."
+            ],
+            [
+              "Initial condition",
+              "A known function value that determines the integration constant."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Power rule",
+              "latex": "\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}+C,\\quad n\\ne-1",
+              "note": "On an interval where the expression is defined."
+            },
+            {
+              "label": "Reciprocal",
+              "latex": "\\int\\frac{dx}{x}=\\ln|x|+C",
+              "note": "For x nonzero on the interval."
+            },
+            {
+              "label": "Exponential",
+              "latex": "\\int a^x\\,dx=\\frac{a^x}{\\ln a}+C",
+              "note": "Valid for positive a different from 1."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Add $+C$ to indefinite integrals. Divide by the new exponent. Simplify a quotient term by term only when the denominator is common."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "When the question gives a slope and one point, find the family and then determine $C$. Show both integrations and both constants in a motion problem."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "xaCPDMEkbig",
+          "title": "Antiderivatives",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Check each answer by differentiating before continuing."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Simplify before integrating",
+          "problem": "Find $\\int (x^2+4x+3)/x^2\\,dx$.",
+          "answer": "$x+4\\ln|x|-3/x+C$.",
+          "steps": [
+            {
+              "title": "Split the fraction",
+              "md": "$1+4x^{-1}+3x^{-2}$.",
+              "why": "A common denominator allows termwise simplification."
+            },
+            {
+              "title": "Reverse the rules",
+              "md": "Integrate the middle term with $\\ln|x|$, and the last with $3x^{-1}/(-1)$.",
+              "why": "The exponent $-1$ is the exception to the power rule."
+            },
+            {
+              "title": "Check",
+              "md": "The derivative is $1+4/x+3/x^2$.",
+              "why": "It recovers the integrand on either interval avoiding zero."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Integrate acceleration twice",
+          "problem": "Given $a(t)=6t$, $v(0)=-2$ and $s(0)=5$, find $s(t)$.",
+          "answer": "$s(t)=t^3-2t+5$.",
+          "steps": [
+            {
+              "title": "Find velocity",
+              "md": "$v(t)=3t^2+C_1$ and $v(0)=-2$, so $C_1=-2$.",
+              "why": "Velocity data select the first constant."
+            },
+            {
+              "title": "Find position",
+              "md": "$s(t)=t^3-2t+C_2$ and $s(0)=5$, so $C_2=5$.",
+              "why": "Position data select the second constant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "power-family",
+            "drill-03",
+            "drill-04",
+            "reciprocal-power",
+            "velocity-initial",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "When is the power rule invalid?",
+              "At exponent $-1$, use the log rule."
+            ],
+            [
+              "Why can antiderivatives differ by a constant?",
+              "Their difference has derivative zero on the interval."
+            ],
+            [
+              "How can you check your answer?",
+              "Differentiate it and check any initial data."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Integrate algebraic and transcendental terms.",
+            "Solve for constants with initial data.",
+            "Check the result by differentiating."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

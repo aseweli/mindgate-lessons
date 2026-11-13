@@ -1,0 +1,43 @@
+{
+  "title": "Signed versus total accumulation",
+  "difficulty": 5,
+  "minutes": 6,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Find the velocity zero.",
+    "Split at $t=2$.",
+    "Add the magnitudes of the two changes."
+  ],
+  "solution": "The primitive $4t-t^2$ gives $0,4,-5$ at times 0, 2 and 5. Distance is $4+9=13$.",
+  "statement": "A velocity is $v(t)=4-2t$ m/s. Find the total distance in meters on $[0,5]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "13",
+      "feedback": [
+        {
+          "answer": "5",
+          "message": "Add the magnitudes of the two changes."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(13)/2"
+      ],
+      "wrong": [
+        "5"
+      ]
+    }
+  }
+}

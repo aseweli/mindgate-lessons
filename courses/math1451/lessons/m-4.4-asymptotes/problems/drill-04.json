@@ -1,0 +1,39 @@
+{
+  "title": "Slant line",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Divide the polynomials.",
+    "The leading quotient term is $2x$.",
+    "Subtract $2x(x+3)$ and continue."
+  ],
+  "solution": "$(2x^2-1)/(x+3)=2x-6+17/(x+3)$. The last term tends to zero.",
+  "statement": "Find the slant asymptote as a function of $x$ for $(2x^2-1)/(x+3)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "2*x-6",
+      "feedback": [
+        {
+          "answer": "2*x+6",
+          "message": "Subtract $2x(x+3)$ and continue."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(2*x-6) + x - x"
+      ],
+      "wrong": [
+        "2*x+6"
+      ]
+    }
+  }
+}

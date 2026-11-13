@@ -1,0 +1,43 @@
+{
+  "title": "Rolle on a quadratic",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Compare the endpoint values.",
+    "Both equal zero.",
+    "Solve $2c-6=0$."
+  ],
+  "solution": "The polynomial satisfies the hypotheses and $f^\\prime(c)=2c-6=0$ at 3.",
+  "statement": "Find the Rolle point for $x^2-6x+5$ on $[1,5]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Solve $2c-6=0$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3)/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Choose the missing value",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "A continuous extension equals the limit.",
+    "Factor and cancel the removable factor.",
+    "Set the missing value to $[$a]+[$a]$."
+  ],
+  "solution": "The quotient agrees with $x+[$a]$ for $x\\ne[$a]$. Thus $f([$a])=2\\cdot[$a]$.",
+  "statement": "Find $f([$a])$ to make $f(x)=(x^2-[$a]^2)/(x-[$a])$ continuous at $[$a]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2*a",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "The limit uses the simplified nearby formula $x+[$a]$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$a]+[$a]"
+      ],
+      "wrong": [
+        "[$a]"
+      ]
+    }
+  }
+}

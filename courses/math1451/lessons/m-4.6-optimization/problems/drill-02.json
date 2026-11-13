@@ -1,0 +1,43 @@
+{
+  "title": "Open-top box cut",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Write $V=x(12-2x)^2$.",
+    "$V^\\prime=(12-2x)(12-6x)$.",
+    "The physical domain is $[0,6]$."
+  ],
+  "solution": "Both endpoints give zero. The only interior critical number is 2, where volume is positive, so it is optimal.",
+  "statement": "Cut equal squares from a 12-in by 12-in sheet and fold up the sides. Find the cut size that maximizes volume in inches.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2",
+      "feedback": [
+        {
+          "answer": "6",
+          "message": "The physical domain is $[0,6]$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(2)/2"
+      ],
+      "wrong": [
+        "6"
+      ]
+    }
+  }
+}

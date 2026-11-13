@@ -1,0 +1,43 @@
+{
+  "title": "Speed from position",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Differentiate position.",
+    "$v(2)=4-9$.",
+    "Take the absolute value of velocity."
+  ],
+  "solution": "$v(2)=-5$ so speed is $5$.",
+  "statement": "If $s(t)=t^2-9t$, find speed at $t=2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "5",
+      "feedback": [
+        {
+          "answer": "-5",
+          "message": "Take the absolute value of velocity."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(5)/2"
+      ],
+      "wrong": [
+        "-5"
+      ]
+    }
+  }
+}

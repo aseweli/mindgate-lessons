@@ -1,0 +1,43 @@
+{
+  "title": "Evaluate a finite sigma sum",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Distribute the sum.",
+    "The squares add to 30.",
+    "The constant 1 occurs four times."
+  ],
+  "solution": "$2(1+4+9+16)+4=64$.",
+  "statement": "Compute $\\sum_{i=1}^4(2i^2+1)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "64",
+      "feedback": [
+        {
+          "answer": "61",
+          "message": "The constant 1 occurs four times."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(64)/2"
+      ],
+      "wrong": [
+        "61"
+      ]
+    }
+  }
+}

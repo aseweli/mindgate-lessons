@@ -1,0 +1,46 @@
+{
+  "title": "Power chain rule",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        6
+      ]
+    }
+  },
+  "hints": [
+    "Identify the outer cube.",
+    "Keep the inside intact when differentiating the cube.",
+    "Multiply by the derivative $2\\cdot[$a]x$ of the inner expression."
+  ],
+  "solution": "Let $u=[$a]x^2+1$. Then $(u^3)^\\prime=3u^2\\cdot2\\cdot[$a]x$.",
+  "statement": "Differentiate $([$a]x^2+1)^3$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "6*a*x*(a*x^2+1)^2",
+      "feedback": [
+        {
+          "answer": "3*(a*x^2+1)^2",
+          "message": "Multiply by the derivative $2\\cdot[$a]x$ of the inner expression."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "3*([$a]*x^2+1)^2*(2*[$a]*x)"
+      ],
+      "wrong": [
+        "3*([$a]*x^2+1)^2"
+      ]
+    }
+  }
+}

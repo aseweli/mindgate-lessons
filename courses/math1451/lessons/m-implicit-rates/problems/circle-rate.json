@@ -1,0 +1,56 @@
+{
+  "title": "Expanding circle",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "r": {
+      "int": [
+        2,
+        9
+      ]
+    },
+    "v": {
+      "int": [
+        2,
+        5
+      ]
+    }
+  },
+  "hints": [
+    "Start with $A=\\pi r^2$.",
+    "Differentiate with respect to time.",
+    "Multiply $2\\pi r$ by the given radial rate."
+  ],
+  "solution": "$\\dot A=2\\pi r\\dot r=2\\pi\\cdot[$r]\\cdot[$v]$.",
+  "statement": "A circular spill has radius $[$r]$ m and its radius increases at $[$v]$ m/s. Find $dA/dt$ in m$^2$/s.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2*pi*r*v",
+      "feedback": [
+        {
+          "answer": "pi*r*v",
+          "message": "Multiply $2\\pi r$ by the given radial rate."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "pi*([$r]+[$r])*[$v]"
+      ],
+      "wrong": [
+        "pi*[$r]*[$v]"
+      ]
+    }
+  }
+}

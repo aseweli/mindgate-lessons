@@ -1,0 +1,39 @@
+{
+  "title": "Slope and a point",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Integrate the derivative.",
+    "At 2 the nonconstant terms sum to 2.",
+    "Solve $2+C=7$."
+  ],
+  "solution": "$F=2x^2-3x+C$, so $C=5$.",
+  "statement": "Find $F(x)$ if $F^\\prime(x)=4x-3$ and $F(2)=7$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "2*x^2-3*x+5",
+      "feedback": [
+        {
+          "answer": "2*x^2-3*x+7",
+          "message": "Solve $2+C=7$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(2*x^2-3*x+5) + x - x"
+      ],
+      "wrong": [
+        "2*x^2-3*x+7"
+      ]
+    }
+  }
+}

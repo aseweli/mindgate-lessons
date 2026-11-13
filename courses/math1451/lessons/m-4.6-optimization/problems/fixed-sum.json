@@ -1,0 +1,50 @@
+{
+  "title": "Maximum product under a sum",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "s": {
+      "int": [
+        8,
+        30
+      ]
+    }
+  },
+  "hints": [
+    "Let the numbers be $x$ and $s-x$.",
+    "Their product is a downward parabola.",
+    "The vertex is at $x=s/2$."
+  ],
+  "solution": "The optimal numbers are both $[$s]/2$, so the product is $([$s]/2)^2$.",
+  "statement": "Two nonnegative numbers add to $[$s]$. Find their maximum possible product.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "s^2/4",
+      "feedback": [
+        {
+          "answer": "s^2/2",
+          "message": "The vertex is at $x=s/2$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "([$s]/2)^2"
+      ],
+      "wrong": [
+        "[$s]^2/2"
+      ]
+    }
+  }
+}

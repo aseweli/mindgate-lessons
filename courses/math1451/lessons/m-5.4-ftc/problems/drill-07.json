@@ -1,0 +1,43 @@
+{
+  "title": "Maximum accumulation",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Find the sign of the integrand as a function of the upper limit.",
+    "$A^\\prime=4-x^2$.",
+    "It switches from positive to negative at 2."
+  ],
+  "solution": "$A$ rises through $x<2$ and falls through $x>2$. Therefore its absolute maximum is at 2.",
+  "statement": "Find where $A(x)=\\int_0^x(4-t^2)\\,dt$ attains its absolute maximum on $[0,3]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2",
+      "feedback": [
+        {
+          "answer": "3",
+          "message": "It switches from positive to negative at 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(2)/2"
+      ],
+      "wrong": [
+        "3"
+      ]
+    }
+  }
+}

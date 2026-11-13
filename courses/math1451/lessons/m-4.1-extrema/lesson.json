@@ -1,0 +1,193 @@
+{
+  "id": "m-4.1-extrema",
+  "title": "Absolute and local extrema",
+  "short": "Extreme values",
+  "section": "4.1",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Find absolute and local extreme values, including endpoints and corners.",
+  "tags": [
+    "exam3"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Critical number",
+              "An input in the domain where the derivative is zero or undefined."
+            ],
+            [
+              "Extreme value",
+              "The output $f(c)$ at a maximizing or minimizing input."
+            ],
+            [
+              "EVT",
+              "Continuity on a closed, bounded interval guarantees attainment."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Interior smooth extremum",
+              "latex": "\\text{local extremum at differentiable }c\\ \\Rightarrow\\ f^\\prime(c)=0",
+              "note": "The converse can fail."
+            },
+            {
+              "label": "Closed-interval candidates",
+              "latex": "a,\\quad b,\\quad c\\in(a,b):\\, f^\\prime(c)=0\\text{ or undefined}",
+              "note": "Keep c in the domain."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Compare outputs, include endpoints, and exclude holes. A zero of $f^\\prime$ outside the interval is irrelevant."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Show the candidate table and state the extreme values and where each occurs. Check endpoints even if the prompt gives a derivative."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "3wrXDw5ETh4",
+          "title": "Finding absolute extrema",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "5:00",
+          "focus": "Write the candidate table as the first example is solved."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Cubic on a closed interval",
+          "problem": "Find absolute extrema of $f(x)=x^3-3x$ on $[-2,3]$.",
+          "answer": "Minimum $-2$ at $x=-2,1$ and maximum $18$ at $x=3$.",
+          "steps": [
+            {
+              "title": "Find candidates",
+              "md": "$f^\\prime=3(x^2-1)$, so use $-2,-1,1,3$.",
+              "why": "Both stationary points are inside the interval and the endpoints must be tested."
+            },
+            {
+              "title": "Compare function values",
+              "md": "The four values are $-2,2,-2,18$.",
+              "why": "Ties for an absolute extreme can occur."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Include a corner",
+          "problem": "Find absolute extrema of $g(x)=|x-2|+1$ on $[0,5]$.",
+          "answer": "Minimum $1$ at 2 and maximum $4$ at 5.",
+          "steps": [
+            {
+              "title": "Find the corner",
+              "md": "$g^\\prime=-1$ for $x<2$ and $+1$ for $x>2$.",
+              "why": "The derivative is undefined at 2, where $g$ exists."
+            },
+            {
+              "title": "Evaluate candidates",
+              "md": "$g(0)=3$, $g(2)=1$, $g(5)=4$.",
+              "why": "Comparing outputs includes the endpoints."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "quadratic-min",
+            "drill-03",
+            "drill-04",
+            "corner-max",
+            "cubic-min-open",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "When does EVT apply?",
+              "Continuous function on a closed, bounded interval."
+            ],
+            [
+              "What is the candidate checklist?",
+              "Endpoints, interior stationary points, and interior nondifferentiable points in the domain."
+            ],
+            [
+              "Does $f^\\prime(c)=0$ guarantee an extremum?",
+              "$x^3$ at zero is a counterexample."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Distinguish a critical input from an extreme value.",
+            "Include corners and endpoints.",
+            "Report ties."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

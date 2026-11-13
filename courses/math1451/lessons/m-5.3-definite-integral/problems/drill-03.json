@@ -1,0 +1,43 @@
+{
+  "title": "Circle geometry",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Identify the graph.",
+    "It is the upper half of a circle.",
+    "The radius is 3."
+  ],
+  "solution": "The upper semicircle has area $(1/2)\\pi(3^2)=9\\pi/2$.",
+  "statement": "Use geometry to compute $\\int_{-3}^{3}\\sqrt{9-x^2}\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "9*pi/2",
+      "feedback": [
+        {
+          "answer": "9*pi",
+          "message": "The radius is 3."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(9*pi/2)/2"
+      ],
+      "wrong": [
+        "9*pi"
+      ]
+    }
+  }
+}

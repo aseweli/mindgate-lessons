@@ -1,0 +1,46 @@
+{
+  "title": "Reverse a power chain",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Let $u=[$a]+x^2$.",
+    "Then $du=2x\\,dx$.",
+    "The integral becomes one-half of $\\int u^3\\,du$."
+  ],
+  "solution": "$x\\,dx=du/2$, hence $\\tfrac12(u^4/4)+C=([$a]+x^2)^4/8+C$.",
+  "statement": "Find $\\int x([$a]+x^2)^3\\,dx$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "(a+x^2)^4/8",
+      "feedback": [
+        {
+          "answer": "(a+x^2)^4/4",
+          "message": "The integral becomes one-half of $\\int u^3\\,du$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(1/2)*(([$a]+x^2)^4/4)+C"
+      ],
+      "wrong": [
+        "([$a]+x^2)^4/4+C"
+      ]
+    }
+  }
+}

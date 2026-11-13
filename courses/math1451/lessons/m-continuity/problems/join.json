@@ -1,0 +1,43 @@
+{
+  "title": "Join a line and an exponential",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Compute the limit from each side.",
+    "The right value is $e^0+4=5$.",
+    "Solve $k+1=5$."
+  ],
+  "solution": "$\\lim_{x\\to1^-}f(x)=k+1$ and $f(1)=\\lim_{x\\to1^+}f(x)=5$, so $k=4$.",
+  "statement": "$f(x)=kx+1$ for $x<1$ and $f(x)=e^{x-1}+4$ for $x\\ge1$. Find $k$ for continuity.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "4",
+      "feedback": [
+        {
+          "answer": "5",
+          "message": "Solve $k+1=5$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(4)/2"
+      ],
+      "wrong": [
+        "5"
+      ]
+    }
+  }
+}

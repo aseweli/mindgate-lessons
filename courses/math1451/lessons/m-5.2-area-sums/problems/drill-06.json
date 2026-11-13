@@ -1,0 +1,43 @@
+{
+  "title": "Nonuniform partition",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Find each width separately.",
+    "The widths are 1, 2, 1.",
+    "Multiply each height by its own width."
+  ],
+  "solution": "The sum is $1(1)+2(9)+1(16)=35$.",
+  "statement": "Use right endpoints for $f(x)=x^2$ with partition $\\{0,1,3,4\\}$. Find the sum.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "35",
+      "feedback": [
+        {
+          "answer": "26",
+          "message": "Multiply each height by its own width."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(35)/2"
+      ],
+      "wrong": [
+        "26"
+      ]
+    }
+  }
+}

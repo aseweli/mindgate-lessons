@@ -1,0 +1,39 @@
+{
+  "title": "Two moving endpoints",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Apply the endpoint rule twice.",
+    "The upper factor is 2 and lower factor is $2x$.",
+    "Subtract the lower term."
+  ],
+  "solution": "$2\\sin(2x)-2x\\sin(x^2)$.",
+  "statement": "Differentiate $\\int_{x^2}^{2x} \\sin t\\,dt$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "2*sin(2*x)-2*x*sin(x^2)",
+      "feedback": [
+        {
+          "answer": "2*sin(2*x)+2*x*sin(x^2)",
+          "message": "Subtract the lower term."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(2*sin(2*x)-2*x*sin(x^2)) + x - x"
+      ],
+      "wrong": [
+        "2*sin(2*x)+2*x*sin(x^2)"
+      ]
+    }
+  }
+}

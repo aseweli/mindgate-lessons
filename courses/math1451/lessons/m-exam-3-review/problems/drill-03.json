@@ -1,0 +1,43 @@
+{
+  "title": "End limit and cancellation",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Multiply by the conjugate.",
+    "The numerator becomes $10x+1$.",
+    "Divide numerator and denominator by $x$."
+  ],
+  "solution": "The limit is $(10+0)/(\\sqrt{1+0+0}+1)=5$.",
+  "statement": "Evaluate $\\lim_{x\\to+\\infty}(\\sqrt{x^2+10x+1}-x)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "5",
+      "feedback": [
+        {
+          "answer": "10",
+          "message": "Divide numerator and denominator by $x$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(5)/2"
+      ],
+      "wrong": [
+        "10"
+      ]
+    }
+  }
+}

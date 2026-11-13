@@ -1,0 +1,76 @@
+{
+  "title": "Fence against a wall",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "p": {
+      "int": [
+        44,
+        96
+      ]
+    }
+  },
+  "hints": [
+    "Two equal widths use fencing.",
+    "The length is $p-2w$.",
+    "Differentiate $A=w(p-2w)$ and set the result to zero."
+  ],
+  "solution": "$A^\\prime=[$p]-4w$, which turns from positive to negative at $[$p]/4$. This is the global maximum width, and $A=[$p]^2/8$.",
+  "parts": [
+    {
+      "id": "a",
+      "statement": "A rectangle beside a wall uses $[$p]$ m of fencing along three sides. Find the optimal width perpendicular to the wall in meters.\n\n[__________]{answer}",
+      "answers": {
+        "answer": {
+          "type": "number",
+          "value": "p/4",
+          "feedback": [
+            {
+              "answer": "p/2",
+              "message": "Differentiate $A=w(p-2w)$ and set the result to zero."
+            }
+          ],
+          "allow": [
+            "DNE",
+            "INF"
+          ]
+        }
+      }
+    },
+    {
+      "id": "b",
+      "statement": "Find the corresponding maximum area in m$^2$.\n\n[__________]{next}",
+      "answers": {
+        "next": {
+          "type": "number",
+          "value": "p^2/8",
+          "feedback": [
+            {
+              "answer": "p^2/16",
+              "message": "The parallel side is twice as long as the optimal width."
+            }
+          ],
+          "allow": [
+            "DNE",
+            "INF"
+          ]
+        }
+      }
+    }
+  ],
+  "scaffold": true,
+  "tests": {
+    "answer": {
+      "right": [
+        "([$p]/2)/2"
+      ],
+      "wrong": [
+        "[$p]/2"
+      ]
+    }
+  }
+}

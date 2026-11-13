@@ -1,0 +1,43 @@
+{
+  "title": "Fixed perimeter",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Write $2w+2\\ell=44$.",
+    "The area is $w(22-w)$.",
+    "Use the vertex or find where $22-2w=0$."
+  ],
+  "solution": "$w=11$ is the maximum of the downward parabola, so $\\ell=11$ and the area is $121$.",
+  "statement": "A rectangle has perimeter 44 m. Find its maximum area in m$^2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "121",
+      "feedback": [
+        {
+          "answer": "484",
+          "message": "Use the vertex or find where $22-2w=0$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(121)/2"
+      ],
+      "wrong": [
+        "484"
+      ]
+    }
+  }
+}

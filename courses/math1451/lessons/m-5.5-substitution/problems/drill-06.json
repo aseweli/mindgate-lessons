@@ -1,0 +1,45 @@
+{
+  "title": "Reciprocal with a signed inside",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Set $u=2x-4$.",
+    "Then $dx=du/2$.",
+    "Use $\\ln|u|$ for negative $u$."
+  ],
+  "solution": "$\\tfrac12\\ln|2x-4|+C$ differentiates to $1/(2x-4)$ on $x<2$.",
+  "statement": "Find $\\int 1/(2x-4)\\,dx$ for $x<2$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "ln(abs(2*x-4))/2",
+      "feedback": [
+        {
+          "answer": "ln(abs(2*x-4))",
+          "message": "Use $\\ln|u|$ for negative $u$."
+        }
+      ],
+      "vars": {
+        "x": [
+          -2,
+          1
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(ln(abs(2*x-4))/2)+4+C"
+      ],
+      "wrong": [
+        "(ln(abs(2*x-4)))+C"
+      ]
+    }
+  }
+}

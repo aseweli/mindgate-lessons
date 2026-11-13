@@ -1,0 +1,43 @@
+{
+  "title": "Crossing a horizontal asymptote",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Find the leading coefficient ratio.",
+    "The asymptote is $y=2$.",
+    "Set the original quotient equal to 2."
+  ],
+  "solution": "$2x^2+x-3=2(x^2+1)$ implies $x=5$, and $f-2=(x-5)/(x^2+1)$ changes sign there.",
+  "statement": "At what input does $f(x)=(2x^2+x-3)/(x^2+1)$ cross its horizontal asymptote?\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "5",
+      "feedback": [
+        {
+          "answer": "3",
+          "message": "Set the original quotient equal to 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(5)/2"
+      ],
+      "wrong": [
+        "3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Power with converted bounds",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use $u=1+x^2$.",
+    "The bounds become 1 and 5.",
+    "The integral is half of $\\int_1^5u^2du$."
+  ],
+  "solution": "$\\tfrac12[u^3/3]_1^5=(125-1)/6=62/3$.",
+  "statement": "Evaluate $\\int_0^2 x(1+x^2)^2\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "62/3",
+      "feedback": [
+        {
+          "answer": "124/3",
+          "message": "The integral is half of $\\int_1^5u^2du$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(62/3)/2"
+      ],
+      "wrong": [
+        "124/3"
+      ]
+    }
+  }
+}

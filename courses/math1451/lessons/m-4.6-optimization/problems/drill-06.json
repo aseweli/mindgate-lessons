@@ -1,0 +1,43 @@
+{
+  "title": "Least-cost rectangular fence",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Let the expensive side be $x$.",
+    "The other side is $300/x$, so $C=6x+600/x$.",
+    "Solve $6-600/x^2=0$ for positive $x$."
+  ],
+  "solution": "$C^\\prime=6(x^2-100)/x^2$ switches from negative to positive at $x=10$ m.",
+  "statement": "A rectangle of area $300$ m$^2$ has two opposite sides costing 3 dollars per meter and the other two costing 1 dollar per meter. Find the length of one expensive side that minimizes cost.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "10",
+      "feedback": [
+        {
+          "answer": "30",
+          "message": "Solve $6-600/x^2=0$ for positive $x$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(10)/2"
+      ],
+      "wrong": [
+        "30"
+      ]
+    }
+  }
+}

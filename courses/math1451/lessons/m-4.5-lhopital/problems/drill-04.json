@@ -1,0 +1,43 @@
+{
+  "title": "Zero times infinity",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Rewrite as a quotient.",
+    "$x\\ln x=\\ln x/(1/x)$.",
+    "Differentiate top and bottom separately."
+  ],
+  "solution": "The form is $-\\infty/\\infty$. The derivative quotient is $(1/x)/(-1/x^2)=-x\\to0$.",
+  "statement": "Evaluate $\\lim_{x\\to0^+}x\\ln x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "0",
+      "feedback": [
+        {
+          "answer": "-INF",
+          "message": "Differentiate top and bottom separately."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(0)/2"
+      ],
+      "wrong": [
+        "-INF"
+      ]
+    }
+  }
+}

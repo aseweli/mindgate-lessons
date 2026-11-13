@@ -1,0 +1,43 @@
+{
+  "title": "Implicit slope",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Differentiate every term.",
+    "$2x+4y+(4x+2y)y^\\prime=0$.",
+    "Substitute the point after collecting terms."
+  ],
+  "solution": "$y^\\prime=-(2x+4y)/(4x+2y)$, giving $-8/10=-4/5$.",
+  "statement": "Find the slope at $(2,1)$ on $x^2+4xy+y^2=13$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-4/5",
+      "feedback": [
+        {
+          "answer": "-2/5",
+          "message": "Substitute the point after collecting terms."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-4/5)/2"
+      ],
+      "wrong": [
+        "-2/5"
+      ]
+    }
+  }
+}

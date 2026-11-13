@@ -1,0 +1,43 @@
+{
+  "title": "Growth comparison",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "The form is $\\infty/\\infty$.",
+    "One derivative quotient gives $2x/e^x$.",
+    "Apply once more because the new form stays indeterminate."
+  ],
+  "solution": "$x^2/e^x$ has the same limit as $2x/e^x$ and $2/e^x$, which tends to 0.",
+  "statement": "Evaluate $\\lim_{x\\to+\\infty}x^2/e^x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "0",
+      "feedback": [
+        {
+          "answer": "INF",
+          "message": "Apply once more because the new form stays indeterminate."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(0)/2"
+      ],
+      "wrong": [
+        "INF"
+      ]
+    }
+  }
+}

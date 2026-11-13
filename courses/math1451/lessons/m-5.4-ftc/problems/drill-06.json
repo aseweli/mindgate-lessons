@@ -1,0 +1,43 @@
+{
+  "title": "Velocity and net change",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Integrate signed velocity.",
+    "Use $t^2-6t$ as the position change primitive.",
+    "Displacement can be negative."
+  ],
+  "solution": "$[t^2-6t]_0^5=25-30=-5$. Total distance would be $9+4=13$.",
+  "statement": "Velocity is $v(t)=2t-6$ m/s. Find displacement on $[0,5]$ in meters.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-5",
+      "feedback": [
+        {
+          "answer": "13",
+          "message": "Displacement can be negative."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-5)/2"
+      ],
+      "wrong": [
+        "13"
+      ]
+    }
+  }
+}

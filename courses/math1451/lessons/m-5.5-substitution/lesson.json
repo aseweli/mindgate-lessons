@@ -1,0 +1,226 @@
+{
+  "id": "m-5.5-substitution",
+  "title": "Integration by substitution",
+  "short": "u-substitution",
+  "section": "5.5",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Recognize reverse chain rule patterns, manage constant factors and bounds, and verify by differentiation.",
+  "tags": [
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Substitution",
+              "A change of variable that simplifies an integral."
+            ],
+            [
+              "Differential factor",
+              "The product $g^\\prime(x)\\,dx$ represented by $du$."
+            ],
+            [
+              "Back-substitution",
+              "Replacing $u$ with its original expression in $x$."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Reverse chain rule",
+              "latex": "\\int f(g(x))g^\\prime(x)\\,dx=F(g(x))+C,\\quad F^\\prime=f",
+              "note": "Look for the inner derivative."
+            },
+            {
+              "label": "Change bounds",
+              "latex": "\\int_a^b f(g(x))g^\\prime(x)\\,dx=\\int_{g(a)}^{g(b)} f(u)\\,du",
+              "note": "Use bounds in the same variable as the integrand."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Check the constant and sign in $du$. Rewrite remaining factors completely. Use matching bounds and variables, and include $+C$ for indefinite answers."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Write the $u$ and $du$ lines. When you convert bounds, show both conversions. Differentiate a proposed antiderivative to check every inner factor."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "sdYdnpYn-1o",
+          "title": "Integration using u-substitution",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "7:00",
+          "focus": "Write the differential line and check which entire factor gets replaced."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Factor of one-half",
+          "problem": "Find $\\int x\\sqrt{4+x^2}\\,dx$.",
+          "answer": "$(4+x^2)^{3/2}/3+C$.",
+          "steps": [
+            {
+              "title": "Choose inside",
+              "md": "$u=4+x^2$, $du=2x\\,dx$, so $x\\,dx=du/2$.",
+              "why": "The derivative of the radical’s inside matches the leftover factor up to a constant."
+            },
+            {
+              "title": "Integrate",
+              "md": "$\\frac12\\int u^{1/2}\\,du=\\frac13u^{3/2}+C$.",
+              "why": "Divide by the new exponent $3/2$."
+            },
+            {
+              "title": "Return to x",
+              "md": "Substitute $u=4+x^2$ and differentiate to check.",
+              "why": "The derivative multiplies by $(3/2)(2x)$, canceling the coefficient."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Reversed bounds",
+          "problem": "Compute $\\int_0^{\\pi/2}\\sin x\\,(2+\\cos x)^2\\,dx$.",
+          "answer": "$19/3$.",
+          "steps": [
+            {
+              "title": "Change variable",
+              "md": "$u=2+\\cos x$, $du=-\\sin x\\,dx$.",
+              "why": "The sine factor matches with a minus sign."
+            },
+            {
+              "title": "Change bounds",
+              "md": "$u(0)=3$ and $u(\\pi/2)=2$.",
+              "why": "Bounds now follow the new variable."
+            },
+            {
+              "title": "Evaluate",
+              "md": "$-\\int_3^2u^2\\,du=\\int_2^3u^2\\,du=(27-8)/3$.",
+              "why": "Reversing the bounds cancels the minus sign."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Rewrite a leftover factor",
+          "problem": "Compute $\\int x\\sqrt{x+1}\\,dx$ on $x>-1$.",
+          "answer": "$\\frac25(x+1)^{5/2}-\\frac23(x+1)^{3/2}+C$.",
+          "steps": [
+            {
+              "title": "Substitute",
+              "md": "$u=x+1$, $du=dx$, and $x=u-1$.",
+              "why": "Every factor must use the new variable."
+            },
+            {
+              "title": "Distribute",
+              "md": "$(u-1)\\sqrt u=u^{3/2}-u^{1/2}$.",
+              "why": "Two power rules now finish the integral."
+            },
+            {
+              "title": "Back-substitute",
+              "md": "$\\frac25u^{5/2}-\\frac23u^{3/2}+C$ with $u=x+1$.",
+              "why": "The answer is a function of the original variable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "power-sub",
+            "drill-03",
+            "drill-04",
+            "exp-sub",
+            "bounds-sub",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "Why does $x\\,dx=du/2$ when $u=x^2+1$?",
+              "Because $du=2x\\,dx$."
+            ],
+            [
+              "Can new bounds decrease?",
+              "Yes. Preserve their order and account for the differential sign."
+            ],
+            [
+              "How do you verify an indefinite substitution?",
+              "Differentiate the result and recover the integrand."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Choose $u$ from the composition and match $du$.",
+            "Handle missing constants and leftover factors.",
+            "Convert both bounds or back-substitute first."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

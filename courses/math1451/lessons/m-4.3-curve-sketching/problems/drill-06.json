@@ -1,0 +1,43 @@
+{
+  "title": "Discontinuous candidate",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check the domain before classifying.",
+    "$f^{\\prime\\prime}=2/(x-2)^3$.",
+    "The graph has no point at 2."
+  ],
+  "solution": "Concavity changes across the vertical asymptote, and the function is undefined there, so there is no inflection point.",
+  "statement": "Find the inflection input of $f(x)=1/(x-2)$, or enter DNE.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "DNE",
+      "feedback": [
+        {
+          "answer": "2",
+          "message": "The graph has no point at 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "DNE"
+      ],
+      "wrong": [
+        "2"
+      ]
+    }
+  }
+}

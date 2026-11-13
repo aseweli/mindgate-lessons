@@ -1,0 +1,50 @@
+{
+  "title": "Inflection input",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        7
+      ]
+    }
+  },
+  "hints": [
+    "Use the second derivative.",
+    "$f^{\\prime\\prime}=6x-6a$.",
+    "Solve for its zero and verify it changes sign."
+  ],
+  "solution": "$f^{\\prime\\prime}=6(x-[$a])$ switches from negative to positive at $x=[$a]$.",
+  "statement": "Find the inflection input for $x^3-3\\cdot[$a]x^2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "2*a",
+          "message": "Solve for its zero and verify it changes sign."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "6*[$a]/6"
+      ],
+      "wrong": [
+        "2*[$a]"
+      ]
+    }
+  }
+}

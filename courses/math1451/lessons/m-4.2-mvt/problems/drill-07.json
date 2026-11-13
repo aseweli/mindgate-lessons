@@ -1,0 +1,43 @@
+{
+  "title": "Nonlinear secant slope",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "The reciprocal is smooth on the interval.",
+    "The secant slope is $-1/9$.",
+    "Solve $-1/c^2=-1/9$ and keep the positive interior root."
+  ],
+  "solution": "$[(1/9)-1]/8=-1/9$. Matching this to $-1/c^2$ gives $c=3$.",
+  "statement": "Find the MVT input for $1/x$ on $[1,9]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3",
+      "feedback": [
+        {
+          "answer": "9",
+          "message": "Solve $-1/c^2=-1/9$ and keep the positive interior root."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3)/2"
+      ],
+      "wrong": [
+        "9"
+      ]
+    }
+  }
+}

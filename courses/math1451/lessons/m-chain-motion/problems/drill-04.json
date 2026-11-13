@@ -1,0 +1,43 @@
+{
+  "title": "Distance versus displacement",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Find where $v$ changes sign.",
+    "Split at $t=3$.",
+    "Add absolute changes across both legs."
+  ],
+  "solution": "$s(0)=0$, $s(3)=-9$, $s(4)=-8$. Distance is $9+1=10$.",
+  "statement": "Find the distance traveled by $s(t)=t^2-6t$ on $[0,4]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "10",
+      "feedback": [
+        {
+          "answer": "8",
+          "message": "Add absolute changes across both legs."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(10)/2"
+      ],
+      "wrong": [
+        "8"
+      ]
+    }
+  }
+}

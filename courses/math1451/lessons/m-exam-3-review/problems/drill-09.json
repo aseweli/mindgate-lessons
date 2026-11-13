@@ -1,0 +1,43 @@
+{
+  "title": "Concavity and height",
+  "difficulty": 5,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Differentiate twice.",
+    "$f^{\\prime\\prime}=6x-12$ changes sign at 2.",
+    "Enter $f(2)$, not the input."
+  ],
+  "solution": "$f(2)=8-24+5=-11$.",
+  "statement": "Find the inflection height of $f(x)=x^3-6x^2+5$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-11",
+      "feedback": [
+        {
+          "answer": "2",
+          "message": "Enter $f(2)$, not the input."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-11)/2"
+      ],
+      "wrong": [
+        "2"
+      ]
+    }
+  }
+}

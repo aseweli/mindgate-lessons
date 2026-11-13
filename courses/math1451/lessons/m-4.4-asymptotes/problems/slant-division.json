@@ -1,0 +1,46 @@
+{
+  "title": "Rational slant asymptote",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Divide the numerator by the denominator.",
+    "The first quotient term is $x$.",
+    "The next quotient term is positive $a$."
+  ],
+  "solution": "$x^2+1=(x-[$a])(x+[$a])+1+[$a]^2$. The remainder divided by the denominator tends to zero.",
+  "statement": "Find the slant asymptote as a function of $x$ for $(x^2+1)/(x-[$a])$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "x+a",
+      "feedback": [
+        {
+          "answer": "x-a",
+          "message": "The next quotient term is positive $a$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$a]+x"
+      ],
+      "wrong": [
+        "x-[$a]"
+      ]
+    }
+  }
+}

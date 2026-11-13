@@ -1,0 +1,45 @@
+{
+  "title": "Log and base change",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use change of base.",
+    "$\\log_2x=\\ln x/\\ln 2$.",
+    "A base other than $e$ introduces a logarithmic factor."
+  ],
+  "solution": "The derivative is $5^x\\ln5+1/(x\\ln2)$.",
+  "statement": "Differentiate $5^x+\\log_2 x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "5^x*ln(5)+1/(x*ln(2))",
+      "feedback": [
+        {
+          "answer": "5^x+1/x",
+          "message": "A base other than $e$ introduces a logarithmic factor."
+        }
+      ],
+      "vars": {
+        "x": [
+          1,
+          4
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(5^x*ln(5)+1/(x*ln(2))) + x - x"
+      ],
+      "wrong": [
+        "5^x+1/x"
+      ]
+    }
+  }
+}

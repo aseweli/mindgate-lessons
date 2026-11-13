@@ -1,0 +1,43 @@
+{
+  "title": "Inflection height",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Find the input first.",
+    "$f^{\\prime\\prime}=6x-18$ switches at $x=3$.",
+    "Plug 3 into the original function."
+  ],
+  "solution": "$f(3)=27-81+6=-48$.",
+  "statement": "Find the $y$-coordinate of the inflection of $x^3-9x^2+2x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-48",
+      "feedback": [
+        {
+          "answer": "3",
+          "message": "Plug 3 into the original function."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-48)/2"
+      ],
+      "wrong": [
+        "3"
+      ]
+    }
+  }
+}

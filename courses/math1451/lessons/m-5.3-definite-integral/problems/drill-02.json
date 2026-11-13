@@ -1,0 +1,43 @@
+{
+  "title": "Total area",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Split at 3.",
+    "Find both triangle areas.",
+    "Add magnitudes."
+  ],
+  "solution": "Total area is $9/2+1/2=5$.",
+  "statement": "Find the total area between $y=x-3$ and the axis on $[0,4]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "5",
+      "feedback": [
+        {
+          "answer": "-4",
+          "message": "Add magnitudes."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(5)/2"
+      ],
+      "wrong": [
+        "-4"
+      ]
+    }
+  }
+}

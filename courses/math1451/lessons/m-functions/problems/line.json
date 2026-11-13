@@ -1,0 +1,43 @@
+{
+  "title": "Slope from two points",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Write rise over run.",
+    "The changes are $-9$ and $6$.",
+    "Keep the same subtraction order."
+  ],
+  "solution": "$m=(-2-7)/(4-(-2))=-3/2$.",
+  "statement": "Find the slope through $(-2,7)$ and $(4,-2)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-3/2",
+      "feedback": [
+        {
+          "answer": "-2/3",
+          "message": "Keep the same subtraction order."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-3/2)/2"
+      ],
+      "wrong": [
+        "-2/3"
+      ]
+    }
+  }
+}

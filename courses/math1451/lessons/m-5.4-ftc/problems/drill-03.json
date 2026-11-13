@@ -1,0 +1,39 @@
+{
+  "title": "Variable upper bound",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use the accumulation derivative.",
+    "Replace $t$ by $x^2$.",
+    "Multiply by $2x$."
+  ],
+  "solution": "$f(x^2)=1+(x^2)^4$ and $(x^2)^\\prime=2x$, giving $2x(1+x^8)$.",
+  "statement": "Differentiate $\\int_3^{x^2}(1+t^4)\\,dt$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "2*x*(1+x^8)",
+      "feedback": [
+        {
+          "answer": "1+x^8",
+          "message": "Multiply by $2x$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(2*x*(1+x^8)) + x - x"
+      ],
+      "wrong": [
+        "1+x^8"
+      ]
+    }
+  }
+}

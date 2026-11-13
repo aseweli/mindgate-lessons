@@ -1,0 +1,43 @@
+{
+  "title": "Global minimum",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Solve $2x-8/x^2=0$ for a positive input.",
+    "$x^3=4$.",
+    "At that input, $8/x=2x^2$."
+  ],
+  "solution": "$f^\\prime=2(x^3-4)/x^2$ changes from negative to positive. The value is $3x^2=3\\cdot4^{2/3}$.",
+  "statement": "Find the absolute minimum value of $x^2+8/x$ on $[1,4]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3*4^(2/3)",
+      "feedback": [
+        {
+          "answer": "4^(1/3)",
+          "message": "At that input, $8/x=2x^2$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3*4^(2/3))/2"
+      ],
+      "wrong": [
+        "4^(1/3)"
+      ]
+    }
+  }
+}

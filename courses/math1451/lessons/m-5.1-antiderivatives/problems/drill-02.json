@@ -1,0 +1,45 @@
+{
+  "title": "Reciprocal and power",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Separate terms.",
+    "The reciprocal uses the log.",
+    "The second term has new exponent $-2$."
+  ],
+  "solution": "$6\\ln x+2x^{-2}/(-2)+C=6\\ln x-x^{-2}+C$.",
+  "statement": "Find $\\int(6/x+2/x^3)\\,dx$ on $x>0$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "6*ln(x)-1/x^2",
+      "feedback": [
+        {
+          "answer": "6*ln(x)+1/x^2",
+          "message": "The second term has new exponent $-2$."
+        }
+      ],
+      "vars": {
+        "x": [
+          1,
+          4
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(6*ln(x)-1/x^2)+4+C"
+      ],
+      "wrong": [
+        "(6*ln(x)+1/x^2)+C"
+      ]
+    }
+  }
+}

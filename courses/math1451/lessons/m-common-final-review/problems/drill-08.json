@@ -1,0 +1,43 @@
+{
+  "title": "Riemann sum on a shifted interval",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "The sample is $1+i/n$.",
+    "Expand its square inside the sum.",
+    "Use the constant, linear and squared sums."
+  ],
+  "solution": "$R_n=(1/n)\\sum[1+2i/n+i^2/n^2]\\to1+1+1/3=7/3$.",
+  "statement": "Use right endpoints to compute the area under $x^2$ on $[1,2]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "7/3",
+      "feedback": [
+        {
+          "answer": "1/3",
+          "message": "Use the constant, linear and squared sums."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(7/3)/2"
+      ],
+      "wrong": [
+        "1/3"
+      ]
+    }
+  }
+}

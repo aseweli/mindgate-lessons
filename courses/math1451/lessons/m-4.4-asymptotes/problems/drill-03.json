@@ -1,0 +1,43 @@
+{
+  "title": "Even pole from the left",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "The square approaches zero from above.",
+    "The numerator stays negative.",
+    "The quotient is negative and grows in magnitude."
+  ],
+  "solution": "The sign is negative on both sides, so the left limit is $-\\infty$.",
+  "statement": "Evaluate $\\lim_{x\\to1^-}(-2)/(x-1)^2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-INF",
+      "feedback": [
+        {
+          "answer": "INF",
+          "message": "The quotient is negative and grows in magnitude."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "-INF"
+      ],
+      "wrong": [
+        "INF"
+      ]
+    }
+  }
+}

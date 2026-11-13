@@ -1,0 +1,6 @@
+When $x$ and $y$ satisfy a relationship, treat $y$ as $y(x)$. Differentiate both sides, attach $y'$ each time you differentiate through $y$, collect the $y'$ terms, and solve. For a second derivative, differentiate the resulting expression again with the product or quotient rule and substitute $y'$ back. In logarithmic differentiation, take logs first when a variable occurs in both the base and exponent. For $y=x^x$, $x>0$, $\ln y=x\ln x$, so $y'=x^x(\ln x+1)$.
+
+### Related rates workflow
+Draw and label variable quantities. Record the known rate with its sign and units. Write one equation relating the quantities, eliminate unneeded variables with geometry if useful, and differentiate with respect to time. Substitute the snapshot values only after differentiating. A fixed length is constant throughout the motion, while a variable length that happens to equal 5 at one instant still has a derivative. Negative answers describe a decreasing quantity.
+
+For a cone $V=\pi r^2h/3$, use similar triangles to express $r$ in terms of $h$ before differentiating if the liquid keeps the same shape. For a moving angle, pick a trig ratio with the known length and the changing distance, and report radians per unit time.

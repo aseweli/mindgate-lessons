@@ -1,0 +1,39 @@
+{
+  "title": "Two moving bounds",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use the FTC at both bounds.",
+    "The upper derivative is 3.",
+    "Subtract the lower contribution."
+  ],
+  "solution": "$3\\sqrt{1+9x^2}-\\sqrt{1+x^2}$.",
+  "statement": "Differentiate $\\int_{x}^{3x} \\sqrt{1+t^2}\\,dt$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "3*sqrt(1+9*x^2)-sqrt(1+x^2)",
+      "feedback": [
+        {
+          "answer": "sqrt(1+9*x^2)-sqrt(1+x^2)",
+          "message": "Subtract the lower contribution."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(3*sqrt(1+9*x^2)-sqrt(1+x^2)) + x - x"
+      ],
+      "wrong": [
+        "sqrt(1+9*x^2)-sqrt(1+x^2)"
+      ]
+    }
+  }
+}

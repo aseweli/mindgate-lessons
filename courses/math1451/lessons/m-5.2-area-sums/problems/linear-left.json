@@ -1,0 +1,56 @@
+{
+  "title": "Left sum with variable width",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "b": {
+      "int": [
+        2,
+        10
+      ]
+    },
+    "n": {
+      "int": [
+        3,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "The sample index starts at zero for left endpoints.",
+    "The width is $b/n$ and the last left point is $b(n-1)/n$.",
+    "Use the sum of integers 0 through $n-1$."
+  ],
+  "solution": "$L_n=\\frac{[$b]^2}{[$n]^2}\\frac{[$n]([$n]-1)}2$.",
+  "statement": "Use $[$n]$ left rectangles for $f(x)=x$ on $[0,[$b]]$. Compute the sum.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "b^2*(n-1)/(2*n)",
+      "feedback": [
+        {
+          "answer": "b^2*(n+1)/(2*n)",
+          "message": "Use the sum of integers 0 through $n-1$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "([$b]/[$n])^2*([$n]*([$n]-1)/2)"
+      ],
+      "wrong": [
+        "[$b]^2*([$n]+1)/(2*[$n])"
+      ]
+    }
+  }
+}

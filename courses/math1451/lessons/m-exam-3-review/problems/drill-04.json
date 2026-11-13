@@ -1,0 +1,43 @@
+{
+  "title": "Exponential limit",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Label $0/0$.",
+    "The first derivative quotient is $(4e^{4x}-4)/(2x)$.",
+    "After another $0/0$ application the denominator is 2."
+  ],
+  "solution": "The second quotient is $16e^{4x}/2\\to8$.",
+  "statement": "Evaluate $\\lim_{x\\to0}(e^{4x}-1-4x)/x^2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "8",
+      "feedback": [
+        {
+          "answer": "16",
+          "message": "After another $0/0$ application the denominator is 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(8)/2"
+      ],
+      "wrong": [
+        "16"
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Repeat only when legal",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "The first form is $0/0$.",
+    "After one round you get $(2e^{2x}-2)/(2x)$.",
+    "The second derivative quotient is $4e^{2x}/2$."
+  ],
+  "solution": "Both applications start from $0/0$. The final quotient approaches $2$.",
+  "statement": "Evaluate $\\lim_{x\\to0}(e^{2x}-1-2x)/x^2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2",
+      "feedback": [
+        {
+          "answer": "4",
+          "message": "The second derivative quotient is $4e^{2x}/2$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(2)/2"
+      ],
+      "wrong": [
+        "4"
+      ]
+    }
+  }
+}

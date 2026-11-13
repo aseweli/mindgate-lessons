@@ -1,0 +1,58 @@
+{
+  "title": "Combine log and a negative power",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        7
+      ]
+    },
+    "b": {
+      "int": [
+        2,
+        9
+      ]
+    }
+  },
+  "hints": [
+    "Integrate each term separately.",
+    "The first term uses the reciprocal rule.",
+    "The second term has new exponent $-1$ and a minus sign."
+  ],
+  "solution": "$\\int [$a]x^{-1}dx+\\int [$b]x^{-2}dx=[$a]\\ln x-[$b]/x+C$.",
+  "statement": "Find $\\int ([$a]/x+[$b]/x^2)\\,dx$ on $x>0$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "a*ln(x)-b/x",
+      "feedback": [
+        {
+          "answer": "a*ln(x)+b/x",
+          "message": "The second term has new exponent $-1$ and a minus sign."
+        }
+      ],
+      "vars": {
+        "x": [
+          1,
+          5
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$a]*ln(x)-[$b]*x^(-1)+C"
+      ],
+      "wrong": [
+        "[$a]*ln(x)+[$b]/x+C"
+      ]
+    }
+  }
+}

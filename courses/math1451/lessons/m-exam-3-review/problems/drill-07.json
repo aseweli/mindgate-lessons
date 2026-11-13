@@ -1,0 +1,43 @@
+{
+  "title": "Build a limit from left rectangles",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use $\\Delta x=4/n$.",
+    "With $j=0,\\ldots,n-1$, the height is $12j/n$.",
+    "Apply $\\sum_{j=0}^{n-1}j=n(n-1)/2$."
+  ],
+  "solution": "$L_n=(48/n^2)n(n-1)/2=24(n-1)/n\\to24$.",
+  "statement": "Use left rectangles to find the area under $3x$ on $[0,4]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "24",
+      "feedback": [
+        {
+          "answer": "12",
+          "message": "Apply $\\sum_{j=0}^{n-1}j=n(n-1)/2$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(24)/2"
+      ],
+      "wrong": [
+        "12"
+      ]
+    }
+  }
+}

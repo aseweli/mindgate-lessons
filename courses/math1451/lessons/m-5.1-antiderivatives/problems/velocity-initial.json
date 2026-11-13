@@ -1,0 +1,52 @@
+{
+  "title": "Apply initial velocity",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        8
+      ]
+    },
+    "b": {
+      "int": [
+        1,
+        9
+      ]
+    }
+  },
+  "hints": [
+    "Integrate acceleration once.",
+    "The derivative of a linear term is its slope.",
+    "Use the initial velocity to set the additive constant."
+  ],
+  "solution": "$v(x)=2\\cdot[$a]x+C$. The value at zero gives $C=[$b]$.",
+  "statement": "An object has $a(t)=2\\cdot[$a]$ m/s$^2$ and $v(0)=[$b]$ m/s. Enter its velocity as a function of $x$, where $x$ represents time in seconds.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "2*a*x+b",
+      "feedback": [
+        {
+          "answer": "a*x+b",
+          "message": "Use the initial velocity to set the additive constant."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$b]+([$a]+[$a])*x"
+      ],
+      "wrong": [
+        "[$a]*x+[$b]"
+      ]
+    }
+  }
+}

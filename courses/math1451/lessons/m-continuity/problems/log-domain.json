@@ -1,0 +1,39 @@
+{
+  "title": "Log of a quadratic",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Set the argument strictly positive.",
+    "Factor $x^2-9$.",
+    "The product is positive outside the roots."
+  ],
+  "solution": "$x^2>9$ means $|x|>3$, or $(-\\infty,-3)\\cup(3,\\infty)$.",
+  "statement": "Find the domain of $\\ln(x^2-9)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "interval",
+      "value": "(-inf,-3) U (3,inf)",
+      "feedback": [
+        {
+          "answer": "[-3,3]",
+          "message": "The product is positive outside the roots."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(-inf,-3) U (3,inf)"
+      ],
+      "wrong": [
+        "[-3,3]"
+      ]
+    }
+  }
+}

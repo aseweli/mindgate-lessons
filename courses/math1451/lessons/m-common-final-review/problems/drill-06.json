@@ -1,0 +1,43 @@
+{
+  "title": "Substitution with exact bounds",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Take the exponent as $u$.",
+    "$du=6x^2\\,dx$.",
+    "Convert the endpoints to 0 and 2."
+  ],
+  "solution": "$\\int_0^2 e^u\\,du=e^2-1$.",
+  "statement": "Evaluate $\\int_0^1 6x^2 e^{2x^3}\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "exp(2)-1",
+      "feedback": [
+        {
+          "answer": "(exp(2)-1)/2",
+          "message": "Convert the endpoints to 0 and 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(exp(2)-1)/2"
+      ],
+      "wrong": [
+        "(exp(2)-1)/2"
+      ]
+    }
+  }
+}

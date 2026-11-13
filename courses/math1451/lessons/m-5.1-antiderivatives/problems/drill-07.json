@@ -1,0 +1,39 @@
+{
+  "title": "Inverse trig pair",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Look for a memorized derivative.",
+    "The denominator is $1+x^2$.",
+    "The matching inverse trig function is arctangent."
+  ],
+  "solution": "$5\\arctan x+C$ differentiates to $5/(1+x^2)$.",
+  "statement": "Find $\\int 5/(1+x^2)\\,dx$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "5*arctan(x)",
+      "feedback": [
+        {
+          "answer": "5*arcsin(x)",
+          "message": "The matching inverse trig function is arctangent."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(5*arctan(x))+4+C"
+      ],
+      "wrong": [
+        "(5*arcsin(x))+C"
+      ]
+    }
+  }
+}

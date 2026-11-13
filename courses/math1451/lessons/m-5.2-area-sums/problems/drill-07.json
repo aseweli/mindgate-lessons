@@ -1,0 +1,43 @@
+{
+  "title": "Check the sample convention",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Interior samples cancel in the difference.",
+    "Only $f(5)-f(1)$ remains.",
+    "Multiply by $\\Delta x=2$."
+  ],
+  "solution": "$R_2-L_2=2(26-2)=48$.",
+  "statement": "Find $R_2-L_2$ for $f(x)=x^2+1$ on $[1,5]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "48",
+      "feedback": [
+        {
+          "answer": "24",
+          "message": "Multiply by $\\Delta x=2$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(48)/2"
+      ],
+      "wrong": [
+        "24"
+      ]
+    }
+  }
+}

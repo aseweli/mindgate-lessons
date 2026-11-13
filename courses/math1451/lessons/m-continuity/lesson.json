@@ -1,0 +1,186 @@
+{
+  "id": "m-continuity",
+  "title": "Continuity, IVT, exponentials and logs",
+  "short": "Continuity and logs",
+  "section": "2.3–2.4",
+  "minutes": 35,
+  "difficulty": 2,
+  "objective": "Apply the continuity checklist and IVT, and simplify exponential and logarithmic expressions.",
+  "tags": [
+    "exam1"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "IVT",
+              "A continuous function crosses every intermediate height between its endpoint values."
+            ],
+            [
+              "Natural log",
+              "Inverse of $e^x$ on positive inputs."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Continuity",
+              "latex": "\\lim_{x\\to a}f(x)=f(a)",
+              "note": "Both sides must be defined and finite."
+            },
+            {
+              "label": "Log laws",
+              "latex": "\\ln(uv)=\\ln u+\\ln v,\\quad \\ln(u^p)=p\\ln u",
+              "note": "For positive inputs."
+            },
+            {
+              "label": "Change of base",
+              "latex": "\\log_b x=\\frac{\\ln x}{\\ln b}",
+              "note": "Requires valid base and positive x."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "$\\ln(u+v)$ generally cannot be split. Check continuity on the entire interval before applying IVT."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Write the one-sided expressions in a continuity problem. For IVT, explicitly state continuity and compute the two endpoint values."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "9brk313DjV8",
+          "title": "Limits and continuity",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "For each example, compare both one-sided limits with the assigned value."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Repair the join",
+          "problem": "$f(x)=2x+k$ for $x<3$ and $f(x)=x^2$ for $x\\ge3$. Find $k$ for continuity.",
+          "answer": "$k=3$.",
+          "steps": [
+            {
+              "title": "Compute both sides",
+              "md": "The left limit is $6+k$. The right limit and $f(3)$ both equal $9$.",
+              "why": "Use the branch valid on each side."
+            },
+            {
+              "title": "Equate",
+              "md": "$6+k=9$.",
+              "why": "Continuity requires equality with the assigned value."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Show a root exists",
+          "problem": "Show $x^3+x-7=0$ has a solution between 1 and 2.",
+          "answer": "At least one root lies in $(1,2)$.",
+          "steps": [
+            {
+              "title": "Check continuity",
+              "md": "The function is a polynomial.",
+              "why": "The IVT needs continuity on the whole interval."
+            },
+            {
+              "title": "Evaluate endpoints",
+              "md": "$f(1)=-5$, $f(2)=3$.",
+              "why": "Zero lies strictly between the endpoint outputs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "fill-hole",
+            "exp-eq",
+            "log-domain",
+            "log-inverse"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "Does IVT prove uniqueness?",
+              "It proves existence. Prove strict monotonicity separately for uniqueness."
+            ],
+            [
+              "What is the domain of $\\ln x$?",
+              "$(0,\\infty)$."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Check each continuity condition.",
+            "Justify a root with IVT.",
+            "Apply log laws with their domain."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "log-laws",
+            "join",
+            "ivt-bracket"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

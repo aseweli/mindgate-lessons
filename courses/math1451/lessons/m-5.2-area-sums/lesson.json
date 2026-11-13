@@ -1,0 +1,210 @@
+{
+  "id": "m-5.2-area-sums",
+  "title": "Area as the limit of a sum",
+  "short": "Area and rectangle sums",
+  "section": "5.2",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Construct left, right and midpoint sums and find exact area by simplifying a finite sum.",
+  "tags": [
+    "exam3"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Partition",
+              "Ordered points dividing an interval into subintervals."
+            ],
+            [
+              "Sample point",
+              "Input used as the rectangle height for one subinterval."
+            ],
+            [
+              "Sigma notation",
+              "A compact representation of an indexed sum."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "right-rectangles.svg",
+          "alt": "Three width-one rectangles over the increasing parabola between 1 and 4, with right-endpoint heights 4, 9 and 16.",
+          "caption": "Three right rectangles for $f(x)=x^2$ on $[1,4]$ give $R_3=4+9+16=29$.",
+          "width": 640
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Width",
+              "latex": "\\Delta x=(b-a)/n",
+              "note": "Uniform partition."
+            },
+            {
+              "label": "Right and midpoint samples",
+              "latex": "x_i=a+i\\Delta x,\\quad m_i=a+(i-\\tfrac12)\\Delta x",
+              "note": "Index starts at 1."
+            },
+            {
+              "label": "Power sums",
+              "latex": "\\sum_{i=1}^n i=\\frac{n(n+1)}2,\\quad\\sum_{i=1}^n i^2=\\frac{n(n+1)(2n+1)}6",
+              "note": "The cubic sum is the square of the linear sum."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Include the width multiplier. Use $a$ in the sample points. Keep finite $n$ separate from the limit as $n$ grows."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "When asked to use the definition, write the sigma expression and evaluate its limit. An antiderivative alone skips the method being tested."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "AkUa9Fkz2rw",
+          "title": "Left, right and midpoint Riemann sums",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "8:00",
+          "focus": "Pause to list the sample points and include each rectangle’s width."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Three rectangles on a shifted interval",
+          "problem": "Find $L_3$, $R_3$ and $M_3$ for $f(x)=x^2$ on $[1,4]$.",
+          "answer": "$L_3=14$, $R_3=29$, $M_3=83/4$.",
+          "steps": [
+            {
+              "title": "Find width and samples",
+              "md": "$\\Delta x=1$. Left samples are $1,2,3$; right are $2,3,4$; midpoint samples are $3/2,5/2,7/2$.",
+              "why": "Each subinterval contributes exactly one height."
+            },
+            {
+              "title": "Add heights times width",
+              "md": "$L_3=1+4+9$; $R_3=4+9+16$; $M_3=(9+25+49)/4$.",
+              "why": "Multiply by width 1 in this example."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Exact area from the definition",
+          "problem": "Use right endpoints to find the area under $f(x)=x^2$ on $[0,3]$.",
+          "answer": "$9$.",
+          "steps": [
+            {
+              "title": "Set up the sum",
+              "md": "$\\Delta x=3/n$ and $x_i=3i/n$, so $R_n=(27/n^3)\\sum i^2$.",
+              "why": "Squaring the sample and multiplying the width gives $n^{-3}$."
+            },
+            {
+              "title": "Apply the identity",
+              "md": "$R_n=27n(n+1)(2n+1)/(6n^3)$.",
+              "why": "The sum of squares introduces the cubic numerator."
+            },
+            {
+              "title": "Take the limit",
+              "md": "Divide by $n^3$ to get $(27/6)(1+1/n)(2+1/n)\\to9$.",
+              "why": "Terms with $1/n$ vanish."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "linear-right",
+            "drill-03",
+            "drill-04",
+            "linear-left",
+            "linear-midpoint",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "Right endpoint formula?",
+              "$a+i\\Delta x$."
+            ],
+            [
+              "How does midpoint differ?",
+              "Use $a+(i-\\tfrac12)\\Delta x$."
+            ],
+            [
+              "For increasing $f$, which bound is larger?",
+              "The right-endpoint sum is at least the left-endpoint sum."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Compute left, right and midpoint estimates.",
+            "Write a symbolic sum on a shifted interval.",
+            "Evaluate a limit using the power-sum identities."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

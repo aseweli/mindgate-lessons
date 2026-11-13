@@ -1,0 +1,35 @@
+{
+  "title": "Rotation and overlap",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Picture a p orbital on either carbon.",
+    "Twist one set of lobes out of parallel alignment.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Rotation reduces the parallel p-orbital overlap that supplies the pi bond.",
+  "exam": false,
+  "statement": "Why does rotating one end of a C=C double bond have a high energy barrier?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It disrupts side-on p overlap.",
+        "It changes the total electron count.",
+        "It turns carbon nuclei into ions.",
+        "It requires breaking every C–H bond."
+      ],
+      "correct": 0,
+      "explanations": [
+        "That weakens the pi interaction.",
+        "Rotation does not change electron count.",
+        "The barrier is due to orbital alignment.",
+        "The relevant interaction is the C=C pi overlap."
+      ]
+    }
+  }
+}

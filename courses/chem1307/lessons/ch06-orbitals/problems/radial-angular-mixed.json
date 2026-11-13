@@ -1,0 +1,34 @@
+{
+  "title": "Compare two subshells in a shell",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Both labels start with n=4.",
+    "The letter sets ℓ.",
+    "Separate total, radial and angular counts."
+  ],
+  "solution": "$n-1=3$ for both. The $4s$ orbital has three radial and zero angular nodes; $4p$ has two radial and one angular.",
+  "statement": "Which statement about hydrogen-like $4s$ and $4p$ orbitals is correct?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Both have three total nodes; 4p has one angular node and two radial nodes.",
+        "4s has fewer total nodes.",
+        "4p has three radial nodes.",
+        "4s has one angular node."
+      ],
+      "correct": 0,
+      "explanations": [
+        "For n=4 total is 3, and p supplies one angular node.",
+        "Both have the same n.",
+        "One of its three total nodes is angular.",
+        "s has ℓ=0."
+      ]
+    }
+  }
+}

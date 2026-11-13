@@ -1,0 +1,39 @@
+{
+  "title": "Eliminate the parameter",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Solve the first equation for $t$.",
+    "$t=(x-3)/2$.",
+    "Substitute into $y$."
+  ],
+  "solution": "$y=5-4(x-3)/2=11-2x$.",
+  "statement": "Write $y$ as a function of $x$ if $x=3+2t$ and $y=5-4t$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "11-2*x",
+      "feedback": [
+        {
+          "answer": "5-2*x",
+          "message": "Substitute into $y$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(11-2*x) + x - x"
+      ],
+      "wrong": [
+        "5-2*x"
+      ]
+    }
+  }
+}

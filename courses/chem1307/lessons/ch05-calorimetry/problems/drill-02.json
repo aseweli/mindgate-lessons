@@ -1,0 +1,35 @@
+{
+  "title": "Cooling and freezing",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Separate the two stages.",
+    "Check the sign for freezing.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$q=mc_\\mathrm{liq}(T_\\mathrm{freeze}-T_i)-n\\Delta H_\\mathrm{fus}$. Both terms are negative.",
+  "exam": false,
+  "statement": "A pure liquid cools to its freezing point, then freezes completely. Which expression gives heat for the sample?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$mc_\\mathrm{liq}(T_\\mathrm{freeze}-T_i)-n\\Delta H_\\mathrm{fus}$",
+        "$mc_\\mathrm{liq}(T_\\mathrm{freeze}-T_i)+n\\Delta H_\\mathrm{fus}$",
+        "$-n\\Delta H_\\mathrm{fus}$ only",
+        "$mc_\\mathrm{solid}(T_\\mathrm{freeze}-T_i)$ only"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Cooling and freezing both release heat.",
+        "The sign of fusion was used for freezing.",
+        "Cooling above the freezing point also transfers heat.",
+        "The first stage is liquid, and freezing needs its own term."
+      ]
+    }
+  }
+}

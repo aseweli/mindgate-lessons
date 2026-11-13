@@ -1,0 +1,43 @@
+{
+  "title": "Endpoint and stationary tie",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Factor the derivative.",
+    "$4x(x^2-1)=0$.",
+    "Compare eligible inputs and endpoints."
+  ],
+  "solution": "$f(-1)=-1$, $f(0)=0$, $f(1)=-1$, $f(2)=8$. The minimum is $-1$.",
+  "statement": "Find the minimum value of $x^4-2x^2$ on $[-1,2]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-1",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Compare eligible inputs and endpoints."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-1)/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

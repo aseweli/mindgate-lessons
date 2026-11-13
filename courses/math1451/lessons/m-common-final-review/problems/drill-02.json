@@ -1,0 +1,43 @@
+{
+  "title": "A continuous join",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Compute the two one-sided limits.",
+    "The right value is 16.",
+    "Set $4k=16$."
+  ],
+  "solution": "The left limit is $4k$, so continuity gives $k=4$.",
+  "statement": "Find $k$ for continuity at 2 if $f(x)=kx^2$ for $x<2$ and $f(x)=7x+2$ for $x\\ge2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "4",
+      "feedback": [
+        {
+          "answer": "8",
+          "message": "Set $4k=16$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(4)/2"
+      ],
+      "wrong": [
+        "8"
+      ]
+    }
+  }
+}

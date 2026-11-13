@@ -1,0 +1,39 @@
+{
+  "title": "Find the inverse",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Set $y=3x-7$.",
+    "Add 7 to both sides.",
+    "Divide by 3 and relabel."
+  ],
+  "solution": "$y+7=3x$, so the inverse sends $x$ to $(x+7)/3$.",
+  "statement": "Find $f^{-1}(x)$ for $f(x)=3x-7$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "(x+7)/3",
+      "feedback": [
+        {
+          "answer": "(x-7)/3",
+          "message": "Divide by 3 and relabel."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "((x+7)/3) + x - x"
+      ],
+      "wrong": [
+        "(x-7)/3"
+      ]
+    }
+  }
+}

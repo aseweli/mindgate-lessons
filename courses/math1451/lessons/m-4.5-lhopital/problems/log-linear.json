@@ -1,0 +1,56 @@
+{
+  "title": "Scaled log difference quotient",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        7
+      ]
+    },
+    "b": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Both limits are zero.",
+    "Differentiate numerator and denominator separately.",
+    "The log derivative at zero is its inner coefficient."
+  ],
+  "solution": "The derivative quotient is $\\frac{[$a]}{[$b](1+[$a]x)}$, which tends to $[$a]/[$b]$.",
+  "statement": "Evaluate $\\lim_{x\\to0}\\ln(1+[$a]x)/([$b]x)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "a/b",
+      "feedback": [
+        {
+          "answer": "1/b",
+          "message": "The log derivative at zero is its inner coefficient."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(2*[$a])/(2*[$b])"
+      ],
+      "wrong": [
+        "1/[$b]"
+      ]
+    }
+  }
+}

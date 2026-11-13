@@ -1,0 +1,35 @@
+{
+  "title": "Total count in acetylene",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count connected pairs first.",
+    "Each extra bond order on the triple bond is pi.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The two C–H bonds and one C–C connection give three sigma bonds. The triple bond supplies two pi bonds.",
+  "exam": false,
+  "statement": "How many sigma and pi bonds are in $\\ce{HC#CH}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "3 sigma, 2 pi",
+        "5 sigma, 0 pi",
+        "1 sigma, 2 pi",
+        "2 sigma, 3 pi"
+      ],
+      "correct": 0,
+      "explanations": [
+        "All connections and both extra bonding interactions are included.",
+        "A triple bond is not three sigma bonds.",
+        "Two C–H sigma bonds were omitted.",
+        "The C–C triple bond contains one sigma connection."
+      ]
+    }
+  }
+}

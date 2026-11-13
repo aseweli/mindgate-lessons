@@ -1,0 +1,64 @@
+{
+  "title": "Rescale both step enthalpies",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Use the algebraic sum.",
+    "Both steps recur twice.",
+    "Keep the negative sign on the second step."
+  ],
+  "solution": "$q=2([$p]-[$q])$ kJ.",
+  "exam": false,
+  "vars": {
+    "p": {
+      "int": [
+        110,
+        210
+      ],
+      "step": 10
+    },
+    "q": {
+      "int": [
+        220,
+        420
+      ],
+      "step": 10
+    },
+    "right_value": {
+      "expr": "(2*p-2*q)"
+    },
+    "wrong_value": {
+      "expr": "(p-q)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] kJ"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] kJ"
+      ]
+    }
+  },
+  "statement": "A route to one mole of a product has step enthalpies $+[$p]$ and $-[$q]$ kJ. Find the total heat for $2.00$ mol of the product.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "2*(p-q)",
+      "units": "kJ",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((p-q))*1",
+          "message": "The quoted route is per mole, so both step heats double."
+        }
+      ]
+    }
+  }
+}

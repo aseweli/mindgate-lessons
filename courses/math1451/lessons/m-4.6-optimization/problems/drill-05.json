@@ -1,0 +1,43 @@
+{
+  "title": "Inscribed rectangle",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "If the upper right corner is $(x,12-x^2)$, the width is $2x$.",
+    "$A=24x-2x^3$, $0\\le x\\le\\sqrt{12}$.",
+    "The positive stationary input is 2."
+  ],
+  "solution": "$A^\\prime=24-6x^2$. Compare zero at the endpoints with $A(2)=32$.",
+  "statement": "A rectangle is symmetric about the $y$-axis, with its base on the $x$-axis and top corners on $y=12-x^2$. Find its maximum area.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "32",
+      "feedback": [
+        {
+          "answer": "16",
+          "message": "The positive stationary input is 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(32)/2"
+      ],
+      "wrong": [
+        "16"
+      ]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Draw CCl4",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count carbon and four chlorine contributions.",
+    "Place carbon centrally with four single bonds.",
+    "Add three lone pairs to each chlorine."
+  ],
+  "solution": "Four C–Cl bonds and twelve chlorine lone pairs exhaust the 32 valence electrons.",
+  "exam": false,
+  "statement": "Draw the Lewis structure for $\\ce{CCl4}$. Show all lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "CCl4",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "C",
+              "lp": 0
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              4,
+              1
+            ]
+          ]
+        }
+      ],
+      "allow": []
+    }
+  }
+}

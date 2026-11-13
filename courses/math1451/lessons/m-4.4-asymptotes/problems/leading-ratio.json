@@ -1,0 +1,56 @@
+{
+  "title": "Equal-degree end behavior",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        5
+      ]
+    },
+    "b": {
+      "int": [
+        6,
+        9
+      ]
+    }
+  },
+  "hints": [
+    "Compare the degrees.",
+    "Divide numerator and denominator by $x^2$.",
+    "The leading ratio keeps numerator over denominator."
+  ],
+  "solution": "$\\frac{[$a]+1/x^2}{[$b]-3/x^2}\\to[$a]/[$b]$.",
+  "statement": "Evaluate $\\lim_{x\\to-\\infty} ([$a]x^2+1)/([$b]x^2-3)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "a/b",
+      "feedback": [
+        {
+          "answer": "b/a",
+          "message": "The leading ratio keeps numerator over denominator."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(2*[$a])/(2*[$b])"
+      ],
+      "wrong": [
+        "[$b]/[$a]"
+      ]
+    }
+  }
+}

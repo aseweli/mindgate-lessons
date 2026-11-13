@@ -1,0 +1,56 @@
+{
+  "title": "Exponential difference quotient",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        7
+      ]
+    },
+    "b": {
+      "int": [
+        2,
+        7
+      ]
+    }
+  },
+  "hints": [
+    "Confirm $0/0$.",
+    "Differentiate top and bottom separately.",
+    "The numerator picks up its inner derivative $[$a]$."
+  ],
+  "solution": "The derivative quotient is $[$a]e^{[$a]x}/[$b]$, approaching $[$a]/[$b]$.",
+  "statement": "Evaluate $\\lim_{x\\to0}(e^{[$a]x}-1)/([$b]x)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "a/b",
+      "feedback": [
+        {
+          "answer": "1/b",
+          "message": "The numerator picks up its inner derivative $[$a]$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(2*[$a])/(2*[$b])"
+      ],
+      "wrong": [
+        "1/[$b]"
+      ]
+    }
+  }
+}

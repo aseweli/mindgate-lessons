@@ -1,0 +1,203 @@
+{
+  "id": "ch06-radiation-photons",
+  "title": "Electromagnetic waves and photons",
+  "short": "Light and photons",
+  "chapter": 6,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Convert wavelength, frequency and photon energy and predict when the photoelectric effect occurs.",
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Wavelength ($\\lambda$)",
+              "Distance between successive equivalent points in the wave."
+            ],
+            [
+              "Frequency ($\\nu$)",
+              "Cycles per second."
+            ],
+            [
+              "Work function",
+              "Minimum energy needed to eject an electron from the surface."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Wave relation",
+              "latex": "c=\\lambda\\nu",
+              "note": "Use wavelength in meters with c = 2.998 × 10⁸ m/s."
+            },
+            {
+              "label": "Photon energy",
+              "latex": "E=h\\nu=\\frac{hc}{\\lambda}",
+              "note": "Use h = 6.626 × 10⁻³⁴ J·s."
+            },
+            {
+              "label": "Photoelectric energy",
+              "latex": "KE_\\mathrm{max}=h\\nu-\\Phi",
+              "note": "For frequencies at or above threshold."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Convert nm before substituting. The photon energy sign is positive. At fixed frequency, increasing intensity does not increase energy per photon."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "Check whether the question asks for frequency, energy per photon, or energy per mole. Predict the order of magnitude before calculating."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "PYNSopwd1l4",
+          "title": "Photon energy from frequency or wavelength",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Write the unit conversion and use c/λ before applying Planck’s equation."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Wavelength to two outputs",
+          "problem": "Light has wavelength 500.0 nm. Find the frequency and energy per photon using the rounded lesson constants.",
+          "answer": "$5.996\\times10^{14}$ Hz and $3.973\\times10^{-19}$ J.",
+          "steps": [
+            {
+              "title": "Convert",
+              "md": "$500.0\\ \\mathrm{nm}=5.000\\times10^{-7}$ m.",
+              "why": "The speed is in meters per second."
+            },
+            {
+              "title": "Find frequency",
+              "md": "$\\nu=(2.998\\times10^8)/(5.000\\times10^{-7})$.",
+              "why": "Wavelength times frequency is speed."
+            },
+            {
+              "title": "Find energy",
+              "md": "Multiply $5.996\\times10^{14}$ Hz by $6.626\\times10^{-34}$ J·s.",
+              "why": "The time units cancel."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Metal threshold",
+          "problem": "A photon carries $5.10\\times10^{-19}$ J and the metal’s work function is $3.20\\times10^{-19}$ J.",
+          "answer": "$KE_\\mathrm{max}=1.90\\times10^{-19}$ J.",
+          "steps": [
+            {
+              "title": "Check threshold",
+              "md": "The photon energy exceeds the work function.",
+              "why": "The excess can become kinetic energy."
+            },
+            {
+              "title": "Subtract",
+              "md": "$5.10-3.20=1.90$ in units of $10^{-19}$ J.",
+              "why": "The work function is used in freeing the electron."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "frequency-nm",
+            "photon-energy",
+            "photoelectron",
+            "drill-01",
+            "drill-02",
+            "drill-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "Shorter wavelength at fixed c?",
+              "Higher frequency and photon energy."
+            ],
+            [
+              "Effect of intensity above threshold?",
+              "More incident photons per unit time at the same frequency."
+            ],
+            [
+              "Convert nm to m?",
+              "Multiply by $10^{-9}$."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Order the EM spectrum.",
+            "Convert wavelength to frequency and energy.",
+            "Separate threshold, intensity and kinetic energy."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "unit-check"
+          ]
+        }
+      ]
+    }
+  ]
+}

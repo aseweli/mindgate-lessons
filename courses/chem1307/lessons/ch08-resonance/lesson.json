@@ -1,0 +1,243 @@
+{
+  "id": "ch08-resonance",
+  "title": "Formal charge, resonance, and octet exceptions",
+  "short": "Formal charge and resonance",
+  "chapter": 8,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Calculate formal charges, compare resonance contributors, and recognize valid exceptions to octets.",
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "lewis_demo",
+          "title": "Lewis structure",
+          "formula": "NO3^-",
+          "structure": {
+            "atoms": [
+              {
+                "el": "N",
+                "lp": 0
+              },
+              {
+                "el": "O",
+                "lp": 2
+              },
+              {
+                "el": "O",
+                "lp": 3
+              },
+              {
+                "el": "O",
+                "lp": 3
+              }
+            ],
+            "bonds": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                1
+              ],
+              [
+                0,
+                3,
+                1
+              ]
+            ]
+          },
+          "caption": "One nitrate contributor has a double bond to one oxygen. Two other equivalent contributors place it on the other oxygen atoms."
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Formal charge",
+              "Valence minus the electrons assigned under equal sharing."
+            ],
+            [
+              "Resonance hybrid",
+              "The actual delocalized distribution described with several formal contributors."
+            ],
+            [
+              "Radical",
+              "Species with at least one unpaired electron."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Charge",
+              "latex": "FC=V-N_\\mathrm{nonbonding}-\\tfrac12N_\\mathrm{bonding}",
+              "note": "Include a lone single electron when present."
+            },
+            {
+              "label": "Equivalent bonds",
+              "latex": "\\overline B=\\frac{\\sum_j B_j}{\\text{number of equivalent contributors}}",
+              "note": "Average only when the contributors have equal weight."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Count nonbonding electrons, rather than lone pairs, in the charge formula. Keep the atoms fixed across resonance drawings. For B, P, or a radical check the actual electron budget."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "Check that proposed formal charges sum to the molecule or ion charge, then apply octets, charge size and electronegativity in that order."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "PeY_sihSh8E",
+          "title": "Lewis structures and formal charge",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Use the electron count to check the candidate contributors."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Formal charges in nitrate",
+          "problem": "Find formal charges in one contributor of $\\ce{NO3^-}$.",
+          "answer": "N is $+1$, the double-bonded O is 0, and each single-bonded O is $-1$.",
+          "steps": [
+            {
+              "title": "Compute N",
+              "md": "$5-0-4=+1$.",
+              "why": "N has total bond order four and no lone pair."
+            },
+            {
+              "title": "Compute O",
+              "md": "Double bond: $6-4-2=0$. Single bond: $6-6-1=-1$.",
+              "why": "Count one assigned electron per bonding pair."
+            },
+            {
+              "title": "Check",
+              "md": "$+1+0-1-1=-1$.",
+              "why": "The sum equals the ion charge."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Compare ozone contributors",
+          "problem": "What is the average O–O bond order in $\\ce{O3}$?",
+          "answer": "$1.5$ for both bonds.",
+          "steps": [
+            {
+              "title": "Draw the contributors",
+              "md": "Each has one single and one double bond, interchanged on the fixed three-O skeleton.",
+              "why": "The ends are equivalent."
+            },
+            {
+              "title": "Average",
+              "md": "$(1+2)/2=1.5$.",
+              "why": "Equivalent contributors have equal weight."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "draw-nitrate",
+            "draw-ozone",
+            "draw-bf3",
+            "draw-pcl5",
+            "drill-01",
+            "drill-02",
+            "drill-03",
+            "draw-no"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "What moves between resonance drawings?",
+              "Electron placement only."
+            ],
+            [
+              "Why can nitrate have fractional bond order?",
+              "Equivalent contributors distribute the double-bond character."
+            ],
+            [
+              "Which period can use expanded Lewis octets here?",
+              "Period 3 and heavier central atoms in suitable compounds."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Compute atom-by-atom formal charge.",
+            "Rank comparable contributors.",
+            "Recognize deficient, expanded and odd-electron structures."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "resonance-skeleton"
+          ]
+        }
+      ]
+    }
+  ]
+}

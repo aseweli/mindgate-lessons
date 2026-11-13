@@ -1,0 +1,57 @@
+{
+  "title": "Convert mass before calculating energy",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Kinetic energy is one-half mass times speed squared.",
+    "Convert grams to kilograms.",
+    "Square 4.00 before multiplying."
+  ],
+  "solution": "$KE=\\tfrac12([$m]/1000)(4.00)^2$ J.",
+  "exam": false,
+  "vars": {
+    "m": {
+      "int": [
+        120,
+        980
+      ],
+      "step": 10
+    },
+    "right_value": {
+      "expr": "(m*8/1000)"
+    },
+    "wrong_value": {
+      "expr": "(m*8)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] J"
+      ]
+    }
+  },
+  "statement": "A cart of mass $[$m]$ g moves at $4.00$ m/s. Find its kinetic energy.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "m/1000*16/2",
+      "units": "J",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((m*8))*1",
+          "message": "The SI mass in this equation is kg."
+        }
+      ]
+    }
+  }
+}

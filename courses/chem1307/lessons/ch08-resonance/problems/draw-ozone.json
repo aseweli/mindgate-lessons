@@ -1,0 +1,82 @@
+{
+  "title": "Draw O3",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count 18 electrons.",
+    "Use an O–O–O skeleton.",
+    "Convert one terminal lone pair into a second bonding pair."
+  ],
+  "solution": "The central oxygen has one lone pair and charge +1. The single-bonded terminal O has −1.",
+  "exam": false,
+  "statement": "Draw the Lewis structure for $\\ce{O3}$. Show all lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "O3",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "O",
+              "lp": 1
+            },
+            {
+              "el": "O",
+              "lp": 2
+            },
+            {
+              "el": "O",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "el": "O",
+              "lp": 1
+            },
+            {
+              "el": "O",
+              "lp": 3
+            },
+            {
+              "el": "O",
+              "lp": 2
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "allow": []
+    }
+  }
+}

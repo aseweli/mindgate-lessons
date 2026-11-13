@@ -1,0 +1,43 @@
+{
+  "title": "Scale a small-angle limit",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Look for $\\sin u/u$.",
+    "Choose $u=7x$.",
+    "The leftover factor is $7/2$."
+  ],
+  "solution": "$\\sin(7x)/(2x)=(7/2)(\\sin(7x)/(7x))\\to7/2$.",
+  "statement": "Evaluate $\\lim_{x\\to0}\\sin(7x)/(2x)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "7/2",
+      "feedback": [
+        {
+          "answer": "1/2",
+          "message": "The leftover factor is $7/2$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(7/2)/2"
+      ],
+      "wrong": [
+        "1/2"
+      ]
+    }
+  }
+}

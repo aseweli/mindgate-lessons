@@ -1,0 +1,56 @@
+{
+  "title": "Scale two small-angle limits",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        5
+      ]
+    },
+    "b": {
+      "int": [
+        6,
+        10
+      ]
+    }
+  },
+  "hints": [
+    "Introduce two $\\sin u/u$ factors.",
+    "Factor the ratio of the inner coefficients.",
+    "Both normalized sine factors tend to 1."
+  ],
+  "solution": "Write the quotient as $\\frac{[$a]}{[$b]}\\frac{\\sin([$a]x)/([$a]x)}{\\sin([$b]x)/([$b]x)}$. Its limit is $[$a]/[$b]$.",
+  "statement": "Evaluate $\\lim_{x\\to0}\\sin([$a]x)/\\sin([$b]x)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "a/b",
+      "feedback": [
+        {
+          "answer": "b/a",
+          "message": "Both normalized sine factors tend to 1."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(3*[$a])/(3*[$b])"
+      ],
+      "wrong": [
+        "[$b]/[$a]"
+      ]
+    }
+  }
+}

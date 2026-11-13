@@ -1,0 +1,211 @@
+{
+  "id": "ch05-calorimetry",
+  "title": "Heat capacity, heating curves, and calorimetry",
+  "short": "Calorimetry",
+  "chapter": 5,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Calculate heat, equilibrium temperature, phase-change energy, and reaction heat in coffee-cup or bomb calorimetry.",
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "heating-curve.svg",
+          "alt": "A rising line for warming a solid, a horizontal melting plateau, a rising liquid line, a horizontal boiling plateau, and a final rising gas line.",
+          "caption": "Schematic for a pure substance at fixed pressure. Use $mc\\Delta T$ on sloped segments and $n\\Delta H$ on plateaus. The segment lengths are illustrative.",
+          "width": 680
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Specific heat",
+              "Heat required per gram per degree."
+            ],
+            [
+              "Thermal equilibrium",
+              "Bodies have the same temperature with no net heat transfer."
+            ],
+            [
+              "Heat capacity",
+              "Heat required per degree for the whole object."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Same phase",
+              "latex": "q=mc(T_f-T_i)",
+              "note": "Use signed temperature changes."
+            },
+            {
+              "label": "Phase transition",
+              "latex": "q=n\\Delta H_\\mathrm{fus/vap}",
+              "note": "Reverse sign for freezing or condensation."
+            },
+            {
+              "label": "Energy balance",
+              "latex": "\\sum_i q_i=0",
+              "note": "Include the reaction and any calorimeter heat within the insulated setup."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Use $T_f-T_i$. Do not insert phase-change energy in $mc\\Delta T$. Check whether the heat capacity is total or per gram. A warming solution means negative reaction heat."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "Expect a supplied specific heat, calorimeter constant, or phase-change enthalpy in a numerical question. Track J and kJ and whether the answer is per mole."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "ePm_N6RgLfk",
+          "title": "Specific heat and calorimetry",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Write the temperature change for each object with its sign."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Warm and melt a sample",
+          "problem": "Heat 18.0 g ice from $-10.0^\\circ$C to liquid at $0^\\circ$C. Use $c_\\mathrm{ice}=2.09$ J/(g·K), $M=18.0$ g/mol and $\\Delta H_\\mathrm{fus}=6.01$ kJ/mol.",
+          "answer": "$6.39$ kJ.",
+          "steps": [
+            {
+              "title": "Warm solid",
+              "md": "$q_1=(18.0)(2.09)(10.0)=376$ J.",
+              "why": "This stage changes temperature without changing phase."
+            },
+            {
+              "title": "Melt",
+              "md": "$q_2=(18.0/18.0)(6.01)=6.01$ kJ.",
+              "why": "Fusion occurs at constant temperature."
+            },
+            {
+              "title": "Add",
+              "md": "$q=0.376+6.01=6.39$ kJ.",
+              "why": "Convert the first stage to kJ."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Bomb calibration applied to a sample",
+          "problem": "Burn 0.0500 mol of fuel in a bomb with heat capacity 8.20 kJ/K. Its temperature rises by 2.40 K.",
+          "answer": "$\\Delta E=-394$ kJ/mol.",
+          "steps": [
+            {
+              "title": "Calorimeter",
+              "md": "$q_\\mathrm{cal}=(8.20)(2.40)=19.68$ kJ.",
+              "why": "The assembly absorbs heat."
+            },
+            {
+              "title": "Reaction",
+              "md": "$q_v=-19.68$ kJ for the sample; divide by 0.0500 mol.",
+              "why": "Energy transfers have opposite signs and the volume is fixed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "water-heats",
+            "coffee-cup",
+            "melt",
+            "drill-01",
+            "drill-02",
+            "drill-03",
+            "coffee-moles"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "What changes on a phase plateau?",
+              "Phase composition changes while temperature stays fixed."
+            ],
+            [
+              "Which heat sign warms water?",
+              "Positive for the water."
+            ],
+            [
+              "What does a bomb measure?",
+              "Constant-volume heat, equal to the reaction internal energy change with no other work."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Build an energy balance.",
+            "Separate phase changes from temperature changes.",
+            "Convert sample heat to molar heat."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "phase-energy"
+          ]
+        }
+      ]
+    }
+  ]
+}

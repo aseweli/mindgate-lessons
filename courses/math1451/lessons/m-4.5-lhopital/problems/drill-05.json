@@ -1,0 +1,43 @@
+{
+  "title": "Infinity minus infinity",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Combine fractions.",
+    "The combined numerator is $x^2$.",
+    "Cancel the common powers of $x$."
+  ],
+  "solution": "$\\frac{x^2}{x(x+x^2)}=\\frac1{1+x}\\to1$.",
+  "statement": "Evaluate $\\lim_{x\\to0^+}(1/x-1/(x+x^2))$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "1",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Cancel the common powers of $x$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(1)/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

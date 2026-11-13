@@ -1,0 +1,43 @@
+{
+  "title": "Decode a partition",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Read the width $3/n$.",
+    "The first interval starts at 1.",
+    "The length is 3, so add it to the starting point."
+  ],
+  "solution": "$x_i=1+3i/n$. The integral is $\\int_1^4\\sqrt{x}\\,dx$.",
+  "statement": "The sum $\\sum_{i=1}^n (3/n)\\sqrt{1+3i/n}$ uses right endpoints. Give the upper limit of integration of its limiting integral of $\\sqrt{x}$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "4",
+      "feedback": [
+        {
+          "answer": "3",
+          "message": "The length is 3, so add it to the starting point."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(4)/2"
+      ],
+      "wrong": [
+        "3"
+      ]
+    }
+  }
+}

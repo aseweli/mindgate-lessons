@@ -1,0 +1,35 @@
+{
+  "title": "p orbital capacity",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Distinguish orbital from subshell.",
+    "Apply Pauli.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Pauli allows two per orbital with opposite spins.",
+  "exam": false,
+  "statement": "How many electrons can occupy one 3p orbital?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2",
+        "6",
+        "3",
+        "18"
+      ],
+      "correct": 0,
+      "explanations": [
+        "One orbital has two allowed spin states.",
+        "This is the whole p subshell capacity.",
+        "This counts the p orbitals.",
+        "This is the n=3 shell capacity."
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Signed displacement",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        4,
+        10
+      ]
+    }
+  },
+  "hints": [
+    "Displacement is final minus initial.",
+    "Use position, even if the particle reversed.",
+    "Subtract $s(0)$ from $s(2)$."
+  ],
+  "solution": "$s(2)-s(0)=4-2\\cdot[$a]$.",
+  "statement": "For $s(t)=t^2-[$a]t$, find displacement from $t=0$ to $t=2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "4-2*a",
+      "feedback": [
+        {
+          "answer": "2*a-4",
+          "message": "Subtract $s(0)$ from $s(2)$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2^2-2*[$a]"
+      ],
+      "wrong": [
+        "2*[$a]-4"
+      ]
+    }
+  }
+}

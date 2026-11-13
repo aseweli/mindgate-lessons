@@ -1,0 +1,43 @@
+{
+  "title": "Bounds from heights",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use the largest height.",
+    "The interval length is 5.",
+    "The constant function $f=6$ attains the bound."
+  ],
+  "solution": "$\\int f\\le6(4-(-1))=30$, and the constant upper bound attains equality.",
+  "statement": "Given $2\\le f(x)\\le6$ on $[-1,4]$ and $f$ is integrable, find the largest possible $\\int_{-1}^4 f$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "30",
+      "feedback": [
+        {
+          "answer": "24",
+          "message": "The constant function $f=6$ attains the bound."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(30)/2"
+      ],
+      "wrong": [
+        "24"
+      ]
+    }
+  }
+}

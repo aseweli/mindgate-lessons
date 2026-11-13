@@ -1,0 +1,34 @@
+{
+  "title": "Shortest oxygen bond",
+  "difficulty": 5,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Compare the π* counts.",
+    "Choose the largest bond order.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$\\ce{O2+}$ has the largest predicted order, 2.5, compared with 2, 1.5 and 1 for the other choices.",
+  "statement": "Which related species is predicted to have the shortest O–O bond?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "O₂⁺",
+        "O₂",
+        "O₂⁻",
+        "O₂²⁻"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Fewer π* electrons give the highest order.",
+        "It still has two π* electrons.",
+        "Its additional π* electron lowers order.",
+        "Its fully occupied π* set gives the lowest order."
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Identify the frequency relation",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Speed stays fixed.",
+    "Relate energy directly to frequency.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$\\nu=c/\\lambda$ and $E=h\\nu$, so both quantities are halved.",
+  "exam": false,
+  "statement": "If wavelength in vacuum is doubled, what happens to frequency and photon energy?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Both halve.",
+        "Frequency doubles and energy halves.",
+        "Both double.",
+        "Frequency halves and energy stays constant."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Both are inversely proportional to wavelength.",
+        "Energy and frequency change together.",
+        "This reverses the wavelength dependence.",
+        "The photon energy depends on frequency."
+      ]
+    }
+  }
+}

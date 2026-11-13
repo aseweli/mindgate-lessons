@@ -1,0 +1,58 @@
+{
+  "title": "Work by a gas at fixed external pressure",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Use the external pressure.",
+    "Expansion has positive volume change.",
+    "Convert L·atm into joules."
+  ],
+  "solution": "$w=-P_\\mathrm{ext}\\Delta V=-(2.00)([$v])$ L·atm; multiply by 101.325 J per L·atm.",
+  "exam": false,
+  "vars": {
+    "v": {
+      "pick": [
+        1.25,
+        2.25,
+        3.25,
+        4.25
+      ]
+    },
+    "right_value": {
+      "expr": "(-2*v*101.325)"
+    },
+    "wrong_value": {
+      "expr": "(2*v*101.325)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] J"
+      ]
+    }
+  },
+  "statement": "A gas expands by $[$v]$ L against $2.00$ atm. Enter the signed work. Use $1\\ \\mathrm{L\\cdot atm}=101.325\\ \\mathrm J$.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "-2*v*101.325",
+      "units": "J",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((2*v*101.325))*1",
+          "message": "Expansion transfers work out of the system."
+        }
+      ]
+    }
+  }
+}

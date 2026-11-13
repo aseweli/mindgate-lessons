@@ -1,0 +1,64 @@
+{
+  "title": "Heat enters while work leaves",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Heat is entering.",
+    "Work done by the system carries a negative sign.",
+    "Compute q+w."
+  ],
+  "solution": "$q=+[$h]$ J and $w=-[$w]$ J, so $\\Delta E=([$h]-[$w])$ J.",
+  "exam": false,
+  "vars": {
+    "h": {
+      "int": [
+        350,
+        850
+      ],
+      "step": 25
+    },
+    "w": {
+      "int": [
+        100,
+        250
+      ],
+      "step": 25
+    },
+    "right_value": {
+      "expr": "(h-w)"
+    },
+    "wrong_value": {
+      "expr": "(h+w)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] J"
+      ]
+    }
+  },
+  "statement": "A system absorbs $[$h]$ J of heat and does $[$w]$ J of work. Find $\\Delta E$.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "h-w",
+      "units": "J",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((h+w))*1",
+          "message": "Work done by the system is negative."
+        }
+      ]
+    }
+  }
+}

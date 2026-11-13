@@ -1,0 +1,53 @@
+{
+  "title": "Compute a radial-node count",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "p corresponds to ℓ=1.",
+    "Angular nodes count as one.",
+    "Subtract that angular node from the total n−1."
+  ],
+  "solution": "Radial nodes $=[$n]-\\ell-1=[$n]-2$.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "int": [
+        4,
+        7
+      ]
+    },
+    "right_count": {
+      "expr": "n-2"
+    },
+    "wrong_count": {
+      "expr": "n-1"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_count]"
+      ],
+      "wrong": [
+        "[$wrong_count]"
+      ]
+    }
+  },
+  "statement": "How many radial nodes does a $[$n]p$ hydrogen-like orbital have?\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "n-2",
+      "feedback": [
+        {
+          "answer": "n-1",
+          "message": "Subtract that angular node from the total n−1."
+        }
+      ]
+    }
+  }
+}

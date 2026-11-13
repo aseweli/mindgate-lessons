@@ -1,0 +1,35 @@
+{
+  "title": "State versus path",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Imagine two routes between the same states.",
+    "Ask whether the measured quantity can depend on the route.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$\\Delta E$ depends solely on the initial and final states. Heat and work can change if the path changes.",
+  "exam": false,
+  "statement": "Which listed quantity is a state function?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$\\Delta E$",
+        "$q$",
+        "$w$",
+        "$\\Delta V$ integrated against varying $P_\\mathrm{ext}$ to obtain work"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Internal energy is a state function.",
+        "Heat transfer depends on the path.",
+        "Work depends on the path.",
+        "Different external pressures along paths alter the work."
+      ]
+    }
+  }
+}

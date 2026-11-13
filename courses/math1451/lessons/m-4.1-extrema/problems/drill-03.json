@@ -1,0 +1,43 @@
+{
+  "title": "Stationary point outside the interval",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check the allowed interval.",
+    "The stationary point is outside $[0,4]$.",
+    "Compare only legal candidates."
+  ],
+  "solution": "$f(0)=36$ and $f(4)=4$. There are no interior critical points.",
+  "statement": "Find the absolute minimum value of $(x-6)^2$ on $[0,4]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "4",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Compare only legal candidates."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(4)/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

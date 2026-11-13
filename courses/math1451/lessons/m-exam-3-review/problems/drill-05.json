@@ -1,0 +1,43 @@
+{
+  "title": "Maximum fencing area",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Let $x$ be the perpendicular width.",
+    "$A=x(60-2x)$ on $[0,30]$.",
+    "The endpoints give zero area."
+  ],
+  "solution": "$A^\\prime=60-4x$ gives $x=15$. The length is 30 and the area is 450.",
+  "statement": "A 60-m fence encloses a rectangle against a wall, so one side needs no fence. Find the maximum area in m$^2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "450",
+      "feedback": [
+        {
+          "answer": "900",
+          "message": "The endpoints give zero area."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(450)/2"
+      ],
+      "wrong": [
+        "900"
+      ]
+    }
+  }
+}

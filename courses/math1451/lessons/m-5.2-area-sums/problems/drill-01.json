@@ -1,0 +1,43 @@
+{
+  "title": "Left rectangles",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Compute the width.",
+    "Left samples are 0, 2, and 4.",
+    "Multiply the sum of squared samples by 2."
+  ],
+  "solution": "$L_3=2(0^2+2^2+4^2)=40$.",
+  "statement": "Find $L_3$ for $x^2$ on $[0,6]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "40",
+      "feedback": [
+        {
+          "answer": "112",
+          "message": "Multiply the sum of squared samples by 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(40)/2"
+      ],
+      "wrong": [
+        "112"
+      ]
+    }
+  }
+}

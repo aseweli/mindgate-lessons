@@ -1,0 +1,34 @@
+{
+  "title": "Cancel dipoles despite lone pairs",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count six domains around Xe.",
+    "Place the lone pairs opposite each other.",
+    "Add the dipoles of the four remaining bonds."
+  ],
+  "solution": "$\\ce{XeF4}$ is $AX_4E_2$, with an octahedral domain arrangement and a square-planar molecular shape. Opposite dipoles cancel.",
+  "statement": "Which geometry and polarity correctly describe $\\ce{XeF4}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Square planar and nonpolar",
+        "Square planar and polar",
+        "Tetrahedral and nonpolar",
+        "Seesaw and polar"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The four identical Xe–F bond vectors cancel in opposing pairs.",
+        "Having lone pairs does not prevent symmetry in the occupied directions.",
+        "Six electron domains give an octahedral parent.",
+        "Seesaw has five domains and one lone pair."
+      ]
+    }
+  }
+}

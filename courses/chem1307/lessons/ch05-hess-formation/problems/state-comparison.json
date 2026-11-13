@@ -1,0 +1,34 @@
+{
+  "title": "Phase change and formation enthalpy",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Write the condensation direction.",
+    "The gas is the reactant and the liquid is the product.",
+    "Subtract the gas value from the liquid value."
+  ],
+  "solution": "$\\ce{H2O(g) -> H2O(l)}$ has $\\Delta H^\\circ=\\Delta H_f^\\circ(\\mathrm{liquid})-\\Delta H_f^\\circ(\\mathrm{gas})<0$.",
+  "statement": "If $\\Delta H_f^\\circ$ of $\\ce{H2O(l)}$ is more negative than that of $\\ce{H2O(g)}$ at the same temperature, what follows?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$\\Delta H^\\circ$ for condensation is negative.",
+        "$\\Delta H^\\circ$ for vaporization is negative.",
+        "$\\Delta H^\\circ$ for condensation is zero.",
+        "$\\Delta H_f^\\circ$ of water is zero in both phases."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Liquid minus gas is negative.",
+        "Gas minus liquid is positive.",
+        "The phases have different enthalpies.",
+        "Water is a compound."
+      ]
+    }
+  }
+}

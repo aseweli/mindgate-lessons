@@ -1,0 +1,58 @@
+{
+  "title": "Atomic energy change for a downward transition",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "The final level is n=2.",
+    "Subtract initial energy from final energy.",
+    "The result is negative for emission."
+  ],
+  "solution": "$\\Delta E=-2.179\\times10^{-18}(1/2^2-1/[$n]^2)$ J.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "int": [
+        3,
+        8
+      ]
+    },
+    "right_value": {
+      "expr": "(-2.179*10^-18*(1/4-1/n^2))"
+    },
+    "wrong_value": {
+      "expr": "(2.179*10^-18*(1/4-1/n^2))"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] J"
+      ]
+    }
+  },
+  "statement": "For hydrogen, calculate $\\Delta E_\\mathrm{atom}$ for $n=[$n]\\to2$. Use $2.179\\times10^{-18}$ J for the Bohr energy coefficient.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "-2.179*10^-18*(1/4-1/n^2)",
+      "units": "J",
+      "sigfigs": 4,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((2.179*10^-18*(1/4-1/n^2)))*1",
+          "message": "That is the emitted photon energy; the question asks for the atom’s signed change."
+        }
+      ],
+      "tol_type": "absolute",
+      "tol": 5e-22
+    }
+  }
+}

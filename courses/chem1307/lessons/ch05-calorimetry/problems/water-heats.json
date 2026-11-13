@@ -1,0 +1,65 @@
+{
+  "title": "Specific heat with a randomized sample",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "The water stays in one phase.",
+    "Use q=mcΔT.",
+    "A rise has a positive sign."
+  ],
+  "solution": "$q=([$m]\\ \\mathrm g)(4.184\\ \\mathrm{J/(g\\,K)})([$t]\\ \\mathrm K)$.",
+  "exam": false,
+  "vars": {
+    "m": {
+      "int": [
+        120,
+        280
+      ],
+      "step": 10
+    },
+    "t": {
+      "pick": [
+        2.25,
+        3.45,
+        4.25,
+        5.15
+      ]
+    },
+    "right_value": {
+      "expr": "(m*4.184*t)"
+    },
+    "wrong_value": {
+      "expr": "(-m*4.184*t)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] J"
+      ]
+    }
+  },
+  "statement": "Water of mass $[$m]$ g warms by $[$t]$ K. Use $c=4.184$ J/(g·K). Find the heat absorbed.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "m*4.184*t",
+      "units": "J",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((-m*4.184*t))*1",
+          "message": "The water absorbs heat."
+        }
+      ]
+    }
+  }
+}

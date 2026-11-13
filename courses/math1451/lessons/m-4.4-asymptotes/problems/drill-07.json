@@ -1,0 +1,43 @@
+{
+  "title": "Find the remaining pole",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Factor $x^2-9$.",
+    "The reduced formula is $1/(x+3)$.",
+    "The pole is the exclusion still in the denominator."
+  ],
+  "solution": "$x=3$ is a hole, and $x=-3$ is a vertical asymptote.",
+  "statement": "Give the input of the vertical asymptote of $(x^2-9)/((x-3)(x+3)^2)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-3",
+      "feedback": [
+        {
+          "answer": "3",
+          "message": "The pole is the exclusion still in the denominator."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-3)/2"
+      ],
+      "wrong": [
+        "3"
+      ]
+    }
+  }
+}

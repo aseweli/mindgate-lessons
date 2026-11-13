@@ -1,0 +1,34 @@
+{
+  "title": "Match bond length and strength",
+  "difficulty": 5,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Control for the bonded elements.",
+    "Think of more shared electron density between the nuclei.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Increasing order increases typical bond strength and decreases typical length in this same-element series.",
+  "statement": "Which qualitative trend is expected for C–C, C=C and C≡C in comparable compounds?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Increasing order usually shortens and strengthens the bond.",
+        "Increasing order lengthens and weakens the bond.",
+        "Increasing order shortens and weakens the bond.",
+        "Increasing order lengthens and strengthens the bond."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Both comparisons apply to similar C–C bonds.",
+        "Both trends are reversed.",
+        "Higher order usually also strengthens it.",
+        "The expected length trend is reversed."
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Order first ionization energy within a group",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "These are all alkali metals.",
+    "The outer electron occupies a larger shell farther down.",
+    "It is easier to remove with increased distance and shielding."
+  ],
+  "solution": "K < Na < Li in first ionization energy.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "K < Na < Li"
+      ],
+      "wrong": [
+        "Li < Na < K"
+      ]
+    }
+  },
+  "statement": "Order increasing first ionization energy for K, Li and Na.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "order",
+      "items": [
+        "K",
+        "Na",
+        "Li"
+      ]
+    }
+  }
+}

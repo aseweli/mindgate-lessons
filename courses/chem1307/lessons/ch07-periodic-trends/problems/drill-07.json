@@ -1,0 +1,34 @@
+{
+  "title": "Group trend explanation",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Find their group.",
+    "Compare outer electron patterns.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Both have outer ns²np⁴ valence configurations. Gaining two electrons fills the outer p subshell.",
+  "statement": "Why do oxygen and sulfur often form analogous 2− monatomic ions?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Both have ns²np⁴ outer configurations.",
+        "They have the same number of core electrons.",
+        "They have identical atomic radii.",
+        "They both have filled p valence subshells as neutral atoms."
+      ],
+      "correct": 0,
+      "explanations": [
+        "This gives the same two-electron deficit in the outer p subshell.",
+        "The inner configurations differ.",
+        "They occupy different principal shells.",
+        "Their neutral outer p subshell is p⁴."
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Photon wavelength comparison",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Shortest wavelength means largest photon energy.",
+    "Look for the widest level separation.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Compare gaps in $1/n^2$: $4\\to1$ has the largest listed gap.",
+  "exam": false,
+  "statement": "Which hydrogen emission has the shortest wavelength?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$4\\to1$",
+        "$3\\to1$",
+        "$4\\to2$",
+        "$4\\to3$"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Largest gap gives shortest wavelength.",
+        "The upper level is lower than 4.",
+        "Ending at 2 releases less energy than ending at 1.",
+        "This gap is small."
+      ]
+    }
+  }
+}

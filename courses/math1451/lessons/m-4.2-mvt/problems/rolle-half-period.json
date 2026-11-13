@@ -1,0 +1,50 @@
+{
+  "title": "Rolle for a scaled sine",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "k": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Sine is smooth and its endpoint values match.",
+    "The derivative has the same zeros as $\\cos(kx)$.",
+    "Take $kx=\\pi/2$ in the open interval."
+  ],
+  "solution": "$f^\\prime=[$k]\\cos([$k]x)$, so $[$k]c=\\pi/2$ and $c=\\pi/(2\\cdot[$k])$.",
+  "statement": "For $f(x)=\\sin([$k]x)$ on $[0,\\pi/[$k]]$, find the Rolle point.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "pi/(2*k)",
+      "feedback": [
+        {
+          "answer": "pi/k",
+          "message": "Take $kx=\\pi/2$ in the open interval."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(pi/2)/[$k]"
+      ],
+      "wrong": [
+        "pi/[$k]"
+      ]
+    }
+  }
+}

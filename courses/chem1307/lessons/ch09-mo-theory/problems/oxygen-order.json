@@ -1,0 +1,37 @@
+{
+  "title": "Rank oxygen species by increasing bond order",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Check which orbital receives or loses the extra electron.",
+    "It is an antibonding π* orbital.",
+    "Adding lowers bond order; removing raises it."
+  ],
+  "solution": "O2− has order 1.5, O2 has order 2, O2+ has order 2.5.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "O2− < O2 < O2+"
+      ],
+      "wrong": [
+        "O2+ < O2 < O2−"
+      ]
+    }
+  },
+  "statement": "Order O2+, O2 and O2− from smallest to largest bond order.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "order",
+      "items": [
+        "O2−",
+        "O2",
+        "O2+"
+      ]
+    }
+  }
+}

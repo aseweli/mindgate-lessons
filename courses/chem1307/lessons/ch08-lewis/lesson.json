@@ -1,0 +1,229 @@
+{
+  "id": "ch08-lewis",
+  "title": "Ionic and covalent bonding, Lewis structures",
+  "short": "Lewis structures",
+  "chapter": 8,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Recognize bonding models and draw atoms, molecules and polyatomic ions with correct electron counts.",
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "lewis_demo",
+          "title": "Lewis structure",
+          "formula": "CO2",
+          "structure": {
+            "atoms": [
+              {
+                "el": "C",
+                "lp": 0
+              },
+              {
+                "el": "O",
+                "lp": 2
+              },
+              {
+                "el": "O",
+                "lp": 2
+              }
+            ],
+            "bonds": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                2
+              ]
+            ]
+          },
+          "caption": "Two C=O bonds and two lone pairs on each oxygen give the full 16-electron budget."
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Ionic lattice",
+              "Extended array of attracting positive and negative ions."
+            ],
+            [
+              "Bonding pair",
+              "Two electrons shown as a Lewis bond."
+            ],
+            [
+              "Lone pair",
+              "Two valence electrons assigned to one atom."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Coulomb magnitude",
+              "latex": "|F|=k\\frac{|q_1q_2|}{r^2}",
+              "note": "Opposite signs attract."
+            },
+            {
+              "label": "Valence budget",
+              "latex": "N_\\mathrm{valence}=\\sum_i N_i-\\text{signed charge}",
+              "note": "Add electrons for an anion."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Count the charge before drawing. A multiple bond reuses a lone pair. Hydrogen gets two electrons and is terminal. One structure does not show three-dimensional geometry by itself."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "Count every electron pair in a proposed drawing before deciding whether a formal-charge or geometric choice makes sense."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "xhItoqhHoEE",
+          "title": "Lewis symbols for ionic compounds",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Compare the electron counts before and after ions form."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "A molecule with two multiple bonds",
+          "problem": "Draw $\\ce{CO2}$.",
+          "answer": "$\\ce{O=C=O}$ with two lone pairs on each O.",
+          "steps": [
+            {
+              "title": "Count and connect",
+              "md": "$4+2(6)=16$ valence electrons. Start O–C–O.",
+              "why": "Carbon is the central atom and oxygen is terminal."
+            },
+            {
+              "title": "Improve both sides",
+              "md": "After placing terminal lone pairs, convert one pair on each O into another bond.",
+              "why": "Two double bonds complete the carbon octet and give zero formal charges."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "A polyatomic cation",
+          "problem": "Draw $\\ce{NH4+}$.",
+          "answer": "Four N–H single bonds and no N lone pair.",
+          "steps": [
+            {
+              "title": "Count",
+              "md": "$5+4(1)-1=8$ valence electrons.",
+              "why": "Positive charge subtracts one electron."
+            },
+            {
+              "title": "Use the budget",
+              "md": "Place all eight electrons in the four single bonds.",
+              "why": "N has an octet, each H a duet, and N carries formal charge +1."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "draw-co2",
+            "draw-nh4",
+            "draw-hcn",
+            "draw-of2",
+            "drill-01",
+            "drill-02",
+            "drill-03",
+            "draw-ccl4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "How many electrons does one bond line represent?",
+              "Two."
+            ],
+            [
+              "How does an anion affect the count?",
+              "Add electrons equal to the magnitude of negative charge."
+            ],
+            [
+              "Why does molten salt conduct?",
+              "Its charged ions can move."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Explain ionic lattice bonding and bulk properties.",
+            "Count valence electrons with ion charges.",
+            "Draw multiple bonds and complete octets."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "polyatomic-budget"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Unpaired sulfur electrons",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Draw three p orbital boxes.",
+    "Fill singles before pairing.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Sulfur is $3p^4$. Three single occupations fill the p boxes first and one then pairs, leaving two singles.",
+  "statement": "How many unpaired electrons does the isolated ground-state sulfur atom have?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2",
+        "0",
+        "4",
+        "1"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Two boxes remain singly occupied.",
+        "This would require pairing too early.",
+        "There are only three p orbitals.",
+        "The p⁴ pattern has one pair and two singles."
+      ]
+    }
+  }
+}

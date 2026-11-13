@@ -1,0 +1,43 @@
+{
+  "title": "Open cylinder",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use one cap and a lateral wall.",
+    "$S=\\pi r^2+64\\pi/r$.",
+    "Set $2r-64/r^2=0$."
+  ],
+  "solution": "$S^\\prime=2\\pi(r^3-32)/r^2$, negative below $r=\\sqrt[3]{32}$ and positive above. Thus $r=2\\sqrt[3]{4}$.",
+  "statement": "An open-top cylinder holds $32\\pi$ cm$^3$. Find the radius minimizing material in cm.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "4^(1/3)*2",
+      "feedback": [
+        {
+          "answer": "4",
+          "message": "Set $2r-64/r^2=0$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(4^(1/3)*2)/2"
+      ],
+      "wrong": [
+        "4"
+      ]
+    }
+  }
+}

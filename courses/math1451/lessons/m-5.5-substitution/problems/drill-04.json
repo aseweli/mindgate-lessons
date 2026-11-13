@@ -1,0 +1,43 @@
+{
+  "title": "Exponential with descending bounds",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Choose $u=1-x$.",
+    "Bounds in $u$ are 1 then 0.",
+    "The differential contributes a minus sign."
+  ],
+  "solution": "$-\\int_1^0e^u\\,du=\\int_0^1e^u\\,du=e-1$.",
+  "statement": "Evaluate $\\int_0^1 e^{1-x}\\,dx$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "e-1",
+      "feedback": [
+        {
+          "answer": "1-e",
+          "message": "The differential contributes a minus sign."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(e-1)/2"
+      ],
+      "wrong": [
+        "1-e"
+      ]
+    }
+  }
+}

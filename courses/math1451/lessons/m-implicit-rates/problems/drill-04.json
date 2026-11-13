@@ -1,0 +1,45 @@
+{
+  "title": "Logarithmic differentiation",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Take natural logs.",
+    "$\\ln y=2x\\ln x$.",
+    "Differentiate the product and multiply by $y$."
+  ],
+  "solution": "$y^\\prime/y=2\\ln x+2$, so $y^\\prime=x^{2x}(2\\ln x+2)$.",
+  "statement": "Differentiate $x^{2x}$ for $x>0$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "x^(2*x)*(2*ln(x)+2)",
+      "feedback": [
+        {
+          "answer": "2*x^(2*x)/x",
+          "message": "Differentiate the product and multiply by $y$."
+        }
+      ],
+      "vars": {
+        "x": [
+          0.5,
+          2
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(x^(2*x)*(2*ln(x)+2)) + x - x"
+      ],
+      "wrong": [
+        "2*x^(2*x)/x"
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "title": "Differentiate a power times an exponential",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "n": {
+      "int": [
+        2,
+        5
+      ]
+    }
+  },
+  "hints": [
+    "Use the product rule.",
+    "Differentiate the power in the first term.",
+    "Add the original power times the exponential derivative."
+  ],
+  "solution": "$f^\\prime=[$n]x^{[$n]-1}e^x+x^{[$n]}e^x$. Factor $e^x$ if desired.",
+  "statement": "Differentiate $x^{[$n]}e^x$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "exp(x)*(n*x^(n-1)+x^n)",
+      "feedback": [
+        {
+          "answer": "n*x^(n-1)*exp(x)",
+          "message": "Add the original power times the exponential derivative."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$n]*x^([$n]-1)*exp(x)+x^[$n]*exp(x)"
+      ],
+      "wrong": [
+        "[$n]*x^([$n]-1)*exp(x)"
+      ]
+    }
+  }
+}

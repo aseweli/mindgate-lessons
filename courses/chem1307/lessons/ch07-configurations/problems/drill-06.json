@@ -1,0 +1,34 @@
+{
+  "title": "Configurations and magnetism",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Remove 4s before 3d.",
+    "Find an ion with only filled subshells.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$\\ce{Zn^2+}$ has $[\\mathrm{Ar}]3d^{10}$, with all electrons paired.",
+  "statement": "Which isolated ion is diamagnetic?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$\\ce{Zn^2+}$",
+        "$\\ce{Cu^2+}$",
+        "$\\ce{Fe^3+}$",
+        "$\\ce{Ti^3+}$"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The 3d subshell is full.",
+        "3d⁹ has one unpaired electron.",
+        "3d⁵ has five unpaired electrons in the isolated ion.",
+        "3d¹ has one unpaired electron."
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Odd cancellation",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check parity.",
+    "Both terms are odd.",
+    "Values at opposite inputs cancel."
+  ],
+  "solution": "$f(-x)=-f(x)$, so the negative and positive halves cancel on the symmetric interval.",
+  "statement": "Compute $\\int_{-2}^2 (x^5+\\sin x)\\,dx$ using symmetry.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "0",
+      "feedback": [
+        {
+          "answer": "2",
+          "message": "Values at opposite inputs cancel."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(0)/2"
+      ],
+      "wrong": [
+        "2"
+      ]
+    }
+  }
+}

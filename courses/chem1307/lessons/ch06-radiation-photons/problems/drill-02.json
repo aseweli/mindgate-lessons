@@ -1,0 +1,35 @@
+{
+  "title": "Visible light",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Use the order red to violet.",
+    "Energy increases with frequency.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Violet has the highest frequency among the listed visible colors.",
+  "exam": false,
+  "statement": "Which visible photon has the largest energy?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Violet",
+        "Red",
+        "Yellow",
+        "Green"
+      ],
+      "correct": 0,
+      "explanations": [
+        "It has the shortest wavelength here.",
+        "It has the longest wavelength here.",
+        "Its frequency is below violet.",
+        "Its wavelength is longer than violet."
+      ]
+    }
+  }
+}

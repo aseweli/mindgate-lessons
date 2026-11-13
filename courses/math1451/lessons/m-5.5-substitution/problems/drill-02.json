@@ -1,0 +1,39 @@
+{
+  "title": "Logarithmic pattern",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Set $u=x^2+4$.",
+    "The differential contains $2x$.",
+    "The leftover multiplier is 3."
+  ],
+  "solution": "$6x\\,dx=3du$. Then $3\\int du/u=3\\ln(x^2+4)+C$, since $x^2+4>0$.",
+  "statement": "Find $\\int 6x/(x^2+4)\\,dx$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "3*ln(x^2+4)",
+      "feedback": [
+        {
+          "answer": "6*ln(x^2+4)",
+          "message": "The leftover multiplier is 3."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(3*ln(x^2+4))+4+C"
+      ],
+      "wrong": [
+        "(6*ln(x^2+4))+C"
+      ]
+    }
+  }
+}

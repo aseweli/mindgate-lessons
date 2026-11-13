@@ -1,0 +1,39 @@
+{
+  "title": "Concave-down interval",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Differentiate twice.",
+    "$f^{\\prime\\prime}=6x+12$.",
+    "Solve the strict negative inequality."
+  ],
+  "solution": "$6x+12<0$ iff $x<-2$.",
+  "statement": "Where is $f$ concave down if $f(x)=x^3+6x^2$?\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "interval",
+      "value": "(-inf,-2)",
+      "feedback": [
+        {
+          "answer": "(-2,inf)",
+          "message": "Solve the strict negative inequality."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(-inf,-2)"
+      ],
+      "wrong": [
+        "(-2,inf)"
+      ]
+    }
+  }
+}

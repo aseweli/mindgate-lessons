@@ -1,0 +1,196 @@
+{
+  "id": "m-common-final-review",
+  "title": "Cumulative common final review",
+  "short": "Common final review",
+  "section": "1.1–5.5",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Choose among limits, derivatives, derivative applications and integrals in a mixed written set.",
+  "tags": [
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Net change",
+              "Final minus initial; the definite integral of a rate."
+            ],
+            [
+              "Method selection",
+              "Identifying the operation requested and checking that the rule applies."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Tangent",
+              "latex": "y=f(a)+f^\\prime(a)(x-a)",
+              "note": "Use function value and derivative."
+            },
+            {
+              "label": "FTC",
+              "latex": "\\int_a^b F^\\prime(x)\\,dx=F(b)-F(a)",
+              "note": "Continuous integrand."
+            },
+            {
+              "label": "Variable upper limit",
+              "latex": "\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt=f(g(x))g^\\prime(x)",
+              "note": "The moving lower limit would subtract its term."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Never infer a limit from an isolated function value. Distinguish a derivative from an accumulation function. Keep exact fractions and radicals, and keep the input separate from the value it attains."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Use exact notation on paper. Check answers by reversing the operation when possible: differentiate an antiderivative, test a sign chart, or plug the optimizer back into the constraint."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Continuity followed by a derivative",
+          "problem": "Let $f(x)=(x^2-4)/(x-2)$ for $x\\ne2$. Extend it continuously to 2 and find the derivative there.",
+          "answer": "$f(2)=4$ and $f^\\prime(2)=1$.",
+          "steps": [
+            {
+              "title": "Extend continuously",
+              "md": "For $x\\ne2$, $f(x)=x+2$ and the limit is 4.",
+              "why": "A continuous extension uses the nearby limit."
+            },
+            {
+              "title": "Differentiate the extension",
+              "md": "After assigning $f(2)=4$, the extended function is $x+2$ for every x.",
+              "why": "Its difference quotient is 1, including at 2."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "FTC instead of an antiderivative",
+          "problem": "Find where $A(x)=\\int_0^{x}(3-t^2)\\,dt$ has an absolute maximum on $[0,3]$.",
+          "answer": "$x=\\sqrt3$.",
+          "steps": [
+            {
+              "title": "Find the derivative",
+              "md": "$A^\\prime=3-x^2$ by the FTC.",
+              "why": "The variable upper bound has derivative 1."
+            },
+            {
+              "title": "Check signs",
+              "md": "$A^\\prime>0$ on $(0,\\sqrt3)$ and $A^\\prime<0$ on $(\\sqrt3,3)$.",
+              "why": "Increase followed by decrease on the whole interval gives the absolute maximum."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Distance from signed velocity",
+          "problem": "A particle has velocity $v(t)=3t^2-12$ m/s. Find total distance over $[0,3]$.",
+          "answer": "$23$ m.",
+          "steps": [
+            {
+              "title": "Find the split",
+              "md": "The velocity turns from negative to positive at $t=2$.",
+              "why": "Distance sums each leg without cancellation."
+            },
+            {
+              "title": "Evaluate both legs",
+              "md": "The primitive $t^3-12t$ takes values $0,-16,-9$ at $0,2,3$.",
+              "why": "Absolute changes add to $16+7=23$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "drill-03",
+            "drill-04",
+            "drill-05",
+            "drill-06"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "What makes a limit two-sided?",
+              "Both one-sided limits agree."
+            ],
+            [
+              "What checks an optimization answer?",
+              "Feasibility and a global comparison or sign analysis."
+            ],
+            [
+              "When do you change integration bounds?",
+              "When you evaluate a definite integral entirely in the new variable."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Complete an unlabeled mixed set on paper.",
+            "Give exact values and theorem hypotheses where needed.",
+            "Check a result using its definition or inverse operation."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-07",
+            "drill-08",
+            "drill-09",
+            "drill-10"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Minimum at the vertex",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        5
+      ]
+    },
+    "b": {
+      "int": [
+        7,
+        10
+      ]
+    }
+  },
+  "hints": [
+    "Find the stationary input.",
+    "Solve $2x-2a=0$.",
+    "Evaluate the original function at that input."
+  ],
+  "solution": "$f(x)=(x-[$a])^2-[$a]^2$. Since $[$a]$ is in the interval, the minimum is $-[$a]^2$.",
+  "statement": "Find the absolute minimum value of $x^2-2\\cdot[$a]x$ on $[0,[$b]]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-a^2",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "Evaluate the original function at that input."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "0-[$a]*[$a]"
+      ],
+      "wrong": [
+        "[$a]"
+      ]
+    }
+  }
+}

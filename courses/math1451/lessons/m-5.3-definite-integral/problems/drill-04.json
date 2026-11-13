@@ -1,0 +1,43 @@
+{
+  "title": "Linearity",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Separate the integrands.",
+    "Apply each constant factor.",
+    "Subtracting the negative contribution adds 2."
+  ],
+  "solution": "$3(5)-2(-1)=17$.",
+  "statement": "If $\\int_0^2 f=5$ and $\\int_0^2 g=-1$, find $\\int_0^2(3f-2g)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "17",
+      "feedback": [
+        {
+          "answer": "13",
+          "message": "Subtracting the negative contribution adds 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(17)/2"
+      ],
+      "wrong": [
+        "13"
+      ]
+    }
+  }
+}

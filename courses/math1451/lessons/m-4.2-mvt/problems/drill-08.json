@@ -1,0 +1,43 @@
+{
+  "title": "Rolle on sine",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check the endpoint values.",
+    "Both are zero and sine is smooth.",
+    "Find the interior zero of cosine."
+  ],
+  "solution": "$f^\\prime(c)=\\cos c=0$ only at $c=\\pi/2$ in the interval.",
+  "statement": "Find the Rolle point for $\\sin x$ on $[0,\\pi]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "pi/2",
+      "feedback": [
+        {
+          "answer": "pi",
+          "message": "Find the interior zero of cosine."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(pi/2)/2"
+      ],
+      "wrong": [
+        "pi"
+      ]
+    }
+  }
+}

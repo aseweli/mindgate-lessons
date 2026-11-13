@@ -1,0 +1,45 @@
+{
+  "title": "Quotient rule",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use the quotient rule.",
+    "The numerator is $(x-2)-(x+1)$.",
+    "Subtract the entire second product."
+  ],
+  "solution": "The numerator is $-3$ and the denominator is $(x-2)^2$.",
+  "statement": "Differentiate $(x+1)/(x-2)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "-3/(x-2)^2",
+      "feedback": [
+        {
+          "answer": "3/(x-2)^2",
+          "message": "Subtract the entire second product."
+        }
+      ],
+      "vars": {
+        "x": [
+          3,
+          6
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(-3/(x-2)^2) + x - x"
+      ],
+      "wrong": [
+        "3/(x-2)^2"
+      ]
+    }
+  }
+}

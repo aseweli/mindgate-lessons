@@ -1,0 +1,39 @@
+{
+  "title": "Tangent line",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Find the point and slope.",
+    "$f(2)=8$ and $f^\\prime(2)=12$.",
+    "Use the displacement $x-2$."
+  ],
+  "solution": "$y=8+12(x-2)=12x-16$.",
+  "statement": "Give the tangent line as a function of $x$ for $f(x)=x^3$ at $x=2$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "12*x-16",
+      "feedback": [
+        {
+          "answer": "12*x+8",
+          "message": "Use the displacement $x-2$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(12*x-16) + x - x"
+      ],
+      "wrong": [
+        "12*x+8"
+      ]
+    }
+  }
+}

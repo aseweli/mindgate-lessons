@@ -1,0 +1,43 @@
+{
+  "title": "Bound an oscillating function",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Cosine stays between $-1$ and $1$.",
+    "Multiply both bounds by $x^4$.",
+    "Both bounds approach zero."
+  ],
+  "solution": "$-x^4\\le x^4\\cos(1/x)\\le x^4$. Apply the squeeze theorem.",
+  "statement": "Evaluate $\\lim_{x\\to0}x^4\\cos(1/x)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "0",
+      "feedback": [
+        {
+          "answer": "DNE",
+          "message": "Both bounds approach zero."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(0)/2"
+      ],
+      "wrong": [
+        "DNE"
+      ]
+    }
+  }
+}

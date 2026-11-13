@@ -1,0 +1,61 @@
+{
+  "title": "Energy from frequency",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Use E=hν.",
+    "Multiply the two mantissas.",
+    "Add exponents −34 and +14."
+  ],
+  "solution": "$E=(6.626\\times10^{-34})([$v]\\times10^{14})$ J.",
+  "exam": false,
+  "vars": {
+    "v": {
+      "pick": [
+        3.25,
+        4.4,
+        5.75,
+        6.35,
+        7.05
+      ]
+    },
+    "right_value": {
+      "expr": "(6.626*v*10^-20)"
+    },
+    "wrong_value": {
+      "expr": "(6.626*v*10^-19)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] J"
+      ]
+    }
+  },
+  "statement": "Find the energy per photon for $\\nu=[$v]\\times10^{14}$ Hz. Use $h=6.626\\times10^{-34}$ J·s.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "6.626*v*10^-20",
+      "units": "J",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((6.626*v*10^-19))*1",
+          "message": "Adding −34 and +14 gives −20 before normalizing."
+        }
+      ],
+      "tol_type": "absolute",
+      "tol": 5e-22
+    }
+  }
+}

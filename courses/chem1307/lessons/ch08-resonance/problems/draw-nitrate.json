@@ -1,0 +1,137 @@
+{
+  "title": "Draw NO3^-",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Use 24 valence electrons.",
+    "Attach three oxygen atoms to nitrogen.",
+    "Use one double and two single bonds."
+  ],
+  "solution": "Each accepted contributor keeps N at eight electrons and has charges +1 on N and −1 on two O atoms.",
+  "exam": false,
+  "statement": "Draw the Lewis structure for $\\ce{NO3^-}$. Show all lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "NO3^-",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "N",
+              "lp": 0
+            },
+            {
+              "el": "O",
+              "lp": 2
+            },
+            {
+              "el": "O",
+              "lp": 3
+            },
+            {
+              "el": "O",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "el": "N",
+              "lp": 0
+            },
+            {
+              "el": "O",
+              "lp": 3
+            },
+            {
+              "el": "O",
+              "lp": 2
+            },
+            {
+              "el": "O",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "el": "N",
+              "lp": 0
+            },
+            {
+              "el": "O",
+              "lp": 3
+            },
+            {
+              "el": "O",
+              "lp": 3
+            },
+            {
+              "el": "O",
+              "lp": 2
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "allow": []
+    }
+  }
+}

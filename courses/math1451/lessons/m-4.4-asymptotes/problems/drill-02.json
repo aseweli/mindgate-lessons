@@ -1,0 +1,43 @@
+{
+  "title": "Odd pole from the left",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Read the numerator sign.",
+    "The numerator approaches 5.",
+    "The denominator is negative on the left."
+  ],
+  "solution": "The quotient approaches $-\\infty$.",
+  "statement": "Evaluate $\\lim_{x\\to4^-}(x+1)/(x-4)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-INF",
+      "feedback": [
+        {
+          "answer": "INF",
+          "message": "The denominator is negative on the left."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "-INF"
+      ],
+      "wrong": [
+        "INF"
+      ]
+    }
+  }
+}

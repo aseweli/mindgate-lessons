@@ -1,0 +1,35 @@
+{
+  "title": "Hydrogen ion bond order",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count electrons after making the cation.",
+    "Put it in the lowest orbital.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The only electron occupies $\\sigma_{1s}$, giving $(1-0)/2=0.5$.",
+  "exam": false,
+  "statement": "What bond order does the MO model give $\\ce{H2+}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "0.5",
+        "0",
+        "1",
+        "1.5"
+      ],
+      "correct": 0,
+      "explanations": [
+        "One bonding electron is present.",
+        "There is no antibonding electron to cancel it.",
+        "That would require two bonding electrons.",
+        "Hydrogen’s cation contains only one electron."
+      ]
+    }
+  }
+}

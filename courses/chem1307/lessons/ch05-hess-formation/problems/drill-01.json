@@ -1,0 +1,35 @@
+{
+  "title": "Find a formation equation",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Look for one mole of product.",
+    "Nitrogen and hydrogen are diatomic in their reference states.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The target is one mole of ammonia from $\\ce{N2(g)}$ and $\\ce{H2(g)}$.",
+  "exam": false,
+  "statement": "Which equation defines $\\Delta H_f^\\circ$ of $\\ce{NH3(g)}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$\\ce{1/2 N2(g) + 3/2 H2(g) -> NH3(g)}$",
+        "$\\ce{N2(g) + 3H2(g) -> 2NH3(g)}$",
+        "$\\ce{N(g) + 3H(g) -> NH3(g)}$",
+        "$\\ce{NH3(g) -> 1/2 N2(g) + 3/2 H2(g)}$"
+      ],
+      "correct": 0,
+      "explanations": [
+        "It produces one mole from element reference states.",
+        "This produces two moles of the compound.",
+        "Atomic gases are not the elemental reference states.",
+        "This is decomposition."
+      ]
+    }
+  }
+}

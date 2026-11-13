@@ -1,0 +1,34 @@
+{
+  "title": "Electrical attraction",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Use force, rather than potential energy.",
+    "Square the distance factor.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The inverse-square law gives $1/2^2=1/4$ of the original force magnitude.",
+  "statement": "At fixed charge magnitudes, what happens to the Coulomb force magnitude if separation doubles?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It becomes one quarter.",
+        "It becomes one half.",
+        "It doubles.",
+        "It is unchanged."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Inverse square of the separation.",
+        "This would be an inverse-distance law.",
+        "Increasing distance weakens the force.",
+        "Separation is in the force law."
+      ]
+    }
+  }
+}

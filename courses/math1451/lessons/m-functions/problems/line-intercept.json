@@ -1,0 +1,62 @@
+{
+  "title": "Intercept of a line",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "m": {
+      "int": [
+        2,
+        5
+      ]
+    },
+    "a": {
+      "int": [
+        2,
+        6
+      ]
+    },
+    "b": {
+      "int": [
+        3,
+        9
+      ]
+    }
+  },
+  "hints": [
+    "Use point-slope form.",
+    "Set $x=0$ at the $y$-axis.",
+    "Multiply the slope by the negative horizontal displacement."
+  ],
+  "solution": "$y-[$b]=[$m](x-[$a])$, so at zero $y=[$b]-[$m]\\cdot[$a]$.",
+  "statement": "A line of slope $[$m]$ passes through $([$a],[$b])$. Find its $y$-intercept.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "b-m*a",
+      "feedback": [
+        {
+          "answer": "b+m*a",
+          "message": "Multiply the slope by the negative horizontal displacement."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$m]*(0-[$a])+[$b]"
+      ],
+      "wrong": [
+        "[$b]+[$m]*[$a]"
+      ]
+    }
+  }
+}

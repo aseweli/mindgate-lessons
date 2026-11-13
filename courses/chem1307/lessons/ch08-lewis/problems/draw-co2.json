@@ -1,0 +1,54 @@
+{
+  "title": "Draw CO2",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count 16 valence electrons.",
+    "Put carbon in the middle.",
+    "Use one double bond to each oxygen."
+  ],
+  "solution": "The two double bonds account for eight electrons and the four lone pairs account for eight more.",
+  "exam": false,
+  "statement": "Draw the Lewis structure for $\\ce{CO2}$. Show all lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "CO2",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "C",
+              "lp": 0
+            },
+            {
+              "el": "O",
+              "lp": 2
+            },
+            {
+              "el": "O",
+              "lp": 2
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "allow": []
+    }
+  }
+}

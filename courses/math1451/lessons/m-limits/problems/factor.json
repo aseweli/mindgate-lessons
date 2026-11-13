@@ -1,0 +1,50 @@
+{
+  "title": "Cancel a common factor",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Factor a difference of squares.",
+    "Cancel for nearby $x\ne[$a]$.",
+    "Evaluate $x+[$a]$ at $x=[$a]$."
+  ],
+  "solution": "Factor $(x-[$a])(x+[$a])$, cancel, then get $2\\cdot[$a]$.",
+  "statement": "Evaluate $\\lim_{x\\to [$a]}(x^2-[$a]^2)/(x-[$a])$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2*a",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "After canceling the factor, substitute into the remaining sum."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$a]+[$a]"
+      ],
+      "wrong": [
+        "[$a]"
+      ]
+    }
+  }
+}

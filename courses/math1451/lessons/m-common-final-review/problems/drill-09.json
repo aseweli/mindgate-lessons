@@ -1,0 +1,43 @@
+{
+  "title": "Indeterminate power",
+  "difficulty": 5,
+  "minutes": 6,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Take logs and set $t=1/x$.",
+    "The log limit is $2\\ln(1-t)/t$.",
+    "Undo the logarithm after applying L’Hôpital."
+  ],
+  "solution": "The log limit is $\\lim_{t\\to0^+}-2/(1-t)=-2$, so the original limit is $e^{-2}$.",
+  "statement": "Evaluate $\\lim_{x\\to+\\infty}(1-1/x)^{2x}$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "exp(-2)",
+      "feedback": [
+        {
+          "answer": "-2",
+          "message": "Undo the logarithm after applying L’Hôpital."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(exp(-2))/2"
+      ],
+      "wrong": [
+        "-2"
+      ]
+    }
+  }
+}

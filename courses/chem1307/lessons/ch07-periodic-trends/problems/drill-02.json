@@ -1,0 +1,35 @@
+{
+  "title": "IE exception",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Write the outer configurations.",
+    "Compare 3s and 3p removal.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Al loses a 3p electron, which is easier to remove here than Mg’s 3s electron.",
+  "exam": false,
+  "statement": "Which has lower first ionization energy, Mg or Al?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Al, because its first removed electron is in 3p.",
+        "Mg, because the trend never reverses.",
+        "Al, because it has fewer protons.",
+        "They have equal values because both have n=3."
+      ],
+      "correct": 0,
+      "explanations": [
+        "This is a common across-period exception.",
+        "Subshell occupancy can reverse the simple pattern.",
+        "Aluminum has more protons than magnesium.",
+        "Different subshells and effective attractions matter."
+      ]
+    }
+  }
+}

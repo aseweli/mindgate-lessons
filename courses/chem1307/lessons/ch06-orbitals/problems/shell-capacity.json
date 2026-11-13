@@ -1,0 +1,53 @@
+{
+  "title": "Maximum electrons in a shell",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "The number of orbitals is n².",
+    "Each orbital can hold two electrons.",
+    "Multiply the orbital count by two."
+  ],
+  "solution": "The shell holds $2([$n])^2$ electrons.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "int": [
+        2,
+        6
+      ]
+    },
+    "right_value": {
+      "expr": "2*n^2"
+    },
+    "wrong_value": {
+      "expr": "n^2"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value]"
+      ],
+      "wrong": [
+        "[$wrong_value]"
+      ]
+    }
+  },
+  "statement": "For shell $n=[$n]$, how many electrons can it hold? Enter a whole number.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "2*n^2",
+      "feedback": [
+        {
+          "answer": "n^2",
+          "message": "This counts orbitals. Each holds up to two electrons."
+        }
+      ]
+    }
+  }
+}

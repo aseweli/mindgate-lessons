@@ -1,0 +1,35 @@
+{
+  "title": "Use a large jump",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Find the first core removal.",
+    "Count the removals before it.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Two electrons are removed before core removal begins.",
+  "exam": false,
+  "statement": "Successive ionization energies jump strongly between IE₂ and IE₃. How many valence electrons are suggested for a main-group element?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Both initial removals reach valence electrons.",
+        "The third removal is the first core removal.",
+        "This would imply a jump between the first and second.",
+        "The jump occurs before four removals."
+      ]
+    }
+  }
+}

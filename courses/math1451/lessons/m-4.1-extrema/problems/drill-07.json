@@ -1,0 +1,43 @@
+{
+  "title": "Open interval",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check whether the endpoint is included.",
+    "The function is strictly increasing.",
+    "Every input in the interval has a larger input still in the interval."
+  ],
+  "solution": "The outputs approach 7 from below and never attain it. The maximum does not exist.",
+  "statement": "Find the absolute maximum of $f(x)=2x+1$ on $(0,3)$, or enter DNE.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "DNE",
+      "feedback": [
+        {
+          "answer": "7",
+          "message": "Every input in the interval has a larger input still in the interval."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "DNE"
+      ],
+      "wrong": [
+        "7"
+      ]
+    }
+  }
+}

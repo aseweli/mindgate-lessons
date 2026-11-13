@@ -1,0 +1,181 @@
+{
+  "id": "m-limits",
+  "title": "Limits from graphs, tables and algebra",
+  "short": "Limits and limit laws",
+  "section": "2.1–2.2",
+  "minutes": 35,
+  "difficulty": 2,
+  "objective": "Read one-sided limits and use algebra, trigonometry and the squeeze theorem to evaluate limits.",
+  "tags": [
+    "exam1"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Left-hand limit",
+              "Approach with $x<a$."
+            ],
+            [
+              "Removable hole",
+              "Both sides approach the same value, while the point is missing or assigned a different value."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Two-sided limit",
+              "latex": "\\lim_{x\\to a^-}f(x)=\\lim_{x\\to a^+}f(x)=L",
+              "note": "Both sides must agree."
+            },
+            {
+              "label": "Small-angle limit",
+              "latex": "\\lim_{u\\to0}\\frac{\\sin u}{u}=1",
+              "note": "Radians."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "The form $0/0$ calls for more work. A solid dot never overrides nearby graph behavior."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Show the original indeterminate form and the legal rewrite. For an infinite one-sided limit, show the sign of the denominator."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "YNstP0ESndU",
+          "title": "Introduction to limits",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Compare the left and right approaches before reading the value at the point."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Rationalize",
+          "problem": "Evaluate $\\lim_{x\\to0}(\\sqrt{9+x}-3)/x$.",
+          "answer": "$1/6$.",
+          "steps": [
+            {
+              "title": "Multiply by the conjugate",
+              "md": "$\\frac{\\sqrt{9+x}-3}{x}\\frac{\\sqrt{9+x}+3}{\\sqrt{9+x}+3}=\\frac{x}{x(\\sqrt{9+x}+3)}$.",
+              "why": "The numerator becomes a difference of squares."
+            },
+            {
+              "title": "Cancel and substitute",
+              "md": "$\\lim_{x\\to0}1/(\\sqrt{9+x}+3)=1/6$.",
+              "why": "The new denominator stays nonzero."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Opposite signs",
+          "problem": "Evaluate $\\lim_{x\\to1} 3/(x-1)$.",
+          "answer": "DNE.",
+          "steps": [
+            {
+              "title": "Read the sides",
+              "md": "The left tends to $-\\infty$ and the right to $+\\infty$.",
+              "why": "The numerator is positive and the denominator changes sign."
+            },
+            {
+              "title": "Compare",
+              "md": "The sides do not agree.",
+              "why": "A two-sided limit needs matching behavior."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "factor",
+            "rationalize",
+            "trig-limit",
+            "scaled-sine"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "What do matching one-sided limits give?",
+              "A two-sided limit."
+            ],
+            [
+              "What does $0/0$ tell you?",
+              "The direct form is indeterminate."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Separate $f(a)$ from the limit.",
+            "Factor or rationalize as needed.",
+            "Check signs on both sides."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "right-side",
+            "squeeze",
+            "graph-reading"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

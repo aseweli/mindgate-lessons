@@ -1,0 +1,35 @@
+{
+  "title": "Lone pair in a hybrid",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Draw the oxygen valence structure.",
+    "Assign one hybrid per domain.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "O has four hybrids: two form bonds to H and two accommodate lone pairs.",
+  "exam": false,
+  "statement": "In the localized $sp^3$ model of water, how many oxygen hybrids contain lone pairs?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2",
+        "0",
+        "1",
+        "4"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Two O lone pairs occupy two hybrids.",
+        "Lone pairs are part of the local electron geometry.",
+        "Water has two O lone pairs.",
+        "Two of the four hybrids take part in O–H bonds."
+      ]
+    }
+  }
+}

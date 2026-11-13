@@ -1,0 +1,53 @@
+{
+  "title": "Compute a total-node count",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Total nodes depend only on n.",
+    "Add angular and radial nodes.",
+    "Do not report radial nodes alone."
+  ],
+  "solution": "Total nodes $=[$n]-1$.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "int": [
+        4,
+        7
+      ]
+    },
+    "right_count": {
+      "expr": "n-1"
+    },
+    "wrong_count": {
+      "expr": "n-3"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_count]"
+      ],
+      "wrong": [
+        "[$wrong_count]"
+      ]
+    }
+  },
+  "statement": "How many total nodes does a $[$n]d$ hydrogen-like orbital have?\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "n-1",
+      "feedback": [
+        {
+          "answer": "n-3",
+          "message": "Do not report radial nodes alone."
+        }
+      ]
+    }
+  }
+}

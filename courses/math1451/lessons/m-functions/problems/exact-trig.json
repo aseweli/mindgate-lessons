@@ -1,0 +1,43 @@
+{
+  "title": "Exact tangent",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use a reference angle.",
+    "The reference angle is $\\pi/6$.",
+    "Sine is positive and cosine is negative."
+  ],
+  "solution": "$\\tan(5\\pi/6)=(1/2)/(-\\sqrt3/2)=-\\sqrt3/3$.",
+  "statement": "Evaluate $\\tan(5\\pi/6)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-sqrt(3)/3",
+      "feedback": [
+        {
+          "answer": "sqrt(3)/3",
+          "message": "Sine is positive and cosine is negative."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-sqrt(3)/3)/2"
+      ],
+      "wrong": [
+        "sqrt(3)/3"
+      ]
+    }
+  }
+}

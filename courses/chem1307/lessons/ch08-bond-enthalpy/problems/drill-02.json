@@ -1,0 +1,35 @@
+{
+  "title": "Which energy carries a positive contribution?",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Track energy during dissociation.",
+    "The reverse process has the opposite sign.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Gas-phase dissociation requires energy input. Forming the same bond is the reverse.",
+  "exam": false,
+  "statement": "In a bond-enthalpy estimate, which operation absorbs heat?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Breaking a reactant bond",
+        "Forming a product bond",
+        "Adding a product coefficient",
+        "Changing the table units"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Dissociation is positive.",
+        "Formation releases energy.",
+        "Coefficients scale the number of bonds and are not a transfer mechanism.",
+        "Unit conversion does not alter physical heat."
+      ]
+    }
+  }
+}

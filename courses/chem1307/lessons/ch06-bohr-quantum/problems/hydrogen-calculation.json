@@ -1,0 +1,34 @@
+{
+  "title": "Hydrogen transition energy",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Find each signed level value.",
+    "Compute the ending value minus the starting one.",
+    "Verify the sign for an upward transition."
+  ],
+  "solution": "$\\Delta E=(-2.179\\times10^{-18})(1/16-1/4)=+4.086\\times10^{-19}$ J.",
+  "statement": "Use $E_n=-2.179\\times10^{-18}/n^2$ J. What is the atom’s energy change for $n=2\\to4$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$+4.086\\times10^{-19}$ J",
+        "$-4.086\\times10^{-19}$ J",
+        "$+5.448\\times10^{-19}$ J",
+        "$+1.362\\times10^{-19}$ J"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Final minus initial is positive for absorption.",
+        "This describes the reverse transition.",
+        "This is the energy to ionize from n=2.",
+        "This is the magnitude of the n=4 level."
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Coffee cup signals",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Treat the reaction as the system.",
+    "Follow the heat from the reaction into the solution.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The solution gains heat, so $q_\\mathrm{rxn}=-q_\\mathrm{solution}<0$.",
+  "exam": false,
+  "statement": "A reaction in an insulated cup warms the surrounding solution. Which sign is right for the reaction?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$\\Delta H_\\mathrm{rxn}<0$ at constant pressure.",
+        "$\\Delta H_\\mathrm{rxn}>0$ at constant pressure.",
+        "$\\Delta H_\\mathrm{rxn}=0$.",
+        "$q_\\mathrm{solution}<0$."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Heat leaves the reaction.",
+        "This would draw heat from the solution.",
+        "A measurable heat transfer occurred.",
+        "A warming solution gains heat."
+      ]
+    }
+  }
+}

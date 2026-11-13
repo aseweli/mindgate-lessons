@@ -1,0 +1,60 @@
+{
+  "title": "Matter wavelength of an electron",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Find momentum mv.",
+    "Divide Planck’s constant by momentum.",
+    "The units reduce to meters."
+  ],
+  "solution": "$\\lambda=(6.626\\times10^{-34})/[(9.109\\times10^{-31})([$v]\\times10^6)]$ m.",
+  "exam": false,
+  "vars": {
+    "v": {
+      "pick": [
+        1.2,
+        1.5,
+        2.25,
+        3.8
+      ]
+    },
+    "right_value": {
+      "expr": "((6.626/9.109/v))"
+    },
+    "wrong_value": {
+      "expr": "((6.626/9.109/v)*10^-3)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] nm"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] m"
+      ]
+    }
+  },
+  "statement": "An electron travels at $[$v]\\times10^6$ m/s. Calculate its de Broglie wavelength using $m_e=9.109\\times10^{-31}$ kg and $h=6.626\\times10^{-34}$ J·s.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "(6.626/9.109/v)*10^-9",
+      "units": "m",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "(((6.626/9.109/v)*10^-3))*1",
+          "message": "Include the speed’s factor of 10⁶ in the momentum."
+        }
+      ],
+      "tol_type": "absolute",
+      "tol": 1e-12
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Reverse-engineer the graph",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Look for a switch $-\to+$.",
+    "The squared factor stays positive away from $-1$.",
+    "Only $x-4$ changes sign."
+  ],
+  "solution": "$f^\\prime$ stays negative through the stationary point $-1$ and turns positive at 4.",
+  "statement": "Given $f^\\prime=(x+1)^2(x-4)$ and $f$ is differentiable everywhere, find the input of the local minimum.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "4",
+      "feedback": [
+        {
+          "answer": "-1",
+          "message": "Only $x-4$ changes sign."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(4)/2"
+      ],
+      "wrong": [
+        "-1"
+      ]
+    }
+  }
+}

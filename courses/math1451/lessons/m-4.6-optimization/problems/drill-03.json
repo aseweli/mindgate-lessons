@@ -1,0 +1,43 @@
+{
+  "title": "Distance to a line",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use squared distance.",
+    "$D^2=(x-4)^2+(2x+1)^2$.",
+    "Differentiate both squares using the chain rule."
+  ],
+  "solution": "$(D^2)^\\prime=2(x-4)+4(2x+1)=10x-4$. It switches from negative to positive at $2/5$.",
+  "statement": "Find the $x$-coordinate on $y=2x+1$ closest to $(4,0)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2/5",
+      "feedback": [
+        {
+          "answer": "4",
+          "message": "Differentiate both squares using the chain rule."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(2/5)/2"
+      ],
+      "wrong": [
+        "4"
+      ]
+    }
+  }
+}

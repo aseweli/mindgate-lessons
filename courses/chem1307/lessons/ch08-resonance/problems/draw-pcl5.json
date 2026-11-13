@@ -1,0 +1,83 @@
+{
+  "title": "Draw PCl5",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "P goes in the center.",
+    "Use five P–Cl bonds.",
+    "Put three lone pairs on each Cl."
+  ],
+  "solution": "This draws ten electrons around phosphorus with all formal charges zero.",
+  "exam": false,
+  "statement": "Draw the Lewis structure for $\\ce{PCl5}$. Show all lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "PCl5",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "P",
+              "lp": 0
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              4,
+              1
+            ],
+            [
+              0,
+              5,
+              1
+            ]
+          ]
+        }
+      ],
+      "allow": [
+        "expanded_octet"
+      ]
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "id": "m-4.5-lhopital",
+  "title": "L’Hôpital’s rule and indeterminate forms",
+  "short": "L’Hôpital’s rule",
+  "section": "4.5",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Identify the indeterminate form, rewrite when necessary, and justify each application.",
+  "tags": [
+    "exam3"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Indeterminate form",
+              "The limiting behavior of the pieces alone does not fix the result."
+            ],
+            [
+              "Derivative quotient",
+              "The ratio $f^\\prime/g^\\prime$ with numerator and denominator differentiated separately."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Quotient limit",
+              "latex": "\\lim f/g=\\lim f^\\prime/g^\\prime",
+              "note": "Only after checking the theorem’s conditions."
+            },
+            {
+              "label": "Power transformation",
+              "latex": "y=f(x)^{g(x)}>0\\ \\Rightarrow\\ \\ln y=g(x)\\ln f(x)",
+              "note": "Return to y by exponentiating."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Do not use the quotient rule here. Recheck before applying L’Hôpital again. For a power form, exponentiate the final log limit."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Label the original form and show the rewrite. For an invalid application, explain the nonzero numerator or the missing quotient form."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "thEnl_gCjXA",
+          "title": "L’Hôpital’s rule and indeterminate forms",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Classify each limit before the instructor chooses a method."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Apply twice",
+          "problem": "Evaluate $\\lim_{x\\to0}(1-\\cos x)/x^2$.",
+          "answer": "$1/2$.",
+          "steps": [
+            {
+              "title": "Check the form",
+              "md": "Both numerator and denominator approach 0.",
+              "why": "The two functions are differentiable near zero and $2x\\ne0$ off zero."
+            },
+            {
+              "title": "Differentiate separately",
+              "md": "The limit becomes $\\lim_{x\\to0}\\sin x/(2x)$, still $0/0$.",
+              "why": "A second application is legal."
+            },
+            {
+              "title": "Evaluate",
+              "md": "$\\lim_{x\\to0}\\cos x/2=1/2$.",
+              "why": "The new denominator is constant and nonzero."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "An indeterminate power",
+          "problem": "Evaluate $\\lim_{x\\to0^+}(1+3x)^{1/x}$.",
+          "answer": "$e^3$.",
+          "steps": [
+            {
+              "title": "Take logs",
+              "md": "$\\ln y=\\ln(1+3x)/x$.",
+              "why": "This turns $1^\\infty$ into a $0/0$ quotient."
+            },
+            {
+              "title": "Evaluate the log limit",
+              "md": "The derivative quotient is $3/(1+3x)\\to3$.",
+              "why": "Differentiate each piece separately."
+            },
+            {
+              "title": "Undo the log",
+              "md": "$y\\to e^3$.",
+              "why": "The exponential is continuous."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "exp-slope",
+            "drill-03",
+            "drill-04",
+            "log-linear",
+            "cos-repeat",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "Which forms allow direct use?",
+              "$0/0$ and $\\infty/\\infty$, with the other hypotheses."
+            ],
+            [
+              "What should you do after one application?",
+              "Check the new form or substitute if possible."
+            ],
+            [
+              "How do you handle $1^\\infty$?",
+              "Take logs and exponentiate the final log limit."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Justify the form before each application.",
+            "Rewrite products and differences.",
+            "Return from a log limit to the original power."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

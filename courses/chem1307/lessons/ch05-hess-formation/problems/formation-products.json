@@ -1,0 +1,58 @@
+{
+  "title": "Carbon monoxide oxidation from formation data",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Oxygen gas has zero formation enthalpy.",
+    "Subtract the CO formation value.",
+    "Scale by moles of CO."
+  ],
+  "solution": "$\\Delta H=(-393.5-(-110.5))([$n])$ kJ.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "pick": [
+        0.125,
+        0.25,
+        0.375,
+        1.25
+      ]
+    },
+    "right_value": {
+      "expr": "(-283*n)"
+    },
+    "wrong_value": {
+      "expr": "(283*n)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] kJ"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] kJ"
+      ]
+    }
+  },
+  "statement": "For $\\ce{CO(g) + 1/2 O2(g) -> CO2(g)}$, use rounded practice data $\\Delta H_f^\\circ(\\ce{CO})=-110.5$ and $\\Delta H_f^\\circ(\\ce{CO2})=-393.5$ kJ/mol. Find heat for $[$n]$ mol of CO.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "( -393.5+110.5)*n",
+      "units": "kJ",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((283*n))*1",
+          "message": "Subtract reactants from products."
+        }
+      ]
+    }
+  }
+}

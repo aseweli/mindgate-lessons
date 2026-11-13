@@ -1,0 +1,54 @@
+{
+  "title": "Draw OF2",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "O is less electronegative than F.",
+    "Use single bonds to both terminal F atoms.",
+    "There are two lone pairs left on O."
+  ],
+  "solution": "Two O–F bonds, two O lone pairs and three lone pairs on each F consume all 20 electrons.",
+  "exam": false,
+  "statement": "Draw the Lewis structure for $\\ce{OF2}$. Show all lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "OF2",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "O",
+              "lp": 2
+            },
+            {
+              "el": "F",
+              "lp": 3
+            },
+            {
+              "el": "F",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "allow": []
+    }
+  }
+}

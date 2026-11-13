@@ -1,0 +1,35 @@
+{
+  "title": "Order comparable bonds",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Compare bonds between the same elements.",
+    "Higher order often means a shorter bond.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "For the same elements, a triple bond typically has the shortest equilibrium separation.",
+  "exam": false,
+  "statement": "Which bond is generally shortest among the listed carbon–carbon bonds?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "C≡C",
+        "C=C",
+        "C–C",
+        "All are the same length"
+      ],
+      "correct": 0,
+      "explanations": [
+        "This has the highest bond order.",
+        "It is typically shorter than a single bond but longer than a triple.",
+        "It has the lowest order.",
+        "Bond order changes the equilibrium separation."
+      ]
+    }
+  }
+}

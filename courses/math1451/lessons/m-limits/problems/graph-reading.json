@@ -1,0 +1,43 @@
+{
+  "title": "Compare one-sided limits",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Read each side separately.",
+    "The left limit is 3.",
+    "The right limit is also 3."
+  ],
+  "solution": "Both formulas tend to 3 at $x=2$. The isolated value 9 does not affect the limit.",
+  "statement": "For $x<2$, $f(x)=x+1$. For $x>2$, $f(x)=5-x$. The single point $f(2)$ equals 9. Find $\\lim_{x\\to2} f(x)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "3",
+      "feedback": [
+        {
+          "answer": "9",
+          "message": "The right limit is also 3."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(3)/2"
+      ],
+      "wrong": [
+        "9"
+      ]
+    }
+  }
+}

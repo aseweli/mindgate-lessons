@@ -1,0 +1,50 @@
+{
+  "title": "Instantaneous slope",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Expand $(a+h)^2$.",
+    "Cancel $a^2$.",
+    "Divide the remaining $2ah+h^2$ by $h$."
+  ],
+  "solution": "The quotient reduces to $2\\cdot[$a]+h$, which approaches $2\\cdot[$a]$.",
+  "statement": "Use the derivative definition for $f(x)=x^2$ at $x=[$a]$. Find the slope.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2*a",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "Divide the remaining $2ah+h^2$ by $h$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "[$a]+[$a]"
+      ],
+      "wrong": [
+        "[$a]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Hole height",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Factor the numerator.",
+    "Cancel only for $x\ne2$.",
+    "Evaluate the resulting nearby expression."
+  ],
+  "solution": "The reduced expression $x+2$ approaches 4. The original function remains undefined at 2.",
+  "statement": "Find the height of the hole at $x=2$ in $(x^2-4)/(x-2)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "4",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Evaluate the resulting nearby expression."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(4)/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

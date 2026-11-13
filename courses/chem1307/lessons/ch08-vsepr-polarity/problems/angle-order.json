@@ -1,0 +1,37 @@
+{
+  "title": "Rank common bond angles",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "All share four electron domains.",
+    "More central lone pairs compress the angle in this series.",
+    "Start with the molecule with two central lone pairs."
+  ],
+  "solution": "Water is about 104.5°, ammonia about 107°, and methane 109.5°.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "water < ammonia < methane"
+      ],
+      "wrong": [
+        "methane < ammonia < water"
+      ]
+    }
+  },
+  "statement": "Order increasing H–center–H bond angle among water, ammonia and methane.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "order",
+      "items": [
+        "water",
+        "ammonia",
+        "methane"
+      ]
+    }
+  }
+}

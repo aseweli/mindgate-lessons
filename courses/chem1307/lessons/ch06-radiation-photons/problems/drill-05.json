@@ -1,0 +1,34 @@
+{
+  "title": "Molar photon energy",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "A mole contains Avogadro’s number of photons.",
+    "Divide joules by 1000 to get kilojoules.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$(4.00\\times10^{-19})(6.022\\times10^{23})=2.41\\times10^5$ J/mol, or 241 kJ/mol.",
+  "statement": "A photon has $4.00\\times10^{-19}$ J. Using $N_A=6.022\\times10^{23}$, what is the energy of one mole of these photons?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "241 kJ/mol",
+        "0.241 kJ/mol",
+        "241,000 kJ/mol",
+        "4.00 × 10⁻¹⁹ J/mol"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Multiply by Avogadro’s constant and convert J to kJ.",
+        "The powers of ten are off by three.",
+        "This numeric value is in J/mol.",
+        "This is energy per photon."
+      ]
+    }
+  }
+}

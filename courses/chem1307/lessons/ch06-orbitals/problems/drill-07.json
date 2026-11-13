@@ -1,0 +1,34 @@
+{
+  "title": "Count f subshell slots",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Use ℓ=3.",
+    "Double the orbital count for electron capacity.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "For f, ℓ=3, so 2ℓ+1=7 orbitals and paired occupancy gives 14 electrons.",
+  "statement": "How many orbitals and maximum electrons are in 4f?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "7 orbitals, 14 electrons",
+        "3 orbitals, 6 electrons",
+        "14 orbitals, 28 electrons",
+        "16 orbitals, 32 electrons"
+      ],
+      "correct": 0,
+      "explanations": [
+        "f has seven magnetic labels.",
+        "Those counts belong to a p subshell.",
+        "Fourteen already counts electrons.",
+        "These counts refer to the whole n=4 shell."
+      ]
+    }
+  }
+}

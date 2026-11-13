@@ -1,0 +1,43 @@
+{
+  "title": "Position from acceleration",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Integrate twice.",
+    "$v(t)=4t-3$.",
+    "Use $s(t)=2t^2-3t+8$."
+  ],
+  "solution": "The two initial conditions set the constants. At $t=2$, $s=8-6+8=10$.",
+  "statement": "Given $a(t)=4$, $v(0)=-3$, $s(0)=8$, find $s(2)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "10",
+      "feedback": [
+        {
+          "answer": "2",
+          "message": "Use $s(t)=2t^2-3t+8$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(10)/2"
+      ],
+      "wrong": [
+        "2"
+      ]
+    }
+  }
+}

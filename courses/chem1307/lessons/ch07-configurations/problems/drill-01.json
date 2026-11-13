@@ -1,0 +1,35 @@
+{
+  "title": "Hund distribution",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Use three degenerate boxes.",
+    "Apply Hund and Pauli separately.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Three degenerate p orbitals fill singly with parallel spins.",
+  "exam": false,
+  "statement": "Which distribution represents the p³ ground state?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "[↑] [↑] [↑]",
+        "[↑↓] [↑] [ ]",
+        "[↑] [↑] [↓]",
+        "[↑↑] [↑] [ ]"
+      ],
+      "correct": 0,
+      "explanations": [
+        "This maximizes unpaired occupancy with aligned spins.",
+        "Pairing occurred early.",
+        "The single spins should be parallel in this diagram.",
+        "The first orbital violates Pauli."
+      ]
+    }
+  }
+}

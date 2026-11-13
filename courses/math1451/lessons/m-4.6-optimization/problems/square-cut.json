@@ -1,0 +1,50 @@
+{
+  "title": "Cut from a square sheet",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "s": {
+      "int": [
+        12,
+        36
+      ]
+    }
+  },
+  "hints": [
+    "Set $V(x)=x(s-2x)^2$.",
+    "Factor $V^\\prime=(s-2x)(s-6x)$.",
+    "The endpoint $s/2$ gives a flattened box."
+  ],
+  "solution": "The feasible interval is $[0,[$s]/2]$. Both endpoints have zero volume, and the sole interior critical number is $[$s]/6$.",
+  "statement": "A square sheet has side length $[$s]$ inches. Equal squares are cut from the corners to make an open-top box. Find the optimal cut length in inches.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "s/6",
+      "feedback": [
+        {
+          "answer": "s/2",
+          "message": "The endpoint $s/2$ gives a flattened box."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "([$s]/2)/3"
+      ],
+      "wrong": [
+        "[$s]/2"
+      ]
+    }
+  }
+}

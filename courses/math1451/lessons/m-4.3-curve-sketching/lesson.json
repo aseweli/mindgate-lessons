@@ -1,0 +1,205 @@
+{
+  "id": "m-4.3-curve-sketching",
+  "title": "Increasing, decreasing, concavity and inflection",
+  "short": "Derivative sign charts",
+  "section": "4.3",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Build first- and second-derivative sign charts and use them to sketch a graph.",
+  "tags": [
+    "exam3"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Critical number",
+              "Candidate boundary for a first-derivative sign chart."
+            ],
+            [
+              "Inflection point",
+              "A point on a continuous graph where concavity changes."
+            ],
+            [
+              "Concavity",
+              "Whether the slopes increase or decrease."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "cubic-sign-chart.svg",
+          "alt": "Cubic with a local maximum at zero, inflection at (1, negative 2), and local minimum at (2, negative 4).",
+          "caption": "The graph of $f(x)=x^3-3x^2$ flattens at 0 and 2 and changes concavity at 1.",
+          "width": 640
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Increasing and decreasing",
+              "latex": "f^\\prime>0\\Rightarrow \\text{increasing},\\qquad f^\\prime<0\\Rightarrow\\text{decreasing}",
+              "note": "Apply on intervals."
+            },
+            {
+              "label": "Concavity",
+              "latex": "f^{\\prime\\prime}>0\\Rightarrow\\text{concave up},\\qquad f^{\\prime\\prime}<0\\Rightarrow\\text{concave down}",
+              "note": "A sign change is what matters for inflection."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Use $f^\\prime$ for rising and falling, and $f^{\\prime\\prime}$ for bending. Do not call a discontinuity an inflection point. An even-multiplicity root may preserve the sign."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "On a full sketch question, show both charts and label extrema and inflection coordinates. On a graph of $f^\\prime$, height gives the sign of $f^\\prime$ and slope gives the sign of $f^{\\prime\\prime}$."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "WqRPFvZWF0k",
+          "title": "Curve sketching with derivatives",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Track how the first derivative and second derivative answer different questions."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Full cubic sketch",
+          "problem": "Sketch $f(x)=x^3-3x^2$.",
+          "answer": "Local max $(0,0)$, local min $(2,-4)$, inflection $(1,-2)$.",
+          "steps": [
+            {
+              "title": "First chart",
+              "md": "$f^\\prime=3x(x-2)$ has signs $+,-,+$ around 0 and 2.",
+              "why": "Classify extrema by changes in monotonicity."
+            },
+            {
+              "title": "Second chart",
+              "md": "$f^{\\prime\\prime}=6(x-1)$ switches from negative to positive at 1.",
+              "why": "This determines bending independently of rising and falling."
+            },
+            {
+              "title": "Anchor the graph",
+              "md": "$f=x^2(x-3)$ vanishes at 0 and 3. Plot the three key points and draw the cubic ends.",
+              "why": "The intercept and end behavior constrain the shape."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "A stationary point without an extremum",
+          "problem": "Classify the origin for $f(x)=x^3$.",
+          "answer": "Inflection at $(0,0)$ with horizontal tangent.",
+          "steps": [
+            {
+              "title": "Test the first derivative",
+              "md": "$3x^2>0$ on each side of 0.",
+              "why": "No sign change means no local extremum."
+            },
+            {
+              "title": "Test the second derivative",
+              "md": "$6x$ changes from negative to positive.",
+              "why": "The function is continuous, so this is an inflection."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "inflection-cubic",
+            "drill-03",
+            "drill-04",
+            "critical-value",
+            "horizontal-inflection",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "A $+\to-$ first derivative change?",
+              "Local maximum at a continuous join."
+            ],
+            [
+              "What if the second derivative test gives zero?",
+              "Use the first derivative sign chart."
+            ],
+            [
+              "Can a graph fall and be concave up?",
+              "Yes. Its negative slopes can become less negative."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Make two separate sign charts.",
+            "Report an inflection as a coordinate pair.",
+            "Read the signs of both derivatives from a graph of $f^\\prime$."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "One-electron model",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Count electrons from the atomic number and charge.",
+    "One electron is required.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$\\ce{He+}$ has two protons and one electron, unlike neutral helium or the other listed species.",
+  "statement": "For which species is the Bohr one-electron energy expression, with proper Z, appropriate?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$\\ce{He+}$",
+        "$\\ce{He}$",
+        "$\\ce{Li+}$",
+        "$\\ce{H-}$"
+      ],
+      "correct": 0,
+      "explanations": [
+        "It is a one-electron ion with $Z=2$.",
+        "Neutral helium has two electrons.",
+        "Lithium has three protons and this ion has two electrons.",
+        "The extra electron gives two electrons."
+      ]
+    }
+  }
+}

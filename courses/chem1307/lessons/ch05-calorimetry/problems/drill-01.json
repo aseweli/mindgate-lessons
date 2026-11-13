@@ -1,0 +1,35 @@
+{
+  "title": "Mix unequal water masses",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Both samples are water.",
+    "The temperature is closer to that of the larger mass.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$20.0(T_f-70.0)+60.0(T_f-30.0)=0$ after canceling common specific heat, so $T_f=40.0^\\circ$C.",
+  "exam": false,
+  "statement": "Mix 20.0 g of water at 70.0 °C and 60.0 g at 30.0 °C in an insulated cup. What is the final temperature?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "40.0 °C",
+        "50.0 °C",
+        "60.0 °C",
+        "30.0 °C"
+      ],
+      "correct": 0,
+      "explanations": [
+        "This is the mass-weighted average.",
+        "This is an unweighted average.",
+        "The larger mass would have to be the hotter sample.",
+        "The hotter sample supplies nonzero heat."
+      ]
+    }
+  }
+}

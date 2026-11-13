@@ -1,0 +1,50 @@
+{
+  "title": "Parallel tangent on a parabola",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "b": {
+      "int": [
+        3,
+        12
+      ]
+    }
+  },
+  "hints": [
+    "The secant slope is rise over run.",
+    "The slope is $b^2/b=b$.",
+    "Solve $2c=b$."
+  ],
+  "solution": "Polynomials satisfy both hypotheses. The secant slope is $[$b]$ and $f^\\prime(c)=2c$, so $c=[$b]/2$.",
+  "statement": "For $f(x)=x^2$ on $[0,[$b]]$, find the MVT input.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "b/2",
+      "feedback": [
+        {
+          "answer": "b",
+          "message": "Solve $2c=b$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "([$b]^2/[$b])/2"
+      ],
+      "wrong": [
+        "[$b]"
+      ]
+    }
+  }
+}

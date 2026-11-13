@@ -1,0 +1,46 @@
+{
+  "title": "Exponential of a trig function",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        6
+      ]
+    }
+  },
+  "hints": [
+    "The outer exponential stays the same.",
+    "The middle derivative introduces cosine.",
+    "The inner linear expression introduces its coefficient."
+  ],
+  "solution": "$f^\\prime=e^{\\sin([$a]x)}\\cos([$a]x)\\cdot[$a]$.",
+  "statement": "Differentiate $e^{\\sin([$a]x)}$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula",
+      "value": "a*cos(a*x)*exp(sin(a*x))",
+      "feedback": [
+        {
+          "answer": "cos(a*x)*exp(sin(a*x))",
+          "message": "The inner linear expression introduces its coefficient."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "exp(sin([$a]*x))*([$a]*cos([$a]*x))"
+      ],
+      "wrong": [
+        "exp(sin([$a]*x))*cos([$a]*x)"
+      ]
+    }
+  }
+}

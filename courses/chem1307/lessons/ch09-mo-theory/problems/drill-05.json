@@ -1,0 +1,35 @@
+{
+  "title": "Peroxide dianion",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Begin from the O₂ π* occupancy of two.",
+    "Add two electrons to complete the pair.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Two extra electrons fill the π* pair, lowering order from 2 to 1 and pairing all electrons.",
+  "exam": false,
+  "statement": "What are the bond order and magnetic behavior of $\\ce{O2^2-}$ in this model?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "1 and diamagnetic",
+        "1 and paramagnetic",
+        "2 and diamagnetic",
+        "3 and paramagnetic"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The π* pair is now fully occupied.",
+        "The filled π* pair contains no singles.",
+        "The order falls when two antibonding electrons are added.",
+        "Adding antibonding electrons weakens the order."
+      ]
+    }
+  }
+}

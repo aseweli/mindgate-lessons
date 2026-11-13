@@ -1,0 +1,184 @@
+{
+  "id": "ch05-hess-formation",
+  "title": "Hess’s law and standard formation enthalpy",
+  "short": "Hess and formation",
+  "chapter": 5,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Combine thermochemical equations, identify formation reactions, and calculate standard reaction enthalpy.",
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Hess’s law",
+              "Reaction enthalpies add when their equations add."
+            ],
+            [
+              "Standard formation enthalpy",
+              "Enthalpy to form one mole from elements in their reference states."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Formation data",
+              "latex": "\\Delta H^\\circ_\\mathrm{rxn}=\\sum_\\mathrm{products}\\nu\\Delta H_f^\\circ-\\sum_\\mathrm{reactants}\\nu\\Delta H_f^\\circ",
+              "note": "Weight by balanced coefficients."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Reverse the sign only when reversing an equation. Phases matter. Zero applies to an element in its reference state."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "For a formation equation, check the product coefficient and the physical forms of the elements. For a table calculation, check the order of subtraction."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "2ixEf2zpR8E",
+          "title": "Hess’s law and enthalpy changes",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Annotate each reversal and scaling factor before canceling species."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Subtract one pathway",
+          "problem": "Given $\\ce{C(graphite) + O2(g) -> CO2(g)}$, $-393.5$ kJ, and $\\ce{CO(g) + 1/2 O2(g) -> CO2(g)}$, $-283.0$ kJ, find $\\Delta H$ for $\\ce{C(graphite) + 1/2 O2(g) -> CO(g)}$.",
+          "answer": "$-110.5$ kJ.",
+          "steps": [
+            {
+              "title": "Place CO on the product side",
+              "md": "Reverse the second equation and use $+283.0$ kJ.",
+              "why": "Reversal changes the sign."
+            },
+            {
+              "title": "Cancel",
+              "md": "Cancel carbon dioxide and half of the oxygen. Add $-393.5+283.0$.",
+              "why": "The sum must reproduce the target equation."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Use formation data",
+          "problem": "For $\\ce{CaCO3(s) -> CaO(s) + CO2(g)}$, use formation enthalpies $-1207$, $-635$, and $-394$ kJ/mol respectively.",
+          "answer": "Approximately $+178$ kJ per mole decomposed.",
+          "steps": [
+            {
+              "title": "Add products",
+              "md": "$-635-394=-1029$ kJ.",
+              "why": "Each product coefficient is one."
+            },
+            {
+              "title": "Subtract reactant",
+              "md": "$-1029-(-1207)=178$ kJ.",
+              "why": "Subtract the signed reactant sum."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "formation-products",
+            "scaled-route",
+            "coefficients",
+            "drill-01",
+            "drill-02",
+            "drill-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "What is the product coefficient in a formation reaction?",
+              "Exactly one."
+            ],
+            [
+              "Reference-state elemental formation enthalpy?",
+              "Zero by definition."
+            ],
+            [
+              "How do you cancel a Hess intermediate?",
+              "Match species, phase and amount on opposite sides."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Recognize a valid formation equation.",
+            "Combine signs and coefficients in Hess’s law.",
+            "Apply the products-minus-reactants table method."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "state-comparison"
+          ]
+        }
+      ]
+    }
+  ]
+}

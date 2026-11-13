@@ -1,0 +1,45 @@
+{
+  "title": "Fractional power",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use exponent $1/2$.",
+    "The new power is $3/2$.",
+    "Divide the coefficient 3 by $3/2$."
+  ],
+  "solution": "The result is $2x^{3/2}+C$.",
+  "statement": "Find $\\int 3\\sqrt x\\,dx$ for $x>0$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "2*x^(3/2)",
+      "feedback": [
+        {
+          "answer": "3*x^(3/2)",
+          "message": "Divide the coefficient 3 by $3/2$."
+        }
+      ],
+      "vars": {
+        "x": [
+          1,
+          5
+        ]
+      }
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(2*x^(3/2))+4+C"
+      ],
+      "wrong": [
+        "(3*x^(3/2))+C"
+      ]
+    }
+  }
+}

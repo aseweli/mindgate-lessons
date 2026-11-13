@@ -1,0 +1,43 @@
+{
+  "title": "Use the rate to bound a reading",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "The lowest change uses the lower slope bound.",
+    "The interval length is 3.",
+    "Add the change to the starting value."
+  ],
+  "solution": "$f(5)-10=3f^\\prime(c)\\ge-12$, hence $f(5)\\ge-2$. A line of slope $-4$ attains it.",
+  "statement": "If $f(2)=10$, $-4\\le f^\\prime\\le-2$ on $(2,5)$, and $f$ is continuous on $[2,5]$, find the lowest possible $f(5)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "-2",
+      "feedback": [
+        {
+          "answer": "4",
+          "message": "Add the change to the starting value."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(-2)/2"
+      ],
+      "wrong": [
+        "4"
+      ]
+    }
+  }
+}

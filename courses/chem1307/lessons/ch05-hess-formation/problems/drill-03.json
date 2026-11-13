@@ -1,0 +1,35 @@
+{
+  "title": "Intermediates and phases",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Look at the physical state symbols.",
+    "Cancellation requires the same species in the same state.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The substances differ in phase and enthalpy. A phase-change step can connect them if the target requires it.",
+  "exam": false,
+  "statement": "A Hess sum contains $\\ce{H2O(l)}$ on one side and $\\ce{H2O(g)}$ on the other. What should you do?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Keep them distinct; add a phase-change step if needed.",
+        "Cancel them without adjustment.",
+        "Average their coefficients.",
+        "Both have zero formation enthalpy."
+      ],
+      "correct": 0,
+      "explanations": [
+        "The physical state is part of a thermochemical equation.",
+        "The enthalpy of vaporization would be lost.",
+        "Coefficients do not convert phases.",
+        "Water is a compound."
+      ]
+    }
+  }
+}

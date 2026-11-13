@@ -1,0 +1,56 @@
+{
+  "title": "Stationary inflection height",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        5
+      ]
+    },
+    "b": {
+      "int": [
+        6,
+        11
+      ]
+    }
+  },
+  "hints": [
+    "Differentiate twice.",
+    "The second derivative changes sign at $x=a$.",
+    "Evaluate the original function at the inflection input."
+  ],
+  "solution": "$f^{\\prime\\prime}=6(x-[$a])$ switches sign at $x=[$a]$, where $f=[$b]$.",
+  "statement": "Find the height of the inflection point of $f(x)=(x-[$a])^3+[$b]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "b",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "Evaluate the original function at the inflection input."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "([$a]-[$a])^3+[$b]"
+      ],
+      "wrong": [
+        "[$a]"
+      ]
+    }
+  }
+}

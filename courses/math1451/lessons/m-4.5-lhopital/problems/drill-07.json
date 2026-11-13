@@ -1,0 +1,43 @@
+{
+  "title": "Power limit at infinity",
+  "difficulty": 4,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Set $t=1/x$.",
+    "The log becomes $3\\ln(1+2t)/t$.",
+    "The log tends to 6. Return to the original power."
+  ],
+  "solution": "The derivative quotient for the log is $6/(1+2t)\\to6$, so the limit is $e^6$.",
+  "statement": "Evaluate $\\lim_{x\\to+\\infty}(1+2/x)^{3x}$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "exp(6)",
+      "feedback": [
+        {
+          "answer": "6",
+          "message": "The log tends to 6. Return to the original power."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(exp(6))/2"
+      ],
+      "wrong": [
+        "6"
+      ]
+    }
+  }
+}

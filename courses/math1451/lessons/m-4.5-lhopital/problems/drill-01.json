@@ -1,0 +1,43 @@
+{
+  "title": "Log over linear",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Check the $0/0$ form.",
+    "The numerator derivative is $1/x$.",
+    "Evaluate the derivative quotient at 1."
+  ],
+  "solution": "$\\ln x$ and $x-1$ both tend to zero. Their derivative quotient is $1/x\\to1$.",
+  "statement": "Evaluate $\\lim_{x\\to1}\\ln x/(x-1)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "1",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Evaluate the derivative quotient at 1."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(1)/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

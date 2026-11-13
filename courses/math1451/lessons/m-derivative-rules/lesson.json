@@ -1,0 +1,187 @@
+{
+  "id": "m-derivative-rules",
+  "title": "Derivative definition and basic rules",
+  "short": "Derivative rules",
+  "section": "3.1–3.3",
+  "minutes": 35,
+  "difficulty": 2,
+  "objective": "Find tangent slopes from a limit and differentiate algebraic, trigonometric, exponential and log functions.",
+  "tags": [
+    "exam2"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Derivative",
+              "Instantaneous rate of change or tangent slope."
+            ],
+            [
+              "Differentiability",
+              "Existence of a finite two-sided derivative."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Definition",
+              "latex": "f^\\prime(a)=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h",
+              "note": "Simplify before setting h to zero."
+            },
+            {
+              "label": "Power",
+              "latex": "(x^n)^\\prime=nx^{n-1}",
+              "note": "Where the derivative exists."
+            },
+            {
+              "label": "Product and quotient",
+              "latex": "(fg)^\\prime=f^\\prime g+fg^\\prime,\\quad(f/g)^\\prime=\\frac{f^\\prime g-fg^\\prime}{g^2}",
+              "note": "Keep the signs in order."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Cancel factors, and keep the original domain. A product needs two terms. The derivative of a constant is zero."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "When the prompt says “from the definition,” use the limit even if you already know the power rule."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "IvLpN1G1Ncg",
+          "title": "Basic differentiation rules",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Name the rule before differentiating each term."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Tangent from first principles",
+          "problem": "Find the tangent to $x^2-1$ at $x=2$.",
+          "answer": "$y-3=4(x-2)$.",
+          "steps": [
+            {
+              "title": "Expand",
+              "md": "$[(2+h)^2-4]/h=4+h$ for $h\\ne0$.",
+              "why": "The constants cancel before division."
+            },
+            {
+              "title": "Build the line",
+              "md": "$f(2)=3$ and $f^\\prime(2)=4$.",
+              "why": "Point-slope form combines the point and the derivative."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Product of unlike functions",
+          "problem": "Differentiate $x^2\\ln x$.",
+          "answer": "$2x\\ln x+x$ for $x>0$.",
+          "steps": [
+            {
+              "title": "Apply product rule",
+              "md": "$(2x)\\ln x+x^2(1/x)$.",
+              "why": "Either factor can supply the rate of change."
+            },
+            {
+              "title": "Simplify",
+              "md": "$2x\\ln x+x$.",
+              "why": "The positive domain remains in force."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "tangent-slope",
+            "drill-03",
+            "product-parameter",
+            "trig-slope"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "Does continuity imply differentiability?",
+              "A corner such as $|x|$ at zero is continuous and has different one-sided slopes."
+            ],
+            [
+              "Order of quotient numerator?",
+              "$f^\\prime g-fg^\\prime$."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Compute a derivative from the limit.",
+            "Pick the correct outer rule.",
+            "Write the tangent equation."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-04",
+            "drill-05"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

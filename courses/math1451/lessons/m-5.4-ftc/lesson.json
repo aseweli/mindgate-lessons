@@ -1,0 +1,189 @@
+{
+  "id": "m-5.4-ftc",
+  "title": "Fundamental Theorems of Calculus",
+  "short": "Fundamental Theorems",
+  "section": "5.4",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Evaluate definite integrals with antiderivatives and differentiate accumulation functions with variable bounds.",
+  "tags": [
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Net change",
+              "Integral of a rate, or final amount minus initial amount."
+            ],
+            [
+              "Accumulation function",
+              "A function defined by an integral with a variable bound."
+            ]
+          ]
+        },
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas to know",
+          "items": [
+            {
+              "label": "Endpoint evaluation",
+              "latex": "\\int_a^b f(x)\\,dx=F(b)-F(a),\\quad F^\\prime=f",
+              "note": "For continuous f on the interval."
+            },
+            {
+              "label": "Variable bounds",
+              "latex": "\\frac{d}{dx}\\int_{u(x)}^{v(x)}f(t)\\,dt=f(v(x))v^\\prime(x)-f(u(x))u^\\prime(x)",
+              "note": "Use continuity at the bounds and the chain rule."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Evaluate the antiderivative at the lower endpoint too. A moving lower bound contributes negatively. Include the derivative of each bound."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Written exam practice",
+          "md": "Look at the requested operation first. An integral with fixed bounds asks for a value, and a derivative of an accumulation function usually calls for direct use of the theorem."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "e0E8Is_G_p4",
+          "title": "Fundamental Theorem of Calculus, Parts 1 and 2",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Compare evaluating an integral to differentiating an accumulation function."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Exact endpoint evaluation",
+          "problem": "Compute $\\int_1^3(2x-x^{-2})\\,dx$.",
+          "answer": "$22/3$.",
+          "steps": [
+            {
+              "title": "Find an antiderivative",
+              "md": "$F(x)=x^2+1/x$.",
+              "why": "Differentiating $1/x$ gives $-x^{-2}$."
+            },
+            {
+              "title": "Subtract",
+              "md": "$F(3)-F(1)=(9+1/3)-(1+1)=22/3$.",
+              "why": "Parentheses preserve the lower-endpoint signs."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Two moving bounds",
+          "problem": "Differentiate $H(x)=\\int_{x}^{x^2}\\cos(t^3)\\,dt$.",
+          "answer": "$2x\\cos(x^6)-\\cos(x^3)$.",
+          "steps": [
+            {
+              "title": "Upper contribution",
+              "md": "$\\cos((x^2)^3)\\cdot2x$.",
+              "why": "Substitute into the integrand and multiply by the rate of the upper limit."
+            },
+            {
+              "title": "Lower contribution",
+              "md": "Subtract $\\cos(x^3)\\cdot1$.",
+              "why": "Raising the lower bound removes accumulation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "integrate-linear",
+            "drill-03",
+            "drill-04",
+            "ftc-moving",
+            "ftc-subtract",
+            "drill-05"
+          ],
+          "title": "Practice in order",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall without notes",
+          "cards": [
+            [
+              "What is the derivative of $\\int_0^{x^2} f(t)dt$?",
+              "$2xf(x^2)$."
+            ],
+            [
+              "Does a definite integral include $C$?",
+              "The antiderivative constant cancels in $F(b)-F(a)$."
+            ],
+            [
+              "What controls the increase of $A$?",
+              "The sign of $A^\\prime=f$."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "skills",
+          "title": "Ready when I can…",
+          "items": [
+            "Evaluate upper minus lower.",
+            "Handle both moving bounds with signs and chain factors.",
+            "Infer accumulation behavior from the integrand."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08"
+          ],
+          "title": "Mixed exam drills",
+          "intro": "Show the reasoning on paper and enter exact answers."
+        }
+      ]
+    }
+  ]
+}

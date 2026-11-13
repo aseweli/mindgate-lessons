@@ -1,0 +1,39 @@
+{
+  "title": "Trig composition",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "Use the cosine argument.",
+    "The differential is $du=3x^2dx$.",
+    "Keep the one-third multiplier."
+  ],
+  "solution": "$\\frac13\\int\\cos u\\,du=\\sin(x^3)/3+C$.",
+  "statement": "Find $\\int x^2\\cos(x^3)\\,dx$. Include $C$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "formula_c",
+      "value": "sin(x^3)/3",
+      "feedback": [
+        {
+          "answer": "sin(x^3)",
+          "message": "Keep the one-third multiplier."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(sin(x^3)/3)+4+C"
+      ],
+      "wrong": [
+        "(sin(x^3))+C"
+      ]
+    }
+  }
+}

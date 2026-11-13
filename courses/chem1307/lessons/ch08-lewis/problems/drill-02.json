@@ -1,0 +1,35 @@
+{
+  "title": "Ionic conductivity",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Conduction requires mobile charge.",
+    "Compare ion mobility between solid and liquid.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "In the melt, $\\ce{Mg^2+}$ and $\\ce{Cl^-}$ can move and carry charge.",
+  "exam": false,
+  "statement": "Why does molten magnesium chloride conduct electricity much better than its solid?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Its ions are mobile in the melt.",
+        "It produces free metallic electrons on melting.",
+        "The ions become electrically neutral.",
+        "All chloride ions become atoms."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Moving charged particles carry current.",
+        "Ionic conduction is carried by ions.",
+        "Neutralizing the carriers would not explain conduction.",
+        "Melting does not undo the ionic charges."
+      ]
+    }
+  }
+}

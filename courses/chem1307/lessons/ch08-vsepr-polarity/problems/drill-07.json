@@ -1,0 +1,34 @@
+{
+  "title": "Tricky polar five-domain case",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Place two lone pairs equatorially.",
+    "Add the three remaining bond vectors.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$\\ce{ClF3}$ is AX₃E₂. Equatorial lone pairs leave two axial bonds and one equatorial bond. The two axial contributions cancel each other, while the remaining direction gives a net dipole.",
+  "statement": "Which pair gives the molecular shape and polarity of $\\ce{ClF3}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "T-shaped and polar",
+        "T-shaped and nonpolar",
+        "Trigonal planar and nonpolar",
+        "Seesaw and polar"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The unmatched equatorial bond prevents cancellation.",
+        "Only two of the bond directions oppose each other.",
+        "This omits both lone pairs.",
+        "A seesaw structure has four bonded neighbors."
+      ]
+    }
+  }
+}

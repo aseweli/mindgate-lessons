@@ -1,0 +1,35 @@
+{
+  "title": "Threshold and brightness",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Identify what brightness changes.",
+    "Compare energy per photon with the work function.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Individual photons remain below $\\Phi$, so there is no photoelectron emission.",
+  "exam": false,
+  "statement": "A beam lies below a metal’s threshold frequency. What happens when it is made brighter in the usual one-photon model?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Still no photoelectrons.",
+        "More photoelectrons leave.",
+        "The photoelectrons gain speed.",
+        "The threshold frequency decreases."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Energy per photon is unchanged.",
+        "That applies above threshold.",
+        "The photons still cannot eject an electron.",
+        "The threshold is a property of the surface."
+      ]
+    }
+  }
+}

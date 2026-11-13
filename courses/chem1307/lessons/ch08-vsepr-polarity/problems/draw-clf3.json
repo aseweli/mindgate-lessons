@@ -1,0 +1,65 @@
+{
+  "title": "Draw ClF3",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count 28 valence electrons.",
+    "Place three F atoms around chlorine.",
+    "Two pairs remain on Cl."
+  ],
+  "solution": "The central chlorine has three bonds and two lone pairs. Five domains give an AX₃E₂ T shape.",
+  "exam": false,
+  "statement": "Draw the Lewis structure for $\\ce{ClF3}$. Show all lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "ClF3",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "Cl",
+              "lp": 2
+            },
+            {
+              "el": "F",
+              "lp": 3
+            },
+            {
+              "el": "F",
+              "lp": 3
+            },
+            {
+              "el": "F",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ]
+          ]
+        }
+      ],
+      "allow": [
+        "expanded_octet"
+      ]
+    }
+  }
+}

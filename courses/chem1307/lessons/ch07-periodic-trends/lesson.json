@@ -1,0 +1,195 @@
+{
+  "id": "ch07-periodic-trends",
+  "title": "Periodic trends, shielding, and isoelectronic ions",
+  "short": "Periodic trends",
+  "chapter": 7,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Explain and rank atomic size, ion size, ionization energy and electron affinity.",
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Effective nuclear charge",
+              "Net attractive influence of the nucleus on an electron after shielding."
+            ],
+            [
+              "Isoelectronic",
+              "Same total electron count."
+            ],
+            [
+              "Electron affinity",
+              "Energy change for adding an electron to gaseous X under the stated convention."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Effective charge",
+              "latex": "Z_\\mathrm{eff}\\approx Z-S",
+              "note": "A qualitative shielding model."
+            },
+            {
+              "label": "First ionization",
+              "latex": "\\ce{X(g) -> X+(g) + e-}",
+              "note": "Energy input is positive."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Count electrons before ranking isoelectronic ions. Use first-ionization exceptions. Keep electron affinity separate from electronegativity and check sign conventions."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "If given a list of successive ionization energies, locate the big jump and count removals made before it."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "KSjacvlr-M4",
+          "title": "Periodic trends",
+          "channel": "GS Academy",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Explain each trend using effective nuclear charge or a change of occupied shell."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Isoelectronic order",
+          "problem": "Rank $\\ce{O^2-}$, $\\ce{F^-}$, $\\ce{Na+}$ and $\\ce{Mg^2+}$ from smallest to largest.",
+          "answer": "$\\ce{Mg^2+ < Na+ < F^- < O^2-}$.",
+          "steps": [
+            {
+              "title": "Count",
+              "md": "All have 10 electrons.",
+              "why": "This controls the shell and electron count."
+            },
+            {
+              "title": "Compare protons",
+              "md": "Z is 12, 11, 9 and 8 respectively in the answer order.",
+              "why": "More protons pull the same electron count inward."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Successive IE jump",
+          "problem": "A main-group atom has successive ionization energies 600, 1800, 2700, and 11,600 kJ/mol. How many valence electrons are suggested?",
+          "answer": "Three.",
+          "steps": [
+            {
+              "title": "Find the jump",
+              "md": "The largest rise is between IE₃ and IE₄.",
+              "why": "The fourth electron is much harder to remove."
+            },
+            {
+              "title": "Interpret",
+              "md": "The first three removals depleted the valence shell.",
+              "why": "The fourth removal reaches the core."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "iso-order",
+            "radius-order",
+            "ie-order",
+            "drill-01",
+            "drill-02",
+            "drill-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "Across a main-group period, what generally happens to radius?",
+              "It decreases as effective nuclear charge rises."
+            ],
+            [
+              "Same electron count, more protons?",
+              "Smaller radius."
+            ],
+            [
+              "Why is IE₁ of O below N?",
+              "O has a paired 2p electron that is easier to remove."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Explain trends with shielding and shell size.",
+            "Rank isoelectronic ions.",
+            "Use the large successive IE jump.",
+            "Read electron affinity signs."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "drill-07",
+            "ie-n-o"
+          ]
+        }
+      ]
+    }
+  ]
+}

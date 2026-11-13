@@ -1,0 +1,43 @@
+{
+  "title": "Shifted interval limit",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {},
+  "hints": [
+    "The width is $3/n$.",
+    "The right sample is $2+3i/n$.",
+    "Retain the constant 2 inside the sum."
+  ],
+  "solution": "$R_n=(3/n)(2n+(3/n)n(n+1)/2)=6+9(n+1)/(2n)\\to21/2$.",
+  "statement": "Use right rectangles to find the area under $x$ on $[2,5]$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "21/2",
+      "feedback": [
+        {
+          "answer": "9/2",
+          "message": "Retain the constant 2 inside the sum."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "2*(21/2)/2"
+      ],
+      "wrong": [
+        "9/2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Chain factor at a point",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "hints": [
+    "Use the FTC before evaluating.",
+    "At 1 the integrand value at the upper bound is $1+a$.",
+    "Multiply by the derivative of the upper bound at 1."
+  ],
+  "solution": "$A^\\prime(x)=(1+[$a]x^2)(2\\cdot[$a]x)$. At 1 it is $2\\cdot[$a](1+[$a])$.",
+  "statement": "If $A(x)=\\int_0^{[$a]x^2}(1+t)\\,dt$, find $A^\\prime(1)$.\n\n[__________]{answer}",
+  "answers": {
+    "answer": {
+      "type": "number",
+      "value": "2*a*(1+a)",
+      "feedback": [
+        {
+          "answer": "1+a",
+          "message": "Multiply by the derivative of the upper bound at 1."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ]
+    }
+  },
+  "tests": {
+    "answer": {
+      "right": [
+        "(1+[$a])*([$a]+[$a])"
+      ],
+      "wrong": [
+        "1+[$a]"
+      ]
+    }
+  }
+}

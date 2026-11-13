@@ -1,0 +1,35 @@
+{
+  "title": "First row filled pair",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count four electrons.",
+    "Fill both 1s MOs.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Two electrons fill $\\sigma_{1s}$ and two fill $\\sigma^*_{1s}$, giving zero.",
+  "exam": false,
+  "statement": "What is the predicted bond order for isolated $\\ce{He2}$ in the simple 1s MO model?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "−1"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The bonding and antibonding effects cancel in the model.",
+        "That counts the bonding pair only.",
+        "This treats every electron as bonding.",
+        "The two occupations are equal."
+      ]
+    }
+  }
+}

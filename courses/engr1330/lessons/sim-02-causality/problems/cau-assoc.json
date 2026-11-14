@@ -1,0 +1,45 @@
+{
+  "title": "Association",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "statement": "Any relation between the treatment and the outcome is called …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "a cause",
+        "a confounder",
+        "an association",
+        "a control group"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Causality needs more evidence.",
+        "That's a third variable.",
+        "Correct.",
+        "That's a group of individuals."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "The first stage of a study.",
+    "Before deciding cause.",
+    ""
+  ],
+  "solution": "Any treatment–outcome relation is an association.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "What does it make?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "statement": "`np.random.choice(['treatment', 'control'], 10)` returns …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "the word 'treatment' 10 times",
+        "10 random labels; the two groups may not have 5 each",
+        "one label",
+        "exactly 5 of each label"
+      ],
+      "correct": 1,
+      "explanations": [
+        "It's random.",
+        "Correct: with replacement.",
+        "The size is 10.",
+        "Use a permutation for equal sizes."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "With or without replacement?",
+    "With.",
+    "Counts can be unequal."
+  ],
+  "solution": "10 independent random labels, so the groups can be unequal.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

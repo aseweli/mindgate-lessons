@@ -1,0 +1,45 @@
+{
+  "title": "Switch or stay?",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "simulation"
+  ],
+  "statement": "In the Monty Hall game, about what fraction of games does the **switch** strategy win?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Always",
+        "About 2/3",
+        "About 1/2",
+        "About 1/3"
+      ],
+      "correct": 1,
+      "explanations": [
+        "If your first guess was the car, switching loses.",
+        "Correct.",
+        "The two closed doors aren't equally likely.",
+        "That's staying."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Staying wins when the first guess was the car.",
+    "That happens 1/3 of the time.",
+    "Switching wins the rest."
+  ],
+  "solution": "Switching wins whenever the first guess was a goat: about 2/3.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

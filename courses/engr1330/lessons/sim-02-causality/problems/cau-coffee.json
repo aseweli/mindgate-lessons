@@ -1,0 +1,45 @@
+{
+  "title": "Spot the confounder",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "statement": "In the 1960s coffee drinkers had higher lung-cancer rates than non-drinkers.\n\nWhat is the most likely confounding factor?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Age, because all studies have age effects",
+        "Coffee, because the association is strong",
+        "There is no confounder",
+        "Smoking, because coffee drinkers were more likely to smoke"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Possible, but the known confounder is smoking.",
+        "Strong association isn't causation.",
+        "Smoking explains the association.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is there a third variable that affects both?",
+    "Think about what else differs between the groups.",
+    "That variable is the confounder."
+  ],
+  "solution": "The association is explained by a third variable: smoking, because coffee drinkers were more likely to smoke.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

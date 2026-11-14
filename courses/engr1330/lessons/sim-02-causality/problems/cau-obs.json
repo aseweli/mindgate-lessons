@@ -1,0 +1,45 @@
+{
+  "title": "Observational study",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "statement": "Researchers record which students chose to attend tutoring and compare their grades with students who didn't. This is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "a randomized controlled experiment",
+        "an observational study; it can show association but not cause",
+        "a simulation",
+        "proof that tutoring raises grades"
+      ],
+      "correct": 1,
+      "explanations": [
+        "The students chose.",
+        "Correct.",
+        "Real data, not a simulation.",
+        "Motivated students might both attend and do better."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Who chose the groups?",
+    "The students.",
+    "No randomization."
+  ],
+  "solution": "Students self-selected, so motivation could confound the comparison.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

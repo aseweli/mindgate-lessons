@@ -1,0 +1,45 @@
+{
+  "title": "What is estimated?",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "simulation"
+  ],
+  "statement": "```python\nhits = 0\nfor i in np.arange(10000):\n    rolls = np.random.choice(np.arange(1, 7), 3)\n    if np.count_nonzero(rolls == 6) >= 1:\n        hits = hits + 1\nprint(hits / 10000)\n```\n\nThis estimates …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "the chance of exactly one six in 3 rolls",
+        "the chance of a six in one roll",
+        "the chance of at least one six in 3 rolls",
+        "the average number of sixes"
+      ],
+      "correct": 2,
+      "explanations": [
+        "`>= 1` also counts two or three sixes.",
+        "Each trial is 3 rolls.",
+        "Correct: about 1 − (5/6)³ ≈ 0.42.",
+        "It counts trials, not sixes."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What is one trial?",
+    "3 rolls.",
+    "When does it count a hit?"
+  ],
+  "solution": "A hit is a trial of 3 rolls with at least one six: it estimates 1 − (5/6)³.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

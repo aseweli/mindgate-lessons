@@ -1,0 +1,240 @@
+{
+  "id": "sim-02-causality",
+  "title": "Causality, confounding and randomized experiments",
+  "short": "Causality",
+  "minutes": 35,
+  "difficulty": 2,
+  "objective": "Tell association from causation, spot confounding factors, and explain why randomized controlled experiments can establish causality.",
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "requires": [
+    "sim-01-simulation"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Treatment",
+              "The factor whose effect you want to know."
+            ],
+            [
+              "Outcome",
+              "What is measured on each individual."
+            ],
+            [
+              "Association",
+              "Any relation between treatment and outcome."
+            ],
+            [
+              "Confounding factor",
+              "A difference between groups, other than the treatment, that affects the outcome."
+            ],
+            [
+              "Randomized controlled experiment",
+              "Individuals randomly assigned to treatment or control, then treated identically otherwise."
+            ],
+            [
+              "Observational study",
+              "Researchers only observe who got the treatment; no random assignment."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Correlation ⇒ causation.** An association can come from a confounder.\n- **Letting people choose their group.** Self-selection brings confounders back in.\n- **Treating groups differently besides the treatment.** Then any difference could be due to that.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools. Expect: naming the confounder in a short story, picking\nthe design that can establish causation, and reading `np.random.choice(['treatment', 'control'], n)`.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "GtV-VYdNt_g",
+          "title": "Correlation Doesn't Equal Causation",
+          "channel": "CrashCourse",
+          "focus": "Confounders and why randomized experiments are the gold standard.",
+          "start": "0:00",
+          "end": "12:17"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Find the confounder",
+          "problem": "Towns with more fire trucks at a fire have more damage. Do fire trucks cause damage?",
+          "steps": [
+            {
+              "md": "More trucks ↔ more damage.",
+              "title": "Association",
+              "why": "That's what the data show."
+            },
+            {
+              "md": "The **size of the fire** drives both: big fires get more trucks and do more damage.",
+              "title": "Look for a third variable",
+              "why": "A confounder affects both."
+            },
+            {
+              "md": "No; the association is explained by fire size.",
+              "title": "Conclusion"
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nnp.random.seed(1)\nfire_size = np.random.uniform(1, 10, 200)\ntrucks = np.round(fire_size + np.random.normal(0, 1, 200))\ndamage = 50 * fire_size + np.random.normal(0, 40, 200)\nprint(\"r(trucks, damage):\", round(np.corrcoef(trucks, damage)[0, 1], 2))\n```\n\n```text\nr(trucks, damage): 0.89\n```",
+              "title": "Complete program (illustration)",
+              "why": "Trucks don't appear in the damage formula at all, yet r is high."
+            }
+          ],
+          "answer": "Fire size is a confounder; trucks don't cause damage."
+        },
+        {
+          "type": "worked_example",
+          "title": "Design a fair test",
+          "problem": "A team wants to know whether a new coating reduces corrosion on 40 steel plates.",
+          "steps": [
+            {
+              "md": "Randomly split the 40 plates into 20 treatment (coated) and 20 control (uncoated).",
+              "title": "Randomize",
+              "why": "Removes confounders such as batch or position."
+            },
+            {
+              "md": "Same environment and test time for all 40 plates.",
+              "title": "Treat identically",
+              "why": "Only the coating differs."
+            },
+            {
+              "md": "Compare average corrosion between the groups.",
+              "title": "Compare"
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nnp.random.seed(40)\nplates = np.arange(1, 41)\nshuffled = np.random.permutation(plates)\ntreatment, control = shuffled[:20], shuffled[20:]\nprint(len(treatment), len(control))\nprint(sorted(treatment[:5]))\n```\n\n```text\n20 20\n[np.int64(3), np.int64(23), np.int64(25), np.int64(26), np.int64(30)]\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "A randomized controlled experiment."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "assign",
+          "title": "Random assignment",
+          "language": "python",
+          "md": "Randomly split 12 participants into two groups of exactly 6 with `np.random.permutation`. Print each group\nsorted. Expected output:\n\n```text\ntreatment: [np.int64(3), np.int64(4), np.int64(5), np.int64(7), np.int64(9), np.int64(10)]\ncontrol: [np.int64(1), np.int64(2), np.int64(6), np.int64(8), np.int64(11), np.int64(12)]\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-assign.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "cau-coffee",
+            "cau-ice",
+            "cau-design",
+            "cau-code",
+            "cau-assoc",
+            "cau-why-random",
+            "cau-obs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Association vs causation",
+              "A relation vs one thing producing the other"
+            ],
+            [
+              "Confounder",
+              "Third variable affecting both treatment and outcome"
+            ],
+            [
+              "Randomized controlled experiment",
+              "Random assignment to treatment/control, otherwise identical"
+            ],
+            [
+              "Observational study",
+              "No random assignment"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Name the confounder in a story.",
+            "Explain why randomization removes confounding.",
+            "Randomly assign groups in Python."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice.",
+          "problems": [
+            "cau-rev-control",
+            "cau-rev-claim",
+            "cau-rev-perm"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Random assignment",
+          "md": "Full program for **Random assignment** (try it yourself first):\n\n```python\nimport numpy as np\n\nnp.random.seed(1330)\npeople = np.arange(1, 13)\nshuffled = np.random.permutation(people)\ntreatment = shuffled[:6]\ncontrol = shuffled[6:]\nprint(\"treatment:\", sorted(treatment))\nprint(\"control:\", sorted(control))\n```\n\nOutput:\n\n```text\ntreatment: [np.int64(3), np.int64(4), np.int64(5), np.int64(7), np.int64(9), np.int64(10)]\ncontrol: [np.int64(1), np.int64(2), np.int64(6), np.int64(8), np.int64(11), np.int64(12)]\n```"
+        }
+      ]
+    }
+  ]
+}

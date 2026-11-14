@@ -1,0 +1,45 @@
+{
+  "title": "Simulation recipe",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "simulation"
+  ],
+  "statement": "You want to estimate the chance that 10 coin tosses give at least 8 heads. In the simulation recipe, what is\n\"simulate one value\"?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Compute 8/10",
+        "Repeat 10,000 times",
+        "Toss one coin",
+        "Toss 10 coins once and record whether there were at least 8 heads"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That's not a simulation.",
+        "That's step 3/4.",
+        "One value must be one full experiment of 10 tosses.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What is one experiment here?",
+    "10 tosses.",
+    "Record the event for that one experiment."
+  ],
+  "solution": "One value = one run of the whole experiment (10 tosses) and its result.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

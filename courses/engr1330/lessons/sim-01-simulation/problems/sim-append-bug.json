@@ -1,0 +1,45 @@
+{
+  "title": "Why is it empty?",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "simulation"
+  ],
+  "statement": "```python\nimport numpy as np\n\nresults = np.array([])\nfor i in np.arange(10):\n    np.append(results, i)\nprint(len(results))\n```\n\nIt prints 0. Which change fixes it?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Use `len(results) + 1`",
+        "Move `results = np.array([])` inside the loop",
+        "Use `range(10)` instead of `np.arange(10)`",
+        "Write `results = np.append(results, i)`"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That hides the bug.",
+        "Then it would be reset every pass.",
+        "The loop runs fine; the results are thrown away.",
+        "Correct: np.append returns a new array."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Does np.append change `results` in place?",
+    "No, it returns a new array.",
+    "Assign it back."
+  ],
+  "solution": "np.append returns a new array; assign it: `results = np.append(results, i)`.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

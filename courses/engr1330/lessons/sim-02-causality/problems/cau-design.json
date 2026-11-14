@@ -1,0 +1,45 @@
+{
+  "title": "Which design shows causation?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "statement": "Which study can best show that a new fertilizer **causes** higher crop yields?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Randomly assign 100 plots to fertilizer or no fertilizer, then treat them the same otherwise",
+        "Compare farms that chose to use it with farms that didn't",
+        "Use it on the best plots and compare with the rest",
+        "Survey farmers about their yields"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: a randomized controlled experiment.",
+        "Self-selection: better farms may choose it.",
+        "The plots differ before treatment.",
+        "Observational and self-reported."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Who decides the groups?",
+    "Chance should.",
+    "Randomization removes confounders."
+  ],
+  "solution": "Random assignment plus identical treatment otherwise: a randomized controlled experiment.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

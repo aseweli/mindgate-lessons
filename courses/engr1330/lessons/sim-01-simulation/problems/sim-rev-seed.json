@@ -1,0 +1,45 @@
+{
+  "title": "Different every time",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "simulation"
+  ],
+  "statement": "Running `print(np.random.choice(np.arange(1, 7)))` twice gives 4 and then 2. Why?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It picks randomly each time; set `np.random.seed(...)` to repeat results",
+        "It's a bug in NumPy",
+        "It cycles through the faces in order",
+        "arange changes between runs"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "That's how random choice works.",
+        "It's random, not ordered.",
+        "arange is fixed."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is choice deterministic?",
+    "No.",
+    "A seed makes it repeatable."
+  ],
+  "solution": "Random functions change each run unless a seed is fixed.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

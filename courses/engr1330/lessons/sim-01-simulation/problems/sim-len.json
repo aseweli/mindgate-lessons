@@ -1,0 +1,40 @@
+{
+  "title": "How long is the array?",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "simulation"
+  ],
+  "vars": {
+    "n": {
+      "int": [
+        5,
+        400
+      ]
+    }
+  },
+  "statement": "How many values does `outcomes` hold after this runs?\n\n```python\nimport numpy as np\n\noutcomes = np.array([])\nfor i in np.arange([$n]):\n    outcomes = np.append(outcomes, np.random.choice([-1, 0, 1]))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "n"
+    }
+  },
+  "hints": [
+    "How many times does the loop run?",
+    "`np.arange([$n])` has [$n] values.",
+    "One value is appended per pass."
+  ],
+  "solution": "The loop runs [$n] times and appends one value each time: [$n].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$n]"
+      ],
+      "wrong": [
+        "[$n]-1"
+      ]
+    }
+  }
+}

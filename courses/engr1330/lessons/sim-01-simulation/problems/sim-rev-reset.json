@@ -1,0 +1,45 @@
+{
+  "title": "Collector in the loop",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "simulation"
+  ],
+  "statement": "```python\nfor i in np.arange(100):\n    outcomes = np.array([])\n    outcomes = np.append(outcomes, bet_on_one_roll())\n```\n\nWhat is `len(outcomes)` after the loop?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "0",
+        "100",
+        "101",
+        "1"
+      ],
+      "correct": 3,
+      "explanations": [
+        "One value is appended after each reset.",
+        "It would be, if the empty array were created before the loop.",
+        "No.",
+        "Correct: the array is reset every pass."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Where is the empty array created?",
+    "Inside the loop, every pass.",
+    "Only the last value survives."
+  ],
+  "solution": "The collector is recreated each pass, so only the last value remains: length 1.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

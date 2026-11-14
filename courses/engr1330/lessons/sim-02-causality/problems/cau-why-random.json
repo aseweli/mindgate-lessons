@@ -1,0 +1,45 @@
+{
+  "title": "Why randomize?",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "statement": "Why does random assignment help establish causality?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It lets participants pick the group they prefer",
+        "It makes the sample bigger",
+        "It makes the groups alike on average in every other way, including unknown confounders",
+        "It guarantees a large effect"
+      ],
+      "correct": 2,
+      "explanations": [
+        "That's the opposite.",
+        "Group size doesn't change.",
+        "Correct.",
+        "It says nothing about effect size."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What could differ between groups?",
+    "Confounders.",
+    "Chance spreads them evenly."
+  ],
+  "solution": "Randomization balances all other factors on average, so a difference in outcome points to the treatment.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

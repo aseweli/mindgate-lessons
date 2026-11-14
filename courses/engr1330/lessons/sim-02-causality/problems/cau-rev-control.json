@@ -1,0 +1,45 @@
+{
+  "title": "Control group",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "statement": "The control group in an experiment …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "gets twice the treatment",
+        "is not measured",
+        "is chosen by the researcher as the healthiest",
+        "does not get the treatment but is otherwise treated the same"
+      ],
+      "correct": 3,
+      "explanations": [
+        "No.",
+        "Both groups are measured.",
+        "That would bias it.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Compare with the treatment group.",
+    "Only one difference.",
+    ""
+  ],
+  "solution": "The control group gets no treatment but otherwise identical conditions.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

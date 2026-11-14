@@ -1,0 +1,45 @@
+{
+  "title": "A causal claim",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "statement": "An observational study finds people who drink green tea live longer. Which claim is justified?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Green tea drinking is associated with longer life",
+        "Green tea causes longer life",
+        "Long life causes tea drinking",
+        "There is no relationship"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Observational: confounders possible.",
+        "Not justified either.",
+        "There is an association."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Was there random assignment?",
+    "No.",
+    "Only association."
+  ],
+  "solution": "Without randomization, only an association is justified.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

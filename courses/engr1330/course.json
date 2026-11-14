@@ -80,7 +80,10 @@
       "title": "Unit 10 · Simulation & causality",
       "from": "2026-10-23",
       "to": "2026-10-26",
-      "lessons": []
+      "lessons": [
+        "sim-01-simulation",
+        "sim-02-causality"
+      ]
     },
     {
       "id": "u11",

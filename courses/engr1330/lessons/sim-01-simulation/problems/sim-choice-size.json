@@ -1,0 +1,45 @@
+{
+  "title": "With a size",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "simulation"
+  ],
+  "statement": "`np.random.choice(np.arange(1, 7), 4)` returns …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "an array of 4 random faces from 1 to 6, possibly repeated",
+        "4 different faces",
+        "the number 4",
+        "one random face"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: with replacement.",
+        "Repeats are allowed (with replacement).",
+        "4 is the size.",
+        "Without the size you'd get one value."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does the second argument mean?",
+    "Size.",
+    "With replacement by default."
+  ],
+  "solution": "It returns 4 draws with replacement.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

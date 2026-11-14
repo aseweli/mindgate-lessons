@@ -1,0 +1,45 @@
+{
+  "title": "Spot the confounder",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "statement": "Cities that sell more ice cream have more drownings each month.\n\nWhat is the most likely confounding factor?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Ice cream makes swimmers drown",
+        "Hot weather, which increases both swimming and ice-cream sales",
+        "Drownings increase ice-cream sales",
+        "City population only"
+      ],
+      "correct": 1,
+      "explanations": [
+        "No causal mechanism; a confounder explains it.",
+        "Correct.",
+        "Backwards and still not causal.",
+        "Population is fixed month to month; the seasonal pattern points to weather."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is there a third variable that affects both?",
+    "Think about what else differs between the groups.",
+    "That variable is the confounder."
+  ],
+  "solution": "The association is explained by a third variable: hot weather, which increases both swimming and ice-cream sales.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

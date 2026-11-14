@@ -1,0 +1,50 @@
+{
+  "title": "What does this print? (count)",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "simulation"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "arr": "-1, 0, 1, 1, -1, 1",
+          "k": 3
+        },
+        {
+          "arr": "0, 0, 1, -1",
+          "k": 1
+        },
+        {
+          "arr": "1, 1, 1, 0, 1, -1, 1",
+          "k": 5
+        }
+      ]
+    }
+  },
+  "statement": "What does this print?\n\n```python\nimport numpy as np\n\noutcomes = np.array([$c.arr])\nprint(np.count_nonzero(outcomes == 1))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.k"
+    }
+  },
+  "hints": [
+    "`outcomes == 1` marks the 1s.",
+    "Count them.",
+    ""
+  ],
+  "solution": "There are [$c.k] ones.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.k]"
+      ],
+      "wrong": [
+        "[$c.k]+1"
+      ]
+    }
+  }
+}

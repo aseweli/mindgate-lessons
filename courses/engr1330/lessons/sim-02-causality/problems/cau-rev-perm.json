@@ -1,0 +1,45 @@
+{
+  "title": "Equal groups",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "causality"
+  ],
+  "statement": "Which code splits 20 people into two groups of exactly 10 at random?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`np.random.choice(['T', 'C'], 20)`",
+        "`s = np.random.permutation(people); s[:10], s[10:]`",
+        "`people[:10], people[10:]`",
+        "`np.random.choice(people, 10)`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "Group sizes can be unequal.",
+        "Correct.",
+        "Not random.",
+        "With replacement; may repeat people."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Random and exactly equal?",
+    "Shuffle, then cut.",
+    ""
+  ],
+  "solution": "Shuffle with permutation, then cut in half.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

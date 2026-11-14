@@ -1,0 +1,65 @@
+{
+  "title": "Residual",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "vars": {
+    "x": {
+      "int": [
+        5,
+        30
+      ]
+    },
+    "y": {
+      "int": [
+        40,
+        80
+      ]
+    },
+    "d": {
+      "pick": [
+        -6,
+        -4,
+        -2,
+        3,
+        5,
+        7
+      ]
+    },
+    "p": {
+      "expr": "y-d"
+    }
+  },
+  "statement": "A data point has x = [$x] and y = [$y]. The line predicts $\\hat y = [$p]$. What is the residual?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "y-p",
+      "feedback": [
+        {
+          "answer": "p-y",
+          "message": "Residual = actual − predicted."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Residual = actual − predicted.",
+    "Actual y = [$y].",
+    "[$y] − [$p]."
+  ],
+  "solution": "Residual = actual − predicted = $[$y]-[$p]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$y]-[$p]"
+      ],
+      "wrong": [
+        "[$p]-[$y]"
+      ]
+    }
+  }
+}

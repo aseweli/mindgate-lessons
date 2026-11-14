@@ -1,0 +1,32 @@
+{
+  "title": "r = −1",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "If r = −1, what is the SD of the residuals?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "0"
+    }
+  },
+  "hints": [
+    "Use √(1 − r²)·SDy.",
+    "r² = 1.",
+    "√0 = 0."
+  ],
+  "solution": "All points are on the line, so every residual is 0.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "r = 0",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "If r = 0, the SD of the residuals equals …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "0",
+        "the SD of x",
+        "the SD of y",
+        "half the SD of y"
+      ],
+      "correct": 2,
+      "explanations": [
+        "That's r = ±1.",
+        "x's spread isn't involved.",
+        "Correct: √(1 − 0)·SDy; the line is flat at the mean.",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "√(1 − r²) with r = 0.",
+    "= 1.",
+    ""
+  ],
+  "solution": "√(1 − 0) = 1, so SD_residuals = SD_y: the line explains nothing.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

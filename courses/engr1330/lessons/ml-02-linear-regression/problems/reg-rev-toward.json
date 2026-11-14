@@ -1,0 +1,45 @@
+{
+  "title": "Regression toward the mean",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "r = 0.5 between midparent and child height. A family's midparent height is 2 SDs above average. The predicted child\nheight is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "1 SD above average",
+        "2 SDs above average",
+        "4 SDs above average",
+        "Exactly average"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: 0.5 × 2.",
+        "That ignores r.",
+        "Multiply by r, don't divide.",
+        "Only if r = 0."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Standard units: ŷ = r·x.",
+    "0.5 × 2.",
+    ""
+  ],
+  "solution": "0.5 × 2 = 1 SD above average: predictions are pulled toward the mean.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

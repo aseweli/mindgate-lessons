@@ -1,0 +1,45 @@
+{
+  "title": "Changing units",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "correlation"
+  ],
+  "statement": "r between engine power (kW) and price (dollars) is 0.62. Power is converted to horsepower and price to thousands of\ndollars. The new r is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It can't be known without the data",
+        "−0.62",
+        "0.62",
+        "0.62 × 1.341 / 1000"
+      ],
+      "correct": 2,
+      "explanations": [
+        "r is unchanged by linear unit changes.",
+        "Positive rescaling doesn't flip the sign.",
+        "Correct: r has no units and doesn't change with rescaling.",
+        "Unit conversions don't enter r."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What units does r have?",
+    "None.",
+    "Rescaling x or y doesn't change standard units."
+  ],
+  "solution": "Standard units remove the units, so r stays 0.62.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

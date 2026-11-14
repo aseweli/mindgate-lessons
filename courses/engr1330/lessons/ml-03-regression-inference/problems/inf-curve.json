@@ -1,0 +1,45 @@
+{
+  "title": "Curved residual plot",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "A residual plot shows residuals positive for small x, negative in the middle, and positive for large x. What does it\nmean?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Heteroscedasticity",
+        "The residuals have a non-zero average",
+        "The fit is perfect",
+        "The relationship is non-linear; a straight line isn't the best model"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That's a fan shape, not a curve.",
+        "They still average 0.",
+        "A perfect fit has residuals all 0.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is there a pattern?",
+    "U-shape.",
+    "Pattern → line misses curvature."
+  ],
+  "solution": "A U-shaped pattern means the data curve; use a non-linear model.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

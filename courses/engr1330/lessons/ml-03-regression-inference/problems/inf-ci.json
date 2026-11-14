@@ -1,0 +1,45 @@
+{
+  "title": "Slope interval",
+  "difficulty": 4,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "The bootstrap 95% CI for the true slope is (−0.4, 1.1). What should you conclude?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "The slope is definitely positive",
+        "Use a 99% interval to get a significant result",
+        "The slope is 0.35",
+        "0 is plausible, so the linear relation may not be real"
+      ],
+      "correct": 3,
+      "explanations": [
+        "The interval includes negative values.",
+        "A wider interval would still include 0.",
+        "That's just the midpoint.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Does the interval contain 0?",
+    "Yes.",
+    "Warning sign."
+  ],
+  "solution": "Because the interval contains 0, the true line could be flat.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

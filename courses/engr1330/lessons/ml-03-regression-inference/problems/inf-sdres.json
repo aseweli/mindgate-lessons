@@ -1,0 +1,56 @@
+{
+  "title": "SD of the residuals",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "vars": {
+    "r": {
+      "pick": [
+        0.6,
+        0.8,
+        -0.6,
+        0.28,
+        -0.96
+      ]
+    },
+    "s": {
+      "int": [
+        5,
+        25
+      ],
+      "step": 5
+    }
+  },
+  "statement": "SD of y is [$s] and r = [$r]. What is the SD of the residuals of the regression line?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "sqrt(1-r^2)*s",
+      "feedback": [
+        {
+          "answer": "(1-r^2)*s",
+          "message": "Take the square root of 1 − r²."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "SD_res = √(1 − r²)·SD_y.",
+    "1 − ([$r])² first.",
+    "Square root, times [$s]."
+  ],
+  "solution": "$\\sqrt{1-([$r])^2}\\times[$s]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "sqrt(1-([$r])^2)*[$s]"
+      ],
+      "wrong": [
+        "(1-([$r])^2)*[$s]"
+      ]
+    }
+  }
+}

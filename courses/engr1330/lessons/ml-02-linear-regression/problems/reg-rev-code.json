@@ -1,0 +1,45 @@
+{
+  "title": "Which line computes the slope?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "`r`, `x` and `y` are defined. Which line computes the regression slope in original units?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`slope = np.mean(y) / np.mean(x)`",
+        "`slope = r * np.std(y) / np.std(x)`",
+        "`slope = r * np.std(x) / np.std(y)`",
+        "`slope = r`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "That's a ratio of means, not the regression slope.",
+        "Correct.",
+        "SDs upside down.",
+        "Only in standard units."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "slope = r × SDy / SDx.",
+    "y on top.",
+    ""
+  ],
+  "solution": "slope = r·SDy/SDx.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

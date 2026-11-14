@@ -1,0 +1,45 @@
+{
+  "title": "corrcoef output",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "correlation"
+  ],
+  "statement": "`m = np.corrcoef(x, y)`. Which expression is r?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`m[0, 1]`",
+        "`m[1, 1]`",
+        "`m`",
+        "`m[0, 0]`"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct (so is `m[1, 0]`).",
+        "Always 1: y with itself.",
+        "That's the whole 2×2 matrix.",
+        "Always 1: x with itself."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What shape is m?",
+    "The diagonal compares each variable with itself.",
+    "Off-diagonal = r."
+  ],
+  "solution": "The off-diagonal entries of the 2×2 matrix are r.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

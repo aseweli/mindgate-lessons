@@ -1,0 +1,55 @@
+{
+  "title": "Intercept",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "vars": {
+    "b": {
+      "pick": [
+        0.5,
+        1.2,
+        2,
+        2.5,
+        -1.5
+      ]
+    },
+    "mx": {
+      "int": [
+        10,
+        40
+      ]
+    },
+    "my": {
+      "int": [
+        50,
+        90
+      ]
+    }
+  },
+  "statement": "The regression line has slope [$b]. The mean of x is [$mx] and the mean of y is [$my]. What is the intercept?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "my-b*mx"
+    }
+  },
+  "hints": [
+    "The line passes through (mean x, mean y).",
+    "intercept = mean y − slope × mean x.",
+    "[$my] − [$b] × [$mx]."
+  ],
+  "solution": "$[$my] - [$b]\\times[$mx]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$my]-[$b]*[$mx]"
+      ],
+      "wrong": [
+        "[$my]-[$mx]"
+      ]
+    }
+  }
+}

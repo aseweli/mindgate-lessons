@@ -1,0 +1,248 @@
+{
+  "id": "ml-03-regression-inference",
+  "title": "Residual plots and regression inference",
+  "short": "Regression diagnostics",
+  "minutes": 50,
+  "difficulty": 4,
+  "objective": "Diagnose a regression with residual plots, use the SD-of-residuals formula, and bootstrap a confidence interval for the true slope.",
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "requires": [
+    "ml-02-linear-regression"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Residual plot",
+              "Residuals plotted against x; should be a shapeless band around 0."
+            ],
+            [
+              "Heteroscedasticity",
+              "Uneven spread of residuals across x (a fan shape)."
+            ],
+            [
+              "Fitted values",
+              "The line's predictions ŷ."
+            ],
+            [
+              "CI for the true slope",
+              "Middle 95% of bootstrap slopes; if it contains 0, the linear relation may not be real."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Facts about the regression line",
+          "items": [
+            {
+              "label": "Mean residual",
+              "latex": "\\overline{e}=0"
+            },
+            {
+              "label": "SD of residuals",
+              "latex": "SD_e=\\sqrt{1-r^2}\\,SD_y"
+            },
+            {
+              "label": "SD of fitted values",
+              "latex": "SD_{\\hat y}=|r|\\,SD_y"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Judging fit from the regression plot alone.** Curves often only show clearly in the residual plot.\n- **Expecting the average residual to show bad fit.** It is 0 for every regression line.\n- **Bootstrapping x and y separately.** Resample whole rows so each pair stays together.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "After Exam 3; useful for the final project. Expect to read residual plots (pattern, fan, none), apply the\n√(1 − r²) formula, and decide from a slope CI whether to use linear regression.",
+          "title": "How it's tested"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "2AQKmw14mHM",
+          "title": "R-squared, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "How much of y's variation a line explains; connect it to √(1 − r²) for the leftover spread.",
+          "start": "0:00",
+          "end": "11:01"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Size of the errors from r",
+          "problem": "SD of y is 12 and r = 0.8. Find the SD of the residuals and of the fitted values.",
+          "steps": [
+            {
+              "md": "$\\sqrt{1 - 0.64} \\times 12 = 0.6 \\times 12 = 7.2$.",
+              "title": "Residuals",
+              "why": "SD of residuals = √(1 − r²)·SDy."
+            },
+            {
+              "md": "$0.8 \\times 12 = 9.6$.",
+              "title": "Fitted values",
+              "why": "SD of fitted = |r|·SDy."
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nsd_y, r = 12, 0.8\nprint(round(np.sqrt(1 - r**2) * sd_y, 2), round(abs(r) * sd_y, 2))\n```\n\n```text\n7.2 9.6\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "7.2 and 9.6."
+        },
+        {
+          "type": "worked_example",
+          "title": "Reading a slope interval",
+          "problem": "A bootstrap 95% CI for the true slope of price vs age is (−0.12, 0.35). Should you use the line?",
+          "steps": [
+            {
+              "md": "Yes: −0.12 < 0 < 0.35.",
+              "title": "Does it contain 0?",
+              "why": "0 means a flat true line."
+            },
+            {
+              "md": "The data don't show a real linear relation; stay away from the line for predictions.",
+              "title": "Conclusion",
+              "why": "Warning sign from the lecture."
+            },
+            {
+              "md": "```python\nleft, right = -0.12, 0.35\nprint(\"contains 0:\", left <= 0 <= right)\n```\n\n```text\ncontains 0: True\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "No: 0 is a plausible slope."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "slope-ci",
+          "title": "Bootstrap the slope",
+          "language": "python",
+          "md": "Bootstrap the slope of the regression of `Age` on `Diameter` in `trees.csv` (made-up) with 2,000 resamples of\nrows. Print the 95% CI (3 decimals) and whether it contains 0. Expected output:\n\n```text\n95% CI: 0.443 0.632\ncontains 0: False\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-slope-ci.py"
+              }
+            }
+          ],
+          "data": [
+            "trees.csv"
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "inf-mean",
+            "inf-sdres",
+            "inf-fitted",
+            "inf-perfect",
+            "inf-curve",
+            "inf-fan",
+            "inf-ci"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Curved residual plot",
+              "Non-linear relation"
+            ],
+            [
+              "Fan-shaped residual plot",
+              "Heteroscedasticity"
+            ],
+            [
+              "Mean residual",
+              "Always 0"
+            ],
+            [
+              "SD of residuals",
+              "√(1 − r²)·SD_y"
+            ],
+            [
+              "Slope CI contains 0",
+              "Don't trust the linear relation"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Read a residual plot.",
+            "Use the √(1 − r²) and |r| formulas.",
+            "Bootstrap a CI for the slope."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice.",
+          "problems": [
+            "inf-rev-good",
+            "inf-rev-r0",
+            "inf-rev-boot"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Bootstrap the slope",
+          "md": "Full program for **Bootstrap the slope** (try it yourself first):\n\n```python\nimport numpy as np\nimport pandas as pd\n\nt = pd.read_csv(\"trees.csv\")\nnp.random.seed(1330)\n\ndef slope_of(df):\n    r = np.corrcoef(df[\"Diameter\"], df[\"Age\"])[0, 1]\n    return r * np.std(df[\"Age\"]) / np.std(df[\"Diameter\"])\n\nslopes = []\nfor i in range(2000):\n    resample = t.sample(len(t), replace=True)\n    slopes.append(slope_of(resample))\n\nleft = np.percentile(slopes, 2.5)\nright = np.percentile(slopes, 97.5)\nprint(\"95% CI:\", round(left, 3), round(right, 3))\nprint(\"contains 0:\", left <= 0 <= right)\n```\n\nOutput:\n\n```text\n95% CI: 0.443 0.632\ncontains 0: False\n```"
+        }
+      ]
+    }
+  ]
+}

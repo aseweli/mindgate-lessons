@@ -1,0 +1,58 @@
+{
+  "title": "Standard units",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "correlation"
+  ],
+  "vars": {
+    "m": {
+      "int": [
+        10,
+        40
+      ]
+    },
+    "s": {
+      "int": [
+        2,
+        8
+      ]
+    },
+    "k": {
+      "pick": [
+        -2,
+        -1.5,
+        0.5,
+        1,
+        2.5
+      ]
+    },
+    "x": {
+      "expr": "m+k*s"
+    }
+  },
+  "statement": "The x values have mean [$m] and SD [$s]. What is $x = [$x]$ in standard units?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(x-m)/s"
+    }
+  },
+  "hints": [
+    "z = (x − mean) / SD.",
+    "[$x] − [$m] first.",
+    "Divide by [$s]."
+  ],
+  "solution": "$([$x]-[$m])/[$s]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "([$x]-[$m])/[$s]"
+      ],
+      "wrong": [
+        "[$x]-[$m]"
+      ]
+    }
+  }
+}

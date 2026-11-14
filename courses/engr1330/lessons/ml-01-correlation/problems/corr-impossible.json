@@ -1,0 +1,45 @@
+{
+  "title": "Possible values",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "correlation"
+  ],
+  "statement": "Which of these can **not** be a correlation coefficient?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "0",
+        "1.3",
+        "−0.95",
+        "1"
+      ],
+      "correct": 1,
+      "explanations": [
+        "No linear association.",
+        "Correct: r is always between −1 and 1.",
+        "A strong negative linear association.",
+        "A perfect upward line."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What's the range of r?",
+    "From −1 to 1.",
+    "Which value is outside?"
+  ],
+  "solution": "$-1 \\le r \\le 1$, so 1.3 is impossible.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Predict",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "vars": {
+    "b": {
+      "pick": [
+        0.8,
+        1.5,
+        2,
+        3.2
+      ]
+    },
+    "a": {
+      "int": [
+        5,
+        40
+      ]
+    },
+    "x": {
+      "int": [
+        3,
+        20
+      ]
+    }
+  },
+  "statement": "The regression line is $\\hat y = [$b]x + [$a]$. Predict y for $x = [$x]$.\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "b*x+a"
+    }
+  },
+  "hints": [
+    "Plug x into the line.",
+    "[$b] × [$x] first.",
+    "Then add [$a]."
+  ],
+  "solution": "$[$b]\\times[$x]+[$a]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$b]*[$x]+[$a]"
+      ],
+      "wrong": [
+        "[$b]+[$x]+[$a]"
+      ]
+    }
+  }
+}

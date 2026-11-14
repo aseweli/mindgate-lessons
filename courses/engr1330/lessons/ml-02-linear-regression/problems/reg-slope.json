@@ -1,0 +1,66 @@
+{
+  "title": "Slope from summary numbers",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "vars": {
+    "r": {
+      "pick": [
+        0.3,
+        0.5,
+        0.6,
+        0.8,
+        -0.4,
+        -0.7
+      ]
+    },
+    "sx": {
+      "int": [
+        2,
+        6
+      ]
+    },
+    "sy": {
+      "int": [
+        8,
+        20
+      ]
+    }
+  },
+  "statement": "r = [$r], SD of x = [$sx], SD of y = [$sy]. What is the slope of the regression line (original units)?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "r*sy/sx",
+      "feedback": [
+        {
+          "answer": "r*sx/sy",
+          "message": "SD of **y** goes on top."
+        },
+        {
+          "answer": "r",
+          "message": "r is the slope only in standard units."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "slope = r × SDy / SDx.",
+    "SDy = [$sy], SDx = [$sx].",
+    "[$r] × [$sy] / [$sx]."
+  ],
+  "solution": "slope = $[$r] \\times [$sy]/[$sx]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$r]*[$sy]/[$sx]"
+      ],
+      "wrong": [
+        "[$r]*[$sx]/[$sy]"
+      ]
+    }
+  }
+}

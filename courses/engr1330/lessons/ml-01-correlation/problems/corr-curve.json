@@ -1,0 +1,45 @@
+{
+  "title": "A perfect curve",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "correlation"
+  ],
+  "statement": "For the points of $y = x^2$ with x = −3, −2, …, 3, `np.corrcoef(x, y)[0, 1]` is 0. What is the right conclusion?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "x and y are unrelated",
+        "There is no linear association, even though y depends perfectly on x",
+        "The code has a bug",
+        "y causes x"
+      ],
+      "correct": 1,
+      "explanations": [
+        "y is exactly x²; r misses curved relations.",
+        "Correct.",
+        "r really is 0 for a symmetric U-shape.",
+        "r says nothing about cause."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What kind of association does r measure?",
+    "Linear only.",
+    "Look at the scatter plot: a U."
+  ],
+  "solution": "r measures only linear association; a symmetric curve gives r = 0.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

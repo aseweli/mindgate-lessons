@@ -1,0 +1,45 @@
+{
+  "title": "Bootstrapping a scatter plot",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "To bootstrap the slope, each resample should be made by …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "taking the first half of the rows",
+        "resampling x and y separately",
+        "resampling whole rows (x, y pairs) with replacement",
+        "shuffling y while keeping x fixed"
+      ],
+      "correct": 2,
+      "explanations": [
+        "That's deterministic.",
+        "That breaks the pairs and destroys the relationship.",
+        "Correct.",
+        "That simulates a flat line, not the slope's variability."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "The relationship lives in the pairs.",
+    "Keep pairs together.",
+    ""
+  ],
+  "solution": "Resample rows so each (x, y) pair stays together.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

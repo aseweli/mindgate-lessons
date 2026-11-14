@@ -1,0 +1,60 @@
+{
+  "title": "What does this print? (r)",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "final-project",
+    "correlation"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "x": "[1, 2, 3, 4, 5]",
+          "y": "[2, 4, 5, 4, 5]",
+          "v": 0.775
+        },
+        {
+          "x": "[1, 2, 3, 4]",
+          "y": "[8, 6, 5, 1]",
+          "v": -0.965
+        },
+        {
+          "x": "[2, 4, 6, 8]",
+          "y": "[3, 7, 11, 15]",
+          "v": 1.0
+        },
+        {
+          "x": "[1, 2, 3, 4, 5]",
+          "y": "[5, 3, 4, 1, 2]",
+          "v": -0.8
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\nimport numpy as np\n\nx = np.array([$c.x])\ny = np.array([$c.y])\nprint(round(np.corrcoef(x, y)[0, 1], 3))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v",
+      "tol": 0.0006,
+      "tol_type": "absolute"
+    }
+  },
+  "hints": [
+    "`[0, 1]` picks r out of the 2×2 matrix.",
+    "Convert x and y to standard units.",
+    "r = mean of the products; round to 3 decimals."
+  ],
+  "solution": "The correlation of these points is [$c.v].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.v]"
+      ],
+      "wrong": [
+        "-[$c.v]+5"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Why the regression line?",
+  "difficulty": 4,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "What makes the regression line special among all straight lines through a scatter plot?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It has slope 1",
+        "It passes through every point",
+        "Its residuals are all positive",
+        "It has the smallest RMSE (least squares)"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Its slope is r·SDy/SDx.",
+        "Only if r = ±1.",
+        "Its residuals average to 0.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "How do we measure a line's error?",
+    "RMSE.",
+    "The regression line minimizes it."
+  ],
+  "solution": "The regression line is the least-squares line: no other line has a smaller RMSE.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

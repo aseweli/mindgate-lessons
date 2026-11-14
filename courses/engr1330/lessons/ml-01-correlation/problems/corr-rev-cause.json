@@ -1,0 +1,45 @@
+{
+  "title": "Ice cream and sunburn",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "correlation"
+  ],
+  "statement": "Ice cream sales and sunburn cases have r = 0.85 across the months of a year. Which conclusion is justified?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Sunburn causes ice cream sales",
+        "Ice cream causes sunburn",
+        "They have a strong positive association, possibly both driven by hot sunny weather",
+        "The relationship is weak"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Same problem.",
+        "Correlation alone can't show cause.",
+        "Correct: a confounder.",
+        "0.85 is strong."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does r measure?",
+    "Can r show cause?",
+    "Is there a third variable?"
+  ],
+  "solution": "Strong association; summer weather drives both.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

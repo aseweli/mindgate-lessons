@@ -1,0 +1,45 @@
+{
+  "title": "Average residual",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "For any regression line, the average of the residuals is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "the RMSE",
+        "0",
+        "1",
+        "r"
+      ],
+      "correct": 1,
+      "explanations": [
+        "RMSE is never negative and usually > 0.",
+        "Correct, no matter how bad the fit.",
+        "No.",
+        "r is not involved."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Positive and negative residuals …",
+    "… balance out exactly.",
+    "For the least-squares line."
+  ],
+  "solution": "Residuals of the regression line always average to 0.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

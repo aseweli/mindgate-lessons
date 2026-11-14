@@ -1,0 +1,45 @@
+{
+  "title": "One outlier",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "correlation"
+  ],
+  "statement": "A scatter plot of 30 points shows no trend (r ≈ 0.05). One extra point far up and to the right is added. What\nhappens to r?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It can rise a lot: r is sensitive to outliers",
+        "It must become negative",
+        "r can't be computed with outliers",
+        "It stays near 0.05"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Up-right of the center gives a large positive product.",
+        "It can; it's just misleading.",
+        "One extreme point can dominate the average of products."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Where is the new point relative to the center?",
+    "Both standard units are large and positive.",
+    "Its product is huge."
+  ],
+  "solution": "The outlier's large positive product pulls r up: r is sensitive to outliers.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

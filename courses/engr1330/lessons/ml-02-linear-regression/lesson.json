@@ -1,0 +1,272 @@
+{
+  "id": "ml-02-linear-regression",
+  "title": "The regression line and least squares",
+  "short": "Linear regression",
+  "minutes": 55,
+  "difficulty": 3,
+  "objective": "Find the regression line's slope and intercept from r, the means and the SDs, make predictions, compute residuals and RMSE, and explain why it is the least-squares line.",
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "requires": [
+    "ml-01-correlation"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Regression line",
+              "The line used to predict y from x; slope r·SDy/SDx, through the point of means."
+            ],
+            [
+              "Residual",
+              "Actual y − predicted y."
+            ],
+            [
+              "MSE / RMSE",
+              "Mean of squared residuals / its square root (units of y)."
+            ],
+            [
+              "Least squares",
+              "The regression line has the smallest RMSE of all straight lines."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas",
+          "items": [
+            {
+              "label": "Slope",
+              "latex": "b=r\\frac{SD_y}{SD_x}"
+            },
+            {
+              "label": "Intercept",
+              "latex": "a=\\bar y-b\\,\\bar x"
+            },
+            {
+              "label": "Prediction",
+              "latex": "\\hat y=b x+a"
+            },
+            {
+              "label": "RMSE",
+              "latex": "\\sqrt{\\tfrac1n\\sum (y-\\hat y)^2}"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Slope = r.** Only in standard units; in original units multiply by SDy/SDx.\n- **SDs upside down.** It's SD of **y** over SD of **x**.\n- **Residual sign.** Residual = actual − predicted, not the other way round.\n- **Mixing np.std and pandas .std().** Use the same kind for both SDs (the class notebooks use either consistently).",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "After Exam 3, so it supports the final project. Multiple-choice style: compute slope/intercept from summary\nnumbers, predict, interpret a residual, and explain least squares.",
+          "title": "How it's tested"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "PaFPbb66DxQ",
+          "title": "The Main Ideas of Fitting a Line to Data",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "Least squares: why the best line is the one with the smallest sum of squared residuals.",
+          "start": "0:00",
+          "end": "9:21"
+        },
+        {
+          "type": "video",
+          "youtube": "WWqE7YHR4Jc",
+          "title": "Regression",
+          "channel": "CrashCourse",
+          "focus": "Residuals and what the slope means in context.",
+          "start": "0:00",
+          "end": "12:40"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Line from summary statistics",
+          "problem": "Study hours x: mean 10, SD 4. Scores y: mean 70, SD 12. r = 0.6. Find the regression line and predict the score for 14 hours.",
+          "steps": [
+            {
+              "md": "$0.6 \\times 12/4 = 1.8$ points per hour.",
+              "title": "Slope",
+              "why": "slope = r·SDy/SDx."
+            },
+            {
+              "md": "$70 - 1.8 \\times 10 = 52$.",
+              "title": "Intercept",
+              "why": "The line passes through (mean x, mean y)."
+            },
+            {
+              "md": "$1.8 \\times 14 + 52 = 77.2$.",
+              "title": "Predict",
+              "why": "Plug x into the line."
+            },
+            {
+              "md": "14 hours is 1 SD above; prediction is 0.6 SD above: 70 + 0.6·12 = 77.2.",
+              "title": "Check in standard units",
+              "why": "Same answer."
+            },
+            {
+              "md": "```python\nr, mx, sx, my, sy = 0.6, 10, 4, 70, 12\nslope = r * sy / sx\nintercept = my - slope * mx\nprint(round(slope, 2), round(intercept, 2), round(slope * 14 + intercept, 2))\n```\n\n```text\n1.8 52.0 77.2\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "ŷ = 1.8x + 52; predicted score 77.2."
+        },
+        {
+          "type": "worked_example",
+          "title": "Residuals for three families",
+          "problem": "With the line from Learn, find the residuals of the first three families in `heights.csv`.",
+          "steps": [
+            {
+              "md": "Compute slope and intercept as in Learn.",
+              "title": "Fit"
+            },
+            {
+              "md": "residual = Child − predicted.",
+              "title": "Predict and subtract",
+              "why": "Actual minus predicted."
+            },
+            {
+              "md": "```python\nimport numpy as np\nimport pandas as pd\n\nh = pd.read_csv(\"heights.csv\")\nr = np.corrcoef(h[\"Midparent\"], h[\"Child\"])[0, 1]\nslope = r * np.std(h[\"Child\"]) / np.std(h[\"Midparent\"])\nintercept = np.mean(h[\"Child\"]) - slope * np.mean(h[\"Midparent\"])\nh[\"Predicted\"] = slope * h[\"Midparent\"] + intercept\nh[\"Residual\"] = h[\"Child\"] - h[\"Predicted\"]\nprint(h.head(3).round(2))\n```\n\n```text\n   Family  Midparent  Child  Predicted  Residual\n0       1       67.7   66.8      66.96     -0.16\n1       2       67.8   68.7      67.01      1.69\n2       3       68.8   67.7      67.51      0.19\n```",
+              "title": "Complete program",
+              "why": "Positive residual: the child is taller than predicted."
+            }
+          ],
+          "answer": "Each residual is the vertical gap between a point and the line."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "fit-line",
+          "title": "Fit and evaluate the line",
+          "language": "python",
+          "md": "Using `heights.csv` (made-up), compute the slope and intercept of the regression line for predicting `Child`\nfrom `Midparent`, the prediction for a 66-inch midparent, and the RMSE. Round to 3 decimals. Expected output:\n\n```text\nslope 0.501\nintercept 33.004\nprediction at 66 66.103\nRMSE 3.441\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-fit-line.py"
+              }
+            }
+          ],
+          "data": [
+            "heights.csv"
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "reg-slope",
+            "reg-intercept",
+            "reg-predict",
+            "reg-residual",
+            "reg-rmse",
+            "reg-su",
+            "reg-ls"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Slope (original units)",
+              "r × SDy / SDx"
+            ],
+            [
+              "Intercept",
+              "mean y − slope × mean x"
+            ],
+            [
+              "Residual",
+              "actual − predicted"
+            ],
+            [
+              "RMSE",
+              "√(mean of residual²)"
+            ],
+            [
+              "Least squares",
+              "The regression line has the smallest RMSE"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Find slope and intercept from r, means and SDs.",
+            "Predict and compute residuals.",
+            "Compute MSE and RMSE.",
+            "Explain least squares."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice.",
+          "problems": [
+            "reg-rev-neg",
+            "reg-rev-code",
+            "reg-rev-toward"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Fit and evaluate the line",
+          "md": "Full program for **Fit and evaluate the line** (try it yourself first):\n\n```python\nimport numpy as np\nimport pandas as pd\n\nh = pd.read_csv(\"heights.csv\")\nx, y = h[\"Midparent\"], h[\"Child\"]\n\nr = np.corrcoef(x, y)[0, 1]\nslope = r * np.std(y) / np.std(x)\nintercept = np.mean(y) - slope * np.mean(x)\npred66 = slope * 66 + intercept\nrmse = np.sqrt(np.mean((y - (slope * x + intercept)) ** 2))\n\nprint(\"slope\", round(slope, 3))\nprint(\"intercept\", round(intercept, 3))\nprint(\"prediction at 66\", round(pred66, 3))\nprint(\"RMSE\", round(rmse, 3))\n```\n\nOutput:\n\n```text\nslope 0.501\nintercept 33.004\nprediction at 66 66.103\nRMSE 3.441\n```"
+        }
+      ]
+    }
+  ]
+}

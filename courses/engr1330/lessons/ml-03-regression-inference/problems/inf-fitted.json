@@ -1,0 +1,54 @@
+{
+  "title": "SD of fitted values",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "vars": {
+    "r": {
+      "pick": [
+        0.5,
+        -0.5,
+        0.9,
+        -0.3
+      ]
+    },
+    "s": {
+      "int": [
+        4,
+        20
+      ]
+    }
+  },
+  "statement": "SD of y is [$s] and r = [$r]. What is the SD of the fitted values?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "abs(r)*s",
+      "feedback": [
+        {
+          "answer": "r*s",
+          "message": "Use |r|: an SD can't be negative."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "SD_fitted / SD_y = |r|.",
+    "Multiply SD_y by |r|.",
+    "|[$r]| × [$s]."
+  ],
+  "solution": "$|[$r]| \\times [$s]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "abs([$r])*[$s]"
+      ],
+      "wrong": [
+        "[$s]"
+      ]
+    }
+  }
+}

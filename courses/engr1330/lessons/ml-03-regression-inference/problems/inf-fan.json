@@ -1,0 +1,45 @@
+{
+  "title": "Fan-shaped residuals",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "Residuals are tightly around 0 for small x but spread out more and more as x grows. This is called …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "an outlier",
+        "heteroscedasticity",
+        "perfect correlation",
+        "a non-linear pattern"
+      ],
+      "correct": 1,
+      "explanations": [
+        "It's a trend in the spread, not one point.",
+        "Correct: uneven spread.",
+        "Then residuals would be 0.",
+        "There's no curve, just growing spread."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Look at the spread, not the center.",
+    "Spread changes with x.",
+    "Uneven variation."
+  ],
+  "solution": "Uneven spread of residuals across x is heteroscedasticity: the line is less accurate for large x.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Direction of association",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "correlation"
+  ],
+  "statement": "SUVs with higher fuel economy (MPG) tend to have lower prices. The correlation between MPG and price is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "negative",
+        "greater than 1",
+        "positive",
+        "exactly 0"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: one goes up as the other goes down.",
+        "r is never above 1.",
+        "Positive means both rise together.",
+        "There is a clear trend."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Does price rise or fall as MPG rises?",
+    "Falls.",
+    "Falling trend → negative r."
+  ],
+  "solution": "Price tends to fall as MPG rises: negative association, r < 0.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

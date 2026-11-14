@@ -1,0 +1,45 @@
+{
+  "title": "A good residual plot",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "Which residual plot means the regression line is a reasonable model?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "A shapeless cloud evenly spread around 0",
+        "A fan opening to the right",
+        "All residuals above 0",
+        "A U-shape"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Heteroscedasticity.",
+        "Impossible for the regression line.",
+        "Non-linear."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "No pattern …",
+    "… and even spread.",
+    ""
+  ],
+  "solution": "No pattern and even spread around 0.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

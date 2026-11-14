@@ -1,0 +1,45 @@
+{
+  "title": "Negative residual",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "statement": "A point has a residual of −3.5. What does that mean?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "The line under-predicted by 3.5",
+        "The slope is negative",
+        "The point is an error in the data",
+        "The line over-predicted this point by 3.5"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That would be a positive residual.",
+        "A residual is about one point, not the slope.",
+        "Residuals are normal.",
+        "Correct: actual − predicted < 0."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Residual = actual − predicted.",
+    "Negative → actual is smaller.",
+    "Prediction was too high."
+  ],
+  "solution": "Negative residual: the prediction was 3.5 too high.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

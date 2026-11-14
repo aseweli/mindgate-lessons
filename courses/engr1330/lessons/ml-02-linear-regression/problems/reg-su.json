@@ -1,0 +1,56 @@
+{
+  "title": "Prediction in standard units",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "regression"
+  ],
+  "vars": {
+    "r": {
+      "pick": [
+        0.4,
+        0.5,
+        0.7,
+        0.9
+      ]
+    },
+    "k": {
+      "pick": [
+        1,
+        1.5,
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "r = [$r]. A value of x is [$k] SDs above its mean. How many SDs above the mean of y is the predicted y?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "r*k",
+      "feedback": [
+        {
+          "answer": "k",
+          "message": "The prediction is pulled toward the mean by the factor r."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "In standard units the slope is r.",
+    "ŷ_su = r × x_su.",
+    "[$r] × [$k]."
+  ],
+  "solution": "In standard units ŷ = r·x = [$r] × [$k].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$r]*[$k]"
+      ],
+      "wrong": [
+        "[$k]"
+      ]
+    }
+  }
+}

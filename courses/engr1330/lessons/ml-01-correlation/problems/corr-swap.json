@@ -1,0 +1,38 @@
+{
+  "title": "Swapping x and y",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "correlation"
+  ],
+  "statement": "`np.corrcoef(a, b)[0, 1]` is −0.4. What is `np.corrcoef(b, a)[0, 1]`?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-0.4",
+      "feedback": [
+        {
+          "answer": "0.4",
+          "message": "Swapping doesn't change the sign."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Does the order of the variables matter for r?",
+    "The product $z_x z_y = z_y z_x$.",
+    "Same value."
+  ],
+  "solution": "r is symmetric in x and y: −0.4.",
+  "tests": {
+    "a": {
+      "right": [
+        "-2/5"
+      ],
+      "wrong": [
+        "0.4"
+      ]
+    }
+  }
+}

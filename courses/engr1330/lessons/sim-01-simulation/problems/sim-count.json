@@ -24,7 +24,7 @@
       ]
     }
   },
-  "statement": "What does this print?\n\n```python\nimport numpy as np\n\noutcomes = np.array([$c.arr])\nprint(np.count_nonzero(outcomes == 1))\n```\n\n[______]{a}",
+  "statement": "What does this print?\n\n```python\nimport numpy as np\n\noutcomes = np.array([[$c.arr]])\nprint(np.count_nonzero(outcomes == 1))\n```\n\n[______]{a}",
   "answers": {
     "a": {
       "type": "number",

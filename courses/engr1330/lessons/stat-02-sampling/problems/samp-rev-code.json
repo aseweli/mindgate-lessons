@@ -1,0 +1,45 @@
+{
+  "title": "Pick the right line",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "statement": "Which line draws a random sample of 100 rows **with replacement** from `df`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`df.sample(100)`",
+        "`df.iloc[0:100]`",
+        "`df.sample(100, replace=True)`",
+        "`df.head(100)`"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Without replacement by default.",
+        "Also the first 100 rows: deterministic.",
+        "Correct.",
+        "The first 100 rows: deterministic."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which ones involve chance at all?",
+    "`head` and `iloc` are by position.",
+    "Replacement must be asked for."
+  ],
+  "solution": "Only `df.sample(100, replace=True)` is random and allows repeats.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "What does this print? (sample median)",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "vars": {
+    "m": {
+      "pick": [
+        {
+          "arr": "[4, 9, 1, 7, 3]",
+          "v": 4.0
+        },
+        {
+          "arr": "[12, 5, 8, 20, 6, 9]",
+          "v": 8.5
+        },
+        {
+          "arr": "[2, 2, 15, 7, 30, 1, 4]",
+          "v": 4.0
+        },
+        {
+          "arr": "[10, 40, 25, 5]",
+          "v": 17.5
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\nimport numpy as np\n\nsample = np.array([$m.arr])\nprint(np.median(sample))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "m.v"
+    }
+  },
+  "hints": [
+    "Sort the values first.",
+    "Odd count: the middle value. Even count: the average of the two middle values.",
+    "`np.median` returns a float, e.g. 6.0."
+  ],
+  "solution": "Sorted, the middle of [$m.arr] is [$m.v].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$m.v]"
+      ],
+      "wrong": [
+        "[$m.v]+100"
+      ]
+    }
+  }
+}

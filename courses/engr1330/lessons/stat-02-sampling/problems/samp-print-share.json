@@ -1,0 +1,63 @@
+{
+  "title": "What does this print? (share late)",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "t": 5,
+          "v": 0.6,
+          "k": 6
+        },
+        {
+          "t": 8,
+          "v": 0.5,
+          "k": 5
+        },
+        {
+          "t": 10,
+          "v": 0.4,
+          "k": 4
+        },
+        {
+          "t": 15,
+          "v": 0.3,
+          "k": 3
+        },
+        {
+          "t": 20,
+          "v": 0.2,
+          "k": 2
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\nimport numpy as np\n\ndelays = np.array([12, -3, 25, 4, 0, 18, 7, -1, 31, 9])\nlate = delays[delays > [$c.t]]\nprint(len(late) / len(delays))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "`delays > [$c.t]` is True where the delay is more than [$c.t].",
+    "Count the values strictly greater than [$c.t].",
+    "Divide that count by 10, the number of delays."
+  ],
+  "solution": "[$c.k] of the 10 delays are greater than [$c.t], so it prints [$c.k]/10 = [$c.v].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.v]"
+      ],
+      "wrong": [
+        "[$c.v]*10"
+      ]
+    }
+  }
+}

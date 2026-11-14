@@ -1,0 +1,45 @@
+{
+  "title": "Can a row repeat?",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "statement": "After `s = df.sample(50)`, can the same row of `df` appear twice in `s`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Yes, but only when the seed is fixed",
+        "Yes, sampling is always with replacement",
+        "No, `df.sample` draws without replacement unless you pass `replace=True`",
+        "Only if `df` has fewer than 50 rows"
+      ],
+      "correct": 2,
+      "explanations": [
+        "The seed makes results repeatable; it doesn't change replacement.",
+        "pandas' default is `replace=False`.",
+        "Correct.",
+        "Then pandas raises an error instead, because it can't draw 50 different rows."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What is the default value of `replace` in `df.sample`?",
+    "The default is `False`.",
+    "Without replacement means each row at most once."
+  ],
+  "solution": "`df.sample(n)` uses `replace=False` by default, so each row appears at most once.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

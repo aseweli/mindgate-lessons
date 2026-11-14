@@ -1,0 +1,45 @@
+{
+  "title": "Statistic or not?",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "statement": "`df` holds all 2,000 arrivals (the population). Which quantity is a **statistic**?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`len(df)`",
+        "`df['Delay'].max()`",
+        "`df.sample(200)['Delay'].median()`",
+        "`df['Delay'].median()`"
+      ],
+      "correct": 2,
+      "explanations": [
+        "The population size, not something estimated from a sample.",
+        "Computed from the entire population: a parameter.",
+        "Correct: computed from a sample, so it changes from sample to sample.",
+        "That is computed from the whole population: a parameter."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "A statistic comes from a sample.",
+    "A parameter comes from the population.",
+    "Only one option takes a sample first."
+  ],
+  "solution": "A statistic is computed from a sample; the population median is a parameter.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

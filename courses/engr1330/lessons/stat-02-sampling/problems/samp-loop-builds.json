@@ -1,0 +1,45 @@
+{
+  "title": "What does the loop build?",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "statement": "```python\nmedians = []\nfor i in range(5000):\n    medians.append(df[\"Delay\"].sample(400, replace=True).median())\n```\n\n`medians` holds 5,000 numbers. What is their histogram?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "The probability distribution of the population median",
+        "The empirical distribution of the sample median for samples of size 400",
+        "The empirical distribution of 400 delays",
+        "The population distribution of delays"
+      ],
+      "correct": 1,
+      "explanations": [
+        "The population median is one fixed number, not random.",
+        "Correct.",
+        "Each entry is a median of 400 delays, not a delay.",
+        "That would be `plt.hist(df['Delay'])`."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What is one entry of `medians`?",
+    "Each entry is a statistic computed from one sample.",
+    "Many values of a statistic = its empirical distribution."
+  ],
+  "solution": "Each pass computes one sample median; 5,000 of them form the empirical distribution of that statistic.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

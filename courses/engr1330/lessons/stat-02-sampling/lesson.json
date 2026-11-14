@@ -1,0 +1,277 @@
+{
+  "id": "stat-02-sampling",
+  "title": "Sampling and empirical distributions",
+  "short": "Sampling & empirical dists",
+  "minutes": 50,
+  "difficulty": 2,
+  "objective": "Tell deterministic, probability and random samples apart, sample a DataFrame with and without replacement, and use empirical distributions of data and of a statistic.",
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "requires": [
+    "stat-01-probability"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Population",
+              "Every element you want to know about (all bus arrivals this semester)."
+            ],
+            [
+              "Sample",
+              "The elements you actually observe, drawn from the population."
+            ],
+            [
+              "Deterministic sample",
+              "Rows chosen by position or condition, with no chance involved."
+            ],
+            [
+              "Probability sample",
+              "A sample whose chance of containing any group of elements can be computed in advance (chances may differ)."
+            ],
+            [
+              "With / without replacement",
+              "Whether a drawn element can be drawn again. `df.sample(n)` is without; `replace=True` is with."
+            ],
+            [
+              "Empirical distribution",
+              "The observed proportions (or histogram) of data you actually collected."
+            ],
+            [
+              "Law of averages",
+              "With many independent repetitions, the observed proportion of an event approaches its probability."
+            ],
+            [
+              "Statistic",
+              "A number computed from a sample, such as its median."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Assuming `df.sample(n)` can repeat rows.** It can't: the default is without replacement. Write `replace=True`\n  when you want repeats.\n- **Calling a filtered table random.** `df[df[\"Route\"] == \"Red\"]` is deterministic; nothing about it is random.\n- **Trusting a tiny sample's histogram.** The match to the population only becomes close as the sample grows.\n- **Thinking a probability sample needs equal chances.** It only needs chances you can compute.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Multiple choice, about 40 minutes. Typical items: classify a line of code as a deterministic or random sample;\nsay whether rows can repeat; predict what happens to an empirical histogram as n grows; state the law of\naverages; read a short `df.sample(...)` loop and say what distribution it builds.",
+          "title": "How Exam 3 tests this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "Rf-fIpB4D50",
+          "title": "Sampling Methods and Bias with Surveys",
+          "channel": "CrashCourse",
+          "focus": "Why random samples are trusted and convenience samples aren't. Connect each method to deterministic vs random samples from this lesson.",
+          "start": "0:00",
+          "end": "11:45"
+        },
+        {
+          "type": "video",
+          "youtube": "XLCWeSVzHUU",
+          "title": "Sampling from a Distribution, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "What it means to draw values from a distribution, and why a small sample's histogram looks bumpy.",
+          "start": "0:00",
+          "end": "3:48"
+        },
+        {
+          "type": "video",
+          "youtube": "x-0RlxTCX8U",
+          "title": "Empirical Distributions - Statistical Inference",
+          "channel": "Data Talks",
+          "focus": "Empirical distributions of data and of a statistic, the same idea as the medians loop in Learn.",
+          "start": "0:00",
+          "end": "4:36"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Late buses: population vs one random sample",
+          "problem": "Using `bus_delays.csv`, find the proportion of arrivals more than 10 minutes late in the whole population, then in one random sample of 200 arrivals drawn without replacement (seed 5).",
+          "steps": [
+            {
+              "md": "Build a True/False Series with `df['Delay'] > 10`, count the Trues, divide by the number of rows.",
+              "title": "Population proportion",
+              "why": "The mean of 0/1 values is a proportion; counting Trues and dividing does the same."
+            },
+            {
+              "md": "`df.sample(200)` picks 200 different rows.",
+              "title": "Draw the sample",
+              "why": "Default `replace=False`: no row twice."
+            },
+            {
+              "md": "Repeat the proportion on the 200 rows.",
+              "title": "Same calculation on the sample",
+              "why": "A statistic is computed the same way as the parameter, just on fewer rows."
+            },
+            {
+              "md": "```python\nimport numpy as np\nimport pandas as pd\n\ndf = pd.read_csv(\"bus_delays.csv\")\npop_share = np.count_nonzero(df[\"Delay\"] > 10) / len(df)\n\nnp.random.seed(5)\nsample = df.sample(200)\nsample_share = np.count_nonzero(sample[\"Delay\"] > 10) / len(sample)\n\nprint(\"population:\", round(pop_share, 3))\nprint(\"sample:    \", round(sample_share, 3))\n```\n\n```text\npopulation: 0.192\nsample:     0.195\n```",
+              "title": "Complete program",
+              "why": "The two numbers are close but not equal: that gap is sampling variability."
+            }
+          ],
+          "answer": "The sample proportion is a good but imperfect estimate of the population proportion."
+        },
+        {
+          "type": "worked_example",
+          "title": "Empirical distribution of the sample median",
+          "problem": "Draw 500 random samples of 100 delays (with replacement), record each sample's median, and report the population median and the middle of the medians.",
+          "steps": [
+            {
+              "md": "`df['Delay'].sample(100, replace=True).median()` is one value of the statistic.",
+              "title": "One repetition",
+              "why": "Step 2 of the simulation recipe: simulate one value."
+            },
+            {
+              "md": "Append each median to a list inside a `for` loop, then convert to an array.",
+              "title": "Repeat and collect",
+              "why": "Many values form the statistic's empirical distribution."
+            },
+            {
+              "md": "Compare `np.median(medians)` with the population median.",
+              "title": "Summarize",
+              "why": "If the samples are random, the medians center near the parameter."
+            },
+            {
+              "md": "```python\nimport numpy as np\nimport pandas as pd\n\ndf = pd.read_csv(\"bus_delays.csv\")\nnp.random.seed(8)\nmedians = []\nfor i in range(500):\n    medians.append(df[\"Delay\"].sample(100, replace=True).median())\nmedians = np.array(medians)\n\nprint(\"population median:\", df[\"Delay\"].median())\nprint(\"median of the 500 sample medians:\", np.median(medians))\nprint(\"smallest and largest:\", medians.min(), medians.max())\n```\n\n```text\npopulation median: 2.0\nmedian of the 500 sample medians: 2.0\nsmallest and largest: 0.0 5.5\n```",
+              "title": "Complete program",
+              "why": "Add `plt.hist(medians)` to see the distribution."
+            }
+          ],
+          "answer": "The sample medians are spread over a few minutes but center on the population median."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "late-share",
+          "title": "How the sample size changes the estimate",
+          "language": "python",
+          "md": "`bus_delays.csv` (made-up data) is copied next to your program. For each sample size in `[20, 200, 2000]`,\ndraw a random sample **with replacement** of that many delays and print the proportion that are more than\n10 minutes late (3 decimals). Then print the population proportion. Expected output:\n\n```text\n20 0.15\n200 0.165\n2000 0.188\npopulation 0.192\n```\n\nBigger samples land closer to the population value (law of averages).",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-late-share.py"
+              }
+            }
+          ],
+          "data": [
+            "bus_delays.csv"
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Kinds of samples, then code, then the distribution of a statistic.",
+          "problems": [
+            "samp-kind",
+            "samp-repeat",
+            "samp-print-share",
+            "samp-prob-sample",
+            "samp-print-median",
+            "samp-law",
+            "samp-loop-builds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Deterministic sample",
+              "Rows chosen by position or condition, no chance"
+            ],
+            [
+              "`df.sample(n)`",
+              "n random rows **without** replacement"
+            ],
+            [
+              "`df.sample(n, replace=True)`",
+              "n random rows **with** replacement (rows can repeat)"
+            ],
+            [
+              "Law of averages",
+              "Many independent repetitions → observed proportion approaches the probability"
+            ],
+            [
+              "Empirical distribution of a statistic",
+              "Histogram of a statistic computed on many random samples"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Classify a sample as deterministic, probability or random.",
+            "Write `df.sample` with and without replacement.",
+            "Explain what happens to an empirical histogram as the sample grows.",
+            "Build the empirical distribution of a statistic with a loop."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 3.",
+          "problems": [
+            "samp-rev-code",
+            "samp-rev-hist",
+            "samp-rev-statistic"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: How the sample size changes the estimate",
+          "md": "Full program for **How the sample size changes the estimate** (try it yourself first):\n\n```python\nimport numpy as np\nimport pandas as pd\n\ndf = pd.read_csv(\"bus_delays.csv\")\nnp.random.seed(1330)\n\nfor n in [20, 200, 2000]:\n    sample = df[\"Delay\"].sample(n, replace=True)\n    share = np.count_nonzero(sample > 10) / n\n    print(n, round(share, 3))\n\npop = np.count_nonzero(df[\"Delay\"] > 10) / len(df)\nprint(\"population\", round(pop, 3))\n```\n\nOutput:\n\n```text\n20 0.15\n200 0.165\n2000 0.188\npopulation 0.192\n```"
+        }
+      ]
+    }
+  ]
+}

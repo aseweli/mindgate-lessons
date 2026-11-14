@@ -1,0 +1,45 @@
+{
+  "title": "Law of averages",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "statement": "A fair die is rolled $n$ times and you record the proportion of sixes. Which statement is true?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "After a run of non-sixes, a six becomes more likely",
+        "The proportion stays the same for every n",
+        "After 6 rolls the proportion is exactly 1/6",
+        "As $n$ grows, the proportion of sixes tends to get closer to 1/6"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Rolls are independent; the die has no memory.",
+        "Small n gives very bumpy proportions.",
+        "Six rolls can easily give zero or three sixes.",
+        "Correct: that is the law of averages."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "The law of averages is about the long run.",
+    "Each roll is independent.",
+    "Large n, proportion ≈ probability."
+  ],
+  "solution": "With many independent repetitions the empirical proportion approaches the probability, 1/6. It says nothing about short runs.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

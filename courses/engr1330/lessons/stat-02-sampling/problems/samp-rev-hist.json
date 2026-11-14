@@ -1,0 +1,45 @@
+{
+  "title": "Bigger samples",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "statement": "You draw random samples of size 10, 100 and 10,000 from a right-skewed population and draw each sample's histogram.\nWhat do you expect?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "All three look the same as the population",
+        "The size-10 histogram is most accurate",
+        "The histograms become symmetric as n grows",
+        "The size-10,000 histogram looks most like the population's"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Small samples are bumpy and can miss the long tail.",
+        "Fewer values means more chance variation.",
+        "The **data** keep the population's skewed shape; it's the distribution of sample **means** that becomes bell-shaped (next lesson).",
+        "Correct: large random samples resemble the population."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does the law of averages say about large n?",
+    "Does sampling change the shape of the data?",
+    "Compare small vs large samples."
+  ],
+  "solution": "A large random sample's empirical distribution closely resembles the population distribution, skew and all.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

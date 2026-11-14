@@ -1,0 +1,50 @@
+{
+  "title": "A probability sample",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "statement": "From three people A, B and C, a sample of two is chosen like this: A is always chosen; then a fair coin decides\nwhether B or C is the second person. What is the chance that the sample is $\\{B, C\\}$? And $\\{A, C\\}$?\n\na) $P(\\{B, C\\})$ =\n\n[_____]{a}\n\nb) $P(\\{A, C\\})$ =\n\n[_____]{b}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "0"
+    },
+    "b": {
+      "type": "number",
+      "value": "1/2",
+      "feedback": [
+        {
+          "answer": "1/3",
+          "message": "The three possible pairs are not equally likely here; follow the procedure."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "List the pairs this procedure can produce.",
+    "A is in every sample.",
+    "The coin gives {A, B} or {A, C}, each with chance 1/2."
+  ],
+  "solution": "Every sample contains A, so $\\{B, C\\}$ has chance 0, and $\\{A, C\\}$ happens when the coin picks C: chance 1/2. Because these chances can be computed in advance, it is a probability sample, even though the chances differ.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1/3"
+      ]
+    },
+    "b": {
+      "right": [
+        "0.5"
+      ],
+      "wrong": [
+        "1/3"
+      ]
+    }
+  }
+}

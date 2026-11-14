@@ -1,0 +1,45 @@
+{
+  "title": "What kind of sample?",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "sampling"
+  ],
+  "statement": "`df` holds every bus arrival. What kind of sample is this?\n\n```python\ngold = df.loc[df[\"Route\"] == \"Gold\"]\n```\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "A random sample without replacement",
+        "A random sample with replacement",
+        "A deterministic sample",
+        "A probability sample with unequal chances"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Nothing random happens; running it twice gives the same rows.",
+        "No row is drawn at random, and none can repeat.",
+        "Correct: the rows are fixed by a condition; no chance is involved.",
+        "Each row's chance of being included is either 0 or 1, decided by the condition, not by chance."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Does running the line again ever give different rows?",
+    "Is any random function called?",
+    "Rows picked by a rule = deterministic."
+  ],
+  "solution": "Selecting rows by a condition (or by position) is a deterministic sample.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

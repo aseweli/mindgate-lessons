@@ -1,0 +1,55 @@
+{
+  "title": "Two chips, no replacement",
+  "difficulty": 3,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "vars": {
+    "r": {
+      "int": [
+        3,
+        6
+      ]
+    },
+    "b": {
+      "int": [
+        2,
+        6
+      ]
+    },
+    "r+b": {
+      "expr": "r+b"
+    }
+  },
+  "statement": "A bin holds [$r] red and [$b] blue chips. Two chips are drawn at random **without replacement**.\nWhat is the probability that **both** are red?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "r/(r+b)*(r-1)/(r+b-1)",
+      "feedback": [
+        {
+          "answer": "(r/(r+b))^2",
+          "message": "That treats the draws as if the first chip went back. Without replacement there is one fewer red and one fewer chip for the second draw."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Use the multiplication rule: P(red first) × P(red second given red first).",
+    "P(red first) = [$r]/[$r+b]. How many chips, and how many red ones, are left after that?",
+    "Second factor: ([$r] − 1)/([$r+b] − 1)."
+  ],
+  "solution": "$P = \\frac{[$r]}{[$r+b]} \\times \\frac{[$r]-1}{[$r+b]-1}$. After the first red chip is removed there are [$r]−1 red chips among [$r+b]−1 chips.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$r]*([$r]-1)/(([$r]+[$b])*([$r]+[$b]-1))"
+      ],
+      "wrong": [
+        "([$r]/([$r]+[$b]))^2"
+      ]
+    }
+  }
+}

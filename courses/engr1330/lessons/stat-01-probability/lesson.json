@@ -1,0 +1,301 @@
+{
+  "id": "stat-01-probability",
+  "title": "Probability: complements, multiplication and addition rules",
+  "short": "Probability rules",
+  "minutes": 50,
+  "difficulty": 2,
+  "objective": "Compute probabilities of random events with the complement, multiplication and addition rules, and check them with a NumPy simulation.",
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Outcome",
+              "One possible result of a random process (a die showing 4)."
+            ],
+            [
+              "Event",
+              "A set of outcomes you care about (\"the die shows an even number\")."
+            ],
+            [
+              "Probability",
+              "A number from 0 to 1 giving how likely an event is."
+            ],
+            [
+              "Complement",
+              "The event \"A does not happen\"; its probability is $1 - P(A)$."
+            ],
+            [
+              "With / without replacement",
+              "Whether a drawn item goes back before the next draw. Without replacement, later chances change."
+            ],
+            [
+              "Simulation",
+              "Using random draws on a computer to mimic a chance experiment many times and estimate a probability."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Rules to memorize",
+          "items": [
+            {
+              "label": "Equally likely outcomes",
+              "latex": "P(A)=\\frac{\\#\\text{ outcomes in }A}{\\#\\text{ all outcomes}}"
+            },
+            {
+              "label": "Complement",
+              "latex": "P(\\text{not }A)=1-P(A)"
+            },
+            {
+              "label": "Multiplication (A and B)",
+              "latex": "P(A\\text{ and }B)=P(A)\\times P(B\\mid A)",
+              "note": "The second factor is computed as if A already happened."
+            },
+            {
+              "label": "Addition (one of two ways)",
+              "latex": "P(A)=P(\\text{way 1})+P(\\text{way 2})",
+              "note": "Only when the two ways can't happen together."
+            },
+            {
+              "label": "At least one in n independent tries",
+              "latex": "P(\\text{at least one})=1-(1-p)^n"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Adding instead of using the complement.** The chance of at least one six in 4 rolls is **not** $4 \\times \\frac16$\n  (that logic gives more than 1 after 7 rolls). Use $1 - (5/6)^4$.\n- **Forgetting the order.** \"Green then red\" is $1/12$; \"one green and one red\" (any order) is twice that.\n- **Ignoring \"without replacement\".** After one ticket is drawn the box is smaller: the second factor is $1/3$, not $1/4$.\n- **Comparing a simulation to the exact value too strictly.** A simulated fraction wobbles around the true\n  probability; it won't match to every decimal.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 3 is about 40 minutes, all multiple choice, no AI tools. Expect: a short word problem (dice, coins, tickets,\ndefective parts) with four probabilities to choose from, where the wrong choices are the classic mistakes above;\n\"which expression computes ...\" with `1 - (5/6)**n` and look-alikes; and short NumPy programs using\n`np.random.choice` and `np.count_nonzero` where you pick what they print or what they estimate.",
+          "title": "How Exam 3 tests this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "OyddY7DlV58",
+          "title": "Probability Part 1: Rules and Patterns",
+          "channel": "CrashCourse",
+          "focus": "The addition and multiplication rules, and why the probability of 'A and B' is never bigger than either one. Pause after each example and write which rule it uses.",
+          "start": "0:00",
+          "end": "12:00"
+        },
+        {
+          "type": "video",
+          "youtube": "uzkc-qNVoOk",
+          "title": "Probability explained: independent and dependent events",
+          "channel": "Khan Academy",
+          "focus": "How drawing without replacement changes the second probability (dependent events), which is exactly the ticket-box situation in this lesson.",
+          "start": "0:00",
+          "end": "8:18"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "At least one defective chip",
+          "problem": "Each chip from a production line is defective with probability 0.02, independently of the others. A quality engineer tests a batch of 30 chips. What is the chance that **at least one** is defective? Write a program that prints it to 4 decimal places.",
+          "steps": [
+            {
+              "md": "\"At least one defective\" can happen in 30 different ways. Its complement is a single case: **all 30 are good**.",
+              "title": "Name the hard event and its complement",
+              "why": "The complement turns many cases into one, which the multiplication rule handles easily."
+            },
+            {
+              "md": "$P(\\text{good}) = 1 - 0.02 = 0.98$.",
+              "title": "Chance one chip is good",
+              "why": "Complement rule for a single chip."
+            },
+            {
+              "md": "The chips are independent, so multiply 30 copies: $0.98^{30}$.",
+              "title": "Chance all 30 are good",
+              "why": "Multiplication rule: each extra chip must also be good."
+            },
+            {
+              "md": "$P(\\text{at least one defective}) = 1 - 0.98^{30}$.",
+              "title": "Back to the original event",
+              "why": "Complement of \"all good\"."
+            },
+            {
+              "md": "```python\np_defect = 0.02\nn = 30\np_all_good = (1 - p_defect) ** n\np_at_least_one = 1 - p_all_good\nprint(\"P(all good) =\", round(p_all_good, 4))\nprint(\"P(at least one defective) =\", round(p_at_least_one, 4))\n```\n\n```text\nP(all good) = 0.5455\nP(at least one defective) = 0.4545\n```",
+              "title": "Complete program",
+              "why": "Python's `**` raises to a power; `round(x, 4)` keeps 4 decimals."
+            }
+          ],
+          "answer": "About 0.4545: almost a 1-in-2 chance, even though each chip is only 2% likely to be bad."
+        },
+        {
+          "type": "worked_example",
+          "title": "Two tickets without replacement, checked by simulation",
+          "problem": "A box has four tickets: red, blue, green, yellow. Two are drawn at random without replacement. Find $P(\\text{one green and one red, in any order})$ exactly, then estimate it with 20,000 simulated draws.",
+          "steps": [
+            {
+              "md": "$\\frac14 \\times \\frac13 = \\frac1{12}$.",
+              "title": "Green then red",
+              "why": "Multiplication rule; after green leaves, 3 tickets remain."
+            },
+            {
+              "md": "Same reasoning: $\\frac14 \\times \\frac13 = \\frac1{12}$.",
+              "title": "Red then green",
+              "why": "The two orders are different outcomes."
+            },
+            {
+              "md": "$\\frac1{12} + \\frac1{12} = \\frac16 \\approx 0.1667$.",
+              "title": "Either order",
+              "why": "Addition rule: the two orders can't both happen in one draw."
+            },
+            {
+              "md": "`np.random.choice(tickets, 2, replace=False)` returns two different tickets. The event happened if the pair contains both 'green' and 'red'.",
+              "title": "Simulate one draw",
+              "why": "`replace=False` is what makes this \"without replacement\"."
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nnp.random.seed(2026)\ntickets = np.array(['red', 'blue', 'green', 'yellow'])\ntrials = 20000\nhits = 0\nfor i in np.arange(trials):\n    pair = np.random.choice(tickets, 2, replace=False)\n    if 'green' in pair and 'red' in pair:\n        hits = hits + 1\nprint(\"simulated:\", hits / trials)\nprint(\"exact:    \", round(1/6, 4))\n```\n\n```text\nsimulated: 0.1665\nexact:     0.1667\n```",
+              "title": "Complete program",
+              "why": "The loop repeats one random draw many times and counts how often the event happened."
+            }
+          ],
+          "answer": "Exactly $1/6$; the simulation lands close to 0.1667."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "atleast-six",
+          "title": "Simulate 'at least one six'",
+          "language": "python",
+          "md": "Read a number of rolls `n` (the Input tab holds `4`). Simulate **10,000 trials**; in each trial roll a die\n`n` times with `np.random.choice`. Count the trials that contain at least one 6, then print the simulated\nfraction and the exact value $1 - (5/6)^n$, both rounded to 4 decimals. Press **Run** (⌘↵).\n\nExpected output for `n = 4` (with the seed in the starter):\n\n```text\nRolls per trial: \nSimulated: 0.5148\nExact:     0.5177\n```\n\nThen change the input to 1, 10 and 20 and watch both numbers climb toward 1.",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-atleast-six.py"
+              }
+            }
+          ],
+          "stdin": "4\n",
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "From one roll of a die up to exam-style multi-step questions.",
+          "problems": [
+            "prob-complement",
+            "prob-die-event",
+            "prob-print-atleast",
+            "prob-both-red",
+            "prob-tickets-order",
+            "prob-count-heads",
+            "prob-sensors",
+            "prob-fix-loop",
+            "prob-dice-sum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "$P(\\text{not } A)$",
+              "$1 - P(A)$"
+            ],
+            [
+              "Multiplication rule",
+              "$P(A \\text{ and } B) = P(A) \\times P(B \\mid A)$; more conditions → smaller probability"
+            ],
+            [
+              "Addition rule",
+              "Add the chances of the different ways (when they can't happen together); more ways → bigger probability"
+            ],
+            [
+              "At least one six in n rolls",
+              "$1 - (5/6)^n$"
+            ],
+            [
+              "`np.random.choice(arr, k)`",
+              "k random picks from arr, **with** replacement (add `replace=False` for without)"
+            ],
+            [
+              "`np.count_nonzero(arr == v)`",
+              "How many entries of arr equal v"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Compute an equally-likely probability by counting outcomes.",
+            "Use the complement for \"at least one\" questions.",
+            "Multiply conditional chances for draws without replacement.",
+            "Add the chances of different orders when order doesn't matter.",
+            "Read a NumPy simulation and say what probability it estimates."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 3. Read the explanation for every option after you check.",
+          "problems": [
+            "prob-rev-expression",
+            "prob-rev-tickets",
+            "prob-rev-print",
+            "prob-rev-limit"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Simulate 'at least one six'",
+          "md": "Full program for **Simulate 'at least one six'** (try it yourself first):\n\n```python\nimport numpy as np\n\nnp.random.seed(1330)\nn = int(input(\"Rolls per trial: \"))\ndie = np.arange(1, 7)\ntrials = 10000\nhits = 0\n\nfor i in np.arange(trials):\n    rolls = np.random.choice(die, n)\n    if np.count_nonzero(rolls == 6) > 0:\n        hits = hits + 1\n\nsimulated = hits / trials\nexact = 1 - (5/6)**n\n\nprint()\nprint(\"Simulated:\", round(simulated, 4))\nprint(\"Exact:    \", round(exact, 4))\n```\n\nOutput:\n\n```text\nRolls per trial: \nSimulated: 0.5148\nExact:     0.5177\n```"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "title": "What does this print? (count heads)",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "vars": {
+    "f": {
+      "pick": [
+        {
+          "arr": "'H', 'T', 'H', 'H', 'T', 'H', 'T', 'T', 'H', 'H'",
+          "h": 6,
+          "n": 10,
+          "p": 0.6
+        },
+        {
+          "arr": "'T', 'T', 'H', 'T', 'H', 'T', 'T', 'H'",
+          "h": 3,
+          "n": 8,
+          "p": 0.375
+        },
+        {
+          "arr": "'H', 'H', 'T', 'H', 'H'",
+          "h": 4,
+          "n": 5,
+          "p": 0.8
+        },
+        {
+          "arr": "'T', 'H', 'T', 'T'",
+          "h": 1,
+          "n": 4,
+          "p": 0.25
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\nimport numpy as np\n\nflips = np.array([[$f.arr]])\nprint(np.count_nonzero(flips == 'H') / len(flips))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "f.h/f.n",
+      "feedback": [
+        {
+          "answer": "f.h",
+          "message": "`count_nonzero` gives the count; the program then divides by the number of flips."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "`flips == 'H'` is an array of True/False, one per flip.",
+    "`np.count_nonzero` counts the Trues: the number of heads.",
+    "Divide that count by `len(flips)`."
+  ],
+  "solution": "There are [$f.h] heads among [$f.n] flips, so it prints [$f.h]/[$f.n] = [$f.p].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$f.h]/[$f.n]"
+      ],
+      "wrong": [
+        "[$f.h]"
+      ]
+    }
+  }
+}

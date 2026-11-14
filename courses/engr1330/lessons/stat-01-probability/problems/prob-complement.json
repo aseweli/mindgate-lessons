@@ -1,0 +1,41 @@
+{
+  "title": "Complement of passing",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "vars": {
+    "p": {
+      "real": [
+        0.6,
+        0.95
+      ],
+      "step": 0.05
+    }
+  },
+  "statement": "A machined part passes inspection with probability [$p]. What is the probability that it **fails** inspection?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "1-p"
+    }
+  },
+  "hints": [
+    "\"Fails\" is the complement of \"passes\".",
+    "Pass and fail together cover every outcome, so their probabilities add to 1.",
+    "Compute $1 - [$p]$."
+  ],
+  "solution": "Fail is the complement of pass, so $P(\\text{fail}) = 1 - P(\\text{pass}) = 1 - [$p]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "1-[$p]"
+      ],
+      "wrong": [
+        "[$p]"
+      ]
+    }
+  }
+}

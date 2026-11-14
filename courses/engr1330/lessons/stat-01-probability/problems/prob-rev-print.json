@@ -1,0 +1,45 @@
+{
+  "title": "What does it print?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "statement": "    What does this program print?\n\n    ```python\n    import numpy as np\n\noutcomes = np.array([3, 6, 1, 6, 2, 5, 6, 4])\nprint(np.count_nonzero(outcomes == 6) / len(outcomes))\n```\n\n    [_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "0.625",
+        "0.1667",
+        "0.375",
+        "3"
+      ],
+      "correct": 2,
+      "explanations": [
+        "That is the fraction of outcomes that are **not** six.",
+        "That is the theoretical chance of a six, not this array's fraction.",
+        "Correct: 3 sixes out of 8 outcomes.",
+        "That is the count; the program divides it by the length."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "`outcomes == 6` marks each 6 with True.",
+    "There are three 6s.",
+    "The program divides by `len(outcomes)`, which is 8."
+  ],
+  "solution": "Three of the eight outcomes are 6, so it prints 3/8 = 0.375.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

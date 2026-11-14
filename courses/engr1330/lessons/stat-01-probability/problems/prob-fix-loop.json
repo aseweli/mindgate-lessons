@@ -1,0 +1,45 @@
+{
+  "title": "Which change fixes the loop?",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "statement": "This loop is supposed to print the chance of **at least one six** in n rolls of a die, for n = 1 to 4:\n\n```python\nfor n in range(1, 5):\n    print(n, round(1 - (1/6)**n, 3))\n```\n\nIt prints numbers that are far too big. Which single change makes it correct?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Change `**` to `*`",
+        "Change `(1/6)**n` to `(5/6)**n`",
+        "Change `range(1, 5)` to `range(0, 4)`",
+        "Change `1 - (1/6)**n` to `(1/6)**n`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "$1 - n/6$ goes negative after 6 rolls, so it can't be a probability.",
+        "Correct. $(5/6)^n$ is the chance of **no** six in n rolls; 1 minus it is the chance of at least one.",
+        "That only changes which n values print; the formula is still wrong.",
+        "$(1/6)^n$ is the chance that **every** roll is a six."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What is the complement of \"at least one six\"?",
+    "\"No six\" in one roll has probability 5/6, not 1/6.",
+    "Only the base of the power needs to change."
+  ],
+  "solution": "The complement of \"at least one six in n rolls\" is \"no six in n rolls\", probability $(5/6)^n$. The fixed loop prints:\n\n```text\n1 0.167\n2 0.306\n3 0.421\n4 0.518\n```",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

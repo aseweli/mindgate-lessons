@@ -1,0 +1,45 @@
+{
+  "title": "Which expression?",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "statement": "Which expression gives the probability of getting **at least one head** in 5 tosses of a fair coin?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`1 - 5 * (1/2)`",
+        "`1 - (1/2)**5`",
+        "`5 * (1/2)`",
+        "`(1/2)**5`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "Negative, so it can't be a probability.",
+        "Correct: 1 minus the chance of five tails.",
+        "That equals 2.5, which can't be a probability.",
+        "That is the chance of five tails (or five heads), not at least one head."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Use the complement of \"at least one head\".",
+    "The complement is \"all tails\".",
+    "P(all tails) = (1/2)^5."
+  ],
+  "solution": "Complement: $1 - P(\\text{TTTTT}) = 1 - (1/2)^5 = 31/32$.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

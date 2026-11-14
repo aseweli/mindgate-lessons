@@ -1,0 +1,56 @@
+{
+  "title": "At least one sensor fails",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "vars": {
+    "k": {
+      "int": [
+        3,
+        8
+      ]
+    },
+    "q": {
+      "pick": [
+        0.05,
+        0.1,
+        0.15,
+        0.2
+      ]
+    }
+  },
+  "statement": "A drone carries [$k] sensors. Each fails during a flight with probability [$q], independently of the others.\nWhat is the probability that **at least one** sensor fails during a flight? (4 decimal places are enough.)\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "1-(1-q)^k",
+      "tol": 0.0005,
+      "tol_type": "absolute",
+      "feedback": [
+        {
+          "answer": "k*q",
+          "message": "Adding the chances counts the overlaps more than once. Use the complement: 1 − P(no sensor fails)."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "The complement of \"at least one fails\" is \"none fail\".",
+    "P(one sensor works) = 1 − [$q]; all [$k] must work.",
+    "Answer = 1 − (1 − [$q])^[$k]."
+  ],
+  "solution": "$P(\\text{none fail}) = (1-[$q])^{[$k]}$, so $P(\\text{at least one}) = 1-(1-[$q])^{[$k]}$.",
+  "tests": {
+    "a": {
+      "right": [
+        "1-(1-[$q])^[$k]"
+      ],
+      "wrong": [
+        "[$k]*[$q]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Many rolls",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "statement": "As the number of rolls $n$ grows, what happens to $1 - (5/6)^n$, the chance of at least one six?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It gets closer to 5/6",
+        "It stays at 1/6",
+        "It gets closer and closer to 1",
+        "It gets closer to 0"
+      ],
+      "correct": 2,
+      "explanations": [
+        "5/6 is the chance of no six in **one** roll.",
+        "1/6 is the chance of a six on one roll; more rolls give more chances.",
+        "Correct: $(5/6)^n$ shrinks toward 0.",
+        "That is what happens to $(5/6)^n$, the chance of **no** six."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What happens to $(5/6)^n$ when n is large?",
+    "A number below 1 raised to a big power gets tiny.",
+    "1 minus a tiny number is close to 1."
+  ],
+  "solution": "$(5/6)^n \\to 0$, so $1 - (5/6)^n \\to 1$: with enough rolls a six is almost certain.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

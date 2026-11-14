@@ -1,0 +1,45 @@
+{
+  "title": "Four tickets",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "statement": "A box holds tickets A, B, C and D. Two are drawn at random without replacement. What is the chance of getting\nA and B, in either order?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$1/6$",
+        "$1/2$",
+        "$1/12$",
+        "$1/8$"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: $2 \\times \\frac14 \\times \\frac13$.",
+        "That is the chance that A is one of the two tickets drawn; it ignores that B must be drawn too.",
+        "That is only A-then-B; B-then-A also counts.",
+        "That uses $\\frac14 \\times \\frac14$ twice, as if the first ticket went back."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Find P(A then B) first.",
+    "Then P(B then A).",
+    "Add them (addition rule)."
+  ],
+  "solution": "$P(AB) = \\frac14 \\cdot \\frac13 = \\frac1{12}$ and $P(BA) = \\frac1{12}$, so the answer is $\\frac2{12} = \\frac16$.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

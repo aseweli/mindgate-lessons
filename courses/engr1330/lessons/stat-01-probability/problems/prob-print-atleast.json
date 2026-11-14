@@ -1,0 +1,48 @@
+{
+  "title": "What does this print? (at least one six)",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "vars": {
+    "n": {
+      "int": [
+        2,
+        8
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\nn = [$n]\np = 1 - (5/6)**n\nprint(round(p, 3))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "1-(5/6)^n",
+      "tol": 0.0006,
+      "tol_type": "absolute",
+      "feedback": [
+        {
+          "answer": "n/6",
+          "message": "That adds $1/6$ once per roll. The program computes $1-(5/6)^n$ instead."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "The program computes the chance of at least one six in n rolls.",
+    "First find $(5/6)^{[$n]}$.",
+    "Subtract it from 1 and round to 3 decimals."
+  ],
+  "solution": "$(5/6)^{[$n]}$ is the chance of no six in [$n] rolls, so the program prints $1-(5/6)^{[$n]}$ rounded to 3 decimals.",
+  "tests": {
+    "a": {
+      "right": [
+        "1-(5/6)^[$n]"
+      ],
+      "wrong": [
+        "[$n]/6"
+      ]
+    }
+  }
+}

@@ -1,5 +1,9 @@
 {
   "schema": 1,
   "title": "MindGate lessons",
-  "courses": ["math1451", "chem1307"]
+  "courses": [
+    "math1451",
+    "chem1307",
+    "engr1330"
+  ]
 }

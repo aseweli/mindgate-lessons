@@ -1,0 +1,74 @@
+{
+  "title": "One roll of a die",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "vars": {
+    "ev": {
+      "pick": [
+        {
+          "desc": "even",
+          "k": 3,
+          "faces": "2, 4, 6"
+        },
+        {
+          "desc": "a multiple of 3",
+          "k": 2,
+          "faces": "3, 6"
+        },
+        {
+          "desc": "greater than 4",
+          "k": 2,
+          "faces": "5, 6"
+        },
+        {
+          "desc": "less than 3",
+          "k": 2,
+          "faces": "1, 2"
+        },
+        {
+          "desc": "at most 5",
+          "k": 5,
+          "faces": "1, 2, 3, 4, 5"
+        },
+        {
+          "desc": "odd",
+          "k": 3,
+          "faces": "1, 3, 5"
+        }
+      ]
+    }
+  },
+  "statement": "A fair six-sided die is rolled once. What is the probability that the number of spots is **[$ev.desc]**?\nGive a fraction or a decimal.\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "ev.k/6",
+      "feedback": [
+        {
+          "answer": "1/ev.k",
+          "message": "Count the faces that work and put that count over 6, the number of all faces."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "All six faces are equally likely.",
+    "List the faces that make the event happen.",
+    "Probability = (faces that work) / 6."
+  ],
+  "solution": "The faces that work are [$ev.faces], which is [$ev.k] of the 6 equally likely faces, so the probability is $[$ev.k]/6$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$ev.k]/6"
+      ],
+      "wrong": [
+        "1/[$ev.k]"
+      ]
+    }
+  }
+}

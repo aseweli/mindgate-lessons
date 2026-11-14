@@ -1,0 +1,58 @@
+{
+  "title": "Tickets: ordered vs any order",
+  "difficulty": 3,
+  "minutes": 4,
+  "tags": [
+    "exam3",
+    "probability"
+  ],
+  "vars": {
+    "n": {
+      "int": [
+        3,
+        7
+      ]
+    }
+  },
+  "statement": "A box has [$n] tickets, each a different color; one is green and one is red. Two tickets are drawn at random\nwithout replacement.\n\na) $P(\\text{green first, then red})$ =\n\n[______]{a}\n\nb) $P(\\text{one green and one red, in any order})$ =\n\n[______]{b}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "1/(n*(n-1))"
+    },
+    "b": {
+      "type": "number",
+      "value": "2/(n*(n-1))",
+      "feedback": [
+        {
+          "answer": "1/(n*(n-1))",
+          "message": "That is only the green-then-red order. Add the red-then-green order too."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Multiplication rule for (a): the second draw comes from [$n] − 1 tickets.",
+    "(a) is $\\frac1{[$n]} \\times \\frac1{[$n]-1}$.",
+    "For (b), red-then-green is just as likely as green-then-red; add the two orders."
+  ],
+  "solution": "(a) $\\frac1{[$n]}\\cdot\\frac1{[$n]-1}$. (b) The two orders can't both happen, so add them: twice the answer to (a).",
+  "tests": {
+    "a": {
+      "right": [
+        "1/[$n]*1/([$n]-1)"
+      ],
+      "wrong": [
+        "1/[$n]^2"
+      ]
+    },
+    "b": {
+      "right": [
+        "2/([$n]*([$n]-1))"
+      ],
+      "wrong": [
+        "1/([$n]*([$n]-1))"
+      ]
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "id": "engr1330",
+  "code": "ENGR 1330",
+  "title": "Computational Thinking with Data Science",
+  "term": "Fall 2026 · D03 · lectures posted MWF by noon, labs online (Teams) MW",
+  "accent": "#a371f7",
+  "icon": "code",
+  "textbook": {
+    "title": "Computational and Inferential Thinking: The Foundations of Data Science",
+    "authors": "Ani Adhikari and John DeNero",
+    "publisher": "inferentialthinking.com (free online, CC BY-NC-ND)"
+  },
+  "notes": "**Grade:** exams 30% (three midterms), assignments 25%, lab exercises 20%, final project 15%, quizzes 10%; A 90–100, B 80–90, C 70–80, D 60–70. **Exams:** about 40 minutes, all multiple choice, no AI tools; quizzes and exams can't be taken after their scheduled time (exam make-ups only with a valid excuse). Exam 1 was in class on Canvas with the Respondus LockDown Browser (bring your laptop). **Quizzes:** Sep 25, Sep 28, Oct 26, Oct 28, Nov 13, Nov 16, Nov 30, Dec 2. **Late work:** labs and assignments lose 10% per day (at most 50%) and close after 2 weeks; the final project (due Dec 9) takes no late submissions. **AI tools:** allowed and cited on labs, assignments and the project (restricted in the first half of the term), never on exams or quizzes. **Tools:** Python 3 (Anaconda, Jupyter) with NumPy, pandas and Matplotlib; scikit-learn for machine learning. **Dates:** last day to drop Nov 16 · Thanksgiving Nov 25–29 · last class Dec 2. **Start with Units 11–13 for Exam 3.**",
+  "units": [
+    {
+      "id": "u01",
+      "title": "Unit 1 · Computational thinking & Python basics",
+      "from": "2026-08-24",
+      "to": "2026-09-02",
+      "lessons": []
+    },
+    {
+      "id": "u02",
+      "title": "Unit 2 · Data structures",
+      "from": "2026-09-04",
+      "to": "2026-09-04",
+      "lessons": []
+    },
+    {
+      "id": "u03",
+      "title": "Unit 3 · Algorithms, selection & loops",
+      "from": "2026-09-09",
+      "to": "2026-09-18",
+      "lessons": []
+    },
+    {
+      "id": "u04",
+      "title": "Unit 4 · Functions",
+      "from": "2026-09-21",
+      "to": "2026-09-21",
+      "lessons": []
+    },
+    {
+      "id": "u05",
+      "title": "Unit 5 · Files & external modules",
+      "from": "2026-09-25",
+      "to": "2026-09-25",
+      "lessons": []
+    },
+    {
+      "id": "u06",
+      "title": "Unit 6 · NumPy arrays & linear algebra",
+      "from": "2026-10-02",
+      "to": "2026-10-07",
+      "lessons": []
+    },
+    {
+      "id": "u07",
+      "title": "Unit 7 · Pandas",
+      "from": "2026-10-09",
+      "to": "2026-10-12",
+      "lessons": []
+    },
+    {
+      "id": "u08",
+      "title": "Unit 8 · Plotting with Matplotlib",
+      "from": "2026-10-14",
+      "to": "2026-10-16",
+      "lessons": []
+    },
+    {
+      "id": "u09",
+      "title": "Unit 9 · Numerical methods",
+      "from": "2026-10-19",
+      "to": "2026-10-21",
+      "lessons": []
+    },
+    {
+      "id": "u10",
+      "title": "Unit 10 · Simulation & causality",
+      "from": "2026-10-23",
+      "to": "2026-10-26",
+      "lessons": []
+    },
+    {
+      "id": "u11",
+      "title": "Unit 11 · Probability & sampling",
+      "from": "2026-11-02",
+      "to": "2026-11-04",
+      "lessons": [
+        "stat-01-probability"
+      ]
+    },
+    {
+      "id": "u12",
+      "title": "Unit 12 · Descriptive statistics & distributions",
+      "from": "2026-11-06",
+      "to": "2026-11-09",
+      "lessons": []
+    },
+    {
+      "id": "u13",
+      "title": "Unit 13 · Bootstrap & confidence intervals",
+      "from": "2026-11-11",
+      "to": "2026-11-16",
+      "lessons": []
+    },
+    {
+      "id": "u14",
+      "title": "Unit 14 · Correlation & linear regression",
+      "from": "2026-11-23",
+      "to": "2026-11-30",
+      "lessons": []
+    },
+    {
+      "id": "u15",
+      "title": "Unit 15 · Multiple regression & machine learning",
+      "from": "2026-12-02",
+      "to": "2026-12-02",
+      "lessons": []
+    }
+  ],
+  "exams": [
+    {
+      "id": "exam1",
+      "title": "Exam 1",
+      "at": "2026-09-30",
+      "after_unit": "u04",
+      "covers_units": [
+        "u01",
+        "u02",
+        "u03",
+        "u04"
+      ],
+      "covers_text": "Computational thinking, data types, operators, strings, lists/tuples/dicts/sets, flowcharts and pseudocode, if/elif/else, loops, functions",
+      "format_text": "Multiple choice · about 40 min · no AI tools · in class on Canvas with the Respondus LockDown Browser",
+      "practice": {
+        "minutes": 40
+      }
+    },
+    {
+      "id": "exam2",
+      "title": "Exam 2",
+      "at": "2026-10-30",
+      "after_unit": "u10",
+      "covers_units": [
+        "u05",
+        "u06",
+        "u07",
+        "u08",
+        "u09",
+        "u10"
+      ],
+      "covers_text": "Files and external modules, NumPy, Pandas, Matplotlib, numerical methods, simulation and causality",
+      "format_text": "Multiple choice · about 40 min · no AI tools",
+      "practice": {
+        "minutes": 40
+      }
+    },
+    {
+      "id": "exam3",
+      "title": "Exam 3",
+      "at": "2026-11-18",
+      "after_unit": "u13",
+      "covers_units": [
+        "u11",
+        "u12",
+        "u13"
+      ],
+      "covers_text": "Probability, sampling and empirical distributions, descriptive statistics, normal distribution and the central limit theorem, bootstrap, confidence intervals",
+      "format_text": "Multiple choice · about 40 min · no AI tools",
+      "practice": {
+        "minutes": 40
+      }
+    }
+  ],
+  "resources": [
+    {
+      "title": "Computational and Inferential Thinking (online textbook)",
+      "url": "https://www.inferentialthinking.com/chapters/intro"
+    },
+    {
+      "title": "Computational Thinking and Data Science: WebBook for ENGR 1330 (TTU)",
+      "url": "http://54.243.252.9/engr-1330-webroot/engr1330jb/_build/html/intro.html"
+    },
+    {
+      "title": "OpenAI Academy",
+      "url": "https://academy.openai.com/"
+    },
+    {
+      "title": "Anaconda distribution",
+      "url": "https://www.anaconda.com/"
+    },
+    {
+      "title": "Jupyter",
+      "url": "https://jupyter.org/"
+    }
+  ]
+}

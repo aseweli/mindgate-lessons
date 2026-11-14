@@ -1,0 +1,54 @@
+{
+  "title": "Proportion as a mean",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "descriptive"
+  ],
+  "vars": {
+    "m": {
+      "pick": [
+        {
+          "arr": "[1, 0, 0, 1, 1]",
+          "v": 0.6
+        },
+        {
+          "arr": "[0, 0, 0, 1]",
+          "v": 0.25
+        },
+        {
+          "arr": "[1, 1, 1, 0, 1, 1, 0, 1]",
+          "v": 0.75
+        },
+        {
+          "arr": "[1, 0, 1, 0, 0, 0, 0, 0, 0, 1]",
+          "v": 0.3
+        }
+      ]
+    }
+  },
+  "statement": "Each entry is 1 if a weld failed its test and 0 otherwise. What does the program print?\n\n```python\nimport numpy as np\n\nx = np.array([$m.arr])\nprint(np.mean(x))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "m.v"
+    }
+  },
+  "hints": [
+    "The sum of 0s and 1s counts the 1s.",
+    "Divide by the number of welds.",
+    "The mean of a 0/1 array is a proportion."
+  ],
+  "solution": "The mean of a 0/1 array is the proportion of 1s: [$m.v].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$m.v]"
+      ],
+      "wrong": [
+        "1-[$m.v]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "What an outlier changes",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "descriptive"
+  ],
+  "statement": "In the data 5, 6, 6, 8, 12 the largest value 12 is replaced by 1200. Which statement is true?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Both the mean and the median increase a lot",
+        "The mean increases a lot; the median stays 6",
+        "The median increases; the mean stays the same",
+        "Neither changes, because only one value changed"
+      ],
+      "correct": 1,
+      "explanations": [
+        "The median is still the middle value, 6.",
+        "Correct.",
+        "It's the other way around.",
+        "The mean uses every value's size, so it jumps."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which statistic uses the size of every value?",
+    "Which one only uses the middle position?",
+    "The middle value of 5, 6, 6, 8, 1200 is still 6."
+  ],
+  "solution": "The mean jumps to 245; the median is the middle of the sorted values, still 6.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

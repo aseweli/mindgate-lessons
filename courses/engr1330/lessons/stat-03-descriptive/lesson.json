@@ -1,0 +1,307 @@
+{
+  "id": "stat-03-descriptive",
+  "title": "Descriptive statistics: center, spread and skew",
+  "short": "Descriptive statistics",
+  "minutes": 55,
+  "difficulty": 2,
+  "objective": "Compute and interpret mean, proportion, median, mode, percentiles, range, IQR, variance, standard deviation and skew with NumPy and pandas.",
+  "tags": [
+    "exam3",
+    "descriptive"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Mean",
+              "Sum of the values divided by how many there are."
+            ],
+            [
+              "Proportion",
+              "Fraction of values with a property; the mean of a 0/1 array."
+            ],
+            [
+              "Median",
+              "Middle value of the sorted data (average of the two middle values if the count is even)."
+            ],
+            [
+              "Mode",
+              "Most frequent value."
+            ],
+            [
+              "Percentile",
+              "The value with about p% of the data at or below it; quartiles are the 25th, 50th, 75th."
+            ],
+            [
+              "IQR",
+              "Q3 − Q1, the spread of the middle half; resistant to outliers."
+            ],
+            [
+              "Standard deviation",
+              "Root mean squared deviation from the mean; a typical distance from the mean."
+            ],
+            [
+              "Skew",
+              "Asymmetry: right-skewed has a long right tail and mean > median."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas",
+          "items": [
+            {
+              "label": "Mean",
+              "latex": "\\bar x=\\frac1n\\sum_{i=1}^n x_i"
+            },
+            {
+              "label": "Variance (NumPy)",
+              "latex": "\\text{var}=\\frac1N\\sum_{i=1}^N (x_i-\\bar x)^2"
+            },
+            {
+              "label": "Standard deviation",
+              "latex": "SD=\\sqrt{\\text{var}}",
+              "note": "pandas .std() divides by N−1 instead of N"
+            },
+            {
+              "label": "Range and IQR",
+              "latex": "\\text{range}=\\max-\\min,\\qquad IQR=Q_3-Q_1"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **np.std vs pandas .std().** `np.std` divides by N, pandas by N − 1. A question that says \"using NumPy\" wants the N version.\n- **Median with an even count.** Average the two middle values; don't just pick one.\n- **Forgetting to sort** before finding the median or a percentile by hand.\n- **Mixing up skew direction.** The skew is named after the **tail**: tail on the right, mean pulled right, mean > median.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Multiple choice, about 40 minutes. Expect: the output of `np.mean`, `np.median`, `np.percentile`, `np.std` on a\nshort array; which statistic an outlier changes; reading a `describe()` table; deciding skew from mean vs median or\nfrom a skew factor; and the N vs N − 1 difference between NumPy and pandas.",
+          "title": "How Exam 3 tests this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "kn83BA7cRNM",
+          "title": "Mean, Median, and Mode: Measures of Central Tendency",
+          "channel": "CrashCourse",
+          "focus": "When the median is a better center than the mean (skewed data, outliers).",
+          "start": "0:00",
+          "end": "11:23"
+        },
+        {
+          "type": "video",
+          "youtube": "R4yfNi_8Kqw",
+          "title": "Measures of Spread",
+          "channel": "CrashCourse",
+          "focus": "Range, IQR, variance and standard deviation, and why squaring the deviations is needed.",
+          "start": "0:00",
+          "end": "11:47"
+        },
+        {
+          "type": "video",
+          "youtube": "IFKQLDmRK0Y",
+          "title": "Quantiles and Percentiles, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "What a percentile means; note that different software interpolates percentiles slightly differently.",
+          "start": "0:00",
+          "end": "6:30"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Mean, variance and SD by hand, then in NumPy",
+          "problem": "Five strain readings are 4, 7, 7, 10, 22. Find the mean, median, variance and standard deviation (NumPy's definition).",
+          "steps": [
+            {
+              "md": "$(4+7+7+10+22)/5 = 50/5 = 10$.",
+              "title": "Mean",
+              "why": "Sum divided by count."
+            },
+            {
+              "md": "Sorted: 4, 7, **7**, 10, 22 → 7.",
+              "title": "Median",
+              "why": "Odd count: the middle value. It is below the mean because 22 pulls the mean up."
+            },
+            {
+              "md": "Deviations −6, −3, −3, 0, 12; squares 36, 9, 9, 0, 144; sum 198.",
+              "title": "Squared deviations",
+              "why": "Squares stop the deviations from cancelling."
+            },
+            {
+              "md": "Variance $= 198/5 = 39.6$; SD $= \\sqrt{39.6} \\approx 6.293$.",
+              "title": "Variance and SD",
+              "why": "NumPy divides by N = 5."
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nx = np.array([4, 7, 7, 10, 22])\nprint(\"mean:\", np.mean(x))\nprint(\"median:\", np.median(x))\nprint(\"variance:\", np.var(x))\nprint(\"SD:\", round(np.std(x), 3))\n```\n\n```text\nmean: 10.0\nmedian: 7.0\nvariance: 39.6\nSD: 6.293\n```",
+              "title": "Complete program",
+              "why": "The program confirms each hand calculation."
+            }
+          ],
+          "answer": "Mean 10, median 7, variance 39.6, SD ≈ 6.293. Mean > median hints at a right skew."
+        },
+        {
+          "type": "worked_example",
+          "title": "Is the pump data skewed?",
+          "problem": "Using `pump_failures.csv`, report the mean, median, IQR and skew factor of `Hours`, and decide whether to describe the center with the mean or the median.",
+          "steps": [
+            {
+              "md": "Compute `mean()` and `median()` of the column.",
+              "title": "Center",
+              "why": "If they differ a lot, the data are lopsided."
+            },
+            {
+              "md": "IQR = `np.percentile(h, 75) - np.percentile(h, 25)`.",
+              "title": "Spread",
+              "why": "IQR isn't thrown off by the few very long-lived pumps."
+            },
+            {
+              "md": "`skew()` gives the skew factor; compare with 0.5 and 1.",
+              "title": "Shape",
+              "why": "Rule of thumb for skew."
+            },
+            {
+              "md": "```python\nimport numpy as np\nimport pandas as pd\n\nh = pd.read_csv(\"pump_failures.csv\")[\"Hours\"]\nprint(\"mean:\", round(h.mean(), 1))\nprint(\"median:\", h.median())\nprint(\"IQR:\", np.percentile(h, 75) - np.percentile(h, 25))\ns = h.skew()\nprint(\"skew:\", round(s, 2))\nif s > 1:\n    print(\"highly right-skewed: report the median\")\nelif s > 0.5:\n    print(\"moderately right-skewed: the median is safer\")\nelse:\n    print(\"roughly symmetric: the mean is fine\")\n```\n\n```text\nmean: 995.1\nmedian: 815.0\nIQR: 909.75\nskew: 1.23\nhighly right-skewed: report the median\n```",
+              "title": "Complete program",
+              "why": "The decision rule turns the skew factor into a recommendation."
+            }
+          ],
+          "answer": "Mean well above median and a skew factor above 1: highly right-skewed, so the median describes a typical pump better."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "pump-summary",
+          "title": "Summarize the pump failures",
+          "language": "python",
+          "md": "`pump_failures.csv` (made-up data) has a `Hours` column. Fill in the TODOs to print the mean, median,\nNumPy SD, pandas SD, range and IQR, each rounded to 1 decimal. Expected output:\n\n```text\nmean 995.1\nmedian 815.0\nSD numpy 773.2\nSD pandas 778.0\nrange 3409\nIQR 909.8\n```\n\nNotice the two SDs differ slightly (N vs N − 1).",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-pump-summary.py"
+              }
+            }
+          ],
+          "data": [
+            "pump_failures.csv"
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Center, then spread, then shape.",
+          "problems": [
+            "desc-mean",
+            "desc-proportion",
+            "desc-outlier",
+            "desc-std",
+            "desc-iqr",
+            "desc-ddof",
+            "desc-skew"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Mean of a 0/1 array",
+              "The proportion of 1s"
+            ],
+            [
+              "Median, even count",
+              "Average of the two middle sorted values"
+            ],
+            [
+              "IQR",
+              "Q3 − Q1 (`np.percentile(x, 75) - np.percentile(x, 25)`)"
+            ],
+            [
+              "np.std vs pandas .std()",
+              "N vs N − 1 in the denominator"
+            ],
+            [
+              "Right skew",
+              "Long right tail; mean > median"
+            ],
+            [
+              "Skew factor > 1",
+              "Highly skewed"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Compute mean, median and mode of a short list by hand.",
+            "Compute variance and SD by hand and with NumPy.",
+            "Use np.percentile for quartiles and the IQR.",
+            "Explain why the mean and median differ in skewed data.",
+            "Read every row of describe()."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 3.",
+          "problems": [
+            "desc-rev-describe",
+            "desc-rev-center",
+            "desc-rev-var"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Summarize the pump failures",
+          "md": "Full program for **Summarize the pump failures** (try it yourself first):\n\n```python\nimport numpy as np\nimport pandas as pd\n\nh = pd.read_csv(\"pump_failures.csv\")[\"Hours\"]\n\nmean = h.mean()\nmedian = h.median()\nsd_numpy = np.std(h)\nsd_pandas = h.std()\nrng = h.max() - h.min()\niqr = np.percentile(h, 75) - np.percentile(h, 25)\n\nprint(\"mean\", round(mean, 1))\nprint(\"median\", round(median, 1))\nprint(\"SD numpy\", round(sd_numpy, 1))\nprint(\"SD pandas\", round(sd_pandas, 1))\nprint(\"range\", round(rng, 1))\nprint(\"IQR\", round(iqr, 1))\n```\n\nOutput:\n\n```text\nmean 995.1\nmedian 815.0\nSD numpy 773.2\nSD pandas 778.0\nrange 3409\nIQR 909.8\n```"
+        }
+      ]
+    }
+  ]
+}

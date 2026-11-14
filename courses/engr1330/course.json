@@ -97,7 +97,10 @@
       "title": "Unit 12 · Descriptive statistics & distributions",
       "from": "2026-11-06",
       "to": "2026-11-09",
-      "lessons": []
+      "lessons": [
+        "stat-03-descriptive",
+        "stat-04-normal-clt"
+      ]
     },
     {
       "id": "u13",

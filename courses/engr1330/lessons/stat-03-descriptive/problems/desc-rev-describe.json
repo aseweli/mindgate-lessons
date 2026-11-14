@@ -1,0 +1,45 @@
+{
+  "title": "Reading describe()",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "descriptive"
+  ],
+  "statement": "In the output of `df[\"Load\"].describe()`, which row is the median?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`25%`",
+        "`mean`",
+        "`std`",
+        "`50%`"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That is the first quartile.",
+        "The mean is a different measure of center.",
+        "That is the (N − 1) standard deviation.",
+        "Correct: the 50th percentile."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "The median splits the data in half.",
+    "describe() lists percentiles.",
+    "Half = 50%."
+  ],
+  "solution": "The median is the 50th percentile, the `50%` row.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

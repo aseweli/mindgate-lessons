@@ -1,0 +1,45 @@
+{
+  "title": "Best center",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "descriptive"
+  ],
+  "statement": "Household incomes in a town are strongly right-skewed. Which statistic best describes a typical household?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "The standard deviation",
+        "The range",
+        "The mean",
+        "The median"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That measures spread, not center.",
+        "That measures spread, not center.",
+        "A few huge incomes pull the mean above most households.",
+        "Correct: it isn't pulled up by the few very large incomes."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Center or spread?",
+    "Which center resists outliers?",
+    "Skewed data → median."
+  ],
+  "solution": "For skewed data the median is the robust measure of center.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

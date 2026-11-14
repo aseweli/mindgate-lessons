@@ -1,0 +1,46 @@
+{
+  "title": "Four times the data",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "normal",
+    "clt"
+  ],
+  "statement": "With samples of 100, the SD of the sample mean delay is 3.9 minutes. About what is it with samples of 400?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "About 1.95 minutes",
+        "About 7.8 minutes",
+        "About 3.9 minutes",
+        "About 0.98 minutes"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: 4× the data halves the SD.",
+        "The SD shrinks with more data, it doesn't grow.",
+        "More data makes the mean more precise.",
+        "That divides by 4; divide by √4 = 2."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Factor of sample-size increase?",
+    "Square-root law.",
+    "3.9 / 2."
+  ],
+  "solution": "400 = 4 × 100, so divide by √4 = 2: about 1.95 minutes.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Bigger sample",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "normal",
+    "clt"
+  ],
+  "vars": {
+    "k": {
+      "pick": [
+        4,
+        9,
+        16,
+        25
+      ]
+    },
+    "rk": {
+      "expr": "sqrt(k)"
+    },
+    "n": {
+      "pick": [
+        50,
+        100,
+        200
+      ]
+    },
+    "n2": {
+      "expr": "n*k"
+    },
+    "d": {
+      "int": [
+        6,
+        24
+      ],
+      "step": 6
+    }
+  },
+  "statement": "With samples of size [$n], the SD of the sample mean is [$d] minutes. The sample size is increased to [$n2].\nWhat is the new SD of the sample mean?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "d/sqrt(k)",
+      "feedback": [
+        {
+          "answer": "d/k",
+          "message": "The sample size grew by a factor of [$k], so the SD shrinks by √[$k], not [$k]."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "By what factor did the sample size grow?",
+    "The SD shrinks by the square root of that factor.",
+    "New SD = [$d] / √[$k]."
+  ],
+  "solution": "The sample size is [$k] times bigger, so the SD is divided by $\\sqrt{[$k]} = [$rk]$: $[$d]/[$rk]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$d]/[$rk]"
+      ],
+      "wrong": [
+        "[$d]/[$k]"
+      ]
+    }
+  }
+}

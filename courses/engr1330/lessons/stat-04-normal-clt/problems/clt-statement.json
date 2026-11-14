@@ -1,0 +1,46 @@
+{
+  "title": "What the CLT says",
+  "difficulty": 5,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "normal",
+    "clt"
+  ],
+  "statement": "A population of bus delays is strongly right-skewed. You draw 10,000 random samples of 500 delays each and plot a\nhistogram of the 10,000 **sample means**. What does the central limit theorem predict?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Right-skewed like the population",
+        "Roughly normal (bell-shaped), centered near the population mean",
+        "Roughly normal, centered near the population median",
+        "Flat (uniform), because every sample is equally likely"
+      ],
+      "correct": 1,
+      "explanations": [
+        "That's what the histogram of the delays themselves looks like.",
+        "Correct.",
+        "Sample means center on the population **mean**.",
+        "Means near the population mean are far more common."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "The CLT is about the means, not the data.",
+    "What shape do means of large samples take?",
+    "Where is that bell centered?"
+  ],
+  "solution": "Means of large random samples are roughly normal, whatever the population's shape, and they center on the population mean.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

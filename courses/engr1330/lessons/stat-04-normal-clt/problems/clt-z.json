@@ -1,0 +1,65 @@
+{
+  "title": "Standard units",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "normal",
+    "clt"
+  ],
+  "vars": {
+    "m": {
+      "int": [
+        60,
+        75
+      ]
+    },
+    "s": {
+      "int": [
+        5,
+        12
+      ]
+    },
+    "d": {
+      "pick": [
+        -2,
+        -1,
+        1,
+        2,
+        3
+      ]
+    },
+    "x": {
+      "expr": "m+d*s"
+    }
+  },
+  "statement": "Exam scores have mean [$m] and SD [$s]. A student scored [$x]. What is that score in standard units?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(x-m)/s",
+      "feedback": [
+        {
+          "answer": "x-m",
+          "message": "Divide the distance from the mean by the SD."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "z = (value − mean) / SD.",
+    "Distance from the mean: [$x] − [$m].",
+    "Divide by [$s]."
+  ],
+  "solution": "$z = ([$x] - [$m]) / [$s]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "([$x]-[$m])/[$s]"
+      ],
+      "wrong": [
+        "[$x]-[$m]"
+      ]
+    }
+  }
+}

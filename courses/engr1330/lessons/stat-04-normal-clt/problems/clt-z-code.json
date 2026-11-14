@@ -1,0 +1,71 @@
+{
+  "title": "What does this print? (standard units)",
+  "difficulty": 3,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "normal",
+    "clt"
+  ],
+  "vars": {
+    "p": {
+      "pick": [
+        {
+          "i": 0,
+          "v": -1.5
+        },
+        {
+          "i": 1,
+          "v": -0.5
+        },
+        {
+          "i": 2,
+          "v": -0.5
+        },
+        {
+          "i": 3,
+          "v": -0.5
+        },
+        {
+          "i": 4,
+          "v": 0.0
+        },
+        {
+          "i": 5,
+          "v": 0.0
+        },
+        {
+          "i": 6,
+          "v": 1.0
+        },
+        {
+          "i": 7,
+          "v": 2.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\nimport numpy as np\n\nx = np.array([2, 4, 4, 4, 5, 5, 7, 9])\nz = (x - np.mean(x)) / np.std(x)\nprint(z[[$p.i]])\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "p.v"
+    }
+  },
+  "hints": [
+    "The mean of x is 5 and NumPy's SD is 2.",
+    "Index [$p.i] counts from 0.",
+    "z = (x[[$p.i]] − 5) / 2."
+  ],
+  "solution": "Mean 5, SD 2, so z[[$p.i]] = (x[[$p.i]] − 5)/2 = [$p.v].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$p.v]"
+      ],
+      "wrong": [
+        "[$p.v]+1"
+      ]
+    }
+  }
+}

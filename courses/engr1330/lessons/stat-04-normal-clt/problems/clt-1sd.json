@@ -1,0 +1,46 @@
+{
+  "title": "Within one SD",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "normal",
+    "clt"
+  ],
+  "statement": "For a normal distribution, about what percent of the values lie within **1 SD** of the mean?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "50%",
+        "68%",
+        "99.7%",
+        "95%"
+      ],
+      "correct": 1,
+      "explanations": [
+        "Half the values are above the mean; that's a different fact.",
+        "Correct.",
+        "That's within 3 SDs.",
+        "That's within 2 SDs."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Recall 68–95–99.7.",
+    "The first number goes with 1 SD.",
+    "68%."
+  ],
+  "solution": "68% within 1 SD, 95% within 2, 99.7% within 3.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

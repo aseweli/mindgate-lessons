@@ -1,0 +1,72 @@
+{
+  "title": "95% range",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "normal",
+    "clt"
+  ],
+  "vars": {
+    "m": {
+      "int": [
+        480,
+        520
+      ],
+      "step": 5
+    },
+    "s": {
+      "int": [
+        2,
+        6
+      ]
+    }
+  },
+  "statement": "A machine fills bottles with a roughly normal amount of liquid: mean [$m] mL, SD [$s] mL. About 95% of bottles hold\nbetween which two amounts?\n\na) lower end (mL) =\n\n[______]{a}\n\nb) upper end (mL) =\n\n[______]{b}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "m-2*s",
+      "feedback": [
+        {
+          "answer": "m-s",
+          "message": "That is 1 SD (about 68%). 95% needs 2 SDs."
+        }
+      ]
+    },
+    "b": {
+      "type": "number",
+      "value": "m+2*s",
+      "feedback": [
+        {
+          "answer": "m+s",
+          "message": "That is 1 SD (about 68%). 95% needs 2 SDs."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Which multiple of the SD goes with 95%?",
+    "95% ↔ 2 SDs.",
+    "mean ± 2 × SD."
+  ],
+  "solution": "95% lies within 2 SDs: $[$m] \\pm 2 \\times [$s]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$m]-2*[$s]"
+      ],
+      "wrong": [
+        "[$m]-[$s]"
+      ]
+    },
+    "b": {
+      "right": [
+        "[$m]+2*[$s]"
+      ],
+      "wrong": [
+        "[$m]+[$s]"
+      ]
+    }
+  }
+}

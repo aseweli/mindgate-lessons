@@ -1,0 +1,45 @@
+{
+  "title": "Reading skew",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "descriptive"
+  ],
+  "statement": "For a set of repair times, the mean is 42 minutes, the median is 25 minutes and `df.skew()` gives 1.6.\nWhich description is best?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Highly right-skewed; the median is the better summary of a typical repair",
+        "Left-skewed, because the median is smaller",
+        "Roughly symmetric",
+        "Moderately right-skewed; the mean is the better summary"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Skew is named after the tail; the mean is pulled right by long repairs.",
+        "The skew factor 1.6 is far above 0.5, and mean ≫ median.",
+        "Above 1 is highly skewed, and skew makes the median safer."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Mean > median: which way is the tail?",
+    "Compare 1.6 with the 0.5 and 1 cut-offs.",
+    "Which center resists a long tail?"
+  ],
+  "solution": "Mean > median and skew 1.6 > 1: highly right-skewed. The median isn't pulled by the long repairs.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

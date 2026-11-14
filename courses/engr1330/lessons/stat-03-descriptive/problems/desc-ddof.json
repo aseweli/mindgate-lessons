@@ -1,0 +1,45 @@
+{
+  "title": "Why the two SDs differ",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "descriptive"
+  ],
+  "statement": "```python\nimport numpy as np\nimport pandas as pd\n\ns = pd.Series([5, 6, 6, 12])\nprint(np.std(s), s.std())\n```\n\nThe two printed numbers are different. Why?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "pandas uses the median instead of the mean",
+        "pandas rounds its answer",
+        "`np.std` ignores the largest value",
+        "`np.std` divides by N; pandas' `.std()` divides by N − 1"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Both measure deviations from the mean.",
+        "Neither function rounds.",
+        "Every value is used by both.",
+        "Correct: pandas reports the sample SD."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Both use the same deviations from the mean.",
+    "What do they divide by?",
+    "pandas' default is `ddof=1`."
+  ],
+  "solution": "NumPy uses N (population SD); pandas uses N − 1 (sample SD), so pandas' value is slightly larger: 2.773 vs 3.202.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

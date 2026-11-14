@@ -1,0 +1,46 @@
+{
+  "title": "68–95–99.7",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "normal",
+    "clt"
+  ],
+  "statement": "Heights are roughly normal with mean 170 cm and SD 8 cm. About what percent of people are **taller than 186 cm**?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "About 0.15%",
+        "About 16%",
+        "About 5%",
+        "About 2.5%"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That's above mean + 3 SD (194 cm).",
+        "That's above mean + 1 SD (178 cm).",
+        "That's outside 2 SD on **both** sides together.",
+        "Correct: 186 = mean + 2 SD; 5% is outside ±2 SD, half of it above."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "How many SDs above the mean is 186?",
+    "(186 − 170)/8 = 2.",
+    "95% inside, 5% outside, split between two tails."
+  ],
+  "solution": "186 is 2 SDs above the mean. 5% lies beyond 2 SDs, half on each side: about 2.5%.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

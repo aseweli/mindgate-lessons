@@ -1,0 +1,58 @@
+{
+  "title": "What does this print? (mean)",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "descriptive"
+  ],
+  "vars": {
+    "m": {
+      "pick": [
+        {
+          "arr": "[2, 4, 9]",
+          "v": 5.0
+        },
+        {
+          "arr": "[3, 5, 7, 13]",
+          "v": 7.0
+        },
+        {
+          "arr": "[10, 20, 30, 60]",
+          "v": 30.0
+        },
+        {
+          "arr": "[1, 1, 4, 6, 8]",
+          "v": 4.0
+        },
+        {
+          "arr": "[6, 9, 15]",
+          "v": 10.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\nimport numpy as np\n\nx = np.array([$m.arr])\nprint(np.mean(x))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "m.v"
+    }
+  },
+  "hints": [
+    "Add the values.",
+    "Divide by how many there are.",
+    "`np.mean` prints a float such as 5.0."
+  ],
+  "solution": "The mean of [$m.arr] is [$m.v].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$m.v]"
+      ],
+      "wrong": [
+        "[$m.v]+1"
+      ]
+    }
+  }
+}

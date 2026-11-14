@@ -1,0 +1,45 @@
+{
+  "title": "Variance and SD",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "descriptive"
+  ],
+  "statement": "    What does this program print?\n\n    ```python\n    import numpy as np\n\nx = np.array([2, 4, 4, 4, 5, 5, 7, 9])\nprint(np.var(x), np.std(x))\n```\n\n    [_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`5.0 2.0`",
+        "`4.571428571428571 2.138089935299395`",
+        "`4.0 2.0`",
+        "`2.0 4.0`"
+      ],
+      "correct": 2,
+      "explanations": [
+        "5 is the mean, not the variance.",
+        "That divides by N − 1 = 7 (pandas' rule); NumPy divides by 8.",
+        "Correct: mean 5, squared deviations sum to 32, 32/8 = 4, √4 = 2.",
+        "Reversed: the variance is the square of the SD."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "The mean is 5.",
+    "Squared deviations: 9, 1, 1, 1, 0, 0, 4, 16.",
+    "NumPy divides their sum by N = 8."
+  ],
+  "solution": "Mean 5; squared deviations sum to 32; variance 32/8 = 4.0; SD = 2.0.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

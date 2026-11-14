@@ -1,0 +1,60 @@
+{
+  "title": "SD of the sample mean",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "normal",
+    "clt"
+  ],
+  "vars": {
+    "n": {
+      "pick": [
+        25,
+        64,
+        100,
+        400,
+        900
+      ]
+    },
+    "r": {
+      "expr": "sqrt(n)"
+    },
+    "s": {
+      "int": [
+        20,
+        60
+      ],
+      "step": 5
+    }
+  },
+  "statement": "A population has SD [$s]. What is the SD of the means of random samples of size [$n]?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "s/sqrt(n)",
+      "feedback": [
+        {
+          "answer": "s/n",
+          "message": "Divide by the **square root** of the sample size."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "SD of sample means = population SD / √n.",
+    "√[$n] = [$r].",
+    "Divide [$s] by [$r]."
+  ],
+  "solution": "$[$s]/\\sqrt{[$n]} = [$s]/[$r]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$s]/[$r]"
+      ],
+      "wrong": [
+        "[$s]/[$n]"
+      ]
+    }
+  }
+}

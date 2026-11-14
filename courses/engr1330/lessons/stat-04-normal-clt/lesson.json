@@ -1,0 +1,289 @@
+{
+  "id": "stat-04-normal-clt",
+  "title": "Normal distribution, central limit theorem and sample means",
+  "short": "Normal & CLT",
+  "minutes": 55,
+  "difficulty": 3,
+  "objective": "Use the 68–95–99.7 rule and standard units, state the central limit theorem, and predict how the SD of sample means shrinks with sample size.",
+  "tags": [
+    "exam3",
+    "normal",
+    "clt"
+  ],
+  "requires": [
+    "stat-03-descriptive"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Normal distribution",
+              "Symmetric bell-shaped distribution set by its mean and SD."
+            ],
+            [
+              "68–95–99.7 rule",
+              "About 68%, 95%, 99.7% of a normal distribution lies within 1, 2, 3 SDs of the mean."
+            ],
+            [
+              "Standard units (z)",
+              "(value − mean) / SD: how many SDs a value is from the mean."
+            ],
+            [
+              "Sampling distribution of the mean",
+              "The distribution of the means of many random samples of the same size."
+            ],
+            [
+              "Central limit theorem",
+              "Means of large random samples are roughly normally distributed, whatever the population's shape."
+            ],
+            [
+              "Square-root law",
+              "SD of sample means = population SD / √n; K times the sample size divides it by √K."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas",
+          "items": [
+            {
+              "label": "Standard units",
+              "latex": "z=\\frac{x-\\text{mean}}{SD}"
+            },
+            {
+              "label": "Within k SDs",
+              "latex": "\\text{mean}\\pm k\\cdot SD\\quad(k=1,2,3\\;\\to\\;68\\%,95\\%,99.7\\%)"
+            },
+            {
+              "label": "SD of sample means",
+              "latex": "SD_{\\bar x}=\\frac{\\sigma_{\\text{population}}}{\\sqrt n}"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Thinking the data become normal.** The CLT is about the distribution of **sample means**, not the data. A big\n  sample of skewed data is still skewed.\n- **Dividing by n instead of √n.** Four times the sample size halves the SD of the mean; it doesn't quarter it.\n- **Mixing the argument order.** `np.random.normal(mean, sd, size)`: mean first, then SD (not the variance).\n- **Using the rule on skewed data.** 68–95–99.7 holds for (roughly) normal distributions only.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Multiple choice, about 40 minutes. Expect: \"about what percent lies between ... and ...\" with the 68–95–99.7 rule;\nconverting to standard units; the shape and center of a histogram of many sample means; and square-root-law\nquestions like \"the sample size goes from 100 to 400; what happens to the SD of the sample mean?\".",
+          "title": "How Exam 3 tests this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "rzFX5NWojp0",
+          "title": "The Normal Distribution, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "How the mean and SD set the center and width of the curve, and the 95%-within-2-SDs idea.",
+          "start": "0:00",
+          "end": "5:12"
+        },
+        {
+          "type": "video",
+          "youtube": "YAlJCEDH2uY",
+          "title": "The Central Limit Theorem, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "Means of samples from a non-normal distribution still pile up into a bell shape.",
+          "start": "0:00",
+          "end": "7:35"
+        },
+        {
+          "type": "video",
+          "youtube": "rBjft49MAO8",
+          "title": "The Normal Distribution",
+          "channel": "CrashCourse",
+          "focus": "Why distributions of means are normal, and how the spread of the means depends on sample size.",
+          "start": "0:00",
+          "end": "11:27"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Using the 68–95–99.7 rule",
+          "problem": "Bolt lengths are roughly normal with mean 50.0 mm and SD 0.2 mm. (a) Between which lengths do about 95% of bolts fall? (b) What percent are longer than 50.2 mm? (c) What is 49.6 mm in standard units?",
+          "steps": [
+            {
+              "md": "$50.0 \\pm 2(0.2)$ → 49.6 mm to 50.4 mm.",
+              "title": "(a) 95% = 2 SD",
+              "why": "95% of a normal distribution is within 2 SDs."
+            },
+            {
+              "md": "68% are within 1 SD (49.8–50.2), so 32% are outside, split equally: 16% above 50.2.",
+              "title": "(b) Beyond +1 SD",
+              "why": "The normal curve is symmetric."
+            },
+            {
+              "md": "$z = (49.6 - 50.0)/0.2 = -2$.",
+              "title": "(c) Standard units",
+              "why": "Two SDs below the mean."
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nnp.random.seed(3)\nbolts = np.random.normal(50.0, 0.2, 100000)\nprint(\"within 2 SD:\", np.count_nonzero(np.abs(bolts - 50.0) <= 0.4) / len(bolts))\nprint(\"above 50.2:\", np.count_nonzero(bolts > 50.2) / len(bolts))\nprint(\"z of 49.6:\", round((49.6 - 50.0) / 0.2, 2))\n```\n\n```text\nwithin 2 SD: 0.95551\nabove 50.2: 0.15678\nz of 49.6: -2.0\n```",
+              "title": "Complete program (check by simulation)",
+              "why": "The simulated fractions are close to 0.95 and 0.16."
+            }
+          ],
+          "answer": "(a) 49.6–50.4 mm (b) about 16% (c) z = −2."
+        },
+        {
+          "type": "worked_example",
+          "title": "The square-root law in action",
+          "problem": "A population of delivery times has SD 30 minutes. What is the SD of the sample mean for samples of 25, 100 and 900? Check the 100 case by simulation.",
+          "steps": [
+            {
+              "md": "$30/\\sqrt{25} = 6$, $30/\\sqrt{100} = 3$, $30/\\sqrt{900} = 1$.",
+              "title": "Apply the law",
+              "why": "SD of means = population SD / √n."
+            },
+            {
+              "md": "100 is 4× 25 → SD halves (6 → 3); 900 is 9× 100 → SD divides by 3.",
+              "title": "Read the pattern",
+              "why": "Square-root law."
+            },
+            {
+              "md": "Make a skewed population with SD near 30, draw 4,000 samples of 100, and take the SD of their means.",
+              "title": "Simulate",
+              "why": "If the CLT and the law hold, the result is close to 3."
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nnp.random.seed(9)\npopulation = np.random.exponential(30, 60000)\nprint(\"population SD:\", round(np.std(population), 1))\nmeans = [np.mean(np.random.choice(population, 100)) for i in range(4000)]\nprint(\"SD of sample means (n=100):\", round(np.std(means), 2))\nprint(\"formula:\", round(np.std(population) / np.sqrt(100), 2))\n```\n\n```text\npopulation SD: 29.9\nSD of sample means (n=100): 2.96\nformula: 2.99\n```",
+              "title": "Complete program",
+              "why": "Simulation and formula agree."
+            }
+          ],
+          "answer": "6, 3 and 1 minutes. Nine times more data only cuts the uncertainty to a third."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "clt-sim",
+          "title": "See the square-root law",
+          "language": "python",
+          "md": "The starter makes a right-skewed population of 40,000 values. For each sample size in `[16, 64, 256]`,\ndraw **2,000** random samples (with replacement, `np.random.choice`), compute the SD of their means, and print\nit next to the formula `pop_sd / np.sqrt(n)`, both rounded to 2 decimals. Expected output:\n\n```text\n16 3.09 3.05\n64 1.51 1.52\n256 0.78 0.76\n```\n\nEach 4× increase in n roughly halves the SD.",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-clt-sim.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Normal curves, standard units, then the CLT and the square-root law.",
+          "problems": [
+            "clt-95-range",
+            "clt-1sd",
+            "clt-z",
+            "clt-z-code",
+            "clt-sd-means",
+            "clt-factor",
+            "clt-statement"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "68–95–99.7",
+              "Percent within 1, 2, 3 SDs of the mean (normal only)"
+            ],
+            [
+              "Standard units",
+              "z = (x − mean) / SD"
+            ],
+            [
+              "Central limit theorem",
+              "Means of large random samples are roughly normal, whatever the population shape"
+            ],
+            [
+              "SD of sample means",
+              "population SD / √n"
+            ],
+            [
+              "Sample size × 9",
+              "SD of the sample mean ÷ 3"
+            ],
+            [
+              "`np.random.normal(a, b, n)`",
+              "n values, mean a, SD b"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Use the 68–95–99.7 rule to find ranges and tail percents.",
+            "Convert values to standard units.",
+            "State the CLT and say what it is (and isn't) about.",
+            "Apply the square-root law to a change in sample size."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 3.",
+          "problems": [
+            "clt-rev-code",
+            "clt-rev-quad",
+            "clt-rev-rule"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: See the square-root law",
+          "md": "Full program for **See the square-root law** (try it yourself first):\n\n```python\nimport numpy as np\n\nnp.random.seed(1330)\npopulation = np.random.exponential(12, 40000)\npop_sd = np.std(population)\n\nfor n in [16, 64, 256]:\n    means = []\n    for i in range(2000):\n        sample = np.random.choice(population, n)\n        means.append(np.mean(sample))\n    sd_sim = np.std(means)\n    sd_formula = pop_sd / np.sqrt(n)\n    print(n, round(sd_sim, 2), round(sd_formula, 2))\n```\n\nOutput:\n\n```text\n16 3.09 3.05\n64 1.51 1.52\n256 0.78 0.76\n```"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Save a figure",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "statement": "Which line saves the current figure as a PNG file?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`plt.savefig('result.png')`",
+        "`plt.save('result.png')`",
+        "`plt.export('result.png')`",
+        "`plt.show('result.png')`"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "No such function.",
+        "No such function.",
+        "show displays; it doesn't save."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Save + figure.",
+    "savefig.",
+    ""
+  ],
+  "solution": "`plt.savefig('result.png')` (or `fig.savefig`).",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

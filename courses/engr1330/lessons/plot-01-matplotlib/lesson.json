@@ -1,0 +1,240 @@
+{
+  "id": "plot-01-matplotlib",
+  "title": "Matplotlib basics: plots, labels, styles and subplots",
+  "short": "Matplotlib basics",
+  "minutes": 45,
+  "difficulty": 2,
+  "objective": "Make and decorate line plots with Matplotlib (labels, title, legend, grid, colors, markers, limits), use subplots and the object-oriented interface, and save figures.",
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Figure",
+              "The whole canvas that holds one or more plots."
+            ],
+            [
+              "Axes",
+              "One plot area with its own axes."
+            ],
+            [
+              "plt.subplot(r, c, i)",
+              "Select panel i (from 1) of an r×c grid."
+            ],
+            [
+              "plt.subplots(r, c)",
+              "Create a figure and an array of axes."
+            ],
+            [
+              "Legend",
+              "Key that names each line; needs `label=` on each plot call."
+            ],
+            [
+              "savefig",
+              "Write the figure to an image file."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **No axis labels or units.** Always label both axes (with units) and add a title.\n- **`plt.legend()` with no `label=`.** The legend comes out empty.\n- **Subplot index 0.** `plt.subplot` counts panels from 1; `axes[...]` from `plt.subplots` counts from 0.\n- **`subplot` vs `subplots`.** The first selects one panel; the second creates the whole grid.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools. Expect: which line adds a legend or labels, what `plt.subplot(2, 1, 2)` selects, reading `figsize`, and spotting the missing piece of a properly decorated plot.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "UO98lJQ3QGI",
+          "title": "Matplotlib Tutorial (Part 1): Creating and Customizing Our First Plots",
+          "channel": "Corey Schafer",
+          "focus": "Labels, legends, colors and line styles: the same functions as this lesson.",
+          "start": "0:00",
+          "end": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "A properly decorated plot",
+          "problem": "Plot $y = \\sin x$ and $y = \\cos x$ for $0 \\le x \\le 2\\pi$ on one figure with labels, a title, a legend and a grid.",
+          "steps": [
+            {
+              "md": "`x = np.linspace(0, 2*np.pi, 200)`.",
+              "title": "Data",
+              "why": "Many points make smooth curves."
+            },
+            {
+              "md": "`plt.plot(x, np.sin(x), label='sin')`, same for cos with `linestyle='--'`.",
+              "title": "Two labeled lines",
+              "why": "Labels feed the legend."
+            },
+            {
+              "md": "xlabel, ylabel, title, legend, grid.",
+              "title": "Decorate",
+              "why": "Graphing conventions."
+            },
+            {
+              "md": "```python\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(0, 2 * np.pi, 200)\nplt.plot(x, np.sin(x), label=\"sin(x)\")\nplt.plot(x, np.cos(x), linestyle=\"--\", label=\"cos(x)\")\nplt.xlabel(\"x (radians)\")\nplt.ylabel(\"value\")\nplt.title(\"Sine and cosine\")\nplt.legend()\nplt.grid()\nplt.show()\nprint(round(np.sin(x[50]), 3))\n```\n\n```text\n1.0\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "Two labeled curves with a legend."
+        },
+        {
+          "type": "worked_example",
+          "title": "A 2×2 grid",
+          "problem": "Show $x$, $x^2$, $x^3$ and $\\sqrt{x}$ for $0 \\le x \\le 4$ in a 2×2 grid of subplots, each titled.",
+          "steps": [
+            {
+              "md": "`fig, axes = plt.subplots(2, 2)`; `axes` has shape (2, 2).",
+              "title": "Create the grid",
+              "why": "Index it as `axes[row, col]`."
+            },
+            {
+              "md": "Zip titles and functions with `axes.flat`.",
+              "title": "Loop over panels",
+              "why": "Avoids repeating code."
+            },
+            {
+              "md": "```python\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(0, 4, 100)\nfig, axes = plt.subplots(2, 2, figsize=(7, 5))\ncurves = [(\"x\", x), (\"x^2\", x**2), (\"x^3\", x**3), (\"sqrt(x)\", np.sqrt(x))]\nfor ax, (name, y) in zip(axes.flat, curves):\n    ax.plot(x, y)\n    ax.set_title(name)\nplt.tight_layout()\nplt.show()\nprint(axes.shape)\n```\n\n```text\n(2, 2)\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "A tidy grid of four titled plots."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "motor-plot",
+          "title": "Plot the motor temperatures",
+          "language": "python",
+          "md": "Plot both motors from `motor_temps.csv` (made-up) on one figure: Motor A in red with circle markers, Motor B in\nblue dashed. Add axis labels with units, a title and a legend, then save it as `motors.png`. The program also\nprints the hottest reading of each motor. Expected printed output (the plot shows under Output):\n\n```text\nmax A: 57.9\nmax B: 60.6\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-motor-plot.py"
+              }
+            }
+          ],
+          "data": [
+            "motor_temps.csv"
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "mpl-legend",
+            "mpl-subplot",
+            "mpl-linspace",
+            "mpl-shape",
+            "mpl-oo",
+            "mpl-style"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Labels",
+              "plt.xlabel / plt.ylabel / plt.title (ax.set_... in OO)"
+            ],
+            [
+              "Legend",
+              "label= on each line + plt.legend()"
+            ],
+            [
+              "plt.subplot(r, c, i)",
+              "Panel i (from 1)"
+            ],
+            [
+              "plt.subplots(r, c)",
+              "fig, axes array"
+            ],
+            [
+              "Save",
+              "plt.savefig('name.png')"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Make a fully labeled line plot.",
+            "Style lines and markers.",
+            "Use subplot and subplots.",
+            "Save a figure."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice.",
+          "problems": [
+            "mpl-rev-conv",
+            "mpl-rev-save",
+            "mpl-rev-figure"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Plot the motor temperatures",
+          "md": "Full program for **Plot the motor temperatures** (try it yourself first):\n\n```python\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv(\"motor_temps.csv\")\nplt.plot(df[\"Minute\"], df[\"MotorA\"], color=\"red\", marker=\"o\", label=\"Motor A\")\nplt.plot(df[\"Minute\"], df[\"MotorB\"], color=\"blue\", linestyle=\"--\", label=\"Motor B\")\nplt.xlabel(\"Time (minutes)\")\nplt.ylabel(\"Temperature (°C)\")\nplt.title(\"Motor temperature comparison\")\nplt.legend()\nplt.savefig(\"motors.png\")\nplt.show()\n\nprint(\"max A:\", df[\"MotorA\"].max())\nprint(\"max B:\", df[\"MotorB\"].max())\n```\n\nOutput:\n\n```text\nmax A: 57.9\nmax B: 60.6\n```"
+        }
+      ]
+    }
+  ]
+}

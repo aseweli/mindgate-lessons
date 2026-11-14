@@ -1,0 +1,69 @@
+{
+  "title": "Count in a bin",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "vars": {
+    "h": {
+      "pick": [
+        {
+          "d": "[1, 2, 2, 3, 5, 6, 6, 6, 8, 9]",
+          "b": "[0, 3, 6, 9]",
+          "c": [
+            "3",
+            "2",
+            "5"
+          ],
+          "k": 2
+        },
+        {
+          "d": "[4, 7, 7, 10, 12, 15, 15, 18]",
+          "b": "[0, 5, 10, 15, 20]",
+          "c": [
+            "1",
+            "2",
+            "2",
+            "3"
+          ],
+          "k": 2
+        },
+        {
+          "d": "[0.5, 1.0, 1.5, 2.0, 2.5, 3.0]",
+          "b": "[0, 1, 2, 3]",
+          "c": [
+            "1",
+            "2",
+            "3"
+          ],
+          "k": 2
+        }
+      ]
+    }
+  },
+  "statement": "What is the **second** number this prints?\n\n```python\nimport numpy as np\n\ncounts, edges = np.histogram([$h.d], bins=[$h.b])\nprint(counts)\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "h.k"
+    }
+  },
+  "hints": [
+    "Bins are [edge, next edge).",
+    "An inner edge value goes to the right-hand bin.",
+    "Count the values in the second bin."
+  ],
+  "solution": "The second bin holds [$h.k] values.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$h.k]"
+      ],
+      "wrong": [
+        "[$h.k]+1"
+      ]
+    }
+  }
+}

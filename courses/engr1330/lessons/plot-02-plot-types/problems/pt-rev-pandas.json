@@ -1,0 +1,45 @@
+{
+  "title": "pandas plot",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "statement": "Which pandas call draws a histogram of column `Load`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`df['Load'].plot.bar()`",
+        "`df['Load'].hist.plot()`",
+        "`df.plot.scatter('Load')`",
+        "`df['Load'].plot.hist()`"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That makes one bar per row.",
+        "Wrong order.",
+        "Scatter needs x and y.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Series.plot.<kind>().",
+    "kind = hist.",
+    ""
+  ],
+  "solution": "`df['Load'].plot.hist()` (or `df['Load'].hist()`).",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

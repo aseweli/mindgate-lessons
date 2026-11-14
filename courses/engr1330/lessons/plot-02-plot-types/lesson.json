@@ -1,0 +1,250 @@
+{
+  "id": "plot-02-plot-types",
+  "title": "Choosing a plot: line, scatter, bar and histogram",
+  "short": "Plot types",
+  "minutes": 40,
+  "difficulty": 2,
+  "objective": "Choose the right plot for the data and the question, and make line plots, scatter plots, bar charts and histograms (with bins) in Matplotlib and pandas.",
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "requires": [
+    "plot-01-matplotlib"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Line plot",
+              "Trend over time or another ordered variable."
+            ],
+            [
+              "Scatter plot",
+              "Relationship between two numeric variables."
+            ],
+            [
+              "Bar chart",
+              "Compare a number across categories."
+            ],
+            [
+              "Histogram",
+              "Distribution of one numeric variable, counted in bins."
+            ],
+            [
+              "Bin",
+              "An interval of a histogram; bars count values inside it."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Bar chart vs histogram.** Bars compare **categories**; a histogram shows the distribution of **one numeric** variable.\n- **Line plot of unordered data.** Connecting points only makes sense if x is ordered (time).\n- **Bin edges.** A value on an inner edge goes to the right-hand bin.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools. Expect: \"which plot best shows …\", what `bins=` does, and reading counts from a histogram.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "nKxLfUrkLE8",
+          "title": "Matplotlib Tutorial (Part 2): Bar Charts and Analyzing Data from CSVs",
+          "channel": "Corey Schafer",
+          "focus": "Bar charts for categories, built from CSV data.",
+          "start": "0:00",
+          "end": "15:00"
+        },
+        {
+          "type": "video",
+          "youtube": "qBigTkBLU6g",
+          "title": "Histograms, Clearly Explained",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "How bin width changes what a histogram shows.",
+          "start": "0:00",
+          "end": "3:42"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Pick the plot",
+          "problem": "For each: (a) daily water use over a month; (b) weight vs fuel economy of 50 cars; (c) number of students per major; (d) 300 measured resistor values.",
+          "steps": [
+            {
+              "md": "Line plot: change over time.",
+              "title": "(a)"
+            },
+            {
+              "md": "Scatter: two numeric variables.",
+              "title": "(b)"
+            },
+            {
+              "md": "Bar chart: categories.",
+              "title": "(c)"
+            },
+            {
+              "md": "Histogram: distribution of one variable.",
+              "title": "(d)"
+            },
+            {
+              "md": "```python\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nnp.random.seed(4)\nohms = np.random.normal(100, 2, 300)\ncounts, edges, _ = plt.hist(ohms, bins=np.arange(92, 109, 2), ec=\"black\")\nplt.xlabel(\"Resistance (Ohms)\")\nplt.ylabel(\"Frequency\")\nplt.show()\nprint(int(counts.sum()), len(edges) - 1)\n```\n\n```text\n300 8\n```",
+              "title": "Complete program (d)",
+              "why": "All 300 values land in the 8 bins."
+            }
+          ],
+          "answer": "Line, scatter, bar, histogram."
+        },
+        {
+          "type": "worked_example",
+          "title": "Count by hand",
+          "problem": "Data 1, 2, 2, 3, 5, 6, 6, 6, 8, 9 with `bins=[0, 3, 6, 9]`. What are the counts?",
+          "steps": [
+            {
+              "md": "1, 2, 2 → 3.",
+              "title": "Bin [0, 3)",
+              "why": "3 is an inner edge, so it goes right."
+            },
+            {
+              "md": "3, 5 → 2.",
+              "title": "Bin [3, 6)"
+            },
+            {
+              "md": "6, 6, 6, 8, 9 → 5.",
+              "title": "Bin [6, 9]",
+              "why": "The last bin includes its right edge."
+            },
+            {
+              "md": "```python\nimport numpy as np\n\ncounts, edges = np.histogram([1, 2, 2, 3, 5, 6, 6, 6, 8, 9], bins=[0, 3, 6, 9])\nprint(counts)\n```\n\n```text\n[3 2 5]\n```",
+              "title": "Complete program",
+              "why": "np.histogram counts without drawing."
+            }
+          ],
+          "answer": "[3 2 5]"
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "hist-bins",
+          "title": "Histogram with your own bins",
+          "language": "python",
+          "md": "Draw a histogram of 500 simulated bolt lengths with bins from 49.4 to 50.6 mm in steps of 0.2, label the axes,\nand print the counts as integers. Expected printed output:\n\n```text\n[  8  74 165 172  66  15]\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-hist-bins.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "pt-time",
+            "pt-relation",
+            "pt-cat",
+            "pt-dist",
+            "pt-count"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Over time",
+              "Line plot"
+            ],
+            [
+              "Two numeric variables",
+              "Scatter plot"
+            ],
+            [
+              "Categories",
+              "Bar chart"
+            ],
+            [
+              "One variable's distribution",
+              "Histogram"
+            ],
+            [
+              "Inner bin edge",
+              "Value goes to the bin on its right"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Choose the right plot for a question.",
+            "Set histogram bins.",
+            "Count values per bin by hand."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice.",
+          "problems": [
+            "pt-rev-bar-hist",
+            "pt-rev-bins",
+            "pt-rev-pandas"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Histogram with your own bins",
+          "md": "Full program for **Histogram with your own bins** (try it yourself first):\n\n```python\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nnp.random.seed(1330)\nlengths = np.random.normal(50.0, 0.2, 500)\nbins = np.arange(49.4, 50.61, 0.2)\ncounts, edges, bars = plt.hist(lengths, bins=bins, ec=\"black\")\nplt.xlabel(\"Bolt length (mm)\")\nplt.ylabel(\"Count\")\nplt.title(\"Bolt length distribution\")\nplt.show()\nprint(counts.astype(int))\n```\n\nOutput:\n\n```text\n[  8  74 165 172  66  15]\n```"
+        }
+      ]
+    }
+  ]
+}

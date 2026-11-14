@@ -1,0 +1,45 @@
+{
+  "title": "Graphing conventions",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "statement": "Which plot follows engineering graphing conventions best?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Two unlabeled lines in different colors",
+        "A title only",
+        "Axis labels without units",
+        "Both axes labeled with units, a title, and a legend for the two lines"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Readers can't tell them apart without a legend.",
+        "Axes need labels and units.",
+        "Units are part of the label.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does a reader need?",
+    "Labels, units, title, legend.",
+    ""
+  ],
+  "solution": "Label both axes with units, add a title and a legend.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

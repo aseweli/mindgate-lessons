@@ -1,0 +1,46 @@
+{
+  "title": "Shape of axes",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "vars": {
+    "r": {
+      "int": [
+        2,
+        4
+      ]
+    },
+    "c": {
+      "int": [
+        2,
+        4
+      ]
+    }
+  },
+  "statement": "What does this print?\n\n```python\nimport matplotlib.pyplot as plt\n\nfig, axes = plt.subplots(nrows=[$r], ncols=[$c])\nprint(axes.size)\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "r*c"
+    }
+  },
+  "hints": [
+    "`axes` is an array with one Axes per panel.",
+    "[$r] rows × [$c] columns.",
+    ".size counts them."
+  ],
+  "solution": "[$r] × [$c] panels.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$r]*[$c]"
+      ],
+      "wrong": [
+        "[$r]*[$c]+1"
+      ]
+    }
+  }
+}

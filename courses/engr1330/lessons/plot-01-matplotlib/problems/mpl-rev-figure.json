@@ -1,0 +1,45 @@
+{
+  "title": "Figure and Axes",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "statement": "In Matplotlib, the Figure is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "one x axis",
+        "the legend",
+        "the whole canvas that can hold several Axes",
+        "the same thing as a subplot"
+      ],
+      "correct": 2,
+      "explanations": [
+        "That's part of an Axes.",
+        "No.",
+        "Correct.",
+        "A subplot is one Axes."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Top-level container.",
+    "Holds Axes.",
+    ""
+  ],
+  "solution": "The Figure is the top-level canvas; each plot area is an Axes.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Effect of bins",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "statement": "You change `bins=5` to `bins=50` for 200 values. What happens?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "The data change",
+        "Nothing",
+        "More, narrower bars; the shape looks noisier",
+        "Fewer bars"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Only the display changes.",
+        "The bins change the picture.",
+        "Correct.",
+        "More bins = more bars."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What is a bin?",
+    "An interval.",
+    "More intervals → narrower bars."
+  ],
+  "solution": "More bins means narrower bars with fewer values each, so more noise.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

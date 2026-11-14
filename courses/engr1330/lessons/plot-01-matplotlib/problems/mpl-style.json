@@ -1,0 +1,45 @@
+{
+  "title": "Line style",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "statement": "Which call draws a green dashed line with square markers?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`plt.scatter(x, y, color='green', linestyle='--')`",
+        "`plt.plot(x, y, 'g', marker='o')`",
+        "`plt.plot(x, y, color='green', linestyle='s', marker='--')`",
+        "`plt.plot(x, y, color='green', linestyle='--', marker='s')`"
+      ],
+      "correct": 3,
+      "explanations": [
+        "scatter draws points, not a dashed line.",
+        "Circles, solid line.",
+        "Style and marker swapped.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "'--' is dashed.",
+    "'s' is a square marker.",
+    ""
+  ],
+  "solution": "linestyle='--', marker='s'.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

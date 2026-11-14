@@ -66,7 +66,10 @@
       "title": "Unit 8 · Plotting with Matplotlib",
       "from": "2026-10-14",
       "to": "2026-10-16",
-      "lessons": []
+      "lessons": [
+        "plot-01-matplotlib",
+        "plot-02-plot-types"
+      ]
     },
     {
       "id": "u09",

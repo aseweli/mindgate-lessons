@@ -1,0 +1,62 @@
+{
+  "title": "What does this print? (linspace)",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "vars": {
+    "a": {
+      "pick": [
+        0,
+        1,
+        10
+      ]
+    },
+    "b": {
+      "pick": [
+        20,
+        50,
+        100
+      ]
+    },
+    "n": {
+      "pick": [
+        5,
+        11,
+        21,
+        6
+      ]
+    }
+  },
+  "statement": "What does this print?\n\n```python\nimport numpy as np\n\nx = np.linspace([$a], [$b], [$n])\nprint(x[1] - x[0])\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(b-a)/(n-1)",
+      "feedback": [
+        {
+          "answer": "(b-a)/n",
+          "message": "n points make n − 1 gaps."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "linspace includes both ends.",
+    "[$n] points → [$n] − 1 equal gaps.",
+    "Gap = ([$b] − [$a]) / ([$n] − 1)."
+  ],
+  "solution": "The step is $([$b]-[$a])/([$n]-1)$.",
+  "tests": {
+    "a": {
+      "right": [
+        "([$b]-[$a])/([$n]-1)"
+      ],
+      "wrong": [
+        "([$b]-[$a])/[$n]"
+      ]
+    }
+  }
+}

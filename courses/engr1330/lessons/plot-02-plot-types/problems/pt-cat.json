@@ -1,0 +1,45 @@
+{
+  "title": "Which plot?",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "statement": "Which plot best shows: **Average strength of four different alloys**?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Line plot",
+        "Histogram",
+        "Bar chart",
+        "Scatter plot"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Alloys have no order.",
+        "Alloys are categories, not a numeric range.",
+        "Correct: compare categories.",
+        "Only one numeric variable."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is there time order?",
+    "One variable or two? Categories?",
+    "Match the question to the plot."
+  ],
+  "solution": "Best choice: bar chart.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

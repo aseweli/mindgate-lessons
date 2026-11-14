@@ -1,0 +1,45 @@
+{
+  "title": "Labels in the OO interface",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "statement": "You made `fig, ax = plt.subplots()`. Which line labels the x axis of `ax`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`ax.set_xlabel('Time (s)')`",
+        "`plt.label_x('Time (s)')`",
+        "`fig.set_xlabel('Time (s)')`",
+        "`ax.xlabel('Time (s)')`"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "No such function.",
+        "The figure has no x axis; the Axes does.",
+        "Axes methods use set_ ..."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Axes methods start with set_.",
+    "set_xlabel, set_ylabel, set_title.",
+    ""
+  ],
+  "solution": "On an Axes object use `ax.set_xlabel(...)`.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

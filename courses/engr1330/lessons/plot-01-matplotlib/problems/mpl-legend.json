@@ -1,0 +1,45 @@
+{
+  "title": "Empty legend",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "statement": "```python\nplt.plot(t, a)\nplt.plot(t, b)\nplt.legend()\n```\n\nThe legend is empty. What's missing?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "A `label=` argument in each `plt.plot` call",
+        "`plt.show()` before `plt.legend()`",
+        "A `color=` argument",
+        "`plt.title()`"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "The legend must come before show.",
+        "Colors don't create legend text.",
+        "A title doesn't name lines."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Where does the legend get its text?",
+    "From each line's label.",
+    ""
+  ],
+  "solution": "Each `plt.plot(..., label='...')` supplies the legend text.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

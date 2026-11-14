@@ -1,0 +1,45 @@
+{
+  "title": "Bar chart or histogram?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "matplotlib"
+  ],
+  "statement": "What is the key difference between a bar chart and a histogram?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Bar charts need two numeric variables",
+        "Histograms are only for time series",
+        "They are the same",
+        "Bars compare categories; a histogram shows how one numeric variable is distributed"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That's a scatter plot.",
+        "That's line plots.",
+        "Different purposes.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What's on the x axis of each?",
+    "Categories vs numeric bins.",
+    ""
+  ],
+  "solution": "Bar: categories. Histogram: bins of one numeric variable.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

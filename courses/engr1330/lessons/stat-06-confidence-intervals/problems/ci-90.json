@@ -1,0 +1,45 @@
+{
+  "title": "Percentiles for 90%",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "statement": "Which pair of percentiles of the bootstrap distribution gives a **90%** confidence interval?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2.5th and 97.5th",
+        "5th and 95th",
+        "10th and 90th",
+        "0th and 90th"
+      ],
+      "correct": 1,
+      "explanations": [
+        "That's the 95% interval.",
+        "Correct: 5% cut from each end.",
+        "That leaves 80% in the middle.",
+        "A CI cuts both tails equally."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "How much is left out in total?",
+    "10% split between two tails.",
+    "5% each side."
+  ],
+  "solution": "90% in the middle leaves 5% in each tail: percentiles 5 and 95.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Left percentile",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        80,
+        90,
+        95,
+        98,
+        99
+      ]
+    }
+  },
+  "statement": "For a [$c]% confidence interval, which percentile is the **left** end?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(100-c)/2",
+      "feedback": [
+        {
+          "answer": "100-c",
+          "message": "Split the leftover between the two tails."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "What percent is left outside the interval?",
+    "100 − [$c] is split between two tails.",
+    "Left end = (100 − [$c]) / 2."
+  ],
+  "solution": "$(100-[$c])/2$ percent is cut from each end, so the left end is that percentile.",
+  "tests": {
+    "a": {
+      "right": [
+        "(100-[$c])/2"
+      ],
+      "wrong": [
+        "100-[$c]"
+      ]
+    }
+  }
+}

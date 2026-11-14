@@ -1,0 +1,261 @@
+{
+  "id": "stat-05-bootstrap",
+  "title": "Percentiles and the bootstrap",
+  "short": "Bootstrap",
+  "minutes": 50,
+  "difficulty": 3,
+  "objective": "Tell parameters from statistics, compute percentiles, and bootstrap a sample to see how much a statistic could vary.",
+  "tags": [
+    "exam3",
+    "bootstrap"
+  ],
+  "requires": [
+    "stat-02-sampling",
+    "stat-03-descriptive"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Percentile",
+              "Value with about p% of the collection at or below it; `np.percentile(x, p)`."
+            ],
+            [
+              "Parameter",
+              "A number computed from the whole population (usually unknown)."
+            ],
+            [
+              "Statistic",
+              "A number computed from a sample; an estimate of a parameter."
+            ],
+            [
+              "Sampling distribution",
+              "Distribution of a statistic over many different samples."
+            ],
+            [
+              "Bootstrap",
+              "Resampling the original sample, same size, with replacement, to estimate how a statistic varies."
+            ],
+            [
+              "Resample",
+              "One random draw of n rows, with replacement, from the original sample of n rows."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "key",
+          "md": "```py\nbootstraps = []\nfor i in range(10000):\n    resample = sample.sample(len(sample), replace=True)   # same size, WITH replacement\n    bootstraps.append(resample[\"column\"].median())        # the statistic you care about\nbootstraps = np.array(bootstraps)\n```",
+          "title": "The bootstrap recipe"
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Forgetting `replace=True`.** Without it every resample is the original sample reshuffled, and all the\n  bootstrap medians are identical.\n- **Changing the size.** Resamples must have the same size as the original sample.\n- **Resampling the population.** The bootstrap resamples the **sample** you have; if you had the population you\n  wouldn't need it.\n- **Calling the sample median a parameter.** It is a statistic; the parameter is the population's.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Multiple choice, about 40 minutes. Expect: parameter vs statistic; the three bootstrap steps and why resampling is\nwith replacement and the same size; what a histogram of bootstrap statistics represents; output of\n`np.percentile`; spotting the missing `replace=True` in a bootstrap loop.",
+          "title": "How Exam 3 tests this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "Xz0x-8-cgaQ",
+          "title": "Bootstrapping Main Ideas!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "Resampling the one sample you have, with replacement, and reading the spread of the resampled statistic.",
+          "start": "0:00",
+          "end": "9:27"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "A percentile by hand",
+          "problem": "Find the 25th percentile of 4, 8, 15, 16, 23, 42 the way `np.percentile` does.",
+          "steps": [
+            {
+              "md": "4, 8, 15, 16, 23, 42 (already sorted), positions 0 to 5.",
+              "title": "Sort",
+              "why": "Percentiles are about rank."
+            },
+            {
+              "md": "$0.25 \\times (6 - 1) = 1.25$.",
+              "title": "Position",
+              "why": "NumPy's default puts the pth percentile at p/100 × (n − 1)."
+            },
+            {
+              "md": "Between position 1 (8) and 2 (15): $8 + 0.25 \\times (15 - 8) = 9.75$.",
+              "title": "Interpolate",
+              "why": "A quarter of the way from 8 to 15."
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nprint(np.percentile([4, 8, 15, 16, 23, 42], 25))\n```\n\n```text\n9.75\n```",
+              "title": "Complete program",
+              "why": "NumPy agrees."
+            }
+          ],
+          "answer": "9.75"
+        },
+        {
+          "type": "worked_example",
+          "title": "Bootstrap the mean commute",
+          "problem": "Using `commute_times.csv`, bootstrap the **mean** commute with 5,000 resamples (seed 3) and report the sample mean and the 2.5th and 97.5th percentiles of the bootstrap means.",
+          "steps": [
+            {
+              "md": "`sample['Minutes'].mean()`.",
+              "title": "Original statistic",
+              "why": "This is the estimate whose variability we want."
+            },
+            {
+              "md": "`sample.sample(len(sample), replace=True)` → same size, with replacement.",
+              "title": "Resample",
+              "why": "Step 2 of the bootstrap."
+            },
+            {
+              "md": "Loop 5,000 times, append each resample's mean, convert to an array.",
+              "title": "Repeat and collect",
+              "why": "Step 3."
+            },
+            {
+              "md": "Percentiles 2.5 and 97.5 bracket the middle 95% of the bootstrap means.",
+              "title": "Summarize",
+              "why": "That range shows how far the estimate could move."
+            },
+            {
+              "md": "```python\nimport numpy as np\nimport pandas as pd\n\nsample = pd.read_csv(\"commute_times.csv\")\nprint(\"sample mean:\", round(sample[\"Minutes\"].mean(), 2))\n\nnp.random.seed(3)\nboots = []\nfor i in range(5000):\n    resample = sample.sample(len(sample), replace=True)\n    boots.append(resample[\"Minutes\"].mean())\nboots = np.array(boots)\nprint(\"middle 95%:\", round(np.percentile(boots, 2.5), 2), \"to\", round(np.percentile(boots, 97.5), 2))\n```\n\n```text\nsample mean: 22.66\nmiddle 95%: 21.29 to 24.11\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "The sample mean sits in the middle of a fairly narrow range of bootstrap means."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "boot-median",
+          "title": "Bootstrap the median commute",
+          "language": "python",
+          "md": "Bootstrap the **median** of `Minutes` in `commute_times.csv` (made-up data) with **2,000** resamples. Print the\nsample median, how many bootstrap medians you collected, and the smallest and largest bootstrap median.\nExpected output:\n\n```text\nsample median: 19.95\nresamples: 2000\nsmallest: 17.6\nlargest: 23.7\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-boot-median.py"
+              }
+            }
+          ],
+          "data": [
+            "commute_times.csv"
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Vocabulary and percentiles, then the bootstrap itself.",
+          "problems": [
+            "boot-param",
+            "boot-percentile",
+            "boot-replace",
+            "boot-size",
+            "boot-steps",
+            "boot-hist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Parameter vs statistic",
+              "Population number (unknown) vs sample number (estimate)"
+            ],
+            [
+              "Bootstrap step 1",
+              "Treat the sample as the population"
+            ],
+            [
+              "Bootstrap step 2",
+              "Resample: same size, **with replacement**"
+            ],
+            [
+              "Bootstrap step 3",
+              "Compute the statistic for each of many (10,000) resamples"
+            ],
+            [
+              "`np.percentile(x, p)`",
+              "Value at about p% of the sorted data (position p/100·(n−1))"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Tell a parameter from a statistic.",
+            "Compute a percentile the way NumPy does.",
+            "Write a bootstrap loop from memory.",
+            "Explain why resampling is with replacement and the same size."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 3.",
+          "problems": [
+            "boot-rev-fix",
+            "boot-rev-what",
+            "boot-rev-pct"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Bootstrap the median commute",
+          "md": "Full program for **Bootstrap the median commute** (try it yourself first):\n\n```python\nimport numpy as np\nimport pandas as pd\n\nsample = pd.read_csv(\"commute_times.csv\")\nnp.random.seed(1330)\n\nboots = []\nfor i in range(2000):\n    resample = sample.sample(len(sample), replace=True)\n    boots.append(resample[\"Minutes\"].median())\nboots = np.array(boots)\n\nprint(\"sample median:\", sample[\"Minutes\"].median())\nprint(\"resamples:\", len(boots))\nprint(\"smallest:\", boots.min())\nprint(\"largest:\", boots.max())\n```\n\nOutput:\n\n```text\nsample median: 19.95\nresamples: 2000\nsmallest: 17.6\nlargest: 23.7\n```"
+        }
+      ]
+    }
+  ]
+}

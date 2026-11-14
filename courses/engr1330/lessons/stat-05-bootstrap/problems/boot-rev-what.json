@@ -1,0 +1,45 @@
+{
+  "title": "What is resampled?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "bootstrap"
+  ],
+  "statement": "In the bootstrap, resamples are drawn from …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "a normal distribution with the sample's mean and SD",
+        "the previous resample",
+        "the original sample",
+        "the population"
+      ],
+      "correct": 2,
+      "explanations": [
+        "The bootstrap uses the data, not an assumed curve.",
+        "Each resample comes from the original sample.",
+        "Correct.",
+        "The population isn't available."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What data do you have?",
+    "One sample.",
+    "Resample it."
+  ],
+  "solution": "Every resample is drawn, with replacement, from the original sample.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

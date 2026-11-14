@@ -1,0 +1,45 @@
+{
+  "title": "What the histogram shows",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "bootstrap"
+  ],
+  "statement": "`bootstraps` holds 10,000 medians, one per bootstrap resample of a sample of 500 salaries. What does\n`plt.hist(bootstraps)` show?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "An estimate of how the sample median varies from sample to sample",
+        "The 10,000 salaries closest to the median",
+        "The distribution of the 500 salaries",
+        "The exact population distribution of salaries"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: the bootstrap distribution of the median.",
+        "Each value is a median of a whole resample.",
+        "That would be a histogram of the salaries themselves.",
+        "The bootstrap only sees the sample."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "One entry = one resample's median.",
+    "Many medians → their distribution.",
+    "It approximates the sampling distribution of the median."
+  ],
+  "solution": "Each entry is a resample's median, so the histogram is the bootstrap distribution: an estimate of the sampling distribution of the median.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

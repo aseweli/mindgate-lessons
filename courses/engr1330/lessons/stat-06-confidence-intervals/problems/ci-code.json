@@ -1,0 +1,54 @@
+{
+  "title": "What does this print? (CI end)",
+  "difficulty": 3,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "vars": {
+    "p": {
+      "pick": [
+        {
+          "q": 5,
+          "v": 21.0
+        },
+        {
+          "q": 10,
+          "v": 22.0
+        },
+        {
+          "q": 90,
+          "v": 33.0
+        },
+        {
+          "q": 95,
+          "v": 34.5
+        }
+      ]
+    }
+  },
+  "statement": "A small set of bootstrap means is stored in `boots`. What does this print?\n\n```python\nimport numpy as np\n\nboots = np.array([20, 22, 23, 25, 26, 27, 28, 30, 31, 33, 36])\nprint(np.percentile(boots, [$p.q]))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "p.v"
+    }
+  },
+  "hints": [
+    "The values are already sorted; n = 11.",
+    "Position = [$p.q]/100 × 10.",
+    "Interpolate if the position isn't whole."
+  ],
+  "solution": "Position [$p.q]/100 × 10 in the sorted array gives [$p.v].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$p.v]"
+      ],
+      "wrong": [
+        "[$p.v]+2"
+      ]
+    }
+  }
+}

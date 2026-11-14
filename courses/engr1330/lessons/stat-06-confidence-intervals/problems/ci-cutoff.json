@@ -1,0 +1,47 @@
+{
+  "title": "Matching cut-off",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        90,
+        95,
+        99
+      ]
+    }
+  },
+  "statement": "You test a null hypothesis by checking whether its value lies inside a [$c]% confidence interval. What cut-off (in %)\ndoes that test use?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "100-c",
+      "feedback": [
+        {
+          "answer": "(100-c)/2",
+          "message": "That's one tail. The cut-off is the total left outside."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Confidence level and cut-off are complementary.",
+    "They add to 100%.",
+    "Cut-off = 100 − [$c]."
+  ],
+  "solution": "A [$c]% CI goes with a $100-[$c]$% cut-off.",
+  "tests": {
+    "a": {
+      "right": [
+        "100-[$c]"
+      ],
+      "wrong": [
+        "(100-[$c])/2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "title": "What does this print? (percentile)",
+  "difficulty": 2,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "bootstrap"
+  ],
+  "vars": {
+    "q": {
+      "pick": [
+        {
+          "p": 20,
+          "v": 8.0
+        },
+        {
+          "p": 25,
+          "v": 9.75
+        },
+        {
+          "p": 50,
+          "v": 15.5
+        },
+        {
+          "p": 60,
+          "v": 16.0
+        },
+        {
+          "p": 80,
+          "v": 23.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\nimport numpy as np\n\nx = np.array([4, 8, 15, 16, 23, 42])\nprint(np.percentile(x, [$q.p]))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "q.v"
+    }
+  },
+  "hints": [
+    "Position = p/100 × (n − 1) in the sorted array, counting from 0.",
+    "Here n = 6, so position = [$q.p]/100 × 5.",
+    "If the position isn't whole, interpolate between the two neighbors."
+  ],
+  "solution": "NumPy's [$q.p]th percentile of the six values is [$q.v].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$q.v]"
+      ],
+      "wrong": [
+        "[$q.v]+1"
+      ]
+    }
+  }
+}

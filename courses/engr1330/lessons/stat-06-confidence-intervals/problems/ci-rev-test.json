@@ -1,0 +1,45 @@
+{
+  "title": "Claimed average",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "statement": "The 95% CI for the average age in a population is 26.9 to 27.6 years. Null hypothesis: the average is 27.2.\nUsing a 5% cut-off you should …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "accept that the average is exactly 27.2",
+        "reject the null, because the interval is narrow",
+        "reject the null, because 27.2 is not the sample mean",
+        "not reject the null, because 27.2 is inside the interval"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Not rejecting doesn't prove the null is exactly true.",
+        "Only whether 27.2 is inside matters.",
+        "Any value inside the CI is plausible.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is 27.2 between 26.9 and 27.6?",
+    "Inside → plausible.",
+    "Plausible → don't reject."
+  ],
+  "solution": "27.2 is inside the 95% CI, so we don't reject the null at the 5% cut-off.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

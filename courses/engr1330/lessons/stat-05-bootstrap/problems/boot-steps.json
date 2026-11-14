@@ -1,0 +1,45 @@
+{
+  "title": "First step",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "bootstrap"
+  ],
+  "statement": "What is the first step of the bootstrap?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Compute the population parameter",
+        "Treat the original sample as if it were the population",
+        "Sort the sample and take the middle 95%",
+        "Draw a new sample from the population"
+      ],
+      "correct": 1,
+      "explanations": [
+        "It is unknown; that's why we estimate it.",
+        "Correct.",
+        "That's not resampling at all.",
+        "If you could, you wouldn't need the bootstrap."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What do you have? Only one sample.",
+    "You resample from what you have.",
+    "The sample stands in for the population."
+  ],
+  "solution": "Step 1: treat the sample as the population. Step 2: resample it (same size, with replacement). Step 3: compute the statistic many times.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

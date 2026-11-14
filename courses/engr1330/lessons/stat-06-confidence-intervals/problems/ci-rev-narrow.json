@@ -1,0 +1,45 @@
+{
+  "title": "80% instead of 95%",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "statement": "You switch from a 95% to an 80% confidence interval, using the same bootstrap results. The new interval is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "the same",
+        "shifted to the right",
+        "wider",
+        "narrower"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Different percentiles give different ends.",
+        "Both ends move inward symmetrically in percentile terms.",
+        "Less confidence needs a smaller range.",
+        "Correct: percentiles 10 and 90 sit inside 2.5 and 97.5."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which percentiles for 80%?",
+    "10 and 90.",
+    "Compare with 2.5 and 97.5."
+  ],
+  "solution": "Less confidence → narrower interval.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

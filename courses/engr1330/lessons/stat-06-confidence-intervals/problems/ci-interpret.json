@@ -1,0 +1,45 @@
+{
+  "title": "Interpret the interval",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "statement": "From a random sample of 500 employees, the 95% bootstrap CI for the **median** salary is 104,300 to 115,600.\nWhich interpretation is correct?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "95% of employees earn between 104,300 and 115,600",
+        "95% of the 500 sampled salaries are in this interval",
+        "There is a 95% chance the population median is in this particular interval",
+        "We are 95% confident the population median salary is between 104,300 and 115,600"
+      ],
+      "correct": 3,
+      "explanations": [
+        "The CI is about the median, not individual salaries.",
+        "The interval estimates a parameter, not where the data lie.",
+        "The parameter is fixed; the 95% describes the method over many samples.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What parameter is being estimated?",
+    "Does a CI describe individuals?",
+    "What does the 95% refer to?"
+  ],
+  "solution": "The CI estimates the population median; '95% confidence' means the procedure captures the parameter in about 95% of samples.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

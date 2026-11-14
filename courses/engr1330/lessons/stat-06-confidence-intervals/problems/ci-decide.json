@@ -1,0 +1,45 @@
+{
+  "title": "Reject or not?",
+  "difficulty": 5,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "statement": "A new coating is tested on 22 parts. The 99% bootstrap CI for the average drop in corrosion score is **17.1 to 40.6**.\nNull hypothesis: the average drop is 0. What is the best conclusion?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Don't reject the null, because the interval is wide",
+        "Accept that the average drop is exactly 28.85",
+        "Reject the null at the 1% cut-off; the average drop is estimated at about 17 to 41 points",
+        "Reject the null at the 5% cut-off only"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Width doesn't matter; what matters is whether 0 is inside.",
+        "The CI gives a range of plausible values, not one exact value.",
+        "Correct.",
+        "A 99% CI corresponds to a 1% cut-off (and 0 would also be outside the narrower 95% CI)."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is 0 inside 17.1 to 40.6?",
+    "A 99% CI ↔ what cut-off?",
+    "The CI also tells you the size of the effect."
+  ],
+  "solution": "0 is outside the 99% CI, so reject the null at the 1% cut-off. The interval also estimates the average drop: 17.1 to 40.6.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

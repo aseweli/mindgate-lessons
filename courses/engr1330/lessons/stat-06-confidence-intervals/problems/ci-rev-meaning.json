@@ -1,0 +1,45 @@
+{
+  "title": "The meaning of 95%",
+  "difficulty": 4,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "statement": "A researcher repeats the whole procedure (new random sample, 10,000 bootstrap resamples, middle 95%) on 100 different\nsamples. About how many of the 100 intervals should contain the true population parameter?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "About 5",
+        "All 100",
+        "About 50",
+        "About 95"
+      ],
+      "correct": 3,
+      "explanations": [
+        "About 5 should **miss**.",
+        "Some samples are unlucky, so their intervals miss.",
+        "That would be a 50% interval.",
+        "Correct: that's what the confidence level means."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does 95% confidence promise?",
+    "It's a long-run rate for the procedure.",
+    "95 of 100."
+  ],
+  "solution": "About 95 of the 100 intervals capture the parameter (the course demo found 95–96).",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

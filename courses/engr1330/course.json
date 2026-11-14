@@ -107,7 +107,10 @@
       "title": "Unit 13 · Bootstrap & confidence intervals",
       "from": "2026-11-11",
       "to": "2026-11-16",
-      "lessons": []
+      "lessons": [
+        "stat-05-bootstrap",
+        "stat-06-confidence-intervals"
+      ]
     },
     {
       "id": "u14",

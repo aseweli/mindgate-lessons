@@ -1,0 +1,45 @@
+{
+  "title": "Fix the bootstrap",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "bootstrap"
+  ],
+  "statement": "```python\nboots = []\nfor i in range(10000):\n    resample = sample.sample(len(sample))\n    boots.append(resample[\"Age\"].mean())\n```\n\nEvery value in `boots` comes out the same. Which change fixes it?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`sample.sample(100)`",
+        "`range(100000)`",
+        "`sample.sample(len(sample), replace=True)`",
+        "`resample['Age'].median()`"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Smaller resamples vary, but they no longer match the sample size.",
+        "More repetitions of the same reshuffle are still identical.",
+        "Correct: resampling must be with replacement.",
+        "The median of a reshuffle is also always the same."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Why are the means identical?",
+    "The resample contains every row exactly once.",
+    "Allow repeats."
+  ],
+  "solution": "Without `replace=True` each resample is the full sample reshuffled; with it, resamples differ.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

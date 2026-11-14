@@ -1,0 +1,45 @@
+{
+  "title": "Parameter or statistic?",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "bootstrap"
+  ],
+  "statement": "An engineer measures the strength of 40 randomly chosen beams from a shipment of 2,000 and finds a median of 312 kN.\nThe 312 kN is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "a statistic, an estimate of the shipment's median",
+        "the population median",
+        "a percentile of the population",
+        "a parameter"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Only 40 beams were measured.",
+        "It is a median of the sample.",
+        "A parameter would come from all 2,000 beams."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Was it computed from the population or a sample?",
+    "40 of 2,000 beams is a sample.",
+    "Sample → statistic."
+  ],
+  "solution": "Computed from a sample, so it's a statistic estimating the population (shipment) median.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

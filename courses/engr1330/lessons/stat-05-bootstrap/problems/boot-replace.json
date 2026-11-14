@@ -1,0 +1,45 @@
+{
+  "title": "Why with replacement?",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "bootstrap"
+  ],
+  "statement": "A student bootstraps a sample of 500 rows with `sample.sample(500)` (no `replace=True`) 10,000 times and records the\nmedian each time. What happens?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "pandas raises an error",
+        "The medians vary more than they should",
+        "All 10,000 medians are identical: each resample is the same 500 rows in a new order",
+        "It works the same as with replacement"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Drawing 500 of 500 rows without replacement is allowed; it just reshuffles.",
+        "They don't vary at all.",
+        "Correct.",
+        "Without replacement, drawing all 500 rows returns the original sample."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "How many rows are drawn, and how many exist?",
+    "Drawing every row once, in some order …",
+    "… gives the same median every time."
+  ],
+  "solution": "Without replacement, 500 draws from 500 rows is just a reshuffle, so every resample has the same median.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

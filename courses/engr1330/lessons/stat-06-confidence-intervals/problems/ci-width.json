@@ -1,0 +1,45 @@
+{
+  "title": "Which is wider?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "statement": "From the same 10,000 bootstrap means you build a 95% CI and a 99% CI. Which statement is true?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It depends on the random seed",
+        "The 99% CI is narrower because it is more precise",
+        "The 99% CI is wider and contains the 95% CI",
+        "They are the same width"
+      ],
+      "correct": 2,
+      "explanations": [
+        "With the same bootstraps, 0.5–99.5 always contains 2.5–97.5.",
+        "More confidence needs a wider range.",
+        "Correct.",
+        "They use different percentiles."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which percentiles does each use?",
+    "0.5 and 99.5 vs 2.5 and 97.5.",
+    "Which range is bigger?"
+  ],
+  "solution": "The 99% CI uses percentiles 0.5 and 99.5, further out than 2.5 and 97.5, so it is wider and contains the 95% CI.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

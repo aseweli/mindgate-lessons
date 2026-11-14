@@ -1,0 +1,273 @@
+{
+  "id": "stat-06-confidence-intervals",
+  "title": "Building, interpreting and using confidence intervals",
+  "short": "Confidence intervals",
+  "minutes": 55,
+  "difficulty": 4,
+  "objective": "Build 80%, 95% and 99% bootstrap confidence intervals, interpret them correctly, and use one to test a hypothesis.",
+  "tags": [
+    "exam3",
+    "confidence-intervals"
+  ],
+  "requires": [
+    "stat-05-bootstrap"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Confidence interval (CI)",
+              "A range of plausible values for a population parameter, from the middle of the bootstrap distribution."
+            ],
+            [
+              "Confidence level",
+              "The c in a c% interval: how often the procedure captures the parameter in the long run."
+            ],
+            [
+              "Null hypothesis",
+              "The claim being tested, usually 'no effect' (for example, average drop = 0)."
+            ],
+            [
+              "Alternative hypothesis",
+              "The claim that the null is wrong (average drop ≠ 0)."
+            ],
+            [
+              "Cut-off",
+              "100% − confidence level; reject the null if its value is outside the CI."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Percentiles for a c% interval",
+          "items": [
+            {
+              "label": "Left end",
+              "latex": "\\text{percentile }\\tfrac{100-c}{2}"
+            },
+            {
+              "label": "Right end",
+              "latex": "\\text{percentile }100-\\tfrac{100-c}{2}"
+            },
+            {
+              "label": "Test",
+              "latex": "\\text{reject }H_0\\text{ at cut-off }(100-c)\\%\\text{ if the null value is outside the }c\\%\\text{ CI}"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Wrong percentiles.** A 95% interval uses 2.5 and 97.5, not 5 and 95 (that's 90%).\n- **Thinking more confidence means a narrower interval.** It's the opposite.\n- **Reading a CI as a range for individuals.** It estimates a parameter (a mean or median), not where 95% of the data fall.\n- **\"95% chance the parameter is in this interval.\"** The 95% describes the method over many samples.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Multiple choice, about 40 minutes. Expect: which percentiles give a c% interval; which interval is wider; picking\nthe correct interpretation out of several plausible-sounding ones; deciding whether to reject a null hypothesis from\na given interval; and reading a bootstrap-CI program.",
+          "title": "How Exam 3 tests this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "TqOeMYtOc1w",
+          "title": "Confidence Intervals, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "Builds a 95% interval from bootstrapped means, the same method as ENGR 1330, and uses it to compare with a claimed value.",
+          "start": "0:00",
+          "end": "6:41"
+        },
+        {
+          "type": "video",
+          "youtube": "yDEvXB6ApWc",
+          "title": "Confidence Intervals",
+          "channel": "CrashCourse",
+          "focus": "What the confidence level does and does not promise, and why higher confidence gives wider intervals.",
+          "start": "0:00",
+          "end": "13:01"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Which percentiles?",
+          "problem": "You have 10,000 bootstrap medians in `boots`. Write the code for an 80% CI and a 98% CI.",
+          "steps": [
+            {
+              "md": "Cut $(100-80)/2 = 10$ off each end: percentiles 10 and 90.",
+              "title": "80%",
+              "why": "The middle 80% leaves 10% in each tail."
+            },
+            {
+              "md": "Cut $(100-98)/2 = 1$: percentiles 1 and 99.",
+              "title": "98%",
+              "why": "Same rule."
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nnp.random.seed(0)\nboots = np.random.normal(50, 4, 10000)     # stand-in for 10,000 bootstrap medians\nprint(\"80%:\", round(np.percentile(boots, 10), 1), round(np.percentile(boots, 90), 1))\nprint(\"98%:\", round(np.percentile(boots, 1), 1), round(np.percentile(boots, 99), 1))\n```\n\n```text\n80%: 44.8 55.0\n98%: 40.8 59.2\n```",
+              "title": "Complete program",
+              "why": "The 98% interval is wider, as it must be."
+            }
+          ],
+          "answer": "80%: `np.percentile(boots, 10)` and `np.percentile(boots, 90)`; 98%: percentiles 1 and 99."
+        },
+        {
+          "type": "worked_example",
+          "title": "Testing a claimed value",
+          "problem": "From a sample of 1,174 mothers, the 95% bootstrap CI for the average maternal age is 26.9 to 27.6 years. A report claims the population average is 30. What do you conclude, and at what cut-off?",
+          "steps": [
+            {
+              "md": "Null: population average = 30. Alternative: it isn't 30.",
+              "title": "State the hypotheses",
+              "why": "The claim to test is the null."
+            },
+            {
+              "md": "30 is not between 26.9 and 27.6.",
+              "title": "Check the interval",
+              "why": "Values outside the CI are not plausible at this confidence level."
+            },
+            {
+              "md": "Reject the null at the 5% cut-off (95% CI ↔ 5%).",
+              "title": "Conclude",
+              "why": "Confidence level and cut-off add to 100%."
+            },
+            {
+              "md": "```python\nleft, right = 26.9, 27.6\nclaim = 30\nif left <= claim <= right:\n    print(\"don't reject: the claim is plausible\")\nelse:\n    print(\"reject the claim at the 5% cut-off\")\n```\n\n```text\nreject the claim at the 5% cut-off\n```",
+              "title": "Complete program",
+              "why": "The same check works for any interval and claimed value."
+            }
+          ],
+          "answer": "Reject the claim that the average is 30, using a 5% cut-off; the data point to about 27 years."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "fuel-ci",
+          "title": "Did the engine tune cut fuel use?",
+          "language": "python",
+          "md": "`fuel_test.csv` (made-up data) has `Before` and `After` fuel use for 24 trucks. Add a `Drop` column\n(Before − After), bootstrap the **mean drop** 5,000 times, print the 95% CI (2 decimals), and print whether\nto reject the null hypothesis \"the average drop is 0\". Expected output:\n\n```text\n95% CI: 1.07 to 2.5\nreject the null\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-fuel-ci.py"
+              }
+            }
+          ],
+          "data": [
+            "fuel_test.csv"
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Build, then interpret, then use intervals.",
+          "problems": [
+            "ci-90",
+            "ci-left",
+            "ci-width",
+            "ci-code",
+            "ci-interpret",
+            "ci-cutoff",
+            "ci-decide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "95% CI percentiles",
+              "2.5 and 97.5"
+            ],
+            [
+              "80% CI percentiles",
+              "10 and 90"
+            ],
+            [
+              "99% CI percentiles",
+              "0.5 and 99.5"
+            ],
+            [
+              "More confidence",
+              "Wider interval"
+            ],
+            [
+              "Null value outside the c% CI",
+              "Reject the null at a (100 − c)% cut-off"
+            ],
+            [
+              "What the 95% means",
+              "About 95 of 100 intervals built this way contain the parameter"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Write the percentiles for any confidence level.",
+            "Build a bootstrap CI for a mean or median in Python.",
+            "Pick the correct interpretation of a CI and reject the wrong ones.",
+            "Test a null hypothesis with a CI and name the cut-off."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 3.",
+          "problems": [
+            "ci-rev-narrow",
+            "ci-rev-test",
+            "ci-rev-meaning"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Did the engine tune cut fuel use?",
+          "md": "Full program for **Did the engine tune cut fuel use?** (try it yourself first):\n\n```python\nimport numpy as np\nimport pandas as pd\n\nfuel = pd.read_csv(\"fuel_test.csv\")\nfuel[\"Drop\"] = fuel[\"Before\"] - fuel[\"After\"]\nnp.random.seed(1330)\n\nboots = []\nfor i in range(5000):\n    resample = fuel.sample(len(fuel), replace=True)\n    boots.append(resample[\"Drop\"].mean())\nboots = np.array(boots)\n\nleft = np.percentile(boots, 2.5)\nright = np.percentile(boots, 97.5)\nprint(\"95% CI:\", round(left, 2), \"to\", round(right, 2))\n\nif left <= 0 <= right:\n    print(\"do not reject the null\")\nelse:\n    print(\"reject the null\")\n```\n\nOutput:\n\n```text\n95% CI: 1.07 to 2.5\nreject the null\n```"
+        }
+      ]
+    }
+  ]
+}

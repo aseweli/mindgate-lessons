@@ -76,7 +76,10 @@
       "title": "Unit 9 · Numerical methods",
       "from": "2026-10-19",
       "to": "2026-10-21",
-      "lessons": []
+      "lessons": [
+        "num-01-root-finding",
+        "num-02-diff-integration"
+      ]
     },
     {
       "id": "u10",

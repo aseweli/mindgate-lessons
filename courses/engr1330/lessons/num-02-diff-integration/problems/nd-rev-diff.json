@@ -1,0 +1,45 @@
+{
+  "title": "np.diff length",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "`y` has 10 values. How many values does `np.diff(y)` have?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "5",
+        "10",
+        "11",
+        "9"
+      ],
+      "correct": 3,
+      "explanations": [
+        "No.",
+        "That's np.gradient.",
+        "No.",
+        "Correct: one per neighboring pair."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Differences between neighbors.",
+    "10 values, 9 gaps.",
+    ""
+  ],
+  "solution": "9 differences.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

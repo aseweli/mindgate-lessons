@@ -1,0 +1,47 @@
+{
+  "title": "Forward difference",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "vars": {
+    "x": {
+      "int": [
+        1,
+        6
+      ]
+    },
+    "h": {
+      "pick": [
+        0.1,
+        0.5,
+        0.2
+      ]
+    }
+  },
+  "statement": "For $f(x) = x^2$, compute the forward difference at $x = [$x]$ with $h = [$h]$.\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "((x+h)^2-x^2)/h"
+    }
+  },
+  "hints": [
+    "(f(x+h) − f(x))/h.",
+    "f([$x] + [$h]) and f([$x]).",
+    "Simplifies to 2x + h."
+  ],
+  "solution": "$2([$x]) + [$h]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "2*[$x]+[$h]"
+      ],
+      "wrong": [
+        "2*[$x]"
+      ]
+    }
+  }
+}

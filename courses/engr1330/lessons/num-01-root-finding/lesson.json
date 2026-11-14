@@ -1,0 +1,267 @@
+{
+  "id": "num-01-root-finding",
+  "title": "Root finding: lambda functions, bisection and secant",
+  "short": "Root finding",
+  "minutes": 50,
+  "difficulty": 3,
+  "objective": "Write lambda functions, run bisection and secant iterations with a relative-error stopping rule, and compare bracketed and open methods.",
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Root",
+              "A value x with f(x) = 0."
+            ],
+            [
+              "lambda",
+              "Anonymous one-expression function: `lambda x: x**2 - 2`."
+            ],
+            [
+              "Bracketed method",
+              "Keeps the root inside an interval (bisection)."
+            ],
+            [
+              "Open method",
+              "Uses guesses that need not bracket the root (secant)."
+            ],
+            [
+              "Approximate relative error",
+              "|new − old| / |new| × 100%."
+            ],
+            [
+              "Stopping criterion e_s",
+              "Tolerance at which the loop stops."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas",
+          "items": [
+            {
+              "label": "Midpoint",
+              "latex": "x_m=\\frac{x_l+x_u}{2}"
+            },
+            {
+              "label": "Bisection test",
+              "latex": "f(x_l)f(x_m)>0\\Rightarrow x_l=x_m\\text{, else }x_u=x_m"
+            },
+            {
+              "label": "Secant",
+              "latex": "x_{i+1}=x_i-f(x_i)\\frac{x_{i-1}-x_i}{f(x_{i-1})-f(x_i)}"
+            },
+            {
+              "label": "Error",
+              "latex": "e_a=\\left|\\frac{x_{new}-x_{old}}{x_{new}}\\right|\\cdot100\\%"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **No sign change.** Bisection needs $f(x_l)$ and $f(x_u)$ of opposite signs.\n- **Initializing `ea = 0`.** Then the `while ea > es` loop never runs.\n- **Updating the wrong end.** If $f(x_l)f(x_m) > 0$ move $x_l$, not $x_u$.\n- **No iteration cap for secant.** It can run forever if it diverges.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools. Expect: inputs of each method, one bisection or secant step, the error formula, which method always converges, and what a lambda returns.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "OzFuihxtbtA",
+          "title": "How to locate a root: Bisection Method",
+          "channel": "ExamSolutions",
+          "focus": "Sign change, halving the interval, and choosing the half that keeps the sign change.",
+          "start": "0:00",
+          "end": "12:51"
+        },
+        {
+          "type": "video",
+          "youtube": "9qiLUGECMG8",
+          "title": "Efficient Root-Finding with Secant and Modified Secant Methods",
+          "channel": "Den of Learning",
+          "focus": "The secant line through the last two points and why it converges fast.",
+          "start": "0:00",
+          "end": "3:04"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Two bisection steps by hand",
+          "problem": "Find the root of $f(x) = x^3 - 10$ starting from $[2, 3]$; do two steps.",
+          "steps": [
+            {
+              "md": "$f(2) = -2$, $f(3) = 17$: sign change.",
+              "title": "Check the bracket",
+              "why": "Bisection needs it."
+            },
+            {
+              "md": "$x_m = 2.5$, $f(2.5) = 5.625 > 0$. $f(2)f(2.5) < 0$ → root in $[2, 2.5]$.",
+              "title": "Step 1",
+              "why": "Keep the half with the sign change."
+            },
+            {
+              "md": "$x_m = 2.25$, $f(2.25) = 1.39 > 0$ → $[2, 2.25]$.",
+              "title": "Step 2",
+              "why": "The interval halves each time."
+            },
+            {
+              "md": "```python\nf = lambda x: x**3 - 10\nxl, xu = 2, 3\nfor step in range(1, 3):\n    xm = (xl + xu) / 2\n    if f(xl) * f(xm) > 0:\n        xl = xm\n    else:\n        xu = xm\n    print(step, xm, (xl, xu))\n```\n\n```text\n1 2.5 (2, 2.5)\n2 2.25 (2, 2.25)\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "After two steps the root is in [2, 2.25] (true root ≈ 2.1544)."
+        },
+        {
+          "type": "worked_example",
+          "title": "Secant vs bisection on cos x = x",
+          "problem": "Solve $\\cos x - x = 0$ to $e_s = 0.001\\%$ with both methods and count iterations.",
+          "steps": [
+            {
+              "md": "`f = lambda x: np.cos(x) - x`; bracket [0, 1] for bisection, guesses 0 and 1 for secant.",
+              "title": "Set up"
+            },
+            {
+              "md": "Same stopping rule for both.",
+              "title": "Run both loops",
+              "why": "A fair comparison."
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nf = lambda x: np.cos(x) - x\nes = 0.001\n\nxl, xu = 0, 1\nxm, ea, nb = 0.5, 100, 0\nwhile ea > es:\n    nb += 1\n    if f(xl) * f(xm) > 0:\n        xl = xm\n    else:\n        xu = xm\n    old, xm = xm, (xl + xu) / 2\n    ea = abs((xm - old) / xm) * 100\n\na, b, ea, ns = 0, 1, 100, 0\nwhile ea > es and ns < 100:\n    ns += 1\n    c = b - f(b) * (a - b) / (f(a) - f(b))\n    ea = abs((c - b) / c) * 100\n    a, b = b, c\n\nprint(\"bisection:\", nb, round(xm, 6))\nprint(\"secant:   \", ns, round(c, 6))\n```\n\n```text\nbisection: 17 0.739086\nsecant:    5 0.739085\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "Both find x ≈ 0.739085; secant needs far fewer iterations."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "bisect",
+          "title": "Write bisection",
+          "language": "python",
+          "md": "Finish the bisection loop to find the root of $f(x) = x^3 - 2x - 5$ in $[2, 3]$ with $e_s = 0.01\\%$. Print the\nnumber of iterations and the root (6 decimals). Expected output:\n\n```text\niterations: 12\nroot: 2.094604\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-bisect.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "rf-lambda",
+            "rf-mid",
+            "rf-err",
+            "rf-secant",
+            "rf-inputs",
+            "rf-ea-bug",
+            "rf-converge"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "lambda",
+              "`lambda x: expression`"
+            ],
+            [
+              "Bisection inputs",
+              "Interval with a sign change"
+            ],
+            [
+              "Secant inputs",
+              "Two guesses"
+            ],
+            [
+              "e_a",
+              "|new − old|/|new| × 100%"
+            ],
+            [
+              "Always converges",
+              "Bisection"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Write a lambda.",
+            "Do bisection and secant steps by hand.",
+            "Write the while loop with a stopping rule."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice.",
+          "problems": [
+            "rf-rev-lambda",
+            "rf-rev-secant-fast",
+            "rf-rev-update"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Write bisection",
+          "md": "Full program for **Write bisection** (try it yourself first):\n\n```python\nf = lambda x: x**3 - 2*x - 5\nxl, xu = 2, 3\nxm = (xl + xu) / 2\nes, ea, i = 0.01, 100, 0\n\nwhile ea > es:\n    i = i + 1\n    if f(xl) * f(xm) > 0:\n        xl = xm\n    else:\n        xu = xm\n    old = xm\n    xm = (xl + xu) / 2\n    ea = abs((xm - old) / xm) * 100\nprint(\"iterations:\", i)\nprint(\"root:\", round(xm, 6))\n```\n\nOutput:\n\n```text\niterations: 12\nroot: 2.094604\n```"
+        }
+      ]
+    }
+  ]
+}

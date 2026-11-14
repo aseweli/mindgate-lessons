@@ -1,0 +1,95 @@
+{
+  "title": "Next bisection interval",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "vars": {
+    "m": {
+      "pick": [
+        {
+          "c": 2,
+          "l": 0,
+          "u": 2,
+          "mid": 1.0,
+          "sign": "negative",
+          "nl": 1.0,
+          "nu": 2
+        },
+        {
+          "c": 3,
+          "l": 1,
+          "u": 3,
+          "mid": 2.0,
+          "sign": "positive",
+          "nl": 1,
+          "nu": 2.0
+        },
+        {
+          "c": 5,
+          "l": 2,
+          "u": 3,
+          "mid": 2.5,
+          "sign": "positive",
+          "nl": 2,
+          "nu": 2.5
+        },
+        {
+          "c": 10,
+          "l": 3,
+          "u": 4,
+          "mid": 3.5,
+          "sign": "positive",
+          "nl": 3,
+          "nu": 3.5
+        },
+        {
+          "c": 7,
+          "l": 2,
+          "u": 4,
+          "mid": 3.0,
+          "sign": "positive",
+          "nl": 2,
+          "nu": 3.0
+        }
+      ]
+    }
+  },
+  "statement": "$f(x) = x^2 - [$m.c]$ on $[[$m.l], [$m.u]]$. After one bisection step, what are the new ends?\n\na) new $x_l$ =\n\n[______]{a}\n\nb) new $x_u$ =\n\n[______]{b}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "m.nl"
+    },
+    "b": {
+      "type": "number",
+      "value": "m.nu"
+    }
+  },
+  "hints": [
+    "Midpoint first.",
+    "Is f(midpoint) positive or negative?",
+    "Keep the half with the sign change."
+  ],
+  "solution": "Midpoint $x_m = [$m.mid]$; $f(x_m)$ is [$m.sign] while $f([$m.l])$ is negative, so the new interval is $[[$m.nl], [$m.nu]]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$m.nl]"
+      ],
+      "wrong": [
+        "[$m.nl]+0.25"
+      ]
+    },
+    "b": {
+      "right": [
+        "[$m.nu]"
+      ],
+      "wrong": [
+        "[$m.nu]+0.25"
+      ]
+    }
+  }
+}

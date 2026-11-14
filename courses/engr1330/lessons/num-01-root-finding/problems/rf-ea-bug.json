@@ -1,0 +1,45 @@
+{
+  "title": "The loop never runs",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "```python\nes = 0.05\nea = 0\nwhile ea > es:\n    ...\n```\n\nWhy does this loop never run, and how do you fix it?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "0 > 0.05 is False; start with ea = 100",
+        "while needs a for loop inside",
+        "Use `while ea < es`",
+        "es is too small; use es = 5"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "No.",
+        "Then it would stop only when the error grows.",
+        "Still 0 > 5 is False."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Evaluate the condition on the first check.",
+    "0 > 0.05?",
+    "Start with a big error."
+  ],
+  "solution": "The condition is false at the start; initialize ea to a large value like 100.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

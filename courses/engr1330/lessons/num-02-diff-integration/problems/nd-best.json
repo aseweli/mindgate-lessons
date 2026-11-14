@@ -1,0 +1,45 @@
+{
+  "title": "Most accurate",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "For the same h, which estimate is usually most accurate?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Central difference",
+        "Forward difference",
+        "Backward difference",
+        "They're always equal"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Error ~ h.",
+        "Error ~ h.",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which uses points on both sides?",
+    "Central.",
+    "Its error shrinks like h²."
+  ],
+  "solution": "Central differences have error proportional to h², the others to h.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

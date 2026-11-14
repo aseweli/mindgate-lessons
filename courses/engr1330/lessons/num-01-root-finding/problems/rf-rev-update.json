@@ -1,0 +1,45 @@
+{
+  "title": "Bisection update",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "In bisection, $f(x_l) f(x_m) > 0$. What do you do?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Set $x_u = x_m$",
+        "Set $x_l = x_m$ (the root is in the right half)",
+        "Stop: $x_m$ is the root",
+        "Swap $x_l$ and $x_u$"
+      ],
+      "correct": 1,
+      "explanations": [
+        "That keeps a half with no sign change.",
+        "Correct.",
+        "Only if f(x_m) = 0.",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Same sign at x_l and x_m.",
+    "No root between them.",
+    "Move x_l."
+  ],
+  "solution": "Same signs mean no sign change on the left, so the root is in [x_m, x_u].",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

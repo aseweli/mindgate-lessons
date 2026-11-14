@@ -1,0 +1,55 @@
+{
+  "title": "What does this print? (trapezoid)",
+  "difficulty": 3,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "vars": {
+    "t": {
+      "pick": [
+        {
+          "n": 2,
+          "n1": 3,
+          "v": 3.0
+        },
+        {
+          "n": 4,
+          "n1": 5,
+          "v": 2.75
+        },
+        {
+          "n": 6,
+          "n1": 7,
+          "v": 2.7037
+        }
+      ]
+    }
+  },
+  "statement": "What does this print?\n\n```python\nimport numpy as np\n\nx = np.linspace(0, 2, [$t.n1])\ny = x ** 2\nh = x[1] - x[0]\nprint(round(h / 2 * (y[0] + 2 * np.sum(y[1:-1]) + y[-1]), 4))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "t.v",
+      "tol": 6e-05,
+      "tol_type": "absolute"
+    }
+  },
+  "hints": [
+    "[$t.n1] points → [$t.n] strips.",
+    "h = 2/[$t.n].",
+    "Inner points count twice."
+  ],
+  "solution": "With [$t.n] strips the trapezoid rule gives [$t.v] (exact 8/3 ≈ 2.6667).",
+  "tests": {
+    "a": {
+      "right": [
+        "[$t.v]"
+      ],
+      "wrong": [
+        "8/3"
+      ]
+    }
+  }
+}

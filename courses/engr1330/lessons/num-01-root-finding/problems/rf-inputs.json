@@ -1,0 +1,45 @@
+{
+  "title": "Inputs of each method",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "What does bisection need that secant doesn't?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Two starting values",
+        "The derivative of f",
+        "An interval where f changes sign",
+        "A lambda function"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Both use two values; secant's needn't bracket.",
+        "Neither uses it.",
+        "Correct.",
+        "Both can use one."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Bracketed vs open.",
+    "Bisection keeps the root in an interval.",
+    ""
+  ],
+  "solution": "Bisection requires a bracket with a sign change; secant doesn't.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

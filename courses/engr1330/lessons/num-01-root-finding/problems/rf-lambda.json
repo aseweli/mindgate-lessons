@@ -1,0 +1,55 @@
+{
+  "title": "What does this print? (lambda)",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "vars": {
+    "a": {
+      "int": [
+        2,
+        5
+      ]
+    },
+    "b": {
+      "int": [
+        1,
+        9
+      ]
+    },
+    "x": {
+      "int": [
+        -3,
+        4
+      ],
+      "not": [
+        0
+      ]
+    }
+  },
+  "statement": "What does this print?\n\n```python\ng = lambda x: [$a]*x**2 - [$b]\nprint(g([$x]))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a*x^2-b"
+    }
+  },
+  "hints": [
+    "Substitute x = [$x].",
+    "Square first.",
+    "Multiply, then subtract."
+  ],
+  "solution": "$[$a]([$x])^2 - [$b]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$a]*([$x])^2-[$b]"
+      ],
+      "wrong": [
+        "([$a]*([$x]))^2-[$b]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Which always converges?",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "Which method is guaranteed to converge for a continuous f, given a valid start?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Secant",
+        "Both, always",
+        "Bisection",
+        "Neither"
+      ],
+      "correct": 2,
+      "explanations": [
+        "It can diverge.",
+        "Secant has no guarantee.",
+        "Correct: the bracket always contains a root.",
+        "Bisection does."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which keeps a bracket?",
+    "Bisection.",
+    ""
+  ],
+  "solution": "Bisection always converges (slowly); secant is faster but can diverge.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Smaller h",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "You reduce h from 0.1 to 0.01 in a forward difference. The error is roughly …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "10 times larger",
+        "unchanged",
+        "100 times smaller",
+        "10 times smaller"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Smaller h → smaller error (until round-off).",
+        "It depends on h.",
+        "That's the central difference.",
+        "Correct: forward error ∝ h."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Forward error ∝ h.",
+    "h shrinks by 10.",
+    ""
+  ],
+  "solution": "Forward/backward error is proportional to h.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

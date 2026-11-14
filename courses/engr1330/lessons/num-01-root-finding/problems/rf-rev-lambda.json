@@ -1,0 +1,45 @@
+{
+  "title": "Lambda output",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "`h = lambda a, b: a * b + 1`. What is `h(3, 4)`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "12",
+        "15",
+        "13",
+        "8"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Don't forget + 1.",
+        "That's 3·(4 + 1).",
+        "Correct: 3·4 + 1.",
+        "That's 3 + 4 + 1."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "a = 3, b = 4.",
+    "a*b first.",
+    "Then + 1."
+  ],
+  "solution": "3 × 4 + 1 = 13.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

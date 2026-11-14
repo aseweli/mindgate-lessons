@@ -1,0 +1,52 @@
+{
+  "title": "Central difference",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "vars": {
+    "x": {
+      "int": [
+        1,
+        5
+      ]
+    },
+    "h": {
+      "pick": [
+        0.5,
+        1
+      ]
+    }
+  },
+  "statement": "For $f(x) = x^3$, compute the central difference at $x = [$x]$ with $h = [$h]$.\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "((x+h)^3-(x-h)^3)/(2*h)",
+      "feedback": [
+        {
+          "answer": "((x+h)^3-(x-h)^3)/h",
+          "message": "Divide by 2h."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "(f(x+h) − f(x−h))/(2h).",
+    "Compute both cubes.",
+    "Result is 3x² + h²."
+  ],
+  "solution": "$3([$x])^2 + [$h]^2$.",
+  "tests": {
+    "a": {
+      "right": [
+        "3*[$x]^2+[$h]^2"
+      ],
+      "wrong": [
+        "3*[$x]^2"
+      ]
+    }
+  }
+}

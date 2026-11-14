@@ -1,0 +1,61 @@
+{
+  "title": "One trapezoid",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "vars": {
+    "a": {
+      "int": [
+        0,
+        3
+      ]
+    },
+    "w": {
+      "int": [
+        1,
+        4
+      ]
+    },
+    "b": {
+      "expr": "a+w"
+    },
+    "fa": {
+      "int": [
+        1,
+        10
+      ]
+    },
+    "fb": {
+      "int": [
+        2,
+        20
+      ]
+    }
+  },
+  "statement": "Estimate $\\int_{[$a]}^{[$b]} f\\,dx$ with a single trapezoid if $f([$a]) = [$fa]$ and $f([$b]) = [$fb]$.\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(b-a)/2*(fa+fb)"
+    }
+  },
+  "hints": [
+    "One strip: h = b − a.",
+    "Area = h/2 (f(a) + f(b)).",
+    ""
+  ],
+  "solution": "$([$b]-[$a])/2 \\times ([$fa]+[$fb])$.",
+  "tests": {
+    "a": {
+      "right": [
+        "([$b]-[$a])*([$fa]+[$fb])/2"
+      ],
+      "wrong": [
+        "([$b]-[$a])*([$fa]+[$fb])"
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Relative error",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "vars": {
+    "o": {
+      "pick": [
+        1.5,
+        1.25,
+        2.0,
+        3.0
+      ]
+    },
+    "n": {
+      "pick": [
+        1.4,
+        1.375,
+        2.2,
+        2.75
+      ]
+    }
+  },
+  "statement": "The previous estimate was [$o] and the new estimate is [$n]. What is the approximate relative error in percent?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "abs((n-o)/n)*100",
+      "feedback": [
+        {
+          "answer": "abs((n-o)/o)*100",
+          "message": "Divide by the **new** estimate."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "e_a = |new − old| / |new| × 100.",
+    "Difference [$n] − [$o].",
+    "Divide by [$n] and multiply by 100."
+  ],
+  "solution": "$|[$n]-[$o]|/|[$n]|\\times100$.",
+  "tests": {
+    "a": {
+      "right": [
+        "abs(([$n]-[$o])/[$n])*100"
+      ],
+      "wrong": [
+        "abs(([$n]-[$o])/[$o])*100"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "NumPy trapezoid",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "Which call integrates samples `y` taken at points `x`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`np.diff(y, x)`",
+        "`np.trapezoid(y, x)`",
+        "`np.trapezoid(x, y)`",
+        "`np.gradient(y, x)`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "That's differences.",
+        "Correct (np.trapz(y, x) in older NumPy).",
+        "Order is (y, x).",
+        "That's a derivative."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "y first.",
+    "Then x.",
+    ""
+  ],
+  "solution": "`np.trapezoid(y, x)`.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

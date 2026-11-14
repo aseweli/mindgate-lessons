@@ -1,0 +1,45 @@
+{
+  "title": "Trapezoid weights",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "In the composite trapezoid rule, which points are multiplied by 2?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Every point",
+        "None",
+        "Only the two end points",
+        "All inner points"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Ends count once.",
+        "Inner points count twice.",
+        "Those count once.",
+        "Correct: each is shared by two trapezoids."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Each inner point belongs to two strips.",
+    "",
+    ""
+  ],
+  "solution": "Inner points are shared by two trapezoids, so they get weight 2.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

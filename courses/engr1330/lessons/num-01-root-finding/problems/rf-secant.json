@@ -1,0 +1,54 @@
+{
+  "title": "One secant step",
+  "difficulty": 3,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    "p": {
+      "pick": [
+        1,
+        2
+      ]
+    },
+    "q": {
+      "pick": [
+        3,
+        4
+      ]
+    }
+  },
+  "statement": "$f(x) = x^2 - [$c]$ with $x_{i-1} = [$p]$ and $x_i = [$q]$. Compute $x_{i+1}$ with the secant formula.\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "q-(q^2-c)*(p-q)/((p^2-c)-(q^2-c))"
+    }
+  },
+  "hints": [
+    "f([$p]) and f([$q]) first.",
+    "x_{i+1} = x_i − f(x_i)(x_{i−1} − x_i)/(f(x_{i−1}) − f(x_i)).",
+    "Plug in carefully."
+  ],
+  "solution": "$f([$p]) = [$p]^2-[$c]$ and $f([$q]) = [$q]^2-[$c]$; for $f(x) = x^2 - c$ the secant formula simplifies to $(x_{i-1}x_i + c)/(x_{i-1}+x_i) = ([$p]\\cdot[$q]+[$c])/([$p]+[$q])$.",
+  "tests": {
+    "a": {
+      "right": [
+        "([$p]*[$q]+[$c])/([$p]+[$q])"
+      ],
+      "wrong": [
+        "[$q]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Speed",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "statement": "Compared with bisection, the secant method usually …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "needs a sign change",
+        "needs the derivative",
+        "is slower but always converges",
+        "converges in fewer iterations, but may diverge"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That's bisection.",
+        "No.",
+        "That's bisection.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Open vs bracketed.",
+    "Speed vs safety.",
+    ""
+  ],
+  "solution": "Secant is faster but not guaranteed.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "id": "num-02-diff-integration",
+  "title": "Numerical differentiation and the trapezoid rule",
+  "short": "Derivatives & integrals",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Approximate derivatives with forward, backward and central differences, see how the error depends on h, and integrate with the trapezoid rule.",
+  "tags": [
+    "exam2",
+    "numerical-methods"
+  ],
+  "requires": [
+    "num-01-root-finding"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Step size h",
+              "Distance between the x values used."
+            ],
+            [
+              "Forward / backward difference",
+              "Slope to the next / previous point."
+            ],
+            [
+              "Central difference",
+              "Slope between the points on both sides; more accurate."
+            ],
+            [
+              "Trapezoid rule",
+              "Adds trapezoid areas under the curve."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas",
+          "items": [
+            {
+              "label": "Forward",
+              "latex": "\\frac{f(x+h)-f(x)}{h}"
+            },
+            {
+              "label": "Backward",
+              "latex": "\\frac{f(x)-f(x-h)}{h}"
+            },
+            {
+              "label": "Central",
+              "latex": "\\frac{f(x+h)-f(x-h)}{2h}"
+            },
+            {
+              "label": "Trapezoid",
+              "latex": "\\frac h2\\left(f_0+2\\sum_{i=1}^{n-1}f_i+f_n\\right)"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Dividing the central difference by h.** It's 2h.\n- **Doubling the end points.** Only the inner points get the factor 2.\n- **`np.trapz(x, y)`.** The order is `(y, x)`; and newer NumPy calls it `np.trapezoid`.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools. Expect: computing one difference by hand, which is most accurate, effect of h, and a short trapezoid sum.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "VH_6kcxRqRQ",
+          "title": "Trapezoidal Rule: Complete Guide",
+          "channel": "Math AgentX",
+          "focus": "Why inner points are counted twice and how more strips improve accuracy.",
+          "start": "0:00",
+          "end": "16:39"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Velocity from positions",
+          "problem": "A cart is at 0, 1.2, 4.9, 11.1 m at t = 0, 1, 2, 3 s. Estimate the velocity at t = 1 s and t = 2 s with central differences.",
+          "steps": [
+            {
+              "md": "$(4.9 - 0)/(2\\cdot1) = 2.45$ m/s.",
+              "title": "t = 1",
+              "why": "Neighbors at t = 0 and t = 2."
+            },
+            {
+              "md": "$(11.1 - 1.2)/2 = 4.95$ m/s.",
+              "title": "t = 2"
+            },
+            {
+              "md": "```python\nimport numpy as np\n\npos = np.array([0, 1.2, 4.9, 11.1])\nprint(np.gradient(pos, 1.0))\n```\n\n```text\n[1.2  2.45 4.95 6.2 ]\n```",
+              "title": "Complete program",
+              "why": "np.gradient uses central differences inside and one-sided ones at the ends."
+            }
+          ],
+          "answer": "2.45 m/s and 4.95 m/s."
+        },
+        {
+          "type": "worked_example",
+          "title": "Trapezoid by hand",
+          "problem": "Estimate $\\int_0^2 x^3\\,dx$ with 4 strips.",
+          "steps": [
+            {
+              "md": "$h = 0.5$; x = 0, 0.5, 1, 1.5, 2; f = 0, 0.125, 1, 3.375, 8.",
+              "title": "h"
+            },
+            {
+              "md": "$0.25(0 + 2(0.125 + 1 + 3.375) + 8) = 0.25 \\times 17 = 4.25$.",
+              "title": "Sum",
+              "why": "h/2 = 0.25."
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nx = np.linspace(0, 2, 5)\ny = x ** 3\nprint(0.5 / 2 * (y[0] + 2 * np.sum(y[1:-1]) + y[-1]), \"exact:\", 2**4 / 4)\n```\n\n```text\n4.25 exact: 4.0\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "4.25 vs exact 4."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "deriv-error",
+          "title": "How the error depends on h",
+          "language": "python",
+          "md": "For $f(x) = e^x$ at $x = 1$ (true derivative $e$), print h, the forward error % and the central error % for\nh = 0.1, 0.01, 0.001, rounded to 5 decimals. Expected output:\n\n```text\n0.1 5.17092 0.16675\n0.01 0.50167 0.00167\n0.001 0.05002 2e-05\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-deriv-error.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "nd-fwd",
+            "nd-cen",
+            "nd-best",
+            "nd-trap1",
+            "nd-trap-code",
+            "nd-h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Forward",
+              "(f(x+h) − f(x))/h"
+            ],
+            [
+              "Backward",
+              "(f(x) − f(x−h))/h"
+            ],
+            [
+              "Central",
+              "(f(x+h) − f(x−h))/(2h)"
+            ],
+            [
+              "Trapezoid",
+              "h/2 (f0 + 2·inner + fn)"
+            ],
+            [
+              "Most accurate difference",
+              "Central"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Compute the three differences by hand.",
+            "Explain how h affects error.",
+            "Apply the trapezoid rule by hand and in code."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice.",
+          "problems": [
+            "nd-rev-trapz",
+            "nd-rev-diff",
+            "nd-rev-weights"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: How the error depends on h",
+          "md": "Full program for **How the error depends on h** (try it yourself first):\n\n```python\nimport numpy as np\n\nf = lambda x: np.exp(x)\nx, true = 1, np.e\nfor h in [0.1, 0.01, 0.001]:\n    fwd = (f(x + h) - f(x)) / h\n    cen = (f(x + h) - f(x - h)) / (2 * h)\n    e_fwd = abs(fwd - true) / true * 100\n    e_cen = abs(cen - true) / true * 100\n    print(h, round(e_fwd, 5), round(e_cen, 5))\n```\n\nOutput:\n\n```text\n0.1 5.17092 0.16675\n0.01 0.50167 0.00167\n0.001 0.05002 2e-05\n```"
+        }
+      ]
+    }
+  ]
+}

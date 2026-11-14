@@ -1,0 +1,51 @@
+{
+  "title": "Evaluate a polynomial integral · Set 4",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\int_1^{[$a]}3x^2\\,dx$.\n\n[__________]{a}",
+  "hints": [
+    "Find an antiderivative.",
+    "Evaluate at both endpoints.",
+    "Subtract the lower value of 1."
+  ],
+  "solution": "The antiderivative is $x^3$, so the result is $[$a]^3-1$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a^3-1",
+      "feedback": [
+        {
+          "answer": "a^3",
+          "message": "Subtract the lower value of 1."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])^3-1))/2"
+      ],
+      "wrong": [
+        "([$a])^3"
+      ]
+    }
+  }
+}

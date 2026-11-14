@@ -1,0 +1,51 @@
+{
+  "title": "Composition at a point",
+  "difficulty": 1,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "If $f(x)=x^2+1$ and $g(x)=x+[$a]$, compute $(f\\circ g)(2)$.\n\n[__________]{a}",
+  "hints": [
+    "Apply the inner function first.",
+    "Evaluate $g(2)$.",
+    "Square that result, then add one."
+  ],
+  "solution": "$g(2)=2+[$a]$, so $f(g(2))=(2+[$a])^2+1$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(2+a)^2+1",
+      "feedback": [
+        {
+          "answer": "a+5",
+          "message": "Square that result, then add one."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*((2+([$a]))^2+1))/2"
+      ],
+      "wrong": [
+        "([$a])+5"
+      ]
+    }
+  }
+}

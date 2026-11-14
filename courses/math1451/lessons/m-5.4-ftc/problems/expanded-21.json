@@ -1,0 +1,51 @@
+{
+  "title": "Maximum of an accumulation function · Set 3",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Where does $F(x)=\\int_0^x([$a]^2-t^2)\\,dt$ attain its maximum on $[0,[$a]+2]$? Give the input.\n\n[__________]{a}",
+  "hints": [
+    "Differentiate via the FTC.",
+    "Find the positive zero of the integrand.",
+    "Classify it by the sign change."
+  ],
+  "solution": "$F'(x)=[$a]^2-x^2$ is positive below $[$a]$ and negative above it. The maximum is at $x=[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "a^2",
+          "message": "Classify it by the sign change."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "([$a])^2"
+      ]
+    }
+  }
+}

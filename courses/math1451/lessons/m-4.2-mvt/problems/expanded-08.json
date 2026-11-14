@@ -1,0 +1,51 @@
+{
+  "title": "MVT on a symmetric interval · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        3,
+        4
+      ]
+    }
+  },
+  "statement": "Find the positive MVT point for $f(x)=x^3$ on $[-[$a],[$a]]$.\n\n[__________]{a}",
+  "hints": [
+    "The polynomial meets both hypotheses.",
+    "Simplify its endpoint secant slope.",
+    "Solve $3c^2=a^2$ for the positive root."
+  ],
+  "solution": "The secant slope is $[$a]^2$. Thus $c=[$a]/\\sqrt3$, which is interior.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a/sqrt(3)",
+      "feedback": [
+        {
+          "answer": "a/3",
+          "message": "Solve $3c^2=a^2$ for the positive root."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])/sqrt(3)))/2"
+      ],
+      "wrong": [
+        "([$a])/3"
+      ]
+    }
+  }
+}

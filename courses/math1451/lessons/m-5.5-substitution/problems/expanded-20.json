@@ -1,0 +1,52 @@
+{
+  "title": "Logarithm from a negative inner expression · Set 3",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Find $\\int 1/(x-[$a])\\,dx$ for $0<x<1$. Include $C$.\n\n[__________]{a}",
+  "hints": [
+    "Set $u=x-a$.",
+    "Its differential is $dx$.",
+    "Since $u<0$, use the absolute-value log."
+  ],
+  "solution": "The family is $\\ln|x-[$a]|+C$, equivalent on this interval to $\\ln([$a]-x)+C$.",
+  "answers": {
+    "a": {
+      "type": "formula_c",
+      "value": "ln(abs(x-a))",
+      "feedback": [
+        {
+          "answer": "1/(x-a)^2",
+          "message": "Since $u<0$, use the absolute-value log."
+        }
+      ],
+      "vars": {
+        "x": [
+          0.1,
+          0.9
+        ]
+      }
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(ln(abs(x-([$a]))))+7+C"
+      ],
+      "wrong": [
+        "(1/(x-([$a]))^2)+C"
+      ]
+    }
+  }
+}

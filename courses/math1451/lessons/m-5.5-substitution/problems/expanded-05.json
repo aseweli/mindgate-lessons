@@ -1,0 +1,51 @@
+{
+  "title": "A power with changed bounds",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Evaluate $\\int_0^1 2x(x^2+[$a])^3\\,dx$.\n\n[__________]{a}",
+  "hints": [
+    "Substitute $u=x^2+a$.",
+    "Change the bounds to $a,a+1$.",
+    "Evaluate $u^4/4$ at both ends."
+  ],
+  "solution": "With $du=2x\\,dx$, the value is $(([$a]+1)^4-[$a]^4)/4$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "((a+1)^4-a^4)/4",
+      "feedback": [
+        {
+          "answer": "(a+1)^4/4",
+          "message": "Evaluate $u^4/4$ at both ends."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(((([$a])+1)^4-([$a])^4)/4))/2"
+      ],
+      "wrong": [
+        "(([$a])+1)^4/4"
+      ]
+    }
+  }
+}

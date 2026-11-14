@@ -1,0 +1,51 @@
+{
+  "title": "Minimum material for a closed cylinder · Set 3",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "A closed cylinder has volume $2\\pi([$a])^3$. Find the radius minimizing its surface area.\n\n[__________]{a}",
+  "hints": [
+    "Eliminate height with $V=\\pi r^2h$.",
+    "Include two caps plus the side.",
+    "Solve the derivative equation for positive $r$."
+  ],
+  "solution": "$S(r)=2\\pi r^2+4\\pi([$a])^3/r$. Its derivative has sign of $r^3-([$a])^3$, so it switches from negative to positive at $r=[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "2*a",
+          "message": "Solve the derivative equation for positive $r$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "2*([$a])"
+      ]
+    }
+  }
+}

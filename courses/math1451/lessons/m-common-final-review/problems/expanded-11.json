@@ -1,0 +1,51 @@
+{
+  "title": "A mixed signed integral and area · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find total area between $y=2x-2([$a])$ and the $x$-axis on $[0,2([$a])]$.\n\n[__________]{a}",
+  "hints": [
+    "Locate the crossing at $x=a$.",
+    "Find the two triangle magnitudes.",
+    "Add the positive areas."
+  ],
+  "solution": "Each triangle has base $[$a]$ and height $2([$a])$. The total is $2([$a])^2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "2*a^2",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Add the positive areas."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(2*([$a])^2))/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

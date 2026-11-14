@@ -1,0 +1,45 @@
+{
+  "title": "Integrate a polynomial term",
+  "difficulty": 1,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2
+      ]
+    }
+  },
+  "statement": "Find $\\int [$a]x^4\\,dx$. Include $C$.\n\n[__________]{a}",
+  "hints": [
+    "Raise the exponent by one.",
+    "Divide by that new exponent.",
+    "Include the integration constant."
+  ],
+  "solution": "$\\int [$a]x^4\\,dx=[$a]x^5/5+C$. Differentiating recovers $[$a]x^4$.",
+  "answers": {
+    "a": {
+      "type": "formula_c",
+      "value": "a*x^5/5",
+      "feedback": [
+        {
+          "answer": "a*x^5",
+          "message": "Include the integration constant."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(([$a])*x^5/5)+7+C"
+      ],
+      "wrong": [
+        "(([$a])*x^5)+C"
+      ]
+    }
+  }
+}

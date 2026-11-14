@@ -1,0 +1,52 @@
+{
+  "title": "Exact substitution to exponential bounds · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        5,
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\int_0^1 2([$a])x e^{[$a]x^2}\\,dx$.\n\n[__________]{a}",
+  "hints": [
+    "Set $u=ax^2$.",
+    "Convert bounds from 0 and 1 to 0 and $a$.",
+    "Evaluate $e^u$ at both endpoints."
+  ],
+  "solution": "$du=2([$a])x\\,dx$, giving $\\int_0^{[$a]}e^u\\,du=e^{[$a]}-1$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "exp(a)-1",
+      "feedback": [
+        {
+          "answer": "exp(a)",
+          "message": "Evaluate $e^u$ at both endpoints."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(exp(([$a]))-1))/2"
+      ],
+      "wrong": [
+        "exp(([$a]))"
+      ]
+    }
+  }
+}

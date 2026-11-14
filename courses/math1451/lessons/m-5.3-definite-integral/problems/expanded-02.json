@@ -1,0 +1,51 @@
+{
+  "title": "Split to recover a missing interval",
+  "difficulty": 1,
+  "minutes": 3,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "If $\\int_0^5 f=[$a]+7$ and $\\int_0^2 f=[$a]$, find $\\int_2^5 2f$.\n\n[__________]{a}",
+  "hints": [
+    "Split the first integral at 2.",
+    "The unknown piece is the difference.",
+    "The requested integrand has twice the height."
+  ],
+  "solution": "$\\int_2^5f=([$a]+7)-[$a]=7$. The requested value is $2(7)=14$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "14",
+      "feedback": [
+        {
+          "answer": "7",
+          "message": "The requested integrand has twice the height."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(14))/2"
+      ],
+      "wrong": [
+        "7"
+      ]
+    }
+  }
+}

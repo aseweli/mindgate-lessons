@@ -1,0 +1,46 @@
+{
+  "title": "Two moving endpoints · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Differentiate $A(x)=\\int_x^{[$a]x}t^2\\,dt$.\n\n[__________]{a}",
+  "hints": [
+    "Use the FTC at each end.",
+    "Multiply the upper term by the derivative of $ax$.",
+    "Subtract the lower contribution $x^2$."
+  ],
+  "solution": "$A'(x)=[$a]([$a]x)^2-x^2=([$a]^3-1)x^2$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "(a^3-1)*x^2",
+      "feedback": [
+        {
+          "answer": "(a^2-1)*x^2",
+          "message": "Subtract the lower contribution $x^2$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "((([$a])^3-1)*x^2)+x-x"
+      ],
+      "wrong": [
+        "(([$a])^2-1)*x^2"
+      ]
+    }
+  }
+}

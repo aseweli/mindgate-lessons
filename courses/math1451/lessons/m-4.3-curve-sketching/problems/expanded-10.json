@@ -1,0 +1,51 @@
+{
+  "title": "Stationary point, no reversal · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "For $f(x)=(x-[$a])^3$, find the input of a local extremum, or enter DNE.\n\n[__________]{a}",
+  "hints": [
+    "Find where the derivative is zero.",
+    "Check its sign to each side.",
+    "A nonnegative square does not switch signs."
+  ],
+  "solution": "$f'=3(x-[$a])^2>0$ on both sides. The graph increases through the point, so neither extreme occurs.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "DNE",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "A nonnegative square does not switch signs."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "DNE"
+      ],
+      "wrong": [
+        "([$a])"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Local minimum input from a cubic · Set 4",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Find the local-minimum input of $f(x)=x^3-3([$a])^2x$.\n\n[__________]{a}",
+  "hints": [
+    "Find the two critical numbers.",
+    "The derivative changes from negative to positive at the positive one.",
+    "Give its input."
+  ],
+  "solution": "$f'=3(x-[$a])(x+[$a])$, and it changes from negative to positive at $x=[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "-a",
+          "message": "Give its input."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "-([$a])"
+      ]
+    }
+  }
+}

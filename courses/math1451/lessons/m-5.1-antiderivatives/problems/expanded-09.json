@@ -1,0 +1,52 @@
+{
+  "title": "Reverse a negative power · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find $\\int [$a]/x^3\\,dx$ for $x>0$. Include $C$.\n\n[__________]{a}",
+  "hints": [
+    "Rewrite as $ax^{-3}$.",
+    "The new exponent is $-2$.",
+    "Divide the coefficient by $-2$."
+  ],
+  "solution": "The antiderivative is $-[$a]/(2x^2)+C$, whose derivative is $[$a]/x^3$.",
+  "answers": {
+    "a": {
+      "type": "formula_c",
+      "value": "-a/(2*x^2)",
+      "feedback": [
+        {
+          "answer": "a/(2*x^2)",
+          "message": "Divide the coefficient by $-2$."
+        }
+      ],
+      "vars": {
+        "x": [
+          1.0,
+          5.0
+        ]
+      }
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(-([$a])/(2*x^2))+7+C"
+      ],
+      "wrong": [
+        "(([$a])/(2*x^2))+C"
+      ]
+    }
+  }
+}

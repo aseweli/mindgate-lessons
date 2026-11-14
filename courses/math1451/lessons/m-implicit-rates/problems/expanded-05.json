@@ -1,0 +1,52 @@
+{
+  "title": "Second derivative on an ellipse",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "statement": "On the ellipse $x^2+[$a]y^2=[$a]$, find $y''$ at $(0,1)$.\n\n[__________]{a}",
+  "hints": [
+    "Differentiate once to get $x+ayy'=0$.",
+    "The first derivative is zero at $(0,1)$.",
+    "Differentiate that equation using the product rule again."
+  ],
+  "solution": "$1+[$a](y')^2+[$a]yy''=0$. At $(0,1)$, this gives $y''=-1/[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-1/a",
+      "feedback": [
+        {
+          "answer": "1/a",
+          "message": "Differentiate that equation using the product rule again."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(-1/([$a])))/2"
+      ],
+      "wrong": [
+        "1/([$a])"
+      ]
+    }
+  }
+}

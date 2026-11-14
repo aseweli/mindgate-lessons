@@ -1,0 +1,50 @@
+{
+  "title": "Reverse an integral and pull a constant · Set 3",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        5
+      ]
+    }
+  },
+  "statement": "If $\\int_1^4 f(x)\\,dx=[$a]$, evaluate $\\int_4^1 3f(x)\\,dx$.\n\n[__________]{a}",
+  "hints": [
+    "Move the constant outside.",
+    "Reversing the endpoints negates the result.",
+    "Combine the two factors."
+  ],
+  "solution": "$\\int_4^1 3f=-3\\int_1^4 f=-3([$a])$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-3*a",
+      "feedback": [
+        {
+          "answer": "3*a",
+          "message": "Combine the two factors."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(-3*([$a])))/2"
+      ],
+      "wrong": [
+        "3*([$a])"
+      ]
+    }
+  }
+}

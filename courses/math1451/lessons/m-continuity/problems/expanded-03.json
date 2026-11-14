@@ -1,0 +1,51 @@
+{
+  "title": "Which value must IVT attain?",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "A continuous function on $[0,1]$ has $f(0)=-[$a]$ and $f(1)=[$a]+1$. Enter the midpoint of the two endpoint outputs, which IVT guarantees is attained.\n\n[__________]{a}",
+  "hints": [
+    "Add the two signed endpoint values.",
+    "Divide the sum by two.",
+    "The result is between the endpoint outputs."
+  ],
+  "solution": "Their average is $(-[$a]+[$a]+1)/2=1/2$, so IVT guarantees it is attained.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "1/2",
+      "feedback": [
+        {
+          "answer": "a+1/2",
+          "message": "The result is between the endpoint outputs."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(1/2))/2"
+      ],
+      "wrong": [
+        "([$a])+1/2"
+      ]
+    }
+  }
+}

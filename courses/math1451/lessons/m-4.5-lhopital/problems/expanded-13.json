@@ -1,0 +1,51 @@
+{
+  "title": "A zero-to-zero power · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to0^+}x^{[$a]x}$.\n\n[__________]{a}",
+  "hints": [
+    "Take logs with a positive base.",
+    "Rewrite $ax\\ln x$ as a quotient.",
+    "Exponentiate the limit of the log."
+  ],
+  "solution": "The log is $[$a]\\ln x/(1/x)$, whose derivative quotient is $-[$a]x\\to0$. The limit of the original expression is $e^0=1$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "1",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Exponentiate the limit of the log."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(1))/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

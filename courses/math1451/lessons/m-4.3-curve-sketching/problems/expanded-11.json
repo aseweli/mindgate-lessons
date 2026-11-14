@@ -1,0 +1,51 @@
+{
+  "title": "Concavity boundary · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find the left endpoint of the interval where $f(x)=x^3-3([$a])x^2$ is concave up.\n\n[__________]{a}",
+  "hints": [
+    "Differentiate twice.",
+    "Solve the strict positive inequality.",
+    "Read the left boundary."
+  ],
+  "solution": "$f''=6x-6([$a])$ is positive for $x>[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "2*a",
+          "message": "Read the left boundary."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "2*([$a])"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Excluded endpoint",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Give the absolute maximum value of $[$a]x+2$ on $[0,1)$, or enter DNE.\n\n[__________]{a}",
+  "hints": [
+    "The function is increasing.",
+    "The upper endpoint is excluded.",
+    "A limiting upper bound need not be attained."
+  ],
+  "solution": "The values approach $[$a]+2$, but each allowed input has a larger allowed input. No absolute maximum exists.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "DNE",
+      "feedback": [
+        {
+          "answer": "a+2",
+          "message": "A limiting upper bound need not be attained."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "DNE"
+      ],
+      "wrong": [
+        "([$a])+2"
+      ]
+    }
+  }
+}

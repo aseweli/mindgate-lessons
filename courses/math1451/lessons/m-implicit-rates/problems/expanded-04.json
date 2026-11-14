@@ -1,0 +1,51 @@
+{
+  "title": "Rising water in a cylinder",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        4
+      ]
+    }
+  },
+  "statement": "Water enters a cylindrical tank of radius 3 m at $[$a]\\pi$ m$^3$/min. Find the water-level rise rate in m/min.\n\n[__________]{a}",
+  "hints": [
+    "The water occupies a cylinder.",
+    "The cross section is fixed at $9\\pi$.",
+    "Divide inflow by that area."
+  ],
+  "solution": "$V=9\\pi h$, hence $dh/dt=([$a]\\pi)/(9\\pi)=[$a]/9$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a/9",
+      "feedback": [
+        {
+          "answer": "a/3",
+          "message": "Divide inflow by that area."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])/9))/2"
+      ],
+      "wrong": [
+        "([$a])/3"
+      ]
+    }
+  }
+}

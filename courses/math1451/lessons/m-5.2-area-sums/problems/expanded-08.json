@@ -1,0 +1,51 @@
+{
+  "title": "Width of each rectangle · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        3,
+        4
+      ]
+    }
+  },
+  "statement": "Divide $[1,1+[$a]]$ into four equal intervals. Find $\\Delta x$.\n\n[__________]{a}",
+  "hints": [
+    "Use endpoint difference.",
+    "There are four subintervals.",
+    "Divide the interval length by four."
+  ],
+  "solution": "$\\Delta x=((1+[$a])-1)/4=[$a]/4$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a/4",
+      "feedback": [
+        {
+          "answer": "(a+1)/4",
+          "message": "Divide the interval length by four."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])/4))/2"
+      ],
+      "wrong": [
+        "(([$a])+1)/4"
+      ]
+    }
+  }
+}

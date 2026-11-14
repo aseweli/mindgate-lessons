@@ -1,0 +1,46 @@
+{
+  "title": "Natural log with a square · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Differentiate $\\ln(1+[$a]x^2)$.\n\n[__________]{a}",
+  "hints": [
+    "The outer function is a log.",
+    "The denominator is the original argument.",
+    "The numerator is the argument derivative."
+  ],
+  "solution": "Use $u'/u$ to get $2([$a])x/(1+[$a]x^2)$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "2*a*x/(1+a*x^2)",
+      "feedback": [
+        {
+          "answer": "1/(1+a*x^2)",
+          "message": "The numerator is the argument derivative."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*([$a])*x/(1+([$a])*x^2))+x-x"
+      ],
+      "wrong": [
+        "1/(1+([$a])*x^2)"
+      ]
+    }
+  }
+}

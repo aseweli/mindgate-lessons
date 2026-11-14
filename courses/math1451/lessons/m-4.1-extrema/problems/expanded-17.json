@@ -1,0 +1,51 @@
+{
+  "title": "Compare asymmetric cubic candidates · Set 3",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Find the absolute maximum of $f(x)=x^3-3([$a])^2x$ on $[0,3([$a])]$. Give the maximum output.\n\n[__________]{a}",
+  "hints": [
+    "Solve $f'(x)=0$ on the interval.",
+    "Evaluate at $0,a,3a$.",
+    "Compare the three outputs."
+  ],
+  "solution": "The values are $0,-2([$a])^3,18([$a])^3$, so the largest is $18([$a])^3$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "18*a^3",
+      "feedback": [
+        {
+          "answer": "2*a^3",
+          "message": "Compare the three outputs."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(18*([$a])^3))/2"
+      ],
+      "wrong": [
+        "2*([$a])^3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Principal arcsine angle · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        6,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\arcsin(\\sin(\\pi-\\pi/[$a]))$.\n\n[__________]{a}",
+  "hints": [
+    "Sine is unchanged by subtracting its angle from $\\pi$.",
+    "Compare the two angles with the principal range.",
+    "The positive reference angle is inside the arcsine range."
+  ],
+  "solution": "The inner sine equals $\\sin(\\pi/[$a])$ and $\\pi/[$a]$ lies in the principal interval $[-\\pi/2,\\pi/2]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "pi/a",
+      "feedback": [
+        {
+          "answer": "pi-pi/a",
+          "message": "The positive reference angle is inside the arcsine range."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(pi/([$a])))/2"
+      ],
+      "wrong": [
+        "pi-pi/([$a])"
+      ]
+    }
+  }
+}

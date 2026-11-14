@@ -1,0 +1,51 @@
+{
+  "title": "Displacement from signed velocity · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        5,
+        7
+      ]
+    }
+  },
+  "statement": "If $v(t)=2t-[$a]$ m/s, find net displacement from $t=0$ to $t=2$.\n\n[__________]{a}",
+  "hints": [
+    "Net displacement uses signed velocity.",
+    "Compute an antiderivative.",
+    "Subtract its values at 0 and 2."
+  ],
+  "solution": "$\\int_0^2 (2t-[$a])\\,dt=4-2([$a])$ m.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "4-2*a",
+      "feedback": [
+        {
+          "answer": "4+2*a",
+          "message": "Subtract its values at 0 and 2."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(4-2*([$a])))/2"
+      ],
+      "wrong": [
+        "4+2*([$a])"
+      ]
+    }
+  }
+}

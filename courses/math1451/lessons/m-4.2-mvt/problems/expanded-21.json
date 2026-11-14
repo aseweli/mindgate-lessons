@@ -1,0 +1,51 @@
+{
+  "title": "Reciprocal secant · Set 3",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Find the MVT point for $f(x)=1/x$ on $[1,[$a]^2]$.\n\n[__________]{a}",
+  "hints": [
+    "Simplify the secant slope as $-1/a^2$.",
+    "Set $-1/c^2$ equal to it.",
+    "Keep the positive root."
+  ],
+  "solution": "The reciprocal is smooth on the interval. Solving $c^2=[$a]^2$ gives the interior input $c=[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "a^2",
+          "message": "Keep the positive root."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "([$a])^2"
+      ]
+    }
+  }
+}

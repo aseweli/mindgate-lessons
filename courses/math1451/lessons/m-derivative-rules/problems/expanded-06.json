@@ -1,0 +1,47 @@
+{
+  "title": "Tangent line from a derivative",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "statement": "Give $y$ as a function of $x$ for the tangent to $x^2$ at $x=[$a]$.\n\n[__________]{a}",
+  "hints": [
+    "Evaluate both $f(a)$ and $f'(a)$.",
+    "Start from point-slope form.",
+    "The slope multiplies $x-a$."
+  ],
+  "solution": "The line is $y=[$a]^2+2([$a])(x-[$a])$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "2*a*x-a^2",
+      "feedback": [
+        {
+          "answer": "2*a*x+a^2",
+          "message": "The slope multiplies $x-a$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*([$a])*x-([$a])^2)+x-x"
+      ],
+      "wrong": [
+        "2*([$a])*x+([$a])^2"
+      ]
+    }
+  }
+}

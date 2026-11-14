@@ -1,0 +1,52 @@
+{
+  "title": "From rectangles to exact area",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "statement": "Use limiting left endpoints for $f(x)=2x$ on $[0,[$a]]$ to find the area.\n\n[__________]{a}",
+  "hints": [
+    "Use width $a/n$ and sample $ai/n$.",
+    "Sum for $i=0$ to $n-1$.",
+    "Keep the coefficient 2 in the height."
+  ],
+  "solution": "The left sum is $(2([$a])^2/n^2)n(n-1)/2$. Its limit is $([$a])^2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a^2",
+      "feedback": [
+        {
+          "answer": "a^2/2",
+          "message": "Keep the coefficient 2 in the height."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])^2))/2"
+      ],
+      "wrong": [
+        "([$a])^2/2"
+      ]
+    }
+  }
+}

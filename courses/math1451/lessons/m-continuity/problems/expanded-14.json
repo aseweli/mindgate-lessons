@@ -1,0 +1,51 @@
+{
+  "title": "Combine logarithms before solving · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        5,
+        8
+      ]
+    }
+  },
+  "statement": "Solve $\\ln x+\\ln([$a])=\\ln(2)$ for $x>0$.\n\n[__________]{a}",
+  "hints": [
+    "Use the product rule for logs.",
+    "Match the positive arguments.",
+    "Divide by the multiplier on $x$."
+  ],
+  "solution": "The equation is $\\ln([$a]x)=\\ln2$. Thus $[$a]x=2$ and $x=2/[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "2/a",
+      "feedback": [
+        {
+          "answer": "a/2",
+          "message": "Divide by the multiplier on $x$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(2/([$a])))/2"
+      ],
+      "wrong": [
+        "([$a])/2"
+      ]
+    }
+  }
+}

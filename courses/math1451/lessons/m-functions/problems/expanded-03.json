@@ -1,0 +1,52 @@
+{
+  "title": "Undo an affine function",
+  "difficulty": 1,
+  "minutes": 3,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    },
+    "b": {
+      "pick": [
+        1,
+        4
+      ]
+    }
+  },
+  "statement": "Find the inverse function of $f(x)=[$a]x+[$b]$.\n\n[__________]{a}",
+  "hints": [
+    "Set $y=f(x)$.",
+    "Subtract the constant.",
+    "Divide by the slope and exchange the variable roles."
+  ],
+  "solution": "Solve $y=[$a]x+[$b]$ for $x$: $x=(y-[$b])/[$a]$. Relabel the inverse input $x$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "(x-b)/a",
+      "feedback": [
+        {
+          "answer": "(x+b)/a",
+          "message": "Divide by the slope and exchange the variable roles."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "((x-([$b]))/([$a]))+x-x"
+      ],
+      "wrong": [
+        "(x+([$b]))/([$a])"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Area under a semicircle · Set 3",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Use geometry to evaluate $\\int_{-[$a]}^{[$a]}\\sqrt{[$a]^2-x^2}\\,dx$.\n\n[__________]{a}",
+  "hints": [
+    "The equation is an upper semicircle.",
+    "Its radius is $a$.",
+    "Take one half of the disk’s area."
+  ],
+  "solution": "The graph lies above the axis and encloses a semicircle of area $\\pi([$a])^2/2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "pi*a^2/2",
+      "feedback": [
+        {
+          "answer": "pi*a^2",
+          "message": "Take one half of the disk’s area."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(pi*([$a])^2/2))/2"
+      ],
+      "wrong": [
+        "pi*([$a])^2"
+      ]
+    }
+  }
+}

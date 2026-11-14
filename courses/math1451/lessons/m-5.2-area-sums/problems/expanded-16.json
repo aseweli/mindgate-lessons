@@ -1,0 +1,51 @@
+{
+  "title": "A finite right sum · Set 3",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Compute $R_2$ for $f(x)=x^2$ on $[0,2([$a])]$.\n\n[__________]{a}",
+  "hints": [
+    "The width is $a$.",
+    "Right samples are $a$ and $2a$.",
+    "Sum their squared heights and multiply by width."
+  ],
+  "solution": "$R_2=[$a](([$a])^2+(2[$a])^2)=5([$a])^3$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "5*a^3",
+      "feedback": [
+        {
+          "answer": "a^3",
+          "message": "Sum their squared heights and multiply by width."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(5*([$a])^3))/2"
+      ],
+      "wrong": [
+        "([$a])^3"
+      ]
+    }
+  }
+}

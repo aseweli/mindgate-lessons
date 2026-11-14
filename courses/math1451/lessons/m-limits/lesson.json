@@ -128,9 +128,23 @@
           "type": "problem_set",
           "problems": [
             "factor",
+            "expanded-01",
+            "expanded-02",
             "rationalize",
             "trig-limit",
-            "scaled-sine"
+            "scaled-sine",
+            "expanded-03",
+            "expanded-04",
+            "expanded-09",
+            "expanded-10",
+            "expanded-05",
+            "expanded-06",
+            "expanded-11",
+            "expanded-12",
+            "expanded-07",
+            "expanded-08",
+            "expanded-13",
+            "expanded-14"
           ],
           "title": "Practice in order",
           "intro": "Show the reasoning on paper and enter exact answers."

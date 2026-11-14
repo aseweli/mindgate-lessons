@@ -1,0 +1,52 @@
+{
+  "title": "Chain rule through a radical · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Differentiate $\\sqrt{[$a]x+4}$ for $x>0$.\n\n[__________]{a}",
+  "hints": [
+    "Write the square root as a power.",
+    "Keep the linear expression inside.",
+    "Multiply by its derivative."
+  ],
+  "solution": "The outer derivative gives $1/(2\\sqrt{[$a]x+4})$, and the inside contributes $[$a]$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "a/(2*sqrt(a*x+4))",
+      "feedback": [
+        {
+          "answer": "1/(2*sqrt(a*x+4))",
+          "message": "Multiply by its derivative."
+        }
+      ],
+      "vars": {
+        "x": [
+          1.0,
+          3.0
+        ]
+      }
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(([$a])/(2*sqrt(([$a])*x+4)))+x-x"
+      ],
+      "wrong": [
+        "1/(2*sqrt(([$a])*x+4))"
+      ]
+    }
+  }
+}

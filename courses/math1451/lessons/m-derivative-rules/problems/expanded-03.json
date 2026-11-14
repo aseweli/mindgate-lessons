@@ -1,0 +1,46 @@
+{
+  "title": "Product with a sine",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Differentiate $[$a]x\\sin x$.\n\n[__________]{a}",
+  "hints": [
+    "The leading factor and the sine both vary.",
+    "Apply the product rule.",
+    "Keep the term from differentiating $ax$."
+  ],
+  "solution": "The two terms are $[$a]\\sin x+[$a]x\\cos x$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "a*(sin(x)+x*cos(x))",
+      "feedback": [
+        {
+          "answer": "a*x*cos(x)",
+          "message": "Keep the term from differentiating $ax$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(([$a])*(sin(x)+x*cos(x)))+x-x"
+      ],
+      "wrong": [
+        "([$a])*x*cos(x)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "A shifted linear limit · Set 3",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Use right endpoints to find the area under $f(x)=2x+1$ on $[[$a],[$a]+2]$.\n\n[__________]{a}",
+  "hints": [
+    "The width is $2/n$.",
+    "Substitute $a+2i/n$ into $2x+1$.",
+    "Add the constant and linear terms separately."
+  ],
+  "solution": "$R_n=(2/n)(n(2[$a]+1)+(4/n)n(n+1)/2)=4[$a]+2+4(n+1)/n$, so the limit is $4[$a]+6$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "4*a+6",
+      "feedback": [
+        {
+          "answer": "4*a+4",
+          "message": "Add the constant and linear terms separately."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(4*([$a])+6))/2"
+      ],
+      "wrong": [
+        "4*([$a])+4"
+      ]
+    }
+  }
+}

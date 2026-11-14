@@ -1,0 +1,51 @@
+{
+  "title": "Nonuniform right rectangles · Set 3",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Use right endpoints for $f(x)=x$ and partition $\\{0,1,[$a]+1\\}$. Find the sum.\n\n[__________]{a}",
+  "hints": [
+    "The widths are 1 and $a$.",
+    "The right heights are 1 and $a+1$.",
+    "Multiply each height by its own width."
+  ],
+  "solution": "The sum is $1(1)+[$a]([$a]+1)$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "1+a*(a+1)",
+      "feedback": [
+        {
+          "answer": "a+2",
+          "message": "Multiply each height by its own width."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(1+([$a])*(([$a])+1)))/2"
+      ],
+      "wrong": [
+        "([$a])+2"
+      ]
+    }
+  }
+}

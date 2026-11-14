@@ -1,0 +1,53 @@
+{
+  "title": "Mixed log and chain rule · Set 2",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        5,
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Differentiate $\\ln(\\sin([$a]x))$ for $0<x<\\pi/[$a]$.\n\n[__________]{a}",
+  "hints": [
+    "Use the log rule with a positive argument.",
+    "The numerator differentiates the sine.",
+    "Include the inner factor $a$."
+  ],
+  "solution": "The derivative is $[$a]\\cos([$a]x)/\\sin([$a]x)$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "a*cos(a*x)/sin(a*x)",
+      "feedback": [
+        {
+          "answer": "cos(a*x)/sin(a*x)",
+          "message": "Include the inner factor $a$."
+        }
+      ],
+      "vars": {
+        "x": [
+          0.05,
+          0.35
+        ]
+      }
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(([$a])*cos(([$a])*x)/sin(([$a])*x))+x-x"
+      ],
+      "wrong": [
+        "cos(([$a])*x)/sin(([$a])*x)"
+      ]
+    }
+  }
+}

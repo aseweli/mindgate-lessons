@@ -1,0 +1,51 @@
+{
+  "title": "Squeeze a bounded oscillation · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        6
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to0}([$a]x^2)\\cos(1/x)$.\n\n[__________]{a}",
+  "hints": [
+    "Bound cosine between minus one and one.",
+    "Multiply by the nonnegative factor.",
+    "Both bounds approach zero."
+  ],
+  "solution": "$-[$a]x^2\\le [$a]x^2\\cos(1/x)\\le [$a]x^2$, so the squeeze theorem gives zero.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "0",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "Both bounds approach zero."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(0))/2"
+      ],
+      "wrong": [
+        "([$a])"
+      ]
+    }
+  }
+}

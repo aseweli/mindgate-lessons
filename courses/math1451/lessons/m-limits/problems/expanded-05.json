@@ -1,0 +1,51 @@
+{
+  "title": "One-sided reciprocal sign",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to[$a]^-}1/(x-[$a])^3$.\n\n[__________]{a}",
+  "hints": [
+    "On the left, $x-a$ is negative.",
+    "Cubing preserves its sign.",
+    "A reciprocal with denominator approaching zero from below diverges negatively."
+  ],
+  "solution": "The denominator approaches $0^-$, so the limit is $-\\infty$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-INF",
+      "feedback": [
+        {
+          "answer": "INF",
+          "message": "A reciprocal with denominator approaching zero from below diverges negatively."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "-INF"
+      ],
+      "wrong": [
+        "INF"
+      ]
+    }
+  }
+}

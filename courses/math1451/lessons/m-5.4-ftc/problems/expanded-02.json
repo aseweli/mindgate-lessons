@@ -1,0 +1,46 @@
+{
+  "title": "Moving upper limit",
+  "difficulty": 1,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Differentiate $F(x)=\\int_0^{[$a]x^2}(1+t)\\,dt$.\n\n[__________]{a}",
+  "hints": [
+    "Apply the FTC to the upper limit.",
+    "Substitute the whole upper bound into the integrand.",
+    "Multiply by the derivative of that bound."
+  ],
+  "solution": "$F'(x)=(1+[$a]x^2)\\,2([$a])x$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "2*a*x*(1+a*x^2)",
+      "feedback": [
+        {
+          "answer": "1+a*x^2",
+          "message": "Multiply by the derivative of that bound."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*([$a])*x*(1+([$a])*x^2))+x-x"
+      ],
+      "wrong": [
+        "1+([$a])*x^2"
+      ]
+    }
+  }
+}

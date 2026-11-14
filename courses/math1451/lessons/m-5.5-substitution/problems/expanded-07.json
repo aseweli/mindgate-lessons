@@ -1,0 +1,52 @@
+{
+  "title": "Replace the residual variable",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Find $\\int x\\sqrt{x+[$a]}\\,dx$ for $x>0$. Include $C$.\n\n[__________]{a}",
+  "hints": [
+    "Let $u=x+a$.",
+    "Replace $x$ by $u-a$.",
+    "Expand into two powers before integrating."
+  ],
+  "solution": "$\\int(u-[$a])\\sqrt u\\,du=2u^{5/2}/5-2([$a])u^{3/2}/3+C$. Replace $u$ by $x+[$a]$.",
+  "answers": {
+    "a": {
+      "type": "formula_c",
+      "value": "2*(x+a)^(5/2)/5-2*a*(x+a)^(3/2)/3",
+      "feedback": [
+        {
+          "answer": "2*(x+a)^(5/2)/5",
+          "message": "Expand into two powers before integrating."
+        }
+      ],
+      "vars": {
+        "x": [
+          1.0,
+          4.0
+        ]
+      }
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(x+([$a]))^(5/2)/5-2*([$a])*(x+([$a]))^(3/2)/3)+7+C"
+      ],
+      "wrong": [
+        "(2*(x+([$a]))^(5/2)/5)+C"
+      ]
+    }
+  }
+}

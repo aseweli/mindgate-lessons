@@ -1,0 +1,53 @@
+{
+  "title": "Continuity at both joins",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        6,
+        8,
+        10
+      ]
+    }
+  },
+  "statement": "A function equals $x^2$ for $x<1$, $mx+b$ for $1\\le x\\le3$, and $[$a]$ for $x>3$. Give the slope $m$ that makes the function continuous at both joins.\n\n[__________]{a}",
+  "hints": [
+    "Match the two boundary outputs.",
+    "The middle line must pass through $(1,1)$ and $(3,a)$.",
+    "Calculate the slope between those points."
+  ],
+  "solution": "Continuity gives $m+b=1$ and $3m+b=[$a]$. Subtracting gives $m=([$a]-1)/2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(a-1)/2",
+      "feedback": [
+        {
+          "answer": "a/2",
+          "message": "Calculate the slope between those points."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*((([$a])-1)/2))/2"
+      ],
+      "wrong": [
+        "([$a])/2"
+      ]
+    }
+  }
+}

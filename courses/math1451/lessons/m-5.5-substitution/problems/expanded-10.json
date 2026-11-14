@@ -1,0 +1,46 @@
+{
+  "title": "A trig derivative with a sign · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find $\\int \\sin([$a]x)\\,dx$. Include $C$.\n\n[__________]{a}",
+  "hints": [
+    "Substitute $u=ax$.",
+    "The antiderivative of sine is negative cosine.",
+    "Divide by the derivative of the inside."
+  ],
+  "solution": "The result is $-\\cos([$a]x)/[$a]+C$.",
+  "answers": {
+    "a": {
+      "type": "formula_c",
+      "value": "-cos(a*x)/a",
+      "feedback": [
+        {
+          "answer": "cos(a*x)/a",
+          "message": "Divide by the derivative of the inside."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(-cos(([$a])*x)/([$a]))+7+C"
+      ],
+      "wrong": [
+        "(cos(([$a])*x)/([$a]))+C"
+      ]
+    }
+  }
+}

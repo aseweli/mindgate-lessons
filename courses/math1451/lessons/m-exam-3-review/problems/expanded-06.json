@@ -1,0 +1,52 @@
+{
+  "title": "An upper bound from a slope",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "statement": "A smooth function has $f(0)=[$a]$ and $f'(x)\\le3$ for $0<x<4$. Give the largest possible $f(4)$.\n\n[__________]{a}",
+  "hints": [
+    "Use MVT on the full interval.",
+    "The change is at most maximum slope times length.",
+    "Include the initial value."
+  ],
+  "solution": "$f(4)-[$a]=4f'(c)\\le12$. Equality is possible with $f(x)=[$a]+3x$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a+12",
+      "feedback": [
+        {
+          "answer": "12",
+          "message": "Include the initial value."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])+12))/2"
+      ],
+      "wrong": [
+        "12"
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Acceleration at a velocity zero",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "statement": "A particle has position $s(t)=t^3-3([$a])^2t$ for $t\\ge0$. Find its acceleration at the positive instant when its velocity is zero.\n\n[__________]{a}",
+  "hints": [
+    "Set $s'(t)=0$.",
+    "The positive solution is $t=a$.",
+    "Evaluate the second derivative there."
+  ],
+  "solution": "$v=3t^2-3([$a])^2$ and acceleration is $6t$. At the positive stop, $t=[$a]$, so acceleration is $6([$a])$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "6*a",
+      "feedback": [
+        {
+          "answer": "3*a",
+          "message": "Evaluate the second derivative there."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(6*([$a])))/2"
+      ],
+      "wrong": [
+        "3*([$a])"
+      ]
+    }
+  }
+}

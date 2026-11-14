@@ -1,0 +1,51 @@
+{
+  "title": "Recover an unknown reversed segment · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "If $\\int_0^4 f(x)\\,dx=[$a]$ and $\\int_1^4 f(x)\\,dx=2([$a])+1$, find $\\int_1^0 f(x)\\,dx$.\n\n[__________]{a}",
+  "hints": [
+    "Split $[0,4]$ at 1.",
+    "Subtract the piece on $[1,4]$.",
+    "Reverse the resulting integral."
+  ],
+  "solution": "$\\int_0^1f=[$a]-(2[$a]+1)=-[$a]-1$. The requested reversal is $[$a]+1$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a+1",
+      "feedback": [
+        {
+          "answer": "-a-1",
+          "message": "Reverse the resulting integral."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])+1))/2"
+      ],
+      "wrong": [
+        "-([$a])-1"
+      ]
+    }
+  }
+}

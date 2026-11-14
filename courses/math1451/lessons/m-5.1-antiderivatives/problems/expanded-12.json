@@ -1,0 +1,46 @@
+{
+  "title": "Use an initial value · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "If $F'(x)=2x+[$a]$ and $F(0)=4$, find $F(x)$.\n\n[__________]{a}",
+  "hints": [
+    "Integrate both derivative terms.",
+    "Keep the additive constant.",
+    "Substitute zero to identify the constant."
+  ],
+  "solution": "$F=x^2+[$a]x+C$. The initial condition sets $C=4$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "x^2+a*x+4",
+      "feedback": [
+        {
+          "answer": "x^2+a*x",
+          "message": "Substitute zero to identify the constant."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(x^2+([$a])*x+4)+x-x"
+      ],
+      "wrong": [
+        "x^2+([$a])*x"
+      ]
+    }
+  }
+}

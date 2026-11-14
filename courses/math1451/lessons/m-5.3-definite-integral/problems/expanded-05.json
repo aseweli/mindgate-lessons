@@ -1,0 +1,51 @@
+{
+  "title": "Odd cancellation with a constant",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Use symmetry to compute $\\int_{-2}^{2} (x^5+[$a])\\,dx$.\n\n[__________]{a}",
+  "hints": [
+    "The $x^5$ term is odd.",
+    "Its signed contributions cancel on the symmetric interval.",
+    "Integrate the constant over length four."
+  ],
+  "solution": "The first term contributes zero and the constant contributes $4([$a])$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "4*a",
+      "feedback": [
+        {
+          "answer": "2*a",
+          "message": "Integrate the constant over length four."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(4*([$a])))/2"
+      ],
+      "wrong": [
+        "2*([$a])"
+      ]
+    }
+  }
+}

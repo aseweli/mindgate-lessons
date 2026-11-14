@@ -1,0 +1,51 @@
+{
+  "title": "Rewrite an infinite difference · Set 3",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to0^+}(1/x-1/(x+[$a]x^2))$.\n\n[__________]{a}",
+  "hints": [
+    "Combine the two fractions.",
+    "Their numerator is $ax^2$.",
+    "Cancel the common factor of $x^2$."
+  ],
+  "solution": "The difference is $[$a]/(1+[$a]x)$, so the limit is $[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Cancel the common factor of $x^2$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Rationalize an expression over a sum",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3,
+        5,
+        7
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to0}(\\sqrt{[$a]+x}-\\sqrt{[$a]-x})/x$.\n\n[__________]{a}",
+  "hints": [
+    "Use the conjugate of the numerator.",
+    "The difference of radicands is $2x$.",
+    "At zero the two square roots contribute equally."
+  ],
+  "solution": "Cancel $x$ to obtain $2/(\\sqrt{[$a]+x}+\\sqrt{[$a]-x})$, whose limit is $1/\\sqrt{[$a]}$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "1/sqrt(a)",
+      "feedback": [
+        {
+          "answer": "2/sqrt(a)",
+          "message": "At zero the two square roots contribute equally."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(1/sqrt(([$a]))))/2"
+      ],
+      "wrong": [
+        "2/sqrt(([$a]))"
+      ]
+    }
+  }
+}

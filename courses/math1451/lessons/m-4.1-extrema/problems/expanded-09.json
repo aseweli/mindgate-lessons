@@ -1,0 +1,51 @@
+{
+  "title": "Absolute maximum at an endpoint · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find the absolute maximum value of $(x-[$a])^2$ on $[0,2([$a])+1]$.\n\n[__________]{a}",
+  "hints": [
+    "The center is a minimum.",
+    "Compare endpoint distances from the center.",
+    "The right endpoint lies one unit farther away."
+  ],
+  "solution": "The two endpoint values are $[$a]^2$ and $([$a]+1)^2$. The latter is larger.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(a+1)^2",
+      "feedback": [
+        {
+          "answer": "a^2",
+          "message": "The right endpoint lies one unit farther away."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*((([$a])+1)^2))/2"
+      ],
+      "wrong": [
+        "([$a])^2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Quotient with an exponential · Set 3",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Differentiate $e^x/(x+[$a])$.\n\n[__________]{a}",
+  "hints": [
+    "Set numerator to $e^x$.",
+    "The denominator derivative is one.",
+    "Use numerator derivative times denominator minus numerator times denominator derivative."
+  ],
+  "solution": "The quotient rule gives $e^x(x+[$a]-1)/(x+[$a])^2$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "exp(x)*(x+a-1)/(x+a)^2",
+      "feedback": [
+        {
+          "answer": "exp(x)/(x+a)^2",
+          "message": "Use numerator derivative times denominator minus numerator times denominator derivative."
+        }
+      ],
+      "vars": {
+        "x": [
+          0.0,
+          3.0
+        ]
+      }
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(exp(x)*(x+([$a])-1)/(x+([$a]))^2)+x-x"
+      ],
+      "wrong": [
+        "exp(x)/(x+([$a]))^2"
+      ]
+    }
+  }
+}

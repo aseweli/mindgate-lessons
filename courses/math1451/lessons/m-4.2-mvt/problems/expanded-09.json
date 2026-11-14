@@ -1,0 +1,51 @@
+{
+  "title": "Rolle for a shifted quadratic · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find the Rolle point for $(x-[$a])^2$ on $[[$a]-1,[$a]+1]$.\n\n[__________]{a}",
+  "hints": [
+    "Compare the endpoint values.",
+    "The function is smooth.",
+    "Set the derivative equal to zero."
+  ],
+  "solution": "Both endpoint values are 1. Solve $2(c-[$a])=0$, giving $c=[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "a+1",
+          "message": "Set the derivative equal to zero."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "([$a])+1"
+      ]
+    }
+  }
+}

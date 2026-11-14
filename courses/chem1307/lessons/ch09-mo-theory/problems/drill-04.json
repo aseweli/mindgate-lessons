@@ -1,0 +1,35 @@
+{
+  "title": "Choose early or late order",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Locate each element in its family.",
+    "Compare only the two bonding 2p levels.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "In the early sequence π₂p lies below σ₂p; the oxygen family reverses their order.",
+  "exam": false,
+  "statement": "Which ordering comparison is correct for $\\ce{N2}$ and $\\ce{O2}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "π₂p lies below σ₂p in N₂, and above it in O₂.",
+        "π₂p lies above σ₂p in both.",
+        "π₂p lies below σ₂p in both.",
+        "The two orbitals are degenerate in both."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Use the two different sequences.",
+        "N₂ uses the early sequence.",
+        "O₂ uses the late sequence.",
+        "The π pair is internally degenerate, not with σ."
+      ]
+    }
+  }
+}

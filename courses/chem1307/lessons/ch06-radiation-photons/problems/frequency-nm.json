@@ -1,0 +1,57 @@
+{
+  "title": "Frequency from nanometers",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Use c=λν.",
+    "Convert nm to m.",
+    "Divide c by the wavelength in meters."
+  ],
+  "solution": "$\\nu=(2.998\\times10^8)/([$l]\\times10^{-9})$ Hz.",
+  "exam": false,
+  "vars": {
+    "l": {
+      "int": [
+        410,
+        690
+      ],
+      "step": 7
+    },
+    "right_value": {
+      "expr": "((2.998*10^8)/(l*10^-9))"
+    },
+    "wrong_value": {
+      "expr": "((2.998*10^8)/l)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] Hz"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] Hz"
+      ]
+    }
+  },
+  "statement": "Light has wavelength $[$l]$ nm. Find its frequency using $c=2.998\\times10^8$ m/s.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "2.998*10^17/l",
+      "units": "Hz",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "(((2.998*10^8)/l))*1",
+          "message": "The wavelength must be converted from nanometers to meters."
+        }
+      ]
+    }
+  }
+}

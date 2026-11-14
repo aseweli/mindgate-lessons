@@ -1,0 +1,39 @@
+{
+  "title": "Ground-state configuration",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Cr is an exception.",
+    "There are six electrons beyond Ar.",
+    "Use half-filled 3d with one 4s electron."
+  ],
+  "solution": "Observed Cr is $[\\mathrm{Ar}]3d^54s^1$.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "[Ar]4s1 3d5"
+      ],
+      "wrong": [
+        "[Ar]3d4 4s2"
+      ]
+    }
+  },
+  "statement": "Enter the ground-state electron configuration for $\\ce{Cr}$.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "econfig",
+      "value": "[Ar]3d5 4s1",
+      "feedback": [
+        {
+          "answer": "[Ar]3d4 4s2",
+          "message": "Use half-filled 3d with one 4s electron."
+        }
+      ]
+    }
+  }
+}

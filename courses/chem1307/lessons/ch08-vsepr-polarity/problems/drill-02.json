@@ -1,0 +1,35 @@
+{
+  "title": "Multiple bond domain",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Circle only domains on the central atom.",
+    "Treat each double bond as one direction.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Each C=O bond points to one neighbor, giving two domains and a linear geometry.",
+  "exam": false,
+  "statement": "How many domains surround C in $\\ce{CO2}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2",
+        "4",
+        "3",
+        "6"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Two different directions around C.",
+        "This counts electron pairs separately in multiple bonds.",
+        "Carbon has no lone pair in this structure.",
+        "The O lone pairs are on other atoms."
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Bond enthalpy versus formation data",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Identify the kind of data provided.",
+    "Breaking and forming are reverse operations.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Sum bond dissociation energies for the reactant bonds and subtract the corresponding product bond magnitudes.",
+  "statement": "Which expression is appropriate when the data consist of gas-phase average bond enthalpies?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Broken minus formed",
+        "Formed minus broken",
+        "Products plus reactants",
+        "Zero for all elements"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Positive cleavage and negative formation.",
+        "Sign reversed.",
+        "Both contributions would have the same sign.",
+        "This convention applies to standard formation enthalpy for elemental reference states."
+      ]
+    }
+  }
+}

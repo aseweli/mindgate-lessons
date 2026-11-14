@@ -1,0 +1,34 @@
+{
+  "title": "Cancel four strong dipoles",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Draw spatial arrangements.",
+    "Look for equivalent bonds in a symmetric arrangement.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "In $\\ce{CF4}$ all four equivalent C–F bond vectors cancel by tetrahedral symmetry.",
+  "statement": "Which of the following molecules is nonpolar?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "CF₄",
+        "CH₃Cl",
+        "OF₂",
+        "NH₃"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The four equivalent dipoles sum to zero.",
+        "The terminal bonds differ, leaving a net dipole.",
+        "The bent F–O–F arrangement leaves a net dipole.",
+        "The trigonal pyramid has a net dipole."
+      ]
+    }
+  }
+}

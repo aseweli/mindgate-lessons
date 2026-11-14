@@ -1,0 +1,34 @@
+{
+  "title": "Orbital occupancy in an iron cation",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Start with neutral iron.",
+    "Calculate the target electron count.",
+    "Remove from 4s first."
+  ],
+  "solution": "Neutral Fe is $[\\mathrm{Ar}]3d^64s^2$. Two 4s electrons leave to make $\\ce{Fe^2+}$.",
+  "statement": "Which occupancy belongs to isolated $\\ce{Fe^2+}$ in its ground state?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$[\\mathrm{Ar}]3d^6$",
+        "$[\\mathrm{Ar}]3d^44s^2$",
+        "$[\\mathrm{Ar}]3d^5$",
+        "$[\\mathrm{Ar}]3d^64s^2$"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Neutral Fe loses both highest-n 4s electrons.",
+        "It removes 3d electrons while keeping 4s filled.",
+        "This configuration belongs to Fe³⁺.",
+        "This is neutral Fe."
+      ]
+    }
+  }
+}

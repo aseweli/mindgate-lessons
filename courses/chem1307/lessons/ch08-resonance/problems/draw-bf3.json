@@ -1,0 +1,65 @@
+{
+  "title": "Draw BF3",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "B contributes three electrons.",
+    "Use three single B–F bonds.",
+    "Each F has three lone pairs."
+  ],
+  "solution": "B has six electrons around it, an accepted octet exception, and the formal charges are zero.",
+  "exam": false,
+  "statement": "Draw the Lewis structure for $\\ce{BF3}$. Show all lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "BF3",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "B",
+              "lp": 0
+            },
+            {
+              "el": "F",
+              "lp": 3
+            },
+            {
+              "el": "F",
+              "lp": 3
+            },
+            {
+              "el": "F",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ]
+          ]
+        }
+      ],
+      "allow": [
+        "incomplete_octet"
+      ]
+    }
+  }
+}

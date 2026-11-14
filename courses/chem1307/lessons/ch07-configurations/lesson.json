@@ -1,0 +1,193 @@
+{
+  "id": "ch07-configurations",
+  "title": "Electron configurations, spin, and magnetism",
+  "short": "Configurations and spin",
+  "chapter": 7,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Write ground-state configurations, form ions, and identify unpaired electrons and magnetic behavior.",
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Aufbau",
+              "Fill available lower-energy orbitals first."
+            ],
+            [
+              "Pauli exclusion",
+              "Maximum two opposite-spin electrons per orbital."
+            ],
+            [
+              "Hund’s rule",
+              "Spread electrons across degenerate orbitals before pairing."
+            ],
+            [
+              "Paramagnetic",
+              "Has unpaired electrons in the simple isolated-species model."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Electron count for an ion",
+              "latex": "N_e=Z-\\text{signed charge}",
+              "note": "A negative charge adds electrons."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Use the observed Cr and Cu configurations. Remove 4s before 3d for iron-family cations. A full subshell is paired, while a half-full p or d subshell has several singles."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "Use orbital boxes for magnetism questions and verify total electrons after writing an ion configuration."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "Ur2PuzJ7KWs",
+          "title": "Chromium and copper configuration exceptions",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Compare the observed ground state with the simple filling prediction."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Neutral sulfur and its anion",
+          "problem": "Write the configurations for sulfur and $\\ce{S^2-}$ and infer their magnetic behavior.",
+          "answer": "S: $[\\mathrm{Ne}]3s^23p^4$, paramagnetic; $\\ce{S^2-}$: $[\\mathrm{Ar}]$, diamagnetic.",
+          "steps": [
+            {
+              "title": "Count",
+              "md": "Sulfur has 16 electrons. Add two for the anion.",
+              "why": "Negative charge corresponds to electron gain."
+            },
+            {
+              "title": "Fill",
+              "md": "Neutral $3p^4$ gives one pair and two singles. The anion has a full $3p^6$.",
+              "why": "Hund’s rule applies inside the p subshell."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Build a transition-metal cation",
+          "problem": "Write the ground-state configuration for $\\ce{Co^2+}$.",
+          "answer": "$[\\mathrm{Ar}]3d^7$.",
+          "steps": [
+            {
+              "title": "Start neutral",
+              "md": "Co has 27 electrons: $[\\mathrm{Ar}]3d^74s^2$.",
+              "why": "Start from the observed neutral filling."
+            },
+            {
+              "title": "Remove",
+              "md": "Take both electrons from $4s$.",
+              "why": "These have the highest principal quantum number."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "phosphorus",
+            "chromium",
+            "iron-ion",
+            "chloride",
+            "drill-01",
+            "drill-02",
+            "drill-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "What is the spin of a paired orbital?",
+              "One +1/2 and one −1/2 electron."
+            ],
+            [
+              "Remove first from 4s or 3d?",
+              "4s for first-row transition-metal cations."
+            ],
+            [
+              "How many unpaired in p⁴?",
+              "Two."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Write full and noble-gas configurations.",
+            "Apply Pauli and Hund in boxes.",
+            "Form cations and anions and classify magnetic behavior."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "fe-ion-removal"
+          ]
+        }
+      ]
+    }
+  ]
+}

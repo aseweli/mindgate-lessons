@@ -1,0 +1,35 @@
+{
+  "title": "Unused p orbitals",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Begin with three p orbitals.",
+    "Subtract the number participating in sp mixing.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "One of carbon’s three p orbitals is combined with the s orbital, leaving two.",
+  "exam": false,
+  "statement": "How many unhybridized p orbitals remain on a simple $sp$ carbon?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Two p orbitals remain available for pi overlap.",
+        "This would be the sp² case.",
+        "This would be the sp³ case.",
+        "One p orbital is used to make sp hybrids."
+      ]
+    }
+  }
+}

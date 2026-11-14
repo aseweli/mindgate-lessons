@@ -1,0 +1,34 @@
+{
+  "title": "Compare filling order",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Compute both sums.",
+    "Use the tie-breaker.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Both sums are 3, so the smaller n, 2p, comes first.",
+  "statement": "By the n+ℓ rule, which subshell fills first, 2p or 3s?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2p, because it has smaller n in a tie.",
+        "3s, because it has smaller ℓ in a tie.",
+        "They have the same energy in any atom.",
+        "Neither can exist."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Equal n+ℓ is broken by n.",
+        "Smaller n is the rule for a tie.",
+        "The mnemonic does not assert degeneracy.",
+        "Both satisfy ℓ<n."
+      ]
+    }
+  }
+}

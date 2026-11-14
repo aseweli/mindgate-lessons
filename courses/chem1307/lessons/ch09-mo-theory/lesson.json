@@ -1,0 +1,224 @@
+{
+  "id": "ch09-mo-theory",
+  "title": "Molecular orbital filling, bond order, and magnetism",
+  "short": "MO diagrams and ions",
+  "chapter": 9,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Construct homonuclear MO configurations, add or remove electrons for ions, and derive bond order and magnetism.",
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "n2-o2-mo.svg",
+          "alt": "A two-column comparison shows nitrogen’s filled bonding pi and sigma levels, and oxygen’s two unpaired pi star electrons. Core orbitals are omitted.",
+          "caption": "Compare the reversed order of the bonding 2p levels and the singly occupied oxygen π* orbitals. Each horizontal line represents one orbital.",
+          "width": 680
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Bonding MO",
+              "Stabilizing combination with increased density between nuclei."
+            ],
+            [
+              "Antibonding MO",
+              "Combination with an internuclear node and an asterisk."
+            ],
+            [
+              "HOMO and LUMO",
+              "Highest occupied and lowest unoccupied molecular orbitals."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Bond order",
+              "latex": "BO=\\tfrac12(N_\\mathrm{bonding}-N_\\mathrm{antibonding})",
+              "note": "Count electrons, not the number of filled orbital labels."
+            },
+            {
+              "label": "Ion change",
+              "latex": "\\Delta BO=\\pm\\tfrac12\\text{ per electron added or removed}",
+              "note": "Sign depends on bonding character and direction of change."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Use the right ordering for $\\ce{N2}$ versus $\\ce{O2}$. Use one box for each degenerate orbital. A superscript asterisk means antibonding, while an occupancy superscript gives electron count."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "For each MO question, write count → order → fill → bond order and magnetism. For ions identify the orbital affected by charging."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "6tB6E6R_XpQ",
+          "title": "Molecular orbitals and bond order",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Separate bonding and antibonding occupancies before calculating bond order."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Oxygen is paramagnetic",
+          "problem": "Find bond order and unpaired electrons in $\\ce{O2}$.",
+          "answer": "Bond order 2 and two unpaired electrons.",
+          "steps": [
+            {
+              "title": "Fill 12 valence electrons",
+              "md": "Use $(\\sigma_{2s})^2(\\sigma^*_{2s})^2(\\sigma_{2p})^2(\\pi_{2p})^4(\\pi^*_{2p})^2$.",
+              "why": "Use the oxygen-family sequence."
+            },
+            {
+              "title": "Apply Hund",
+              "md": "The last two electrons enter separate π* orbitals.",
+              "why": "Degenerate orbitals fill singly before pairing."
+            },
+            {
+              "title": "Count",
+              "md": "Eight bonding and four antibonding electrons give $(8-4)/2=2$.",
+              "why": "Filled core pairs cancel."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Oxygen molecular ions",
+          "problem": "Compare $\\ce{O2+}$, $\\ce{O2}$, and $\\ce{O2^-}$ by bond order.",
+          "answer": "$\\ce{O2+}$: 2.5; $\\ce{O2}$: 2; $\\ce{O2^-}$: 1.5.",
+          "steps": [
+            {
+              "title": "Remove or add",
+              "md": "The highest occupied electrons in O₂ lie in π* and the same pair has available slots.",
+              "why": "Charging affects antibonding occupation."
+            },
+            {
+              "title": "Update",
+              "md": "Cation loses an antibonding electron and gains 0.5 in order; anion gains an antibonding electron and loses 0.5.",
+              "why": "Antibonding electrons enter the formula with a negative sign."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Earlier order for B₂",
+          "problem": "What are the predicted bond order and magnetic behavior of $\\ce{B2}$?",
+          "answer": "Bond order 1 and paramagnetic with two unpaired electrons.",
+          "steps": [
+            {
+              "title": "Fill six valence electrons",
+              "md": "Fill σ₂s and σ*₂s with four electrons, then put two in separate π₂p boxes.",
+              "why": "The π₂p pair lies below σ₂p in this case."
+            },
+            {
+              "title": "Count",
+              "md": "Four bonding and two antibonding electrons give $(4-2)/2=1$.",
+              "why": "The two π electrons are unpaired."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "oxygen-order",
+            "drill-01",
+            "drill-02",
+            "drill-03",
+            "drill-04",
+            "drill-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "Which orbital fills first in B₂, σ₂p or π₂p?",
+              "The π₂p pair."
+            ],
+            [
+              "Remove one π* electron: effect on bond order?",
+              "Bond order rises by one half."
+            ],
+            [
+              "What actually determines paramagnetism?",
+              "At least one unpaired electron."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Choose the correct 2p ordering.",
+            "Fill neutral diagrams and ions.",
+            "Compute bond order, unpaired electrons, and relative strength."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08",
+            "drill-09",
+            "neutral-nitrogen"
+          ]
+        }
+      ]
+    }
+  ]
+}

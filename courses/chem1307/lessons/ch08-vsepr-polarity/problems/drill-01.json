@@ -1,0 +1,35 @@
+{
+  "title": "Parent and molecular geometry",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count P’s leftover electrons.",
+    "Name the parent from all domains.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Three P–Cl bonds and one P lone pair make AX₃E: tetrahedral domains and a trigonal pyramidal molecule.",
+  "exam": false,
+  "statement": "Which combination is correct for $\\ce{PCl3}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Tetrahedral domains; trigonal pyramidal molecule",
+        "Trigonal planar domains; trigonal planar molecule",
+        "Tetrahedral domains; bent molecule",
+        "Trigonal pyramidal domains; tetrahedral molecule"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Four domains and three bonded neighbors.",
+        "This omits the lone pair.",
+        "Bent here would have two bonded neighbors.",
+        "These labels are reversed."
+      ]
+    }
+  }
+}

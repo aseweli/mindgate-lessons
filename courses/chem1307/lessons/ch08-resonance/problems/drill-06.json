@@ -1,0 +1,34 @@
+{
+  "title": "Average formal charge",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Pick one terminal atom.",
+    "Track it through both contributors.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Each terminal O alternates between charge 0 and −1, so its contributor average is −1/2.",
+  "statement": "What is the formal-charge average on each terminal oxygen over the two equivalent $\\ce{O3}$ contributors?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "−1/2",
+        "+1/2",
+        "−1",
+        "0"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Average 0 and −1.",
+        "The terminal single-bonded O carries negative charge.",
+        "This uses only the single-bonded role.",
+        "This uses only the double-bonded role."
+      ]
+    }
+  }
+}

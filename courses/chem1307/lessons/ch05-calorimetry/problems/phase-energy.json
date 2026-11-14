@@ -1,0 +1,34 @@
+{
+  "title": "Two stages on a heating curve",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "List the two stages.",
+    "Convert the molar phase change to sample heat.",
+    "Add both terms."
+  ],
+  "solution": "$q=1.60+(0.500)(20.0)=11.6$ kJ.",
+  "statement": "A $0.500$ mol sample absorbs 1.60 kJ to reach its boiling point. Its molar vaporization enthalpy is 20.0 kJ/mol. What total heat warms it and vaporizes it completely?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "11.6 kJ",
+        "21.6 kJ",
+        "10.0 kJ",
+        "8.4 kJ"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Add 1.60 to 0.500 times 20.0.",
+        "The full molar enthalpy was used for a half-mole.",
+        "This supplies vaporization alone.",
+        "Both warming and vaporization absorb heat."
+      ]
+    }
+  }
+}

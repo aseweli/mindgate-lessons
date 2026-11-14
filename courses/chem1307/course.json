@@ -20,7 +20,7 @@
     "questions": 30,
     "minutes": 90
   },
-  "notes": "Taught out of book order: chapters 1–4, then 10, 5 and 6, then 7–9, then 11.",
+  "notes": "Taught out of book order: chapters 1–4, then 10, 5 and 6, then 7–9, then 11. **Start with Chapters 7–9 for Exam 3.** Chapters 5 and 6 are previous material and part of the cumulative final. The current MindGate final practice bank draws from the published Chapters 5–9.",
   "units": [
     {
       "id": "ch01",
@@ -50,27 +50,46 @@
     {
       "id": "ch05",
       "title": "Ch. 5 · Thermochemistry",
-      "lessons": []
+      "lessons": [
+        "ch05-energy-enthalpy",
+        "ch05-calorimetry",
+        "ch05-hess-formation"
+      ]
     },
     {
       "id": "ch06",
       "title": "Ch. 6 · Quantum theory and electronic structure",
-      "lessons": []
+      "lessons": [
+        "ch06-radiation-photons",
+        "ch06-bohr-quantum",
+        "ch06-orbitals"
+      ]
     },
     {
       "id": "ch07",
       "title": "Ch. 7 · Atomic electron configurations and periodic trends",
-      "lessons": []
+      "lessons": [
+        "ch07-configurations",
+        "ch07-periodic-trends"
+      ]
     },
     {
       "id": "ch08",
       "title": "Ch. 8 · Bonding and molecular structure",
-      "lessons": []
+      "lessons": [
+        "ch08-lewis",
+        "ch08-resonance",
+        "ch08-vsepr-polarity",
+        "ch08-bond-enthalpy"
+      ]
     },
     {
       "id": "ch09",
       "title": "Ch. 9 · Valence bond theory and molecular orbital theory",
-      "lessons": []
+      "lessons": [
+        "ch09-hybrid-sigma-pi",
+        "ch09-mo-theory"
+      ]
     },
     {
       "id": "ch11",
@@ -155,6 +174,18 @@
     {
       "title": "Cengage login (MindTap)",
       "url": "https://login.cengage.com/cb/"
+    },
+    {
+      "title": "TTU Canvas exam materials and Fact Sheet",
+      "url": "https://texastech.instructure.com/courses/96585/pages/1307-examination-material"
+    },
+    {
+      "title": "OpenStax Chemistry 2e",
+      "url": "https://openstax.org/books/chemistry-2e/pages/1-introduction"
+    },
+    {
+      "title": "NIST fundamental physical constants",
+      "url": "https://physics.nist.gov/cuu/Constants/"
     }
   ]
 }

@@ -1,0 +1,58 @@
+{
+  "title": "Energy to ionize excited hydrogen",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "The free electron threshold energy is zero.",
+    "The starting level energy is negative.",
+    "Subtract the starting value from zero."
+  ],
+  "solution": "$E_\\mathrm{threshold}=0-(-2.179\\times10^{-18}/[$n]^2)$ J.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "int": [
+        2,
+        6
+      ]
+    },
+    "right_value": {
+      "expr": "(2.179*10^-18/n^2)"
+    },
+    "wrong_value": {
+      "expr": "(-2.179*10^-18/n^2)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] J"
+      ]
+    }
+  },
+  "statement": "Find the threshold energy needed to ionize hydrogen from $n=[$n]$. Use $2.179\\times10^{-18}$ J for the Bohr energy coefficient.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "2.179*10^-18/n^2",
+      "units": "J",
+      "sigfigs": 4,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((-2.179*10^-18/n^2))*1",
+          "message": "Ionization requires energy input."
+        }
+      ],
+      "tol_type": "absolute",
+      "tol": 5e-22
+    }
+  }
+}

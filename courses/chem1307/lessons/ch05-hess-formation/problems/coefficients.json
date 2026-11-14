@@ -1,0 +1,37 @@
+{
+  "title": "Balance formation of aluminum oxide",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Balance oxygen with an even product coefficient.",
+    "Two formula units contain six O atoms.",
+    "Balance aluminum last."
+  ],
+  "solution": "$\\ce{4Al + 3O2 -> 2Al2O3}$. For one mole of product use coefficients $2,3/2,1$.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "4, 3, 2"
+      ],
+      "wrong": [
+        "2, 3, 2"
+      ]
+    }
+  },
+  "statement": "Enter the **smallest whole-number coefficients** for $\\ce{Al(s) + O2(g) -> Al2O3(s)}$. Divide through by the product coefficient afterward to obtain the standard formation equation.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "coefficients",
+      "values": [
+        4,
+        3,
+        2
+      ]
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "id": "ch08-vsepr-polarity",
+  "title": "VSEPR geometry, bond angles, and molecular polarity",
+  "short": "VSEPR and polarity",
+  "chapter": 8,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Predict domain and molecular geometry, assess angle changes, and determine whether bond dipoles cancel.",
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Electron domain",
+              "Bonding direction toward one neighbor or central lone pair."
+            ],
+            [
+              "Bond dipole",
+              "Vector describing charge separation along a bond."
+            ],
+            [
+              "Molecular dipole",
+              "Net dipole after contributions are combined."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Count multiple bonds once. Keep “trigonal planar” and “trigonal pyramidal” distinct. Check terminal atom identities before claiming cancellation. Use the lone-pair positions for five and six domains."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "The prompt may ask separately for electron geometry, molecular geometry, ideal angle, or polarity. Name each from the corresponding step."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "_Cw0_cJzkSI",
+          "title": "VSEPR and molecular geometry",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Pause and write AXE notation for each example before naming its shape."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Different shapes with four domains",
+          "problem": "Compare $\\ce{NH3}$ and $\\ce{H2O}$.",
+          "answer": "Both have tetrahedral electron geometry. Ammonia is trigonal pyramidal and water is bent. Both are polar.",
+          "steps": [
+            {
+              "title": "Count",
+              "md": "NH₃ is AX₃E and H₂O is AX₂E₂.",
+              "why": "Four domains determine the parent arrangement."
+            },
+            {
+              "title": "Ignore lone pairs for the shape name",
+              "md": "Three bonded neighbors form a pyramid and two form a bend.",
+              "why": "Shape counts atoms only."
+            },
+            {
+              "title": "Combine vectors",
+              "md": "For each molecule, the bond dipoles do not cancel.",
+              "why": "The hydrogens are arranged asymmetrically around the central atom."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Five and six domains",
+          "problem": "Predict shape and polarity for $\\ce{SF4}$ and $\\ce{XeF4}$.",
+          "answer": "SF₄ is seesaw and polar. XeF₄ is square planar and nonpolar.",
+          "steps": [
+            {
+              "title": "SF₄",
+              "md": "Four bonds and one equatorial lone pair give AX₄E.",
+              "why": "Five domains arrange first as trigonal bipyramidal."
+            },
+            {
+              "title": "XeF₄",
+              "md": "Four bonds and two opposite lone pairs give AX₄E₂.",
+              "why": "The parent octahedral geometry leaves a square of attached F atoms."
+            },
+            {
+              "title": "Polarity",
+              "md": "SF₄ dipoles do not cancel; XeF₄ has cancelling opposite F pairs.",
+              "why": "The net dipole depends on the occupied bond directions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "draw-clf3",
+            "draw-xef4",
+            "drill-01",
+            "drill-02",
+            "drill-03",
+            "angle-order"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "Count domains for a triple bond?",
+              "One."
+            ],
+            [
+              "Five-domain lone pair position?",
+              "Usually equatorial."
+            ],
+            [
+              "Can polar bonds yield a nonpolar molecule?",
+              "Yes, when the vectors cancel."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Determine electron and molecular geometry from AXE notation.",
+            "Predict distorted angles qualitatively.",
+            "Test dipole cancellation using shape and terminal atoms."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "drill-07",
+            "dipoles-in-square"
+          ]
+        }
+      ]
+    }
+  ]
+}

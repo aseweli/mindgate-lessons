@@ -1,0 +1,35 @@
+{
+  "title": "Zero by convention",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Ask whether the sample is an element.",
+    "Check phase and elemental form.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Bromine’s elemental reference state is $\\ce{Br2(l)}$ at this temperature.",
+  "exam": false,
+  "statement": "Which substance has $\\Delta H_f^\\circ=0$ at 298 K?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$\\ce{Br2(l)}$",
+        "$\\ce{Br2(g)}$",
+        "$\\ce{Br(g)}$",
+        "$\\ce{HBr(g)}$"
+      ],
+      "correct": 0,
+      "explanations": [
+        "This is bromine’s reference state.",
+        "Vaporizing bromine requires energy.",
+        "This is atomic bromine.",
+        "A compound generally has nonzero formation enthalpy."
+      ]
+    }
+  }
+}

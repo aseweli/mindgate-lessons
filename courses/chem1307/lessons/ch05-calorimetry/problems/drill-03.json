@@ -1,0 +1,35 @@
+{
+  "title": "Molar dissolution heat",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Follow heat across the boundary.",
+    "Convert kJ per sample to kJ per mole.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The salt dissolution absorbs $+2.50$ kJ, so $\\Delta H_\\mathrm{diss}=+2.50/0.125=+20.0$ kJ/mol.",
+  "exam": false,
+  "statement": "Dissolving 0.125 mol of a salt in an insulated coffee cup removes 2.50 kJ from the solution and cup. What is the molar enthalpy of dissolution?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$+20.0$ kJ/mol",
+        "$-20.0$ kJ/mol",
+        "$+0.313$ kJ/mol",
+        "$+2.50$ kJ/mol"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The process gains the heat lost by its surroundings.",
+        "This reverses the process sign.",
+        "Multiplying by moles gives the wrong units.",
+        "The value must be divided by the amount."
+      ]
+    }
+  }
+}

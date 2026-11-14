@@ -1,0 +1,210 @@
+{
+  "id": "ch06-bohr-quantum",
+  "title": "Line spectra, the Bohr model, and matter waves",
+  "short": "Bohr and matter waves",
+  "chapter": 6,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Use signed energy changes for hydrogen transitions and explain the roles of matter waves and uncertainty.",
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "hydrogen-levels.svg",
+          "alt": "Schematic parallels show hydrogen energy levels from n equals 1 to 5 and the zero-energy ionization limit. A downward arrow runs from n equals 4 to 2.",
+          "caption": "Schematic energy ladder. Spacing decreases as $n$ rises. The downward $4\\to2$ transition emits a Balmer photon.",
+          "width": 680
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Line spectrum",
+              "Discrete wavelengths characteristic of an atom or ion."
+            ],
+            [
+              "Ground state",
+              "Lowest-energy allowed state."
+            ],
+            [
+              "Matter wavelength",
+              "Wavelength associated with a particle’s momentum."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Hydrogen energy",
+              "latex": "E_n=-\\frac{2.179\\times10^{-18}\\ \\mathrm J}{n^2}",
+              "note": "Multiply the numerator by Z² for a hydrogen-like ion."
+            },
+            {
+              "label": "Transition",
+              "latex": "\\Delta E=E_f-E_i,\\quad E_\\mathrm{photon}=|\\Delta E|",
+              "note": "The atom’s sign indicates absorption or emission."
+            },
+            {
+              "label": "Matter and uncertainty",
+              "latex": "\\lambda=\\frac hp,\\quad \\Delta x\\Delta p\\ge\\frac h{4\\pi}",
+              "note": "Use momentum in kg·m/s."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Use final minus initial for the atom. Use positive photon energy. Orbital drawings describe probability; a classical trajectory cannot be read from them."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "When comparing transitions, compare differences of inverse squares. Remember that a larger energy gap means a shorter wavelength."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "mXxsT1ut35Q",
+          "title": "Hydrogen energy levels and spectra",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Name the initial and final levels and assign absorption or emission before calculating."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Hydrogen emission from 4 to 2",
+          "problem": "Compute the atom’s energy change and emitted wavelength for $n=4\\to2$.",
+          "answer": "$\\Delta E=-4.086\\times10^{-19}$ J and $\\lambda\\approx486.2$ nm.",
+          "steps": [
+            {
+              "title": "Subtract",
+              "md": "$\\Delta E=-2.179\\times10^{-18}(1/2^2-1/4^2)$ J.",
+              "why": "Ending at a lower level gives a negative atomic change."
+            },
+            {
+              "title": "Use the magnitude",
+              "md": "$\\lambda=hc/(4.086\\times10^{-19})$.",
+              "why": "The photon energy is positive."
+            },
+            {
+              "title": "Convert",
+              "md": "Multiply the meter result by $10^9$ nm/m.",
+              "why": "The answer is in the visible Balmer series."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Matter wave of an electron",
+          "problem": "An electron of mass $9.109\\times10^{-31}$ kg travels at $2.00\\times10^6$ m/s.",
+          "answer": "$\\lambda=3.64\\times10^{-10}$ m.",
+          "steps": [
+            {
+              "title": "Compute momentum",
+              "md": "$p=(9.109\times10^{-31})(2.00\times10^6)$ kg·m/s.",
+              "why": "The speed is nonrelativistic."
+            },
+            {
+              "title": "Divide",
+              "md": "$h/p=(6.626\times10^{-34})/(1.8218\times10^{-24})$ m.",
+              "why": "Momentum goes in the denominator."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "hydrogen-emission",
+            "de-broglie",
+            "ionize-level",
+            "drill-01",
+            "drill-02",
+            "drill-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "Positive atomic ΔE?",
+              "Absorption."
+            ],
+            [
+              "Photon energy for emission?",
+              "The magnitude of the negative atomic energy change."
+            ],
+            [
+              "$|\\psi|^2$?",
+              "Probability density."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Determine absorption versus emission.",
+            "Compare energy gaps and wavelengths.",
+            "Explain matter wavelength and uncertainty."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "hydrogen-calculation"
+          ]
+        }
+      ]
+    }
+  ]
+}

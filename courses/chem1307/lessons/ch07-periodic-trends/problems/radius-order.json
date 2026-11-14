@@ -1,0 +1,37 @@
+{
+  "title": "Order neutral atoms across Period 3",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "All have valence electrons in the same main shell.",
+    "Effective nuclear charge increases rightward.",
+    "The greater attraction gives a smaller radius."
+  ],
+  "solution": "Chlorine is smallest, then silicon, then sodium.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "Cl < Si < Na"
+      ],
+      "wrong": [
+        "Na < Si < Cl"
+      ]
+    }
+  },
+  "statement": "Order increasing atomic radius for Na, Si and Cl.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "order",
+      "items": [
+        "Cl",
+        "Si",
+        "Na"
+      ]
+    }
+  }
+}

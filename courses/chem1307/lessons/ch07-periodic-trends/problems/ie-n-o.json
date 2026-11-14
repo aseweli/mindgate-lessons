@@ -1,0 +1,34 @@
+{
+  "title": "Hund’s rule and first ionization",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Write 2p³ and 2p⁴ in boxes.",
+    "Identify the paired electron.",
+    "Relate pair repulsion to ease of removal."
+  ],
+  "solution": "N has three singly occupied 2p orbitals. O has one pair in 2p, so removing an electron from that pair costs less energy.",
+  "statement": "Why is the first ionization energy of O lower than that of N?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Removing a paired O 2p electron reduces repulsion.",
+        "O loses a 3s electron.",
+        "N has an extra principal shell.",
+        "O has fewer protons."
+      ],
+      "correct": 0,
+      "explanations": [
+        "O has a paired 2p orbital, and N has three singly occupied 2p orbitals.",
+        "O has no occupied 3s orbital.",
+        "Both are in Period 2.",
+        "O has more protons than N."
+      ]
+    }
+  }
+}

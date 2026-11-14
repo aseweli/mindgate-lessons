@@ -1,0 +1,203 @@
+{
+  "id": "ch05-energy-enthalpy",
+  "title": "Energy, work, and reaction enthalpy",
+  "short": "Energy and enthalpy",
+  "chapter": 5,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Assign heat and work signs, distinguish internal energy from enthalpy, and scale thermochemical equations.",
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "System",
+              "Matter under study."
+            ],
+            [
+              "State function",
+              "Property determined by the initial and final states."
+            ],
+            [
+              "Exothermic",
+              "Process that releases heat at constant pressure."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Kinetic energy",
+              "latex": "KE=\\tfrac12mv^2",
+              "note": "Use kg and m/s for J."
+            },
+            {
+              "label": "First law",
+              "latex": "\\Delta E=q+w",
+              "note": "Signs are for the system."
+            },
+            {
+              "label": "PV work",
+              "latex": "w=-P_\\mathrm{ext}\\Delta V",
+              "note": "1 L·atm = 101.325 J."
+            },
+            {
+              "label": "Enthalpy",
+              "latex": "H=E+PV,\\quad q_p=\\Delta H",
+              "note": "Constant pressure, only PV work."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Expansion gives negative work. A released heat amount is negative for the system. Read the reaction coefficients before converting a molar amount."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "Test whether a word such as “released” or “compressed” changes the sign before doing arithmetic."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "NyOYW07-L5g",
+          "title": "First law, heat and work",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Translate each energy transfer into the system sign convention."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Energy from two transfers",
+          "problem": "A system releases 210 J of heat while a piston does 85 J of work on it.",
+          "answer": "$\\Delta E=-125\\ \\mathrm J$.",
+          "steps": [
+            {
+              "title": "Assign signs",
+              "md": "$q=-210$ J and $w=+85$ J.",
+              "why": "Heat exits and work enters."
+            },
+            {
+              "title": "Add",
+              "md": "$-210+85=-125$ J.",
+              "why": "The first law adds signed transfers."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Scale reaction heat",
+          "problem": "A balanced equation consumes 2 mol of X and has $\\Delta H=-164$ kJ as written. Find the heat for 0.750 mol X.",
+          "answer": "$-61.5$ kJ.",
+          "steps": [
+            {
+              "title": "Convert extent",
+              "md": "The reaction runs $0.750/2=0.375$ times per mole of the written reaction.",
+              "why": "The coefficient 2 defines the reference amount."
+            },
+            {
+              "title": "Scale",
+              "md": "$(0.375)(-164)=-61.5$ kJ.",
+              "why": "Heat at constant pressure scales with the reaction extent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "energy-signs",
+            "expansion",
+            "kinetic",
+            "drill-01",
+            "drill-02",
+            "drill-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "Expansion work sign?",
+              "Negative."
+            ],
+            [
+              "When is $q_p=\\Delta H$?",
+              "Constant pressure with PV work only."
+            ],
+            [
+              "Reverse a thermochemical equation?",
+              "Reverse the sign of its enthalpy."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Assign $q$ and $w$ signs.",
+            "Choose $q_p$ or $q_v$.",
+            "Convert reaction heat using the balanced coefficients."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "first-law-mixed"
+          ]
+        }
+      ]
+    }
+  ]
+}

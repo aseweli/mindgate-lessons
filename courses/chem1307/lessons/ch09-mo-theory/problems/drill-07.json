@@ -1,0 +1,34 @@
+{
+  "title": "Count oxygen anion unpaired electrons",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Add one electron to neutral O₂.",
+    "Apply Pauli and Hund to the π* pair.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "There are three electrons in the two degenerate π* orbitals: one pair and one single.",
+  "statement": "How many unpaired electrons are predicted for $\\ce{O2^-}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Three electrons occupy two boxes as one pair and one single.",
+        "Four electrons would pair both π* orbitals.",
+        "Two singles characterize neutral O₂.",
+        "There are only two π* boxes."
+      ]
+    }
+  }
+}

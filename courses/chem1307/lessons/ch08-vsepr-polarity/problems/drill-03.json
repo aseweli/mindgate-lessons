@@ -1,0 +1,35 @@
+{
+  "title": "Angle compression",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count central lone pairs.",
+    "Compare deviations from tetrahedral 109.5°.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Water has two central lone pairs and an actual H–O–H angle of about 104.5°.",
+  "exam": false,
+  "statement": "Which has the smallest H–center–H bond angle in the usual comparison of $\\ce{CH4}$, $\\ce{NH3}$ and $\\ce{H2O}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Water",
+        "Ammonia",
+        "Methane",
+        "All identical"
+      ],
+      "correct": 0,
+      "explanations": [
+        "It has the strongest bond-angle compression in this series.",
+        "It is compressed but less than water.",
+        "No central lone pairs; angle is about 109.5°.",
+        "Shared parent geometry does not imply identical observed angles."
+      ]
+    }
+  }
+}

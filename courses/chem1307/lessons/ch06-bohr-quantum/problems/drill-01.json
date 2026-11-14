@@ -1,0 +1,35 @@
+{
+  "title": "Level spacing",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Compare differences between inverse squares.",
+    "Larger n levels cluster near zero.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$1/n^2$ changes most between 1 and 2, giving the largest gap.",
+  "exam": false,
+  "statement": "Which adjacent hydrogen transition has the greatest energy gap?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$2\\to1$",
+        "$3\\to2$",
+        "$4\\to3$",
+        "$5\\to4$"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The lowest levels are spaced most widely.",
+        "Its gap is smaller.",
+        "These levels are closer.",
+        "This has the smallest listed gap."
+      ]
+    }
+  }
+}

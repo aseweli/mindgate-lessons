@@ -1,0 +1,35 @@
+{
+  "title": "Spot the odd electron",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Sum the group-valence contributions.",
+    "A radical here follows from an odd total.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$\\ce{NO2}$ has $5+2(6)=17$.",
+  "exam": false,
+  "statement": "Which listed neutral molecule has an odd valence-electron count?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "NO₂",
+        "CO₂",
+        "N₂",
+        "SO₂"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Its valence count is 17.",
+        "It has 16 valence electrons.",
+        "It has 10 valence electrons.",
+        "It has 18 valence electrons."
+      ]
+    }
+  }
+}

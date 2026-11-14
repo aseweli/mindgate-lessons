@@ -1,0 +1,35 @@
+{
+  "title": "Predict the sign from sums",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Assign signs to each process.",
+    "Compute the net energy.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$\\Delta H=810-955=-145$ kJ, an exothermic estimate.",
+  "exam": false,
+  "statement": "A reaction breaks bonds totaling 810 kJ and forms bonds whose dissociation energies total 955 kJ. What is the estimated enthalpy?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "−145 kJ",
+        "+145 kJ",
+        "+1765 kJ",
+        "−1765 kJ"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Formation releases the larger energy magnitude.",
+        "The sums were reversed.",
+        "The magnitudes were added.",
+        "Formation and cleavage have opposite signs."
+      ]
+    }
+  }
+}

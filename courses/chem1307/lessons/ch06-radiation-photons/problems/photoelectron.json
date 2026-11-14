@@ -1,0 +1,60 @@
+{
+  "title": "Kinetic energy after emission",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Check that the photon is above threshold.",
+    "The work function is spent freeing the electron.",
+    "Subtract the work function."
+  ],
+  "solution": "$KE_\\mathrm{max}=([$e]-2.40)\\times10^{-19}$ J.",
+  "exam": false,
+  "vars": {
+    "e": {
+      "pick": [
+        3.25,
+        4.15,
+        5.2,
+        6.35
+      ]
+    },
+    "right_value": {
+      "expr": "((e-2.4)*10^-19)"
+    },
+    "wrong_value": {
+      "expr": "((e+2.4)*10^-19)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] J"
+      ]
+    }
+  },
+  "statement": "A photon brings $[$e]\\times10^{-19}$ J to a metal with work function $2.40\\times10^{-19}$ J. Find its maximum emitted electron kinetic energy.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "(e-2.40)*10^-19",
+      "units": "J",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "(((e+2.4)*10^-19))*1",
+          "message": "Subtract the energy required to eject the electron."
+        }
+      ],
+      "tol_type": "absolute",
+      "tol": 5e-22
+    }
+  }
+}

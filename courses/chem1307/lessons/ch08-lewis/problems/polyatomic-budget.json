@@ -1,0 +1,34 @@
+{
+  "title": "Electron count with a double charge",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Use valence electrons rather than atomic numbers.",
+    "Multiply oxygen’s contribution by three.",
+    "A negative charge adds electrons."
+  ],
+  "solution": "$N_\\mathrm{valence}=4+3(6)+2=24$.",
+  "statement": "How many valence electrons must a Lewis structure of $\\ce{CO3^2-}$ contain?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "24",
+        "22",
+        "20",
+        "32"
+      ],
+      "correct": 0,
+      "explanations": [
+        "4 from carbon, 18 from oxygen, and 2 extra.",
+        "This omits both electrons added by the ion charge.",
+        "The charge adjustment was subtracted.",
+        "This does not follow from the main-group valence counts."
+      ]
+    }
+  }
+}

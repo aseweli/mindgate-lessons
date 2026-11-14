@@ -1,0 +1,35 @@
+{
+  "title": "Sign and spectrum",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Find the ending level.",
+    "Emission is the downward direction.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Balmer emission ends at $n=2$ after dropping from a higher level.",
+  "exam": false,
+  "statement": "Which is a Balmer-series emission?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$5\\to2$",
+        "$2\\to5$",
+        "$3\\to1$",
+        "$5\\to3$"
+      ],
+      "correct": 0,
+      "explanations": [
+        "This is downward and ends at 2.",
+        "This is absorption.",
+        "This is Lyman emission.",
+        "This is Paschen emission."
+      ]
+    }
+  }
+}

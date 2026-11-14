@@ -1,0 +1,194 @@
+{
+  "id": "ch06-orbitals",
+  "title": "Quantum numbers, subshells, and nodes",
+  "short": "Quantum numbers and nodes",
+  "chapter": 6,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Decode orbital notation, apply allowed values, and count orbitals, electrons and nodes.",
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Shell",
+              "All orbitals sharing n."
+            ],
+            [
+              "Subshell",
+              "All orbitals sharing n and ℓ."
+            ],
+            [
+              "Node",
+              "Surface on which ψ and its probability density vanish."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Subshell capacity",
+              "latex": "2(2\\ell+1)",
+              "note": "Multiply number of orbitals by two."
+            },
+            {
+              "label": "Nodes",
+              "latex": "N_\\mathrm{angular}=\\ell,\\quad N_\\mathrm{radial}=n-\\ell-1,\\quad N_\\mathrm{total}=n-1",
+              "note": "Hydrogen-like orbitals."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "The largest ℓ is n−1. A p subshell has three orbitals, while one p orbital holds at most two electrons. Use n+ℓ for filling, and ℓ<n for validity."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "Check the quantum numbers in order, then distinguish capacity of a shell, subshell, and orbital."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "eRIN9CPDrpo",
+          "title": "Quantum numbers",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "For each proposed quantum-number set, check the allowed values from left to right."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Decode 4d",
+          "problem": "Find allowed magnetic labels and the maximum electron count for 4d.",
+          "answer": "Five orbitals, ten electrons.",
+          "steps": [
+            {
+              "title": "Decode the label",
+              "md": "$n=4$ and $d$ gives $\\ell=2$.",
+              "why": "The letter encodes the angular-momentum number."
+            },
+            {
+              "title": "Count",
+              "md": "$m_\\ell=-2,-1,0,1,2$. Two spins per orbital give $5(2)=10$.",
+              "why": "Each distinct magnetic label gives an orbital."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Find the radial and angular nodes",
+          "problem": "How many of each node type are in a 4p orbital?",
+          "answer": "One angular node and two radial nodes.",
+          "steps": [
+            {
+              "title": "Angular",
+              "md": "$p$ means $\\ell=1$.",
+              "why": "Angular nodes are counted by ℓ."
+            },
+            {
+              "title": "Radial",
+              "md": "$4-1-1=2$.",
+              "why": "Total nodes are three and one is angular."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "shell-capacity",
+            "drill-01",
+            "drill-02",
+            "drill-03",
+            "radial-count",
+            "total-count"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "What makes 1p invalid?",
+              "For n=1 only ℓ=0 is allowed."
+            ],
+            [
+              "How many d orbitals?",
+              "Five."
+            ],
+            [
+              "What does a negative orbital lobe label mean?",
+              "Negative wavefunction phase, not negative probability."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Validate all four quantum numbers.",
+            "Find orbital and electron capacities.",
+            "Distinguish radial from angular nodes."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-04",
+            "drill-05",
+            "drill-06",
+            "drill-07",
+            "radial-angular-mixed"
+          ]
+        }
+      ]
+    }
+  ]
+}

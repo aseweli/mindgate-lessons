@@ -1,0 +1,35 @@
+{
+  "title": "Find central formal charge",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count O’s lone-pair electrons.",
+    "Subtract one per bond.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$FC=6-2-3=+1$.",
+  "exam": false,
+  "statement": "What is formal charge on O in $\\ce{H3O+}$ with three O–H bonds and one oxygen lone pair?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "+1",
+        "+2",
+        "0",
+        "−1"
+      ],
+      "correct": 0,
+      "explanations": [
+        "One lone pair is two electrons and three bonds assign three electrons.",
+        "This subtracts one electron for a lone pair.",
+        "This fails to account for the cation charge.",
+        "The sign is reversed."
+      ]
+    }
+  }
+}

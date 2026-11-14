@@ -1,0 +1,35 @@
+{
+  "title": "Anion budget",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count neutral valence electrons.",
+    "Add one for the negative charge.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$7+6+1=14$.",
+  "exam": false,
+  "statement": "How many valence electrons are in $\\ce{ClO^-}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "14",
+        "13",
+        "12",
+        "16"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The negative charge adds one electron.",
+        "This ignores the ion charge.",
+        "This subtracts an electron for a negative charge.",
+        "This does not follow the valence count."
+      ]
+    }
+  }
+}

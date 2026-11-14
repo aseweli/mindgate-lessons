@@ -1,0 +1,35 @@
+{
+  "title": "Pauli violation",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Same box means same n, ℓ and mℓ.",
+    "The spins in the box are also the same.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The two electrons are in the same orbital and would have all four quantum numbers identical.",
+  "exam": false,
+  "statement": "What rule does [↑↑] for a single orbital violate?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Pauli exclusion",
+        "Aufbau alone",
+        "Hund alone",
+        "The octet rule"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Paired electrons must have opposite spins.",
+        "The diagram does not show filling order.",
+        "The issue exists even with one orbital.",
+        "This is an orbital diagram, and spin is the problem."
+      ]
+    }
+  }
+}

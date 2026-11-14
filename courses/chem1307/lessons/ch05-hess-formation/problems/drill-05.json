@@ -1,0 +1,34 @@
+{
+  "title": "Two-step reaction",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Place C on the product side.",
+    "Two B are needed to cancel.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Reverse and double step 2, giving $\\ce{2B -> 2C}$ and $+70$ kJ. Add $90+70=160$ kJ.",
+  "statement": "Step 1 is $\\ce{A -> 2B}$ with $\\Delta H=+90$ kJ. Step 2 is $\\ce{C -> B}$ with $\\Delta H=-35$ kJ. Find $\\Delta H$ for $\\ce{A -> 2C}$.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$+160$ kJ",
+        "$+20$ kJ",
+        "$+125$ kJ",
+        "$+55$ kJ"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Reversal and doubling are both included.",
+        "The sign of step 2 was kept.",
+        "Step 2 was reversed but used only once.",
+        "Neither required transformation was applied."
+      ]
+    }
+  }
+}

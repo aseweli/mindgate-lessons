@@ -1,0 +1,34 @@
+{
+  "title": "Heat loss and compression",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Heat is leaving.",
+    "Compression is work done on the system.",
+    "Combine −105 and +180."
+  ],
+  "solution": "$\\Delta E=q+w=-105+180=+75$ J.",
+  "statement": "A sample releases 105 J of heat. The surroundings compress it with 180 J of work. Find the sample’s internal-energy change.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "+75 J",
+        "−285 J",
+        "−75 J",
+        "+285 J"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Negative heat plus positive compression work.",
+        "Both transfers were treated as leaving.",
+        "Both transfer signs were reversed.",
+        "The heat release was treated as absorbed."
+      ]
+    }
+  }
+}

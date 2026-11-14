@@ -1,0 +1,34 @@
+{
+  "title": "Same heat, different work",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Compression means work is done on the system.",
+    "Use the system’s perspective for both terms.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Both energy transfers enter the system: $140+90=230$ J.",
+  "statement": "A system absorbs 140 J and is compressed by 90 J of work. What is its internal energy change?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$+230$ J",
+        "$+50$ J",
+        "$-50$ J",
+        "$-230$ J"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Both heat and work enter.",
+        "Compression work was treated as energy leaving.",
+        "Heat absorption was treated as energy leaving.",
+        "Both signs are reversed."
+      ]
+    }
+  }
+}

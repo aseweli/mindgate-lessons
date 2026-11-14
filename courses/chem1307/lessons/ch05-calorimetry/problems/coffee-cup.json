@@ -1,0 +1,64 @@
+{
+  "title": "Coffee cup reaction heat",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Find heat gained by solution.",
+    "Reaction heat is the negative of the solution heat.",
+    "Convert J to kJ."
+  ],
+  "solution": "$q_\\mathrm{rxn}=-q_\\mathrm{soln}=-([$m])(4.184)([$t])/1000$ kJ.",
+  "exam": false,
+  "vars": {
+    "m": {
+      "int": [
+        100,
+        250
+      ],
+      "step": 10
+    },
+    "t": {
+      "pick": [
+        2.1,
+        3.4,
+        4.25
+      ]
+    },
+    "right_value": {
+      "expr": "(-m*4.184*t)"
+    },
+    "wrong_value": {
+      "expr": "(m*4.184*t)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] J"
+      ]
+    }
+  },
+  "statement": "The $[$m]$ g solution warms by $[$t]$ K in a cup of negligible heat capacity. Use $c=4.184$ J/(g·K). Find the reaction heat.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "-m*4.184*t/1000",
+      "units": "kJ",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((m*4.184*t))*0.001",
+          "message": "This gives heat of the solution rather than the reaction."
+        }
+      ]
+    }
+  }
+}

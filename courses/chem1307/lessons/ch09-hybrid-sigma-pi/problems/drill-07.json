@@ -1,0 +1,34 @@
+{
+  "title": "Geometric isomer test",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Examine the two substituents on each double-bond carbon.",
+    "Both ends must have distinguishable substituents.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "In 2-butene each alkene carbon carries H and methyl, so different relative methyl positions give cis and trans forms.",
+  "statement": "Which molecule can have cis/trans geometric isomers about its double bond?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2-butene",
+        "Ethene",
+        "Propene",
+        "Ethane"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Both double-bond carbons have different substituents.",
+        "Each double-bond carbon carries two identical H atoms.",
+        "The terminal double-bond carbon carries two H atoms.",
+        "It has no double bond."
+      ]
+    }
+  }
+}

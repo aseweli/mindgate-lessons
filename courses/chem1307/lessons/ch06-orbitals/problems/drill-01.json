@@ -1,0 +1,35 @@
+{
+  "title": "Which subshell can exist?",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Translate the letter first.",
+    "Check whether ℓ is less than n.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "For 3d, n=3 and ℓ=2, which is within 0 through 2.",
+  "exam": false,
+  "statement": "Which subshell label is allowed?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "3d",
+        "2d",
+        "1p",
+        "3f"
+      ],
+      "correct": 0,
+      "explanations": [
+        "ℓ=2 is valid for n=3.",
+        "ℓ must be at most 1.",
+        "ℓ must be 0.",
+        "ℓ must be at most 2."
+      ]
+    }
+  }
+}

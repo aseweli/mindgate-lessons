@@ -1,0 +1,34 @@
+{
+  "title": "Distinguish isomers and conformers",
+  "difficulty": 5,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Identify the bond that rotates.",
+    "Ask whether connectivity changes.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "They share connectivity and interconvert by rotation about the single C–C bond.",
+  "statement": "Which description applies to staggered and eclipsed ethane?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Conformations",
+        "Constitutional isomers",
+        "Double-bond geometric isomers",
+        "Resonance contributors"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The orientation differs without changed connectivity.",
+        "Connectivity is identical.",
+        "Ethane has no double bond.",
+        "Electron redistribution alone does not describe this change in positions."
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Nitrogen molecule magnetism and bond order",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count ten valence electrons.",
+    "Use the nitrogen-family order.",
+    "Check the final sigma occupancy and each filled pi orbital."
+  ],
+  "solution": "Fill $\\sigma_{2s}^2,\\sigma^*_{2s}{}^2,\\pi_{2p}^4,\\sigma_{2p}^2$. The order is $(8-2)/2=3$ and all individual orbitals have paired electrons.",
+  "statement": "What does the course MO diagram predict for neutral $\\ce{N2}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Bond order 3; diamagnetic.",
+        "Bond order 3; paramagnetic.",
+        "Bond order 2; diamagnetic.",
+        "Bond order 2.5; paramagnetic."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Eight bonding and two antibonding valence electrons are all paired.",
+        "The filled bonding 2p levels are paired.",
+        "This misses two bonding electrons in σ₂p.",
+        "This is consistent with losing one bonding electron to make N₂⁺."
+      ]
+    }
+  }
+}

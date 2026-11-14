@@ -1,0 +1,35 @@
+{
+  "title": "Estimate ammonia synthesis",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count bonds from two ammonia molecules.",
+    "Subtract the formed-bond sum from the broken-bond sum.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Break $945+3(436)=2253$ kJ. Form $6(391)=2346$ kJ in magnitude. Difference is $-93$ kJ.",
+  "exam": false,
+  "statement": "For $\\ce{N2(g) + 3H2(g) -> 2NH3(g)}$, use N≡N 945, H–H 436 and N–H 391 kJ/mol. What is the estimate?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "−93 kJ",
+        "+93 kJ",
+        "+1080 kJ",
+        "−965 kJ"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The inventory is 1 triple, 3 H–H and 6 N–H.",
+        "The subtraction is reversed.",
+        "Only three N–H bonds were counted.",
+        "Only one H–H bond was counted."
+      ]
+    }
+  }
+}

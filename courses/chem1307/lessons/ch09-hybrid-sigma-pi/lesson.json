@@ -1,0 +1,188 @@
+{
+  "id": "ch09-hybrid-sigma-pi",
+  "title": "Valence bond theory, hybridization, and multiple bonds",
+  "short": "Hybridization and σ/π",
+  "chapter": 9,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Relate local domain geometry to hybrid labels, count sigma and pi bonds, and explain restricted rotation.",
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Hybrid orbital",
+              "Combination of orbitals on one atom used in the localized model."
+            ],
+            [
+              "Sigma bond",
+              "Bond from end-on overlap along the internuclear axis."
+            ],
+            [
+              "Pi bond",
+              "Bond from side-on overlap with a nodal plane along the internuclear axis."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Multiple bond count",
+              "latex": "\\text{single}=1\\sigma,\\quad\\text{double}=1\\sigma+1\\pi,\\quad\\text{triple}=1\\sigma+2\\pi",
+              "note": "Count every connected atom pair only once for sigma."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Count all local domains before naming a hybridization. A double bond includes one sigma bond. A lone pair counts as a domain even though it does not make a bond."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "Check each highlighted atom independently. For molecule-wide sigma counts, also count terminal atom bonds."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "pdJeQUd2g_4",
+          "title": "Hybridization, sigma bonds and pi bonds",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Count local domains and mark which bonds require unhybridized p orbitals."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Ethene",
+          "problem": "For $\\ce{H2C=CH2}$, identify both carbon hybrid labels and count all $\\sigma$ and $\\pi$ bonds.",
+          "answer": "Both C atoms are $sp^2$; total $5\\sigma$ and $1\\pi$.",
+          "steps": [
+            {
+              "title": "Count domains",
+              "md": "Each C has two C–H directions and one C–C direction.",
+              "why": "The double bond counts as one domain."
+            },
+            {
+              "title": "Count overlaps",
+              "md": "Four C–H and one C–C sigma bond give five. One p orbital on each C forms the pi bond.",
+              "why": "Extra bond order comes from side-on overlap."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Two different carbon centers",
+          "problem": "For $\\ce{CH3-C#N}$, identify both carbon hybrid labels.",
+          "answer": "Methyl C is $sp^3$ and nitrile C is $sp$.",
+          "steps": [
+            {
+              "title": "At methyl C",
+              "md": "Three H neighbors plus the nitrile C give four directions.",
+              "why": "Four sigma directions point tetrahedrally."
+            },
+            {
+              "title": "At nitrile C",
+              "md": "It has one C neighbor and one N neighbor, giving two directions.",
+              "why": "Two unhybridized p orbitals supply the two pi bonds to N."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "drill-01",
+            "drill-02",
+            "drill-03",
+            "drill-04",
+            "drill-05",
+            "drill-06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "How many hybrids from s plus two p orbitals?",
+              "Three sp² hybrids."
+            ],
+            [
+              "Why is alkene rotation restricted?",
+              "Twisting disrupts the aligned p overlap."
+            ],
+            [
+              "What comes from a triple bond?",
+              "One sigma and two pi bonds."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Assign hybridization at each center.",
+            "Count every sigma and pi bond.",
+            "Explain restricted alkene rotation and distinguish conformers from isomers."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-07",
+            "drill-08",
+            "drill-09",
+            "amide-count"
+          ]
+        }
+      ]
+    }
+  ]
+}

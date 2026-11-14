@@ -1,0 +1,35 @@
+{
+  "title": "Hydrogen placement",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Hydrogen is terminal.",
+    "The name identifies the H–C≡N connectivity.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "H has a duet with one bond. C can be central and supports the C≡N triple bond.",
+  "exam": false,
+  "statement": "Which connectivity is appropriate for hydrogen cyanide?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "H–C–N",
+        "C–H–N",
+        "C–N–H",
+        "H–N–H"
+      ],
+      "correct": 0,
+      "explanations": [
+        "This is the connectivity of HCN.",
+        "Hydrogen cannot form two ordinary two-electron bonds here.",
+        "This is the distinct hydrogen isocyanide connectivity.",
+        "This has the wrong composition."
+      ]
+    }
+  }
+}

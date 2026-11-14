@@ -1,0 +1,34 @@
+{
+  "title": "Read the stated reaction amount",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Use moles divided by coefficient.",
+    "Keep the sign when scaling a forward process.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The extent is $0.500/2=0.250$, giving $-65.0$ kJ.",
+  "statement": "A reaction with $\\Delta H=-260$ kJ consumes 2 mol of reactant as written. What is its enthalpy change for 0.500 mol of reactant?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$-65.0$ kJ",
+        "$-130$ kJ",
+        "$+65.0$ kJ",
+        "$-520$ kJ"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The stated reaction is scaled by one quarter.",
+        "This ignores the coefficient 2.",
+        "The equation was not reversed.",
+        "The requested amount is smaller than the written basis."
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Ground-state configuration",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "P has 15 electrons.",
+    "Ne accounts for 10.",
+    "Fill 3s before 3p."
+  ],
+  "solution": "Five electrons remain beyond neon: $3s^23p^3$.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "1s2 2s2 2p6 3s2 3p3"
+      ],
+      "wrong": [
+        "[Ne]3s2 3p4"
+      ]
+    }
+  },
+  "statement": "Enter the ground-state electron configuration for $\\ce{P}$.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "econfig",
+      "value": "[Ne]3s2 3p3",
+      "feedback": [
+        {
+          "answer": "[Ne]3s2 3p4",
+          "message": "Fill 3s before 3p."
+        }
+      ]
+    }
+  }
+}

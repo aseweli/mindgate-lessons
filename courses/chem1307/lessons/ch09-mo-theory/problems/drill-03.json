@@ -1,0 +1,35 @@
+{
+  "title": "Orbital symmetry",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Use the chosen coordinate axis.",
+    "Ask which lobes point along the bond.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The two $2p_z$ orbitals are aligned with the internuclear axis and overlap head-on.",
+  "exam": false,
+  "statement": "With the bond axis defined as z, which 2p pair produces a sigma MO?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2p_z on both atoms",
+        "2p_x on both atoms",
+        "2p_y on both atoms",
+        "2p_x and 2p_y on opposite atoms"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Head-on overlap along z produces sigma symmetry.",
+        "These overlap side-by-side, producing π symmetry.",
+        "These also overlap side-by-side.",
+        "They do not give the requested matched head-on pair."
+      ]
+    }
+  }
+}

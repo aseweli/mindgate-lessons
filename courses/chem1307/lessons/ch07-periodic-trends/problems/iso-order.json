@@ -1,0 +1,38 @@
+{
+  "title": "Order a 10-electron series",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count electrons first.",
+    "Each species has ten.",
+    "More protons imply a smaller radius here."
+  ],
+  "solution": "The nuclear charges are 12, 11, 9 and 8 in order of increasing size.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "Mg2+ < Na+ < F− < O2−"
+      ],
+      "wrong": [
+        "O2− < F− < Na+ < Mg2+"
+      ]
+    }
+  },
+  "statement": "Order increasing ionic radius for Na+, Mg2+, F− and O2−.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "order",
+      "items": [
+        "Mg2+",
+        "Na+",
+        "F−",
+        "O2−"
+      ]
+    }
+  }
+}

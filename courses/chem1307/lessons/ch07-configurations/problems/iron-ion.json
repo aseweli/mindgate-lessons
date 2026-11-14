@@ -1,0 +1,39 @@
+{
+  "title": "Ground-state configuration",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Start from neutral Fe.",
+    "Remove highest n first.",
+    "Then take one electron from 3d."
+  ],
+  "solution": "$\\ce{Fe^3+}$ is $[\\mathrm{Ar}]3d^5$.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "[Ar] 3d5"
+      ],
+      "wrong": [
+        "[Ar]3d3 4s2"
+      ]
+    }
+  },
+  "statement": "Enter the ground-state electron configuration for $\\ce{Fe^3+}$.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "econfig",
+      "value": "[Ar]3d5",
+      "feedback": [
+        {
+          "answer": "[Ar]3d3 4s2",
+          "message": "Then take one electron from 3d."
+        }
+      ]
+    }
+  }
+}

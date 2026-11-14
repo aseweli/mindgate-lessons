@@ -1,0 +1,81 @@
+{
+  "title": "From heat gain to reaction enthalpy",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Heat transfers between reaction and surroundings.",
+    "Their signs are opposite.",
+    "Divide the sample heat in kJ by 0.0500 mol for the molar result."
+  ],
+  "solution": "The reaction loses $[$h]$ J. Its molar enthalpy is $-([$h]/1000)/0.0500$ kJ/mol.",
+  "exam": false,
+  "vars": {
+    "h": {
+      "int": [
+        1250,
+        2600
+      ],
+      "step": 50
+    },
+    "right_value": {
+      "expr": "(-h)"
+    },
+    "wrong_value": {
+      "expr": "(h)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] J"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "first",
+      "statement": "The surroundings absorb $[$h]$ J when $0.0500$ mol of a reactant is consumed at constant pressure. Enter the sample’s reaction heat first.\n\n[__________]{a}",
+      "answers": {
+        "a": {
+          "type": "quantity",
+          "value": "-h",
+          "units": "J",
+          "sigfigs": 3,
+          "sigfig_mode": "warn",
+          "feedback": [
+            {
+              "answer": "((h))*1",
+              "message": "The surroundings gain heat, so the reaction loses it."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "molar",
+      "statement": "Now enter the molar reaction enthalpy in kJ/mol.\n\n[________]{molar}",
+      "answers": {
+        "molar": {
+          "type": "quantity",
+          "value": "-h/50",
+          "units": "kJ/mol",
+          "sigfigs": 3,
+          "feedback": [
+            {
+              "answer": "-h/1000",
+              "message": "Divide the sample heat in kJ by the reacting amount in moles."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "scaffold": true
+}

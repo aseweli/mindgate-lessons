@@ -1,0 +1,35 @@
+{
+  "title": "Hybridization with a lone pair",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Draw the central lone pair.",
+    "Count electron domains.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Three N–H bonds and one lone pair give four domains, so N is $sp^3$.",
+  "exam": false,
+  "statement": "What hybrid label applies to the N in $\\ce{NH3}$ in the localized model?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "sp³",
+        "sp²",
+        "sp",
+        "sp³d"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The lone pair occupies one domain.",
+        "Counting only the three bond directions would omit the lone pair.",
+        "This is the two-domain label.",
+        "This is the five-domain course label."
+      ]
+    }
+  }
+}

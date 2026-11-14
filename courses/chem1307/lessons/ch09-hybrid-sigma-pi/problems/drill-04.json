@@ -1,0 +1,35 @@
+{
+  "title": "Five-domain course label",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Count the five P–Cl directions.",
+    "Use the course geometry mapping.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Five domains give trigonal bipyramidal geometry and the course label $sp^3d$.",
+  "exam": false,
+  "statement": "What hybrid label does the course assign to the central atom in $\\ce{PCl5}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "sp³d",
+        "sp³d²",
+        "sp²",
+        "sp³"
+      ],
+      "correct": 0,
+      "explanations": [
+        "This is the traditional five-domain geometry label.",
+        "This labels six domains.",
+        "This labels three domains.",
+        "This labels four domains."
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Product inventory",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Draw one water molecule.",
+    "Multiply its number of O–H bonds by three.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Each water molecule has two O–H bonds, so the coefficient three gives six.",
+  "exam": false,
+  "statement": "How many O–H bonds are formed when the balanced product side includes $\\ce{3H2O(g)}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "6",
+        "3",
+        "2",
+        "9"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Two bonds per molecule times three molecules.",
+        "This counts water molecules only.",
+        "This counts one water molecule only.",
+        "Three atoms per molecule does not mean three bonds."
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Core and valence",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Find the highest occupied n.",
+    "Add s and p counts in that shell.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$\\ce{Se}$ has $4s^24p^4$ in the outer shell, for six valence electrons.",
+  "exam": false,
+  "statement": "How many valence electrons does selenium have in the main-group counting convention?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "6",
+        "4",
+        "16",
+        "34"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Two in 4s and four in 4p.",
+        "This counts 4p alone.",
+        "The filled 3d is not in the main-group outer shell.",
+        "This is the total electron count."
+      ]
+    }
+  }
+}

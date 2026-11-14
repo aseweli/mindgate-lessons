@@ -1,0 +1,35 @@
+{
+  "title": "Classify the boundary",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Track matter and energy separately.",
+    "Test both restrictions.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "An isolated boundary blocks both matter transfer and energy transfer.",
+  "exam": false,
+  "statement": "Which description fits an isolated system?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Neither matter nor energy crosses.",
+        "Only energy can cross.",
+        "Only matter can cross.",
+        "Both can cross."
+      ],
+      "correct": 0,
+      "explanations": [
+        "This meets both isolation conditions.",
+        "This describes a closed system.",
+        "Any matter exchange prevents isolation.",
+        "That is an open system."
+      ]
+    }
+  }
+}

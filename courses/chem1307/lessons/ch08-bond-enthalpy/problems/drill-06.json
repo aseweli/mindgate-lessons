@@ -1,0 +1,34 @@
+{
+  "title": "What the average leaves out",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Compare product phases.",
+    "Liquid formation requires a phase-change contribution.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "The gas-phase inventory does not account for the enthalpy of condensation to the liquid.",
+  "statement": "Why does a gas-phase bond enthalpy estimate using water as product differ from a standard reaction value with liquid water?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Condensation contributes an additional enthalpy change.",
+        "Water has no O–H bonds in the liquid.",
+        "The atom count changes on condensation.",
+        "All average bond energies give exact reaction values."
+      ],
+      "correct": 0,
+      "explanations": [
+        "The specified phase matters in thermochemistry.",
+        "Liquid water still contains water molecules.",
+        "Only the phase changes.",
+        "Bond strengths vary with chemical environment."
+      ]
+    }
+  }
+}

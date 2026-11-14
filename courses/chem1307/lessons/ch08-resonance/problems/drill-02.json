@@ -1,0 +1,35 @@
+{
+  "title": "Equivalent nitrate bonds",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "There are three equivalent contributors.",
+    "Average the same bond position over all three.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "$[2+1+1]/3=4/3$.",
+  "exam": false,
+  "statement": "What is the resonance-average N–O bond order in $\\ce{NO3^-}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "4/3",
+        "3/2",
+        "2",
+        "1"
+      ],
+      "correct": 0,
+      "explanations": [
+        "There is one double-bond role among three equivalent positions.",
+        "This is the average for two contributors with one single and one double bond.",
+        "This selects just one drawing for one bond.",
+        "This ignores the contribution of the double bond."
+      ]
+    }
+  }
+}

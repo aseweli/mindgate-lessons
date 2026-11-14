@@ -1,0 +1,198 @@
+{
+  "id": "ch08-bond-enthalpy",
+  "title": "Bond order, bond length, and reaction heat estimates",
+  "short": "Bond enthalpy",
+  "chapter": 8,
+  "minutes": 40,
+  "difficulty": 3,
+  "objective": "Relate bond order to length and strength and estimate reaction enthalpy from a bond inventory.",
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Bond enthalpy",
+              "Energy as enthalpy per mole needed to break a specified gas-phase bond."
+            ],
+            [
+              "Bond order",
+              "Number of shared pairs in a localized Lewis bond."
+            ],
+            [
+              "Bond length",
+              "Equilibrium distance between two bonded nuclei."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Equations and relationships",
+          "items": [
+            {
+              "label": "Bond enthalpy estimate",
+              "latex": "\\Delta H_\\mathrm{rxn}\\approx\\sum D(\\text{broken})-\\sum D(\\text{formed})",
+              "note": "Multiply each bond energy by the number of those bonds."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "title": "Common errors",
+          "md": "Breaking absorbs energy; forming releases it. Count bonds per molecule and multiply by the coefficient. The bond-energy subtraction order differs from the formation-enthalpy method."
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "title": "Exam practice",
+          "md": "Set up two labeled sums before calculating. Given a table, use the bond column matching the bond order."
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "0Tm6JMeYX5g",
+          "title": "Bond energy and reaction enthalpy",
+          "channel": "The Organic Chemistry Tutor",
+          "start": "0:00",
+          "end": "6:00",
+          "focus": "Create a reactant and product bond inventory before substituting energies."
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Hydrogen and chlorine",
+          "problem": "Estimate $\\Delta H$ for $\\ce{H2(g) + Cl2(g) -> 2HCl(g)}$. Use 436, 243 and 431 kJ/mol for H–H, Cl–Cl and H–Cl.",
+          "answer": "$-183$ kJ per reaction as written.",
+          "steps": [
+            {
+              "title": "Break",
+              "md": "$436+243=679$ kJ.",
+              "why": "One reactant bond of each kind is dissociated."
+            },
+            {
+              "title": "Form",
+              "md": "$2(431)=862$ kJ is the magnitude released.",
+              "why": "The coefficient produces two H–Cl bonds."
+            },
+            {
+              "title": "Subtract",
+              "md": "$679-862=-183$ kJ.",
+              "why": "More energy is released by formation than consumed by breaking."
+            }
+          ]
+        },
+        {
+          "type": "worked_example",
+          "title": "Hydrogenate an alkene",
+          "problem": "For $\\ce{C2H4 + H2 -> C2H6}$, use C=C 614, H–H 436, C–C 347 and C–H 413 kJ/mol.",
+          "answer": "$\\Delta H\\approx-123$ kJ.",
+          "steps": [
+            {
+              "title": "Cancel common bonds",
+              "md": "Four C–H bonds occur on each side before counting the extra two in ethane.",
+              "why": "Matching bond types cancel in this approximate model."
+            },
+            {
+              "title": "Count net changes",
+              "md": "Break one C=C and one H–H; form one C–C and two C–H.",
+              "why": "Treat the C=C as the full tabulated double bond."
+            },
+            {
+              "title": "Compute",
+              "md": "$614+436-(347+2(413))=-123$.",
+              "why": "Sum broken minus formed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "Write out the setup before using a calculator.",
+          "problems": [
+            "halogen-inventory",
+            "drill-01",
+            "drill-02",
+            "drill-03",
+            "drill-04",
+            "drill-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall from memory",
+          "cards": [
+            [
+              "Higher order for the same elements usually does what?",
+              "Shortens and strengthens the bond."
+            ],
+            [
+              "Why is the estimate approximate?",
+              "Tables average bonds across environments."
+            ],
+            [
+              "Which energy sum goes first?",
+              "Reactant bonds broken."
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Write a bond inventory from a balanced equation.",
+            "Explain why the estimate is approximate.",
+            "Keep the energy signs and order straight."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Choose the best answer and read the distractor feedback after checking.",
+          "problems": [
+            "drill-06",
+            "drill-07",
+            "drill-08",
+            "combustion-count"
+          ]
+        }
+      ]
+    }
+  ]
+}

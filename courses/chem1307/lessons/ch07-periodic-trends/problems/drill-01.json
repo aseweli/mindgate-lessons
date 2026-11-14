@@ -1,0 +1,35 @@
+{
+  "title": "Radius and shell",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Locate them in the same group.",
+    "Compare highest occupied n.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "As occupies an outer shell with higher n and is larger in the group.",
+  "exam": false,
+  "statement": "Which atom has the larger covalent radius, P or As?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "As because its occupied valence shell is n=4.",
+        "P because it has fewer protons.",
+        "Same radius because both are Group 15.",
+        "P because n=3 is larger than n=4."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Higher n generally makes the valence region larger.",
+        "The added occupied shell dominates in this comparison.",
+        "Similar valence patterns do not mean the same size.",
+        "The shell comparison is reversed."
+      ]
+    }
+  }
+}

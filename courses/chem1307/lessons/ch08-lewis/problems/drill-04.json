@@ -1,0 +1,34 @@
+{
+  "title": "Count lone pairs in a multiple bond",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Draw both C=O double bonds.",
+    "Finish the octet on a terminal O.",
+    "Compare the result with each choice and check its sign, units, or underlying rule."
+  ],
+  "solution": "Each double bond contributes four shared electrons to that oxygen’s octet. The remaining four are two lone pairs.",
+  "statement": "How many lone pairs are on each oxygen in the common Lewis structure of $\\ce{CO2}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Four shared plus four nonbonding electrons give an octet.",
+        "This gives only six electrons around O.",
+        "With the double bond this gives ten, invalid for O.",
+        "This leaves only the shared electrons."
+      ]
+    }
+  }
+}

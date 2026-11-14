@@ -1,0 +1,54 @@
+{
+  "title": "Draw HCN",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Hydrogen is terminal.",
+    "Start H–C–N.",
+    "Use a C≡N triple bond to complete both octets."
+  ],
+  "solution": "H–C≡N with one lone pair on N uses ten electrons.",
+  "exam": false,
+  "statement": "Draw the Lewis structure for $\\ce{HCN}$. Show all lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "HCN",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "C",
+              "lp": 0
+            },
+            {
+              "el": "H",
+              "lp": 0
+            },
+            {
+              "el": "N",
+              "lp": 1
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "allow": []
+    }
+  }
+}

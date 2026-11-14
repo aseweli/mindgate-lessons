@@ -1,0 +1,58 @@
+{
+  "title": "Heat at a phase plateau",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "hints": [
+    "Temperature stays at the plateau.",
+    "Use moles times the molar fusion enthalpy.",
+    "Melting absorbs heat."
+  ],
+  "solution": "$q=([$n]\\ \\mathrm{mol})(6.01\\ \\mathrm{kJ/mol})$.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "pick": [
+        0.375,
+        0.58,
+        1.25,
+        2.35
+      ]
+    },
+    "right_value": {
+      "expr": "(n*6010)"
+    },
+    "wrong_value": {
+      "expr": "(-n*6.01)"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$right_value:.9e] J"
+      ],
+      "wrong": [
+        "[$wrong_value:.9e] kJ"
+      ]
+    }
+  },
+  "statement": "At its melting point, $[$n]$ mol of a solid melts. Given $\\Delta H_\\mathrm{fus}=6.01$ kJ/mol, find its heat.\n\n[__________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "n*6.01",
+      "units": "kJ",
+      "sigfigs": 3,
+      "sigfig_mode": "warn",
+      "feedback": [
+        {
+          "answer": "((-n*6.01))*1",
+          "message": "Melting is endothermic."
+        }
+      ]
+    }
+  }
+}

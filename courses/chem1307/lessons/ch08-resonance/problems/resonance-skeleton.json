@@ -1,0 +1,34 @@
+{
+  "title": "Is it resonance or a different skeleton?",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "hints": [
+    "Identify what all contributors represent.",
+    "Keep atom positions and electron count fixed.",
+    "Only reconsider placement of electrons."
+  ],
+  "solution": "The three resonance drawings keep the same three N–O connections and exchange which one is represented by a double bond.",
+  "statement": "Which change is allowed between resonance contributors for nitrate?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Moving the double-bond placement to another N–O connection.",
+        "Replacing N with a different element.",
+        "Moving an O into the center and N to the edge.",
+        "Adding two electrons to only one contributor."
+      ],
+      "correct": 0,
+      "explanations": [
+        "The centers remain connected the same way.",
+        "The atom identities cannot change.",
+        "That changes the atomic connectivity.",
+        "All contributors describe the same charge and electron count."
+      ]
+    }
+  }
+}

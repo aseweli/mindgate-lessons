@@ -1,0 +1,44 @@
+{
+  "title": "Draw the hydroxide ion",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Draw the Lewis structure for $\\ce{OH^-}$. Include lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "OH^-",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "O",
+              "lp": 3
+            },
+            {
+              "el": "H",
+              "lp": 0
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Add one electron for the negative charge.",
+    "Hydrogen forms one bond.",
+    "All nonbonding electrons belong on oxygen."
+  ],
+  "solution": "O supplies six electrons, H one, and the charge adds one. One O–H bond leaves six electrons as three lone pairs on O.",
+  "exam": false
+}

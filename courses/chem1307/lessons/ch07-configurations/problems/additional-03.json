@@ -1,0 +1,34 @@
+{
+  "title": "Even electron count shortcut",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "A neutral atom or monatomic ion has an even number of electrons. What can you conclude before drawing orbital boxes?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It could be diamagnetic or paramagnetic.",
+        "It must be diamagnetic.",
+        "It must be ferromagnetic.",
+        "It must have one unpaired electron."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Even count alone does not determine pairing.",
+        "A p² subshell supplies a counterexample.",
+        "Ferromagnetism involves collective ordering in material.",
+        "Exactly one unpaired electron would make the total odd."
+      ]
+    }
+  },
+  "hints": [
+    "Pairing consumes two electrons at a time.",
+    "Even totals can still have multiple unpaired electrons.",
+    "A specific configuration is needed."
+  ],
+  "solution": "Pairing consumes two electrons at a time. Even totals can still have multiple unpaired electrons. A specific configuration is needed. Even count alone does not determine pairing."
+}

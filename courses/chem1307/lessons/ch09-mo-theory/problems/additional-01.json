@@ -1,0 +1,37 @@
+{
+  "title": "Order nitrogen molecular ions",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Order N2+, N2 and N2− from lowest to highest bond order. For equal bond orders, list the positive ion first.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "order",
+      "items": [
+        "N2+",
+        "N2−",
+        "N2"
+      ]
+    }
+  },
+  "hints": [
+    "Use the early second-row order.",
+    "N₂⁺ loses a bonding electron and N₂⁻ gains an antibonding electron.",
+    "The ions tie and neutral N₂ has the highest order."
+  ],
+  "solution": "Neutral N₂ has order 3. Removing a bonding electron produces N₂⁺ with order 2.5. Adding to π* produces N₂⁻ with order 2.5. Apply the stated tie-breaker.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "N2+ < N2− < N2"
+      ],
+      "wrong": [
+        "N2 < N2− < N2+"
+      ]
+    }
+  }
+}

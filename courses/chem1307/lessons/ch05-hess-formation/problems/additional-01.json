@@ -1,0 +1,65 @@
+{
+  "title": "Combine two consecutive enthalpies",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "For $\\ce{A -> B}$ the heat is $-[$a]$ kJ, and for $\\ce{B -> C}$ it is $+[$b]$ kJ. Find the heat for $\\ce{C -> A}$.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "a-b",
+      "units": "kJ",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "b-a",
+          "message": "Reversing the net equation reverses its heat."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Sum the steps for A to C.",
+    "Identify whether the target is forward or reverse.",
+    "Reversing the net equation reverses its heat."
+  ],
+  "solution": "The forward path has $-[$a]+[$b]$ kJ. Reverse the entire path to obtain $[$a]-[$b]$ kJ.",
+  "exam": false,
+  "vars": {
+    "a": {
+      "pick": [
+        142,
+        175,
+        208,
+        262
+      ]
+    },
+    "b": {
+      "pick": [
+        44,
+        69,
+        98,
+        113
+      ]
+    },
+    "key": {
+      "expr": "a-b"
+    },
+    "distractor": {
+      "expr": "b-a"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] kJ"
+      ],
+      "wrong": [
+        "[$distractor:.10e] kJ"
+      ]
+    }
+  }
+}

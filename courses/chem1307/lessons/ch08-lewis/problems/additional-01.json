@@ -1,0 +1,53 @@
+{
+  "title": "Draw sulfur dichloride",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Draw the Lewis structure for $\\ce{SCl2}$. Include lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "SCl2",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "S",
+              "lp": 2
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            },
+            {
+              "el": "Cl",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Count six from S and seven from each Cl.",
+    "Connect both Cl atoms to S.",
+    "Give each Cl three lone pairs and put the remainder on S."
+  ],
+  "solution": "The total is 20 valence electrons. Two S–Cl single bonds use four; terminal Cl lone pairs use 12, leaving four electrons as two S lone pairs.",
+  "exam": false
+}

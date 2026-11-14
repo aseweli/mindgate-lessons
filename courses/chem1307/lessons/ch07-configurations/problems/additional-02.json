@@ -1,0 +1,39 @@
+{
+  "title": "Titanium(III) configuration",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Enter the ground-state electron configuration of Ti³⁺.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "econfig",
+      "value": "[Ar]3d1",
+      "feedback": [
+        {
+          "answer": "[Ar]4s1",
+          "message": "The third electron comes from 3d."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Count 22 electrons for the neutral atom.",
+    "Remove the two electrons from the highest n.",
+    "The third electron comes from 3d."
+  ],
+  "solution": "Neutral Ti is $[\\mathrm{Ar}]3d^24s^2$. Remove both 4s electrons, then one 3d electron to obtain $[\\mathrm{Ar}]3d^1$.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "1s2 2s2 2p6 3s2 3p6 3d1"
+      ],
+      "wrong": [
+        "[Ar]4s1"
+      ]
+    }
+  }
+}

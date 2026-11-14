@@ -1,0 +1,34 @@
+{
+  "title": "Ionization from excited hydrogen",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "Which hydrogen atom requires less energy to ionize, n=1 or n=3?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "n=3",
+        "n=1",
+        "Both equal",
+        "Neither can ionize"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Its binding energy is one ninth the n=1 value.",
+        "It is farther below zero.",
+        "The initial state enters the energy difference.",
+        "Energy can lift an electron to the continuum."
+      ]
+    }
+  },
+  "hints": [
+    "The ionized threshold is zero.",
+    "Both bound energies are negative.",
+    "The state closer to zero needs less energy."
+  ],
+  "solution": "The ionized threshold is zero. Both bound energies are negative. The state closer to zero needs less energy. Its binding energy is one ninth the n=1 value."
+}

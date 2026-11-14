@@ -1,0 +1,34 @@
+{
+  "title": "Two samples at the same temperature",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "Two beakers contain water at the same temperature, one with twice the mass of the other. Which statement is correct?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "The larger sample requires twice as much heat for the same temperature rise.",
+        "The larger sample has twice the specific heat.",
+        "The larger sample must be hotter.",
+        "Both require the same heat for the same rise."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Its total heat capacity is doubled.",
+        "Specific heat is measured per unit mass.",
+        "The prompt gives equal temperatures.",
+        "The required heat depends on mass."
+      ]
+    }
+  },
+  "hints": [
+    "Distinguish specific heat from heat capacity.",
+    "Use q=mcΔT.",
+    "Only the mass differs."
+  ],
+  "solution": "They have the same temperature and specific heat under the same conditions. Heating the larger sample through the same temperature interval requires twice as much heat."
+}

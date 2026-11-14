@@ -128,12 +128,21 @@
           "title": "Practice in order",
           "intro": "Write out the setup before using a calculator.",
           "problems": [
-            "draw-clf3",
-            "draw-xef4",
             "drill-01",
             "drill-02",
             "drill-03",
-            "angle-order"
+            "angle-order",
+            "draw-clf3",
+            "draw-xef4",
+            "additional-01",
+            "additional-02",
+            "additional-03",
+            "additional-04",
+            "additional-05",
+            "additional-06",
+            "additional-07",
+            "additional-08",
+            "additional-09"
           ]
         }
       ]

@@ -1,0 +1,34 @@
+{
+  "title": "Compare halogen affinities",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Why can electron attachment to Cl release more energy than attachment to F despite F being more electronegative?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "The compact F valence shell increases repulsion for the incoming electron.",
+        "F has no valence electrons.",
+        "Cl gains a proton before attaching an electron.",
+        "Electron affinity is defined as removing an electron."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Attachment trends need more than an electronegativity ranking.",
+        "Fluorine has seven.",
+        "Nuclei stay unchanged.",
+        "That is ionization."
+      ]
+    }
+  },
+  "hints": [
+    "Electron affinity involves a free gaseous atom.",
+    "F adds an electron to a compact 2p subshell.",
+    "Electron repulsion matters along with attraction."
+  ],
+  "solution": "Electron affinity involves a free gaseous atom. F adds an electron to a compact 2p subshell. Electron repulsion matters along with attraction. Attachment trends need more than an electronegativity ranking."
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Recover heat of dissolution",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "A salt dissolves and cools its insulated coffee-cup solution from 25.0 to 21.0 °C. Neglect cup heat. Which sign applies to dissolution?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Positive",
+        "Negative",
+        "Zero",
+        "The sign cannot be determined under the stated conditions."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Heat enters the dissolution process.",
+        "This is the sign for the cooling solution.",
+        "The solution temperature changed.",
+        "The energy balance determines the sign."
+      ]
+    }
+  },
+  "hints": [
+    "Assign the temperature change to the solution.",
+    "Determine the sign of solution heat.",
+    "Reverse that sign for dissolution."
+  ],
+  "solution": "The solution loses sensible heat as it cools: $q_\\mathrm{solution}<0$. The dissolution process absorbs that heat."
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Rank first ionization across a row",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Order increasing first ionization energy for Al, Mg and Si.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "order",
+      "items": [
+        "Al",
+        "Mg",
+        "Si"
+      ]
+    }
+  },
+  "hints": [
+    "Start with the across-period trend.",
+    "Compare Al’s 3p electron with Mg’s 3s electron.",
+    "Al is a subshell exception to the simple trend."
+  ],
+  "solution": "Al has the lower first IE because its removed electron is 3p, followed by Mg, then Si.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "Al < Mg < Si"
+      ],
+      "wrong": [
+        "Mg < Al < Si"
+      ]
+    }
+  }
+}

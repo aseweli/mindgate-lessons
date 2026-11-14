@@ -1,0 +1,34 @@
+{
+  "title": "Local boron hybrid label",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Which hybrid label describes the central boron in BF₃ using the introductory valence bond model?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "sp²",
+        "sp",
+        "sp³",
+        "sp³d"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Three equivalent directions are available.",
+        "Two hybrid orbitals cannot supply three directions.",
+        "This label gives four hybrids.",
+        "This is the five-domain course label."
+      ]
+    }
+  },
+  "hints": [
+    "BF₃ is trigonal planar.",
+    "Count three central bonding domains.",
+    "Three hybrids combine s with two p orbitals."
+  ],
+  "solution": "BF₃ is trigonal planar. Count three central bonding domains. Three hybrids combine s with two p orbitals. Three equivalent directions are available."
+}

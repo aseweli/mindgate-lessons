@@ -1,0 +1,56 @@
+{
+  "title": "Shell orbital count",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "How many individual orbitals are in shell $n=[$n]$?\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "n^2",
+      "feedback": [
+        {
+          "answer": "2*n^2",
+          "message": "That is the maximum electron count. Each orbital holds two electrons."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Count distinct spatial states.",
+    "Each subshell contributes 2ℓ+1 orbitals.",
+    "Their sum from ℓ=0 through n−1 is n²."
+  ],
+  "solution": "The shell has $([$n])^2$ orbitals and twice as many electron slots.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "pick": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "key": {
+      "expr": "n^2"
+    },
+    "wrong": {
+      "expr": "2*n^2"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key]"
+      ],
+      "wrong": [
+        "[$wrong]"
+      ]
+    }
+  }
+}

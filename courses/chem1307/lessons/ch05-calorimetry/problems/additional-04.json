@@ -1,0 +1,34 @@
+{
+  "title": "Find a mixture temperature",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "In an insulated cup, 40.0 g of water at 80.0 °C mixes with 120.0 g of water at 20.0 °C. Neglect cup heat. What is the final temperature?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "35.0 °C",
+        "50.0 °C",
+        "65.0 °C",
+        "60.0 °C"
+      ],
+      "correct": 0,
+      "explanations": [
+        "This is the mass-weighted average.",
+        "This is the unweighted average.",
+        "This assigns the larger mass to the hotter water.",
+        "This subtracts temperatures without an energy balance."
+      ]
+    }
+  },
+  "hints": [
+    "Both samples have the same specific heat.",
+    "Use zero net heat in the insulated cup.",
+    "The result should be closer to 20 °C."
+  ],
+  "solution": "Cancel the common specific heat in $40.0(T_f-80.0)+120.0(T_f-20.0)=0$. This gives $35.0^\\circ$C."
+}

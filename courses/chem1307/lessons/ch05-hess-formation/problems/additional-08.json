@@ -1,0 +1,34 @@
+{
+  "title": "Infer a phase change from two paths",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "Producing liquid Y by a reaction releases 260 kJ. Producing the same amount of gaseous Y from the same reactants releases 230 kJ. What is the heat for vaporizing that amount of Y?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "+30 kJ",
+        "−30 kJ",
+        "+490 kJ",
+        "−490 kJ"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Gas relative to liquid is higher by 30 kJ.",
+        "This is the condensation direction.",
+        "The steps have opposite directions for the shared reactants.",
+        "This adds both production heats."
+      ]
+    }
+  },
+  "hints": [
+    "Use the same starting reactants as a shared state.",
+    "Write liquid → gas.",
+    "Subtract the liquid endpoint enthalpy."
+  ],
+  "solution": "Combine reverse liquid production with forward gas production. The result is +260−230=+30 kJ."
+}

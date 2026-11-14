@@ -1,0 +1,57 @@
+{
+  "title": "Photon from a hydrogen line",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "For the hydrogen transition $n=[$n]\\to2$, calculate the wavelength in nm. Use $E_n=-(2.179\\times10^{-18}\\ \\mathrm J)/n^2$, $h=6.626\\times10^{-34}$ J·s, $c=2.998\\times10^8$ m/s.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "6.626e-34*2.998e8*1e9/(2.179e-18*(1/4-1/n^2))",
+      "units": "nm",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "6.626e-34*2.998e8/(2.179e-18*(1/4-1/n^2))",
+          "message": "Convert the final meters to nanometers."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Find the positive gap magnitude.",
+    "Divide hc by the gap.",
+    "Convert the final meters to nanometers."
+  ],
+  "solution": "Use positive gap $A(1/4-1/[$n]^2)$ in $\\lambda=hc/E$, then multiply meters by $10^9$ for nm.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "pick": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "key": {
+      "expr": "6.626e-34*2.998e8*1e9/(2.179e-18*(1/4-1/n^2))"
+    },
+    "distractor": {
+      "expr": "6.626e-34*2.998e8/(2.179e-18*(1/4-1/n^2))"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] nm"
+      ],
+      "wrong": [
+        "[$distractor:.10e] nm"
+      ]
+    }
+  }
+}

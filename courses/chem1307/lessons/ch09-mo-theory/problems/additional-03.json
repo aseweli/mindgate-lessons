@@ -1,0 +1,34 @@
+{
+  "title": "Remove an antibonding electron",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "A molecular ion forms by removing one antibonding electron from the neutral. How does the model’s bond order change?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Increases by 0.5",
+        "Decreases by 0.5",
+        "Increases by 1",
+        "Stays the same"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Subtracting one fewer antibonding electron raises the difference.",
+        "That is the effect of adding an antibonding electron.",
+        "The formula divides the occupancy difference by two.",
+        "The bonding–antibonding imbalance changes."
+      ]
+    }
+  },
+  "hints": [
+    "Write half the difference between bonding and antibonding populations.",
+    "Bonding population is unchanged.",
+    "Antibonding population decreases by one."
+  ],
+  "solution": "Write half the difference between bonding and antibonding populations. Bonding population is unchanged. Antibonding population decreases by one. Subtracting one fewer antibonding electron raises the difference."
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Molar energy of photons",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "An individual photon carries $[$e]\\times10^{-19}$ J. Find the energy in kJ per mole of photons using $N_A=6.022\\times10^{23}\\ \\mathrm{mol^{-1}}$.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "e*60.22",
+      "units": "kJ/mol",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "e*60220",
+          "message": "Divide by 1000 because the answer is in kJ/mol."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Convert from one photon to a mole.",
+    "Multiply by Avogadro’s constant.",
+    "Divide by 1000 because the answer is in kJ/mol."
+  ],
+  "solution": "Multiply $[$e]\\times10^{-19}$ J by $6.022\\times10^{23}$ photons/mol, then divide by $1000$ to get kJ/mol.",
+  "exam": false,
+  "vars": {
+    "e": {
+      "pick": [
+        2.55,
+        3.16,
+        4.71,
+        5.28
+      ]
+    },
+    "key": {
+      "expr": "e*60.22"
+    },
+    "distractor": {
+      "expr": "e*60220"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] kJ/mol"
+      ],
+      "wrong": [
+        "[$distractor:.10e] kJ/mol"
+      ]
+    }
+  }
+}

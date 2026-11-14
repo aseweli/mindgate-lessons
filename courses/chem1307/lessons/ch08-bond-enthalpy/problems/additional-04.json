@@ -1,0 +1,34 @@
+{
+  "title": "Count a halogen addition",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "In C₂H₄ + Cl₂ → C₂H₄Cl₂, which bond change is included for the product?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Formation of two C–Cl bonds",
+        "Formation of two Cl–Cl bonds",
+        "Formation of four C–Cl bonds",
+        "Formation of a carbon–carbon triple bond"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Each added Cl bonds to a different carbon.",
+        "The Cl–Cl reactant bond is broken.",
+        "The product contains only two chlorine atoms.",
+        "The carbon–carbon bond order decreases."
+      ]
+    }
+  },
+  "hints": [
+    "Chlorine adds across the double bond.",
+    "The C=C changes to C–C.",
+    "One chlorine bonds to each carbon."
+  ],
+  "solution": "Chlorine adds across the double bond. The C=C changes to C–C. One chlorine bonds to each carbon. Each added Cl bonds to a different carbon."
+}

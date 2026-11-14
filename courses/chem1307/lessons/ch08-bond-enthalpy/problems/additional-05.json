@@ -1,0 +1,34 @@
+{
+  "title": "When are bond comparisons safest?",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Which comparison best isolates how bond order affects bond length?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "C–C versus C≡C",
+        "H–Cl versus H–Br",
+        "C–C versus C–O",
+        "Na–Cl versus C–H"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Both bond types connect carbon atoms.",
+        "Changes in atom size confound the comparison.",
+        "The bonded elements differ.",
+        "These involve unlike elements and bonding models."
+      ]
+    }
+  },
+  "hints": [
+    "Hold atom identities fixed.",
+    "Compare conventional single and multiple bonds.",
+    "Avoid mixing bonds to different elements."
+  ],
+  "solution": "Hold atom identities fixed. Compare conventional single and multiple bonds. Avoid mixing bonds to different elements. Both bond types connect carbon atoms."
+}

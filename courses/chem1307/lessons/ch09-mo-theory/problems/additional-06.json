@@ -1,0 +1,34 @@
+{
+  "title": "Compare H₂ and H₂⁻",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Adding one electron to H₂ places it in which orbital in the simple 1s MO model?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "σ*₁s, lowering bond order to 0.5",
+        "σ₁s, increasing bond order to 1.5",
+        "A π₁s orbital",
+        "σ*₁s, increasing bond order to 1.5"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The new electron is antibonding.",
+        "The bonding level is already full.",
+        "Two 1s orbitals combine to sigma-symmetry orbitals.",
+        "The occupancy choice is right but the effect is reversed."
+      ]
+    }
+  },
+  "hints": [
+    "Neutral H₂ already has two electrons in σ₁s.",
+    "Pauli prevents a third in that orbital.",
+    "Use the remaining 1s combination."
+  ],
+  "solution": "Neutral H₂ already has two electrons in σ₁s. Pauli prevents a third in that orbital. Use the remaining 1s combination. The new electron is antibonding."
+}

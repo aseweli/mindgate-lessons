@@ -1,0 +1,65 @@
+{
+  "title": "Missing heat transfer",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "A system does $[$w]$ J of work while its internal energy rises by $[$e]$ J. Calculate the heat transferred into the system.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "e+w",
+      "units": "J",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "e-w",
+          "message": "Rearrange to q=ΔE−w with negative w."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Write the first law.",
+    "Assign the work sign.",
+    "Rearrange to q=ΔE−w with negative w."
+  ],
+  "solution": "Use $\\Delta E=q+w$ with signed work $-[$w]$ J. Therefore $q=[$e]+[$w]$ J.",
+  "exam": false,
+  "vars": {
+    "w": {
+      "pick": [
+        116,
+        153,
+        187,
+        245
+      ]
+    },
+    "e": {
+      "pick": [
+        311,
+        423,
+        537,
+        605
+      ]
+    },
+    "key": {
+      "expr": "e+w"
+    },
+    "distractor": {
+      "expr": "e-w"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] J"
+      ],
+      "wrong": [
+        "[$distractor:.10e] J"
+      ]
+    }
+  }
+}

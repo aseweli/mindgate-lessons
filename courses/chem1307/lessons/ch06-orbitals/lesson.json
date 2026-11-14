@@ -134,12 +134,21 @@
           "title": "Practice in order",
           "intro": "Write out the setup before using a calculator.",
           "problems": [
-            "shell-capacity",
             "drill-01",
+            "shell-capacity",
             "drill-02",
             "drill-03",
             "radial-count",
-            "total-count"
+            "total-count",
+            "additional-01",
+            "additional-02",
+            "additional-03",
+            "additional-04",
+            "additional-05",
+            "additional-06",
+            "additional-07",
+            "additional-08",
+            "additional-09"
           ]
         }
       ]

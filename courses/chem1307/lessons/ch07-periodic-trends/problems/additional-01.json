@@ -1,0 +1,38 @@
+{
+  "title": "Rank sulfur isoelectronic neighbors",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Order increasing radius for Ca2+, K+, Cl− and S2−.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "order",
+      "items": [
+        "Ca2+",
+        "K+",
+        "Cl−",
+        "S2−"
+      ]
+    }
+  },
+  "hints": [
+    "Count all electrons.",
+    "Compare atomic numbers in the shared shell.",
+    "The highest proton count gives the smallest radius."
+  ],
+  "solution": "All have 18 electrons. Nuclear charge decreases from Ca to K to Cl to S, so the radius increases in that order.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "Ca2+ < K+ < Cl− < S2−"
+      ],
+      "wrong": [
+        "S2− < Cl− < K+ < Ca2+"
+      ]
+    }
+  }
+}

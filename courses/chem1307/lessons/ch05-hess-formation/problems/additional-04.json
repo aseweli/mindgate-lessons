@@ -1,0 +1,34 @@
+{
+  "title": "Pick the correct formation equation",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "Which equation defines $\\Delta H_f^\\circ$ for $\\ce{SO2(g)}$ at 298 K? Use $\\ce{S8(s)}$ as the reference.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "$\\ce{1/8 S8(s) + O2(g) -> SO2(g)}$",
+        "$\\ce{S(g) + O2(g) -> SO2(g)}$",
+        "$\\ce{S8(s) + 8O2(g) -> 8SO2(g)}$",
+        "$\\ce{SO2(g) -> 1/8 S8(s) + O2(g)}$"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The element references give one mole of product.",
+        "Atomic gaseous S is not the stated reference.",
+        "This is eight times the target basis.",
+        "This is the reverse direction."
+      ]
+    }
+  },
+  "hints": [
+    "Produce exactly one mole of SO₂.",
+    "Start with the stated sulfur reference.",
+    "Use molecular oxygen as the oxygen reference."
+  ],
+  "solution": "Use $\\ce{1/8 S8(s) + O2(g) -> SO2(g)}$ to make one mole from the elemental reference forms."
+}

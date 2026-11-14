@@ -1,0 +1,34 @@
+{
+  "title": "Which attachment releases more?",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "In the course convention, atom X has EA=−340 kJ/mol and atom Y has EA=−120 kJ/mol. Which gaseous attachment releases more energy?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "X",
+        "Y",
+        "Both equal",
+        "Neither"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The magnitude is 340 kJ/mol.",
+        "Its released magnitude is 120 kJ/mol.",
+        "The magnitudes differ.",
+        "Both signs indicate release in the stated convention."
+      ]
+    }
+  },
+  "hints": [
+    "Negative EA is exothermic here.",
+    "Compare magnitudes of released energy.",
+    "X has the more negative value."
+  ],
+  "solution": "Negative EA is exothermic here. Compare magnitudes of released energy. X has the more negative value. The magnitude is 340 kJ/mol."
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Read the number and letter",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "Which pair decodes 5d?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "n=5, ℓ=2",
+        "n=2, ℓ=5",
+        "n=5, ℓ=5",
+        "n=5, ℓ=3"
+      ],
+      "correct": 0,
+      "explanations": [
+        "This is the meaning of 5d.",
+        "The roles are reversed.",
+        "The letter d is not encoded as five.",
+        "ℓ=3 is an f subshell."
+      ]
+    }
+  },
+  "hints": [
+    "The numeral gives n.",
+    "The letter d gives ℓ=2.",
+    "These labels leave mℓ unspecified."
+  ],
+  "solution": "The numeral gives n. The letter d gives ℓ=2. These labels leave mℓ unspecified. This is the meaning of 5d."
+}

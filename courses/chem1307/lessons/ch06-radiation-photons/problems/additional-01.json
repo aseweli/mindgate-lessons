@@ -1,0 +1,60 @@
+{
+  "title": "Photon energy from a wavelength",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "Calculate the energy per photon for $[$w]$ nm light. Use $h=6.626\\times10^{-34}$ J·s and $c=2.998\\times10^8$ m/s.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "6.626e-34*2.998e8/(w*1e-9)",
+      "units": "J",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "6.626e-34*2.998e8/w",
+          "message": "Using the numerical nm value as meters makes the energy a billion times too small."
+        }
+      ],
+      "tol": 5e-22,
+      "tol_type": "absolute"
+    }
+  },
+  "hints": [
+    "Convert nm to meters.",
+    "Use frequency c/λ or substitute directly in hc/λ.",
+    "Using the numerical nm value as meters makes the energy a billion times too small."
+  ],
+  "solution": "$\\lambda=[$w]\\times10^{-9}$ m. Substituting in $E=hc/\\lambda$ gives the energy per photon.",
+  "exam": false,
+  "vars": {
+    "w": {
+      "pick": [
+        415,
+        472,
+        531,
+        589,
+        644
+      ]
+    },
+    "key": {
+      "expr": "6.626e-34*2.998e8/(w*1e-9)"
+    },
+    "distractor": {
+      "expr": "6.626e-34*2.998e8/w"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] J"
+      ],
+      "wrong": [
+        "[$distractor:.10e] J"
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Hydrogenation from a practice table",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "For $\\ce{C2H4 + H2 -> C2H6}$ use $D(\\mathrm{C=C})=614$, $D(\\mathrm{H-H})=436$, $D(\\mathrm{C-C})=347$, and $D(\\mathrm{C-H})=[$d]$ kJ/mol. Find the bond-enthalpy estimate.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "614+436-347-2*d",
+      "units": "kJ",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "614+436-347-d",
+          "message": "Subtract the full product inventory."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Cancel the four shared C–H bonds.",
+    "Count two new C–H bonds.",
+    "Subtract the full product inventory."
+  ],
+  "solution": "Unchanged C–H bonds cancel. Break C=C and H–H, and form C–C plus two C–H bonds. Thus $\\Delta H=614+436-347-2([$d])$ kJ.",
+  "exam": false,
+  "vars": {
+    "d": {
+      "pick": [
+        402,
+        410,
+        416,
+        424
+      ]
+    },
+    "key": {
+      "expr": "614+436-347-2*d"
+    },
+    "distractor": {
+      "expr": "614+436-347-d"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] kJ"
+      ],
+      "wrong": [
+        "[$distractor:.10e] kJ"
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Compression work from two volumes",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "A gas changes volume from $[$v]$ L to 1.25 L against 1.60 atm. Find the pressure–volume work in joules. Use 101.325 J per L·atm.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "1.6*(v-1.25)*101.325",
+      "units": "J",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "1.6*(1.25-v)*101.325",
+          "message": "Compression gives positive work for the system."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Find final minus initial volume.",
+    "Apply the minus sign in the work equation.",
+    "Compression gives positive work for the system."
+  ],
+  "solution": "$w=-P_\\mathrm{ext}(V_f-V_i)=-1.60(1.25-[$v])(101.325)$ J. Compression makes the result positive.",
+  "exam": false,
+  "vars": {
+    "v": {
+      "pick": [
+        2.55,
+        3.1,
+        3.75,
+        4.2
+      ]
+    },
+    "key": {
+      "expr": "1.6*(v-1.25)*101.325"
+    },
+    "distractor": {
+      "expr": "1.6*(1.25-v)*101.325"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] J"
+      ],
+      "wrong": [
+        "[$distractor:.10e] J"
+      ]
+    }
+  }
+}

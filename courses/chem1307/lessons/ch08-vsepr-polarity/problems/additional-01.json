@@ -1,0 +1,56 @@
+{
+  "title": "Draw xenon difluoride before naming its shape",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Draw the Lewis structure for $\\ce{XeF2}$. Include lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "XeF2",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "Xe",
+              "lp": 3
+            },
+            {
+              "el": "F",
+              "lp": 3
+            },
+            {
+              "el": "F",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "allow": [
+        "expanded_octet"
+      ]
+    }
+  },
+  "hints": [
+    "Count 8+2(7) valence electrons.",
+    "Complete the terminal F octets.",
+    "Three lone pairs remain on xenon and occupy equatorial positions."
+  ],
+  "solution": "There are 22 valence electrons. Use two bonds, six terminal lone pairs and three Xe lone pairs. AX₂E₃ gives a linear molecular shape.",
+  "exam": false
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Matter wavelength scaling",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "A nonrelativistic particle’s speed increases fourfold at constant mass. What happens to its de Broglie wavelength?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "It becomes one quarter as large.",
+        "It quadruples.",
+        "It halves.",
+        "It is unchanged."
+      ],
+      "correct": 0,
+      "explanations": [
+        "λ=h/p.",
+        "This would make wavelength proportional to momentum.",
+        "No square root is used in this comparison.",
+        "The momentum has changed."
+      ]
+    }
+  },
+  "hints": [
+    "Momentum is mv.",
+    "Momentum quadruples.",
+    "Wavelength is inversely proportional to momentum."
+  ],
+  "solution": "Momentum is mv. Momentum quadruples. Wavelength is inversely proportional to momentum. λ=h/p."
+}

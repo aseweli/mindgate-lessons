@@ -1,0 +1,34 @@
+{
+  "title": "Compare two emitted photons",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "Which emission has the higher frequency, hydrogen 4→2 or 4→3?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "4→2",
+        "4→3",
+        "Both are equal",
+        "Neither photon has a frequency"
+      ],
+      "correct": 0,
+      "explanations": [
+        "This has the larger energy drop.",
+        "It has the smaller drop.",
+        "The final level affects the gap.",
+        "Both are electromagnetic radiation."
+      ]
+    }
+  },
+  "hints": [
+    "The initial level is shared.",
+    "n=2 is lower than n=3.",
+    "Larger energy gap means larger frequency."
+  ],
+  "solution": "The initial level is shared. n=2 is lower than n=3. Larger energy gap means larger frequency. This has the larger energy drop."
+}

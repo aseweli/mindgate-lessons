@@ -134,12 +134,21 @@
           "title": "Practice in order",
           "intro": "Write out the setup before using a calculator.",
           "problems": [
+            "drill-01",
             "iso-order",
             "radius-order",
             "ie-order",
-            "drill-01",
             "drill-02",
-            "drill-03"
+            "drill-03",
+            "additional-01",
+            "additional-02",
+            "additional-03",
+            "additional-04",
+            "additional-05",
+            "additional-06",
+            "additional-07",
+            "additional-08",
+            "additional-09"
           ]
         }
       ]

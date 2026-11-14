@@ -65,7 +65,7 @@ write LaTeX normally (`$\frac{1}{2}$`). That is why long text belongs in `.md` f
 ```json
 {
   "id": "chem1307", "code": "CHEM 1307", "title": "Principles of Chemistry I", "term": "Fall 2026",
-  "accent": "#f85149",
+  "accent": "#f85149", "icon": "chem",
   "textbook": {"title": "...", "authors": "...", "edition": "1st", "publisher": "..."},
   "rules": {"calculator": true, "exact_answers": false, "fact_sheet": true, "notes": "shown on the overview"},
   "notes": "Markdown shown on the course overview",
@@ -77,6 +77,12 @@ write LaTeX normally (`$\frac{1}{2}$`). That is why long text belongs in `.md` f
   "resources": [ {"title": "...", "url": "https://...", "note": "optional"} ]
 }
 ```
+
+`"icon"` (optional) picks the sidebar icon: `math`, `chem`, `physics`, `book` or `code`.
+
+**Adding a course:** create `courses/<id>/course.json` and its lesson folders, and add the id to `"courses"` in
+`mindgate.json` (that list sets which courses the app shows, in order). **Removing a course:** take its id out of
+`mindgate.json` (delete the folder too, or keep it for later). Students keep their progress if it comes back.
 
 Exams take one of `"week_of"`, `"at"`, or `"opens"` + `"closes"` (ISO dates). `"after_unit"` places the exam marker in the sidebar.
 `"covers_units"` lists the units a **practice exam** draws problems from, `"practice": {"questions": 30, "minutes": 90}`
@@ -132,6 +138,30 @@ A problem can opt out of practice exams with `"exam": false` (for example a long
 | `problem_set` | `problems`: `["id", ...]`; `title`; `intro` | Several problems in order |
 | `fact_sheet` | (none) | The course's `fact_sheet` text |
 | `divider` | (none) | A horizontal rule |
+| `editor` | `id`; `language`; `files` or `code`; `title`, `md`, `stdin`, `data`, `timeout`, `open` (see §4.1) | A card that opens a code editor beside the lesson, where the student writes and runs Python, C or Verilog. It runs code; it does not grade it |
+
+### 4.1 Code editor blocks
+
+```json
+{"type": "editor", "id": "hw3-squares", "title": "Squares", "language": "python", "open": true,
+ "md": "Read `n`, then print the squares of 1 to n. Press **Run** (⌘↵).",
+ "files": [{"name": "main.py", "code": {"file": "starter.py"}}],
+ "stdin": "5\n", "data": ["grades.csv"]}
+```
+
+- `id` (required): letters, digits, `-`, `_`, `.`; unique in the lesson. The student's draft is saved under it.
+- `language` (required): `python`, `c`, `verilog` or `systemverilog`.
+- `files`: 1 to 6 files `{"name", "code"}`. `code` is a string, a list of lines, or `{"file": "name"}` (a file in the lesson
+  folder, preferred). Names are plain (no folders) and end in `.py` (Python), `.c`/`.h` (C), `.v`/`.vh` (Verilog) or
+  `.sv`/`.svh`/`.v`/`.vh` (SystemVerilog). Python runs the **first** `.py` file. Or use `code` alone for one file named
+  `main.py` (`main.c`, …); not both `code` and `files`.
+- `stdin`: the starting text of the Input tab (what `input()` reads). `data`: up to 10 files from the lesson folder
+  (5 MB each), copied next to the code on every run, e.g. a CSV. `timeout`: 1–30 seconds (default 10 for Python).
+  `open: true` opens the editor when the tab is shown. Verilog only: `top` (module to simulate), `dialect` `"2005"`/`"2012"`.
+- Python packages a lesson imports (numpy, pandas, matplotlib) must be installed on the student's Mac; `plt.show()` and saved
+  images appear under Output.
+- Editor blocks are **not graded**. To check understanding, pair them with normal problems (§5): "what does this program
+  print" as a `text`/`number`/`list` answer, "which line has the bug" as a `choice`, and so on.
 
 Video rules: **use only real video ids you have verified** (the 11-character id after `watch?v=`). Never guess an id.
 Prefer short, focused segments using `start`/`end` over whole hour-long videos. Good channels: The Organic Chemistry Tutor,

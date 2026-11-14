@@ -1,0 +1,45 @@
+{
+  "title": "Simultaneous update",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "statement": "In gradient descent, what does \"update all θ's simultaneously\" mean?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Run the loop in parallel threads",
+        "Use the same value for every θ",
+        "Compute every component's update from the old θ, then replace them all at once",
+        "Use the new θ₀ when updating θ₁"
+      ],
+      "correct": 2,
+      "explanations": [
+        "It's about the math, not threads.",
+        "Each θ gets its own update.",
+        "Correct (the matrix form `theta - alpha*X@(h-y)/m` does exactly this).",
+        "That mixes old and new values."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which θ is used to compute h?",
+    "The old one, for all components.",
+    ""
+  ],
+  "solution": "All components are updated from the same old θ.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

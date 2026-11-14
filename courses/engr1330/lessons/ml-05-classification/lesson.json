@@ -1,0 +1,281 @@
+{
+  "id": "ml-05-classification",
+  "title": "Classification and evaluation metrics",
+  "short": "Classification metrics",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Build a confusion matrix and compute accuracy, precision, recall and F1, and choose the right metric when one class is rare.",
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "requires": [
+    "ml-04-multiple-regression"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Classification",
+              "Predicting a category (0/1) instead of a number."
+            ],
+            [
+              "TP / TN",
+              "Correct positive / negative predictions."
+            ],
+            [
+              "FP",
+              "Predicted 1, actually 0 (false alarm)."
+            ],
+            [
+              "FN",
+              "Predicted 0, actually 1 (missed case)."
+            ],
+            [
+              "Precision",
+              "TP / (TP + FP)"
+            ],
+            [
+              "Recall",
+              "TP / (TP + FN)"
+            ],
+            [
+              "F1",
+              "Harmonic mean of precision and recall."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Metrics",
+          "items": [
+            {
+              "label": "Accuracy",
+              "latex": "\\frac{TP+TN}{TP+TN+FP+FN}"
+            },
+            {
+              "label": "Precision",
+              "latex": "\\frac{TP}{TP+FP}"
+            },
+            {
+              "label": "Recall",
+              "latex": "\\frac{TP}{TP+FN}"
+            },
+            {
+              "label": "F1",
+              "latex": "\\frac{2PR}{P+R}"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Swapping precision and recall.** Precision divides by everything **predicted** positive; recall by everything **actually** positive.\n- **Trusting accuracy with rare classes.** Always-0 can score 90%+.\n- **Mixing up FP and FN.** The second letter is the **prediction** (P = predicted positive).",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "After Exam 3; part of the final project. Compute the metrics from a confusion matrix and pick the right metric for\na situation (catching every failure → recall).",
+          "title": "How it's tested"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "Kdsp6soqA7o",
+          "title": "Machine Learning Fundamentals: The Confusion Matrix",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "How to read TP, TN, FP and FN from the table.",
+          "start": "0:00",
+          "end": "7:12"
+        },
+        {
+          "type": "video",
+          "youtube": "vP06aMoz4v8",
+          "title": "Machine Learning Fundamentals: Sensitivity and Specificity",
+          "channel": "StatQuest with Josh Starmer",
+          "focus": "Sensitivity is the same thing as recall; see how it trades off against false alarms.",
+          "start": "0:00",
+          "end": "11:46"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Metrics from a confusion matrix",
+          "problem": "A failure model on 200 machines: TP = 12, FN = 8, FP = 6, TN = 174. Compute all four metrics.",
+          "steps": [
+            {
+              "md": "(12 + 174)/200 = 0.93.",
+              "title": "Accuracy",
+              "why": "Correct predictions over all."
+            },
+            {
+              "md": "12/(12 + 6) = 0.667.",
+              "title": "Precision",
+              "why": "Of 18 alarms, 12 were real."
+            },
+            {
+              "md": "12/(12 + 8) = 0.6.",
+              "title": "Recall",
+              "why": "Of 20 real failures, 12 were caught."
+            },
+            {
+              "md": "2(0.667)(0.6)/(0.667 + 0.6) ≈ 0.632.",
+              "title": "F1"
+            },
+            {
+              "md": "```python\nTP, FN, FP, TN = 12, 8, 6, 174\naccuracy = (TP + TN) / (TP + FN + FP + TN)\nprecision = TP / (TP + FP)\nrecall = TP / (TP + FN)\nf1 = 2 * precision * recall / (precision + recall)\nprint(round(accuracy, 3), round(precision, 3), round(recall, 3), round(f1, 3))\n```\n\n```text\n0.93 0.667 0.6 0.632\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "0.93, 0.667, 0.6, 0.632: accuracy looks great, but 40% of failures were missed."
+        },
+        {
+          "type": "worked_example",
+          "title": "Choosing a metric",
+          "problem": "A missed failure costs far more than a false alarm. Which metric should the team maximize?",
+          "steps": [
+            {
+              "md": "Missed failures = FN.",
+              "title": "What's costly?"
+            },
+            {
+              "md": "Recall = TP/(TP + FN).",
+              "title": "Which metric has FN in the denominator?",
+              "why": "Fewer FN → higher recall."
+            },
+            {
+              "md": "```python\nfor FN in [10, 5, 1]:\n    TP = 20 - FN\n    print(FN, \"missed -> recall\", TP / (TP + FN))\n```\n\n```text\n10 missed -> recall 0.5\n5 missed -> recall 0.75\n1 missed -> recall 0.95\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "Recall."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "metrics",
+          "title": "Score the failure model",
+          "language": "python",
+          "md": "Using `failures.csv` (made-up), count TP, TN, FP and FN and print accuracy, precision, recall and F1 (3 decimals).\nExpected output:\n\n```text\nTP 21 TN 364 FP 7 FN 8\naccuracy 0.962\nprecision 0.75\nrecall 0.724\nF1 0.737\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-metrics.py"
+              }
+            }
+          ],
+          "data": [
+            "failures.csv"
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "cls-acc",
+            "cls-prec",
+            "cls-rec",
+            "cls-f1",
+            "cls-print",
+            "cls-rare",
+            "cls-which"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Accuracy",
+              "(TP + TN)/all"
+            ],
+            [
+              "Precision",
+              "TP/(TP + FP)"
+            ],
+            [
+              "Recall",
+              "TP/(TP + FN)"
+            ],
+            [
+              "F1",
+              "2PR/(P + R)"
+            ],
+            [
+              "FP vs FN",
+              "False alarm vs missed case"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Fill in a confusion matrix.",
+            "Compute the four metrics.",
+            "Explain why accuracy misleads with rare classes."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice.",
+          "problems": [
+            "cls-rev-fn",
+            "cls-rev-metric",
+            "cls-rev-prec"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Score the failure model",
+          "md": "Full program for **Score the failure model** (try it yourself first):\n\n```python\nimport numpy as np\nimport pandas as pd\n\ndf = pd.read_csv(\"failures.csv\")\na, p = df[\"Actual\"], df[\"Predicted\"]\n\nTP = np.count_nonzero((a == 1) & (p == 1))\nTN = np.count_nonzero((a == 0) & (p == 0))\nFP = np.count_nonzero((a == 0) & (p == 1))\nFN = np.count_nonzero((a == 1) & (p == 0))\n\naccuracy = (TP + TN) / len(df)\nprecision = TP / (TP + FP)\nrecall = TP / (TP + FN)\nf1 = 2 * precision * recall / (precision + recall)\nprint(\"TP\", TP, \"TN\", TN, \"FP\", FP, \"FN\", FN)\nprint(\"accuracy\", round(accuracy, 3))\nprint(\"precision\", round(precision, 3))\nprint(\"recall\", round(recall, 3))\nprint(\"F1\", round(f1, 3))\n```\n\nOutput:\n\n```text\nTP 21 TN 364 FP 7 FN 8\naccuracy 0.962\nprecision 0.75\nrecall 0.724\nF1 0.737\n```"
+        }
+      ]
+    }
+  ]
+}

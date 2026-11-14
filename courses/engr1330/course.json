@@ -128,7 +128,10 @@
       "title": "Unit 15 · Multiple regression & machine learning",
       "from": "2026-12-02",
       "to": "2026-12-02",
-      "lessons": []
+      "lessons": [
+        "ml-04-multiple-regression",
+        "ml-05-classification"
+      ]
     }
   ],
   "exams": [

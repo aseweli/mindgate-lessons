@@ -1,0 +1,45 @@
+{
+  "title": "Catch every failure",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "statement": "Missing a failure is very expensive; false alarms are cheap. Which metric should you focus on?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Recall",
+        "Precision",
+        "None; use RMSE",
+        "Accuracy"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: it penalizes missed failures (FN).",
+        "It penalizes false alarms (FP).",
+        "RMSE is for regression.",
+        "It can be high while missing many failures."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which error is expensive?",
+    "FN.",
+    "Which metric has FN?"
+  ],
+  "solution": "Recall = TP/(TP + FN).",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

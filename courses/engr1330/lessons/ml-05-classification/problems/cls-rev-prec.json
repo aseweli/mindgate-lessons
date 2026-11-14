@@ -1,0 +1,45 @@
+{
+  "title": "Precision",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "statement": "A model raised 50 failure alarms; 40 machines really failed. What is its precision?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "0.2",
+        "1.25",
+        "It needs the number of missed failures",
+        "0.8"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That's the false-alarm share.",
+        "Upside down.",
+        "That's recall.",
+        "Correct: 40/50."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Precision = TP/(TP + FP).",
+    "TP = 40, TP + FP = 50.",
+    ""
+  ],
+  "solution": "40/50 = 0.8.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "What does this print? (cost)",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "h": "[3, 5, 7]",
+          "y": "[2, 5, 9]",
+          "v": 0.8333333333333334
+        },
+        {
+          "h": "[1, 2, 3, 4]",
+          "y": "[2, 2, 2, 2]",
+          "v": 0.75
+        },
+        {
+          "h": "[10, 12]",
+          "y": "[11, 15]",
+          "v": 2.5
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\nimport numpy as np\n\nh = np.array([$c.h])\ny = np.array([$c.y])\nprint(np.sum((h - y) ** 2) / (2 * len(y)))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "Errors h − y first.",
+    "Square and add them.",
+    "Divide by 2m."
+  ],
+  "solution": "J = Σ(h − y)²/(2m) = [$c.v].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.v]"
+      ],
+      "wrong": [
+        "2*[$c.v]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "False negative",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "statement": "In a failure model, a **false negative** is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "a correct 'failure' prediction",
+        "a correct 'no failure' prediction",
+        "a machine predicted to fail that didn't",
+        "a machine that failed but was predicted not to"
+      ],
+      "correct": 3,
+      "explanations": [
+        "True positive.",
+        "True negative.",
+        "That's a false positive.",
+        "Correct: a missed failure."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "'Negative' is the prediction.",
+    "'False' means the prediction was wrong.",
+    "Predicted 0, actually 1."
+  ],
+  "solution": "Predicted negative, actually positive: a missed failure.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

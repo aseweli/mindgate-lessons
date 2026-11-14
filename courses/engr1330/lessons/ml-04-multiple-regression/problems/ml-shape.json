@@ -1,0 +1,53 @@
+{
+  "title": "Shape of the augmented matrix",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "vars": {
+    "k": {
+      "int": [
+        2,
+        6
+      ]
+    },
+    "m": {
+      "pick": [
+        300,
+        3333,
+        1200
+      ]
+    }
+  },
+  "statement": "You have [$k] features and [$m] training examples, stored with one row per feature, and you stack a row of ones on\ntop. How many **rows** does the augmented matrix have?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "k+1",
+      "feedback": [
+        {
+          "answer": "k",
+          "message": "Don't forget the row of ones."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "One row per feature …",
+    "… plus the row of ones.",
+    "[$k] + 1."
+  ],
+  "solution": "[$k] feature rows + 1 row of ones = [$k]+1 rows (and [$m] columns).",
+  "tests": {
+    "a": {
+      "right": [
+        "[$k]+1"
+      ],
+      "wrong": [
+        "[$k]"
+      ]
+    }
+  }
+}

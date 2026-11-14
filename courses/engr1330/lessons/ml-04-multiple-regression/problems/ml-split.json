@@ -1,0 +1,56 @@
+{
+  "title": "Test set size",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "vars": {
+    "p": {
+      "pick": [
+        {
+          "n": 5000,
+          "t": 3333
+        },
+        {
+          "n": 600,
+          "t": 400
+        },
+        {
+          "n": 900,
+          "t": 600
+        }
+      ]
+    },
+    "n": {
+      "expr": "p.n"
+    },
+    "t": {
+      "expr": "p.t"
+    }
+  },
+  "statement": "After shuffling [$n] rows you take `train = rows.iloc[0:[$t]]` and `test = rows.iloc[[$t]:]`. How many rows are in the test set?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "n-t"
+    }
+  },
+  "hints": [
+    "`iloc[0:t]` takes rows 0 to t − 1.",
+    "`iloc[t:]` takes the rest.",
+    "[$n] − [$t]."
+  ],
+  "solution": "The test set has $[$n] - [$t]$ rows.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$n]-[$t]"
+      ],
+      "wrong": [
+        "[$t]"
+      ]
+    }
+  }
+}

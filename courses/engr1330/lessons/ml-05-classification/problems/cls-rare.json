@@ -1,0 +1,45 @@
+{
+  "title": "Rare failures",
+  "difficulty": 4,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "statement": "Only 3% of machines fail. A model that always predicts \"no failure\" has accuracy 0.97. What's wrong with it?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Its recall is 0: it never catches a failure",
+        "Nothing: 97% is excellent",
+        "Its accuracy is computed wrong",
+        "Its precision is 1"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Accuracy hides that it misses every failure.",
+        "0.97 is right; it's just the wrong metric.",
+        "It makes no positive predictions, so precision is undefined."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "How many failures does it catch?",
+    "None.",
+    "Which metric counts caught failures?"
+  ],
+  "solution": "With rare positives, accuracy is misleading; recall = 0.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

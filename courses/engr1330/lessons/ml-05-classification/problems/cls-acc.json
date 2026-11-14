@@ -1,0 +1,61 @@
+{
+  "title": "Accuracy",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "vars": {
+    "tp": {
+      "int": [
+        10,
+        40
+      ]
+    },
+    "fn": {
+      "int": [
+        3,
+        15
+      ]
+    },
+    "fp": {
+      "int": [
+        2,
+        20
+      ]
+    },
+    "tn": {
+      "int": [
+        150,
+        400
+      ]
+    }
+  },
+  "where": [
+    "fn != fp"
+  ],
+  "statement": "TP = [$tp], FN = [$fn], FP = [$fp], TN = [$tn]. What is the accuracy?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(tp+tn)/(tp+fn+fp+tn)"
+    }
+  },
+  "hints": [
+    "Correct predictions: TP + TN.",
+    "All predictions: the sum of all four.",
+    "Divide."
+  ],
+  "solution": "$([$tp]+[$tn])/([$tp]+[$fn]+[$fp]+[$tn])$.",
+  "tests": {
+    "a": {
+      "right": [
+        "([$tp]+[$tn])/([$tp]+[$fn]+[$fp]+[$tn])"
+      ],
+      "wrong": [
+        "[$tp]/([$tp]+[$fp])"
+      ]
+    }
+  }
+}

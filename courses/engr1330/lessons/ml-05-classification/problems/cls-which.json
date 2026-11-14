@@ -1,0 +1,45 @@
+{
+  "title": "Regression or classification?",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "statement": "Which task is **classification**?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Predicting tomorrow's temperature",
+        "Predicting a house's price",
+        "Predicting a part's tensile strength in MPa",
+        "Predicting whether a part will pass or fail inspection"
+      ],
+      "correct": 3,
+      "explanations": [
+        "A number: regression.",
+        "A number: regression.",
+        "A number: regression.",
+        "Correct: two categories."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is the output a category or a number?",
+    "Pass/fail is a category.",
+    ""
+  ],
+  "solution": "Pass/fail is a category, so it's classification.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

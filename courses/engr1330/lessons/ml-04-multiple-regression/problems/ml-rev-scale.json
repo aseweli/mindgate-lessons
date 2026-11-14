@@ -1,0 +1,45 @@
+{
+  "title": "Why scale features?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "statement": "Why convert features to standard units before gradient descent?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "To make the prices normal",
+        "Because NumPy can't handle big numbers",
+        "So features on very different scales don't slow or derail gradient descent",
+        "To remove the need for a test set"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Scaling the features doesn't change y.",
+        "It can.",
+        "Correct: it converges faster.",
+        "You still need one."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Income ≈ 70,000 vs house age ≈ 6.",
+    "One step size must suit all features.",
+    "Scaling makes them comparable."
+  ],
+  "solution": "Standard units put all features on the same scale, so gradient descent converges faster.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

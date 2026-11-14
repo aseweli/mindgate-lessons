@@ -1,0 +1,72 @@
+{
+  "title": "Evaluate the hypothesis",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "vars": {
+    "t0": {
+      "int": [
+        100,
+        300
+      ],
+      "step": 10
+    },
+    "t1": {
+      "int": [
+        10,
+        60
+      ],
+      "step": 5
+    },
+    "t2": {
+      "int": [
+        5,
+        40
+      ],
+      "step": 5
+    },
+    "x1": {
+      "pick": [
+        -1,
+        -0.5,
+        0.5,
+        1,
+        2
+      ]
+    },
+    "x2": {
+      "pick": [
+        -2,
+        -1,
+        0.5,
+        1.5
+      ]
+    }
+  },
+  "statement": "θ = ([$t0], [$t1], [$t2]) and a house has features (in standard units) $x_1 = [$x1]$, $x_2 = [$x2]$.\nWhat is $h_\\theta(x) = \\theta_0 + \\theta_1 x_1 + \\theta_2 x_2$?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "t0+t1*x1+t2*x2"
+    }
+  },
+  "hints": [
+    "Multiply each θ by its feature.",
+    "θ₀ multiplies the 1 in the row of ones.",
+    "Add everything."
+  ],
+  "solution": "$[$t0] + [$t1]([$x1]) + [$t2]([$x2])$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$t0]+[$t1]*([$x1])+[$t2]*([$x2])"
+      ],
+      "wrong": [
+        "[$t1]*([$x1])+[$t2]*([$x2])"
+      ]
+    }
+  }
+}

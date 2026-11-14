@@ -1,0 +1,67 @@
+{
+  "title": "Precision",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "vars": {
+    "tp": {
+      "int": [
+        10,
+        40
+      ]
+    },
+    "fn": {
+      "int": [
+        3,
+        15
+      ]
+    },
+    "fp": {
+      "int": [
+        2,
+        20
+      ]
+    },
+    "tn": {
+      "int": [
+        150,
+        400
+      ]
+    }
+  },
+  "where": [
+    "fn != fp"
+  ],
+  "statement": "TP = [$tp], FN = [$fn], FP = [$fp], TN = [$tn]. What is the precision?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "tp/(tp+fp)",
+      "feedback": [
+        {
+          "answer": "tp/(tp+fn)",
+          "message": "That's recall. Precision divides by everything **predicted** positive."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Precision is about the positive **predictions**.",
+    "Predicted positive = TP + FP.",
+    "TP / (TP + FP)."
+  ],
+  "solution": "$[$tp]/([$tp]+[$fp])$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$tp]/([$tp]+[$fp])"
+      ],
+      "wrong": [
+        "[$tp]/([$tp]+[$fn])"
+      ]
+    }
+  }
+}

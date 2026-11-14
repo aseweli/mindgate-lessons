@@ -1,0 +1,45 @@
+{
+  "title": "Kind of learning",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "statement": "A model learns from 5,000 past houses (features and sale price) to predict the price of a new house. This is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "reinforcement learning",
+        "unsupervised learning",
+        "supervised learning, classification",
+        "supervised learning, regression"
+      ],
+      "correct": 3,
+      "explanations": [
+        "No agent getting trial-and-error feedback.",
+        "The prices are labels.",
+        "Price is a number, not a category.",
+        "Correct: labeled examples, numeric output."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Are there labels?",
+    "Yes, the prices.",
+    "Is the output a number or a category?"
+  ],
+  "solution": "Labeled data + numeric output = supervised regression.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

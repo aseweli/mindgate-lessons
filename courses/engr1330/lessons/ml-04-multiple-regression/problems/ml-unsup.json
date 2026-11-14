@@ -1,0 +1,45 @@
+{
+  "title": "No labels",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "statement": "You group 2,000 sensor readings into clusters without any labels saying what each reading means. This is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "supervised regression",
+        "unsupervised learning",
+        "supervised classification",
+        "reinforcement learning"
+      ],
+      "correct": 1,
+      "explanations": [
+        "There are no labels.",
+        "Correct.",
+        "No labeled categories.",
+        "No rewards or actions."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Labels?",
+    "None.",
+    "Clustering is the classic example."
+  ],
+  "solution": "Finding groups without labels is unsupervised learning.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

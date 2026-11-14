@@ -1,0 +1,53 @@
+{
+  "title": "What does this print? (accuracy)",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "a": "[1, 0, 1, 1, 0, 0]",
+          "p": "[1, 0, 0, 1, 1, 0]",
+          "v": 0.6666666666666666
+        },
+        {
+          "a": "[0, 0, 1, 0]",
+          "p": "[0, 0, 1, 1]",
+          "v": 0.75
+        },
+        {
+          "a": "[1, 1, 0, 0, 0]",
+          "p": "[1, 0, 0, 0, 0]",
+          "v": 0.8
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\nimport numpy as np\n\nactual = np.array([$c.a])\npredicted = np.array([$c.p])\nprint(np.mean(actual == predicted))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "`actual == predicted` is True where they match.",
+    "The mean of True/False is the fraction of Trues.",
+    "That's the accuracy."
+  ],
+  "solution": "The fraction of matching positions is [$c.v].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.v]"
+      ],
+      "wrong": [
+        "1-[$c.v]"
+      ]
+    }
+  }
+}

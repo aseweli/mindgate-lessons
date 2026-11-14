@@ -1,0 +1,64 @@
+{
+  "title": "One update",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "vars": {
+    "t": {
+      "pick": [
+        0,
+        1.5,
+        -2,
+        4
+      ]
+    },
+    "g": {
+      "pick": [
+        -8,
+        -3,
+        2,
+        5,
+        10
+      ]
+    },
+    "a": {
+      "pick": [
+        0.01,
+        0.1,
+        0.5
+      ]
+    }
+  },
+  "statement": "A parameter is θ = [$t]. Its gradient is [$g] and the learning rate is α = [$a]. What is θ after one gradient-descent step?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "t-a*g",
+      "feedback": [
+        {
+          "answer": "t+a*g",
+          "message": "Step **against** the gradient: subtract."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "θ := θ − α·gradient.",
+    "α·gradient = [$a] × [$g].",
+    "Subtract from [$t]."
+  ],
+  "solution": "$[$t] - [$a]\\times([$g])$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$t]-[$a]*([$g])"
+      ],
+      "wrong": [
+        "[$t]+[$a]*([$g])"
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "F1 score",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "vars": {
+    "p": {
+      "pick": [
+        0.5,
+        0.6,
+        0.8,
+        0.9
+      ]
+    },
+    "r": {
+      "pick": [
+        0.4,
+        0.7,
+        0.75
+      ]
+    }
+  },
+  "statement": "A model has precision [$p] and recall [$r]. What is its F1 score?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "2*p*r/(p+r)",
+      "feedback": [
+        {
+          "answer": "(p+r)/2",
+          "message": "F1 is the harmonic mean, not the ordinary average."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "F1 = 2PR/(P + R).",
+    "Numerator 2 × [$p] × [$r].",
+    "Divide by [$p] + [$r]."
+  ],
+  "solution": "$2([$p])([$r])/([$p]+[$r])$.",
+  "tests": {
+    "a": {
+      "right": [
+        "2*[$p]*[$r]/([$p]+[$r])"
+      ],
+      "wrong": [
+        "([$p]+[$r])/2"
+      ]
+    }
+  }
+}

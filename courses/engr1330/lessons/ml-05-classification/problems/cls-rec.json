@@ -1,0 +1,67 @@
+{
+  "title": "Recall",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "final-project",
+    "machine-learning"
+  ],
+  "vars": {
+    "tp": {
+      "int": [
+        10,
+        40
+      ]
+    },
+    "fn": {
+      "int": [
+        3,
+        15
+      ]
+    },
+    "fp": {
+      "int": [
+        2,
+        20
+      ]
+    },
+    "tn": {
+      "int": [
+        150,
+        400
+      ]
+    }
+  },
+  "where": [
+    "fn != fp"
+  ],
+  "statement": "TP = [$tp], FN = [$fn], FP = [$fp], TN = [$tn]. What is the recall?\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "tp/(tp+fn)",
+      "feedback": [
+        {
+          "answer": "tp/(tp+fp)",
+          "message": "That's precision. Recall divides by everything **actually** positive."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Recall is about the **actual** positives.",
+    "Actual positive = TP + FN.",
+    "TP / (TP + FN)."
+  ],
+  "solution": "$[$tp]/([$tp]+[$fn])$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$tp]/([$tp]+[$fn])"
+      ],
+      "wrong": [
+        "[$tp]/([$tp]+[$fp])"
+      ]
+    }
+  }
+}

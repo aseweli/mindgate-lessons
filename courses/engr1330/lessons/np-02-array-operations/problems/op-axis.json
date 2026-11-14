@@ -1,0 +1,62 @@
+{
+  "title": "axis",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import numpy as np\nM = np.array([[90, 31, 94, 75], [66, 45, 46, 75], [14, 28, 12, 16]])\nprint(np.sum(M, axis=0))",
+          "out": "[170 104 152 166]",
+          "w": "[290 232 70]"
+        },
+        {
+          "code": "import numpy as np\nM = np.array([[90, 31, 94, 75], [66, 45, 46, 75], [14, 28, 12, 16]])\nprint(np.sum(M, axis=1))",
+          "out": "[290 232  70]",
+          "w": "[170 104 152 166]"
+        },
+        {
+          "code": "import numpy as np\nM = np.array([[90, 31, 94, 75], [66, 45, 46, 75], [14, 28, 12, 16]])\nprint(np.max(M, axis=0))",
+          "out": "[90 45 94 75]",
+          "w": "[94 75 28]"
+        },
+        {
+          "code": "import numpy as np\nM = np.array([[90, 31, 94, 75], [66, 45, 46, 75], [14, 28, 12, 16]])\nprint(M.min(axis=1))",
+          "out": "[31 45 12]",
+          "w": "[14 28 12 16]"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "axis=0 → one result per column.",
+    "axis=1 → one per row.",
+    ""
+  ],
+  "solution": "axis=0 down the columns, axis=1 across rows.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

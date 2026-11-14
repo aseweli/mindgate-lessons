@@ -1,0 +1,56 @@
+{
+  "title": "Missing values",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import pandas as pd\nimport numpy as np\ndf = pd.DataFrame({'a': [1, np.nan, 3], 'b': [np.nan, np.nan, 6]})\nprint(df.isnull().sum().sum())",
+          "out": "3",
+          "w": "2",
+          "v": 3.0
+        },
+        {
+          "code": "import pandas as pd\nimport numpy as np\ndf = pd.DataFrame({'a': [1, np.nan, 3], 'b': [np.nan, np.nan, 6]})\nprint(len(df.dropna()))",
+          "out": "1",
+          "w": "2",
+          "v": 1.0
+        },
+        {
+          "code": "import pandas as pd\nimport numpy as np\ndf = pd.DataFrame({'a': [1, np.nan, 3], 'b': [np.nan, np.nan, 6]})\nprint(df.dropna(axis=1).shape[1])",
+          "out": "0",
+          "w": "1",
+          "v": 0.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "isnull marks NaN.",
+    "dropna removes rows with any NaN.",
+    "axis=1 removes columns."
+  ],
+  "solution": "Count or drop the NaN cells.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

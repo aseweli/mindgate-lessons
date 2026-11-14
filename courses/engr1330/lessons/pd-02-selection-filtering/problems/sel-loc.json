@@ -1,0 +1,57 @@
+{
+  "title": "loc",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\nprint(df.loc[20, 'name'])",
+          "out": "B",
+          "w": "A"
+        },
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\nprint(df.loc[20:40]['name'].tolist())",
+          "out": "['B', 'C', 'D']",
+          "w": "['B', 'C']"
+        },
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\nprint(df.loc[50, 'team'])",
+          "out": "x",
+          "w": "E"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "loc uses index labels (10, 20, …).",
+    "loc slices include the end label.",
+    ""
+  ],
+  "solution": "loc uses labels and includes the end.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

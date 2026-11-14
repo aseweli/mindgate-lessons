@@ -1,0 +1,45 @@
+{
+  "title": "Imputation",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "statement": "Replacing missing values with a value (for example the column mean) is called …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "dropping (dropna)",
+        "concatenation",
+        "imputation (fillna)",
+        "renaming"
+      ],
+      "correct": 2,
+      "explanations": [
+        "That removes rows.",
+        "No.",
+        "Correct.",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "",
+    "",
+    ""
+  ],
+  "solution": "Imputation, with fillna.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

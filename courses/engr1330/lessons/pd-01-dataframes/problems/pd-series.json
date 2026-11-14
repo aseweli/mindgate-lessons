@@ -1,0 +1,50 @@
+{
+  "title": "Series lookups",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import pandas as pd\ns = pd.Series([10, 20, 30], index=['a', 'b', 'c'])\nprint(s['c'] - s['a'])",
+          "out": "20",
+          "w": "30",
+          "v": 20.0
+        },
+        {
+          "code": "import pandas as pd\ns = pd.Series(['K', 'a', 'T', 'a'])\nprint(s.value_counts()['a'])",
+          "out": "2",
+          "w": "1",
+          "v": 2.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "Index labels select values.",
+    "value_counts counts each value.",
+    ""
+  ],
+  "solution": "Look up by label.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

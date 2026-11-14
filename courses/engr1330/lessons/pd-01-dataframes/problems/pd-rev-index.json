@@ -1,0 +1,45 @@
+{
+  "title": "index_col",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "statement": "`pd.read_csv('movies.csv', index_col='title')` …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "drops the title column",
+        "uses the title column as the row labels",
+        "sorts by title",
+        "reads only the title column"
+      ],
+      "correct": 1,
+      "explanations": [
+        "It becomes the index.",
+        "Correct.",
+        "No sorting.",
+        "All columns are read."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "",
+    "",
+    ""
+  ],
+  "solution": "index_col sets the row labels.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

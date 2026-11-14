@@ -1,0 +1,45 @@
+{
+  "title": "A * B",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "statement": "For two 2×2 arrays, `A * B` computes …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "an error",
+        "the matrix product",
+        "the elementwise product",
+        "the dot product of the first rows"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Same shapes are fine.",
+        "That's A @ B.",
+        "Correct.",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "* vs @.",
+    "",
+    ""
+  ],
+  "solution": "* is elementwise.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

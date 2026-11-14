@@ -1,0 +1,57 @@
+{
+  "title": "Elementwise",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import numpy as np\nA = np.array([1, 2, 3])\nprint(A * A)",
+          "out": "[1 4 9]",
+          "w": "14"
+        },
+        {
+          "code": "import numpy as np\nA = np.array([1, 2, 3])\nprint(A ** 3)",
+          "out": "[ 1  8 27]",
+          "w": "[3 6 9]"
+        },
+        {
+          "code": "import numpy as np\nA = np.array([2, 4, 6])\nprint(A / 2 - 1)",
+          "out": "[0. 1. 2.]",
+          "w": "[1 2 3]"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Each element separately.",
+    "",
+    ""
+  ],
+  "solution": "Operations apply element by element.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

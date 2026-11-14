@@ -1,0 +1,45 @@
+{
+  "title": "List vs array",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "statement": "What does `[2, 3] + [2, 3]` give, compared with `np.array([2, 3]) + np.array([2, 3])`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Both `[2, 3, 2, 3]`",
+        "Both `[4, 6]`",
+        "Error vs `[4, 6]`",
+        "`[2, 3, 2, 3]` vs `array([4, 6])`"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Arrays add elementwise.",
+        "Lists don't add elementwise.",
+        "List + list is valid.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "+ on lists?",
+    "Concatenation.",
+    "+ on arrays: elementwise."
+  ],
+  "solution": "Lists concatenate; arrays add.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

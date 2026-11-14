@@ -1,0 +1,50 @@
+{
+  "title": "Duplicates",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'a': [1, 2, 2, 3], 'b': ['x', 'y', 'y', 'z']})\nprint(len(df.drop_duplicates()))",
+          "out": "3",
+          "w": "4",
+          "v": 3.0
+        },
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'a': [1, 2]})\nprint(len(pd.concat([df, df, df])))",
+          "out": "6",
+          "w": "2",
+          "v": 6.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "Duplicate rows match in every column.",
+    "concat stacks the tables.",
+    ""
+  ],
+  "solution": "Count rows after the operation.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

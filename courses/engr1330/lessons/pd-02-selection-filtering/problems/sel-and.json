@@ -1,0 +1,45 @@
+{
+  "title": "Which line works?",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "statement": "Which line keeps rows with score above 80 **and** team 'x'?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`df[df['score'] > 80 and df['team'] == 'x']`",
+        "`df[(df['score'] > 80) & (df['team'] == 'x')]`",
+        "`df[df['score'] > 80 & df['team'] == 'x']`",
+        "`df[(df['score'] > 80) | (df['team'] == 'x')]`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "`and` with Series raises ValueError.",
+        "Correct.",
+        "Without parentheses & is applied first.",
+        "That's or."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Series need & and |.",
+    "Each comparison in parentheses.",
+    ""
+  ],
+  "solution": "Use & with parentheses around each condition.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

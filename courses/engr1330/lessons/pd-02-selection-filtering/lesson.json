@@ -1,0 +1,242 @@
+{
+  "id": "pd-02-selection-filtering",
+  "title": "pandas selection: loc, iloc, conditions, sorting and apply",
+  "short": "Selecting & filtering",
+  "minutes": 50,
+  "difficulty": 3,
+  "objective": "Select columns and rows with [], loc and iloc, filter with conditions combined by & and |, use isin, sort with sort_values, and create columns with apply.",
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "requires": [
+    "pd-01-dataframes"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "df['col']",
+              "One column as a Series."
+            ],
+            [
+              "df[['a', 'b']]",
+              "Several columns as a DataFrame."
+            ],
+            [
+              "loc",
+              "Select by labels; slices include the end."
+            ],
+            [
+              "iloc",
+              "Select by integer position; slices exclude the end."
+            ],
+            [
+              "Boolean filter",
+              "df[condition] keeps rows where it's True."
+            ],
+            [
+              "isin",
+              "True if the value is in a list."
+            ],
+            [
+              "sort_values",
+              "Sort rows by one or more columns."
+            ],
+            [
+              "apply",
+              "Run a function on every value of a column."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **`and` / `or` with Series** raise ValueError; use `&` and `|` with parentheses.\n- **Missing parentheses**: `df[\"a\"] > 5 & df[\"b\"] < 3` is parsed wrong.\n- **loc vs iloc ends**: loc includes the end label; iloc excludes the end position.\n- **sort_values doesn't sort in place** unless you assign it.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools. Expect: which line selects given rows, loc vs iloc, combining conditions, and the result of sort_values.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "vmEHCJofslg",
+          "title": "Complete Python Pandas Data Science Tutorial",
+          "channel": "Keith Galli",
+          "focus": "Filtering, sorting and conditional selection (middle chapters).",
+          "start": "0:00",
+          "end": "30:00"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "A two-condition query",
+          "problem": "List the Sci-Fi films longer than 120 minutes, highest rated first.",
+          "steps": [
+            {
+              "md": "`(df['genre'] == 'Sci-Fi') & (df['duration'] > 120)`.",
+              "title": "Condition",
+              "why": "Parentheses around each comparison."
+            },
+            {
+              "md": "`.sort_values('avg_vote', ascending=False)`.",
+              "title": "Sort"
+            },
+            {
+              "md": "```python\nimport pandas as pd\n\ndf = pd.read_csv(\"movies.csv\", index_col=\"title\")\nq = df[(df[\"genre\"] == \"Sci-Fi\") & (df[\"duration\"] > 120)].sort_values(\"avg_vote\", ascending=False)\nprint(q[[\"duration\", \"avg_vote\"]])\n```\n\n```text\n              duration  avg_vote\ntitle                           \nIron Valley        136       8.6\nCold Front         143       7.6\nRed Canyon         159       6.1\nPrairie Wind       139       6.0\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "Filter, then sort."
+        },
+        {
+          "type": "worked_example",
+          "title": "loc vs iloc",
+          "problem": "Get the first three rows by position and the rows from 'Glass City' to 'Silent Gear' by label.",
+          "steps": [
+            {
+              "md": "`df.iloc[0:3]`: positions 0, 1, 2.",
+              "title": "iloc"
+            },
+            {
+              "md": "`df.loc['Glass City':'Silent Gear']`: both ends included.",
+              "title": "loc"
+            },
+            {
+              "md": "```python\nimport pandas as pd\n\ndf = pd.read_csv(\"movies.csv\", index_col=\"title\")\nprint(df.iloc[0:3].index.tolist())\nprint(df.loc[\"Glass City\":\"Silent Gear\"].index.tolist())\n```\n\n```text\n['Steel Bridge', 'Night Signal', 'Red Canyon']\n['Glass City', 'Deep Current', 'Silent Gear']\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "Different end rules."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "query",
+          "title": "Query the movies",
+          "language": "python",
+          "md": "Using `movies.csv` (made-up), print: the number of films after 2010; the titles of films by Ben Cole sorted by\nrating (highest first); and how many films are rated \"good\" (≥ 8.0) using `apply`. Expected output:\n\n```text\n10\n['Night Signal', 'Second Law', 'The Last Circuit', 'Copper Moon']\n5\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-query.py"
+              }
+            }
+          ],
+          "data": [
+            "movies.csv"
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "sel-iloc",
+            "sel-loc",
+            "sel-cond",
+            "sel-sort",
+            "sel-and",
+            "sel-apply"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "df['c'] vs df[['c']]",
+              "Series vs DataFrame"
+            ],
+            [
+              "loc / iloc",
+              "Labels (end included) / positions (end excluded)"
+            ],
+            [
+              "Combine conditions",
+              "& and | with parentheses"
+            ],
+            [
+              "isin",
+              "Value in a list"
+            ],
+            [
+              "apply",
+              "Function on each value"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Select rows with loc and iloc.",
+            "Filter with several conditions.",
+            "Sort and apply."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 2.",
+          "problems": [
+            "sel-rev-brackets",
+            "sel-rev-isin",
+            "sel-rev-multi"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Query the movies",
+          "md": "Full program for **Query the movies** (try it yourself first):\n\n```python\nimport pandas as pd\n\ndf = pd.read_csv(\"movies.csv\", index_col=\"title\")\nrecent = df[df[\"year\"] > 2010]\nprint(len(recent))\nben = df[df[\"director\"] == \"Ben Cole\"].sort_values(\"avg_vote\", ascending=False)\nprint(ben.index.tolist())\n\ndef category(x):\n    return \"good\" if x >= 8.0 else \"average\"\n\ndf[\"category\"] = df[\"avg_vote\"].apply(category)\nprint((df[\"category\"] == \"good\").sum())\n```\n\nOutput:\n\n```text\n10\n['Night Signal', 'Second Law', 'The Last Circuit', 'Copper Moon']\n5\n```"
+        }
+      ]
+    }
+  ]
+}

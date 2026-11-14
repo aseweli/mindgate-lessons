@@ -1,0 +1,45 @@
+{
+  "title": "Which axis?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "statement": "A 30×5 array has 30 days (rows) of 5 sensors (columns). Which gives each sensor's average?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`data.mean()`",
+        "`data.mean(axis=1)`",
+        "`data.mean(axis=5)`",
+        "`data.mean(axis=0)`"
+      ],
+      "correct": 3,
+      "explanations": [
+        "One number.",
+        "One per day.",
+        "No axis 5.",
+        "Correct: one value per column."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Sensors are columns.",
+    "axis=0 → per column.",
+    ""
+  ],
+  "solution": "axis=0 averages down each column.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

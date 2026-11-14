@@ -1,0 +1,45 @@
+{
+  "title": "randint",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "statement": "`np.random.randint(1, 50, (5, 3))` gives …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "a 5×3 array of integers from 1 to 49",
+        "a 3×5 array",
+        "15 floats in [1, 50)",
+        "a 5×3 array from 1 to 50"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Shape (5, 3).",
+        "Integers.",
+        "50 is excluded."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "hi excluded.",
+    "",
+    ""
+  ],
+  "solution": "Integers 1..49 in a 5×3 array.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

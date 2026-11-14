@@ -1,0 +1,57 @@
+{
+  "title": "Cross product",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import numpy as np\nprint(np.cross([2, 3, 4], [5, 6, 7]))",
+          "out": "[-3  6 -3]",
+          "w": "[3 -6 3]"
+        },
+        {
+          "code": "import numpy as np\nprint(np.cross([0, 1, 0], [1, 0, 0]))",
+          "out": "[ 0  0 -1]",
+          "w": "[0 0 1]"
+        },
+        {
+          "code": "import numpy as np\nprint(np.cross([1, 2, 0], [3, 1, 0]))",
+          "out": "[ 0  0 -5]",
+          "w": "[0 0 5]"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Use the component formula.",
+    "Order matters.",
+    ""
+  ],
+  "solution": "Cross product components.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

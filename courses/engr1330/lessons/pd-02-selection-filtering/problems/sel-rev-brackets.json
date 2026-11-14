@@ -1,0 +1,45 @@
+{
+  "title": "Series or DataFrame?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "statement": "`df[['score']]` returns …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "a Series",
+        "a number",
+        "a DataFrame with one column",
+        "an error"
+      ],
+      "correct": 2,
+      "explanations": [
+        "That's df['score'].",
+        "No.",
+        "Correct: a list of names.",
+        "Valid."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Double brackets = a list.",
+    "",
+    ""
+  ],
+  "solution": "A list of column names gives a DataFrame.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

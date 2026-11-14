@@ -1,0 +1,241 @@
+{
+  "id": "np-01-arrays",
+  "title": "NumPy arrays: creating, indexing, slicing and masks",
+  "short": "NumPy arrays",
+  "minutes": 50,
+  "difficulty": 2,
+  "objective": "Create 1D and 2D arrays (array, zeros, ones, eye, arange, linspace, random), read shape, reshape, index and slice rows and columns, select with boolean masks, and copy safely.",
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "ndarray",
+              "NumPy's array: same-type elements in a grid."
+            ],
+            [
+              "shape",
+              "Tuple of sizes per axis, e.g. (2, 3)."
+            ],
+            [
+              "arange",
+              "Evenly spaced by step (stop excluded)."
+            ],
+            [
+              "linspace",
+              "num evenly spaced values, stop included."
+            ],
+            [
+              "Boolean mask",
+              "True/False array used to select elements."
+            ],
+            [
+              "View",
+              "A slice sharing data with the original."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **List vs array `+`**: `[2, 3] + [2, 3]` concatenates; `np.array([2, 3]) + np.array([2, 3])` adds.\n- **Ragged lists**: `np.array([[1, 2, 3], [4, 6]])` is an error in current NumPy.\n- **arange vs linspace**: arange excludes stop; linspace includes it and takes a count.\n- **Slices are views**: modify a copy (`.copy()`) if you need the original intact.\n- **Masks with `and`**: use `&` and parentheses: `v[(v > 2) & (v < 6)]`.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools. Review items: dimension and shape, list vs array, creating arrays (random, arange, linspace), slicing, conditional selection, reshape.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "xECXZ3tyONo",
+          "title": "Learn NUMPY in 5 minutes",
+          "channel": "Python Programmer",
+          "focus": "Creating arrays, shape and basic operations.",
+          "start": "0:00",
+          "end": "13:37"
+        },
+        {
+          "type": "video",
+          "youtube": "GB9ByFAIAH4",
+          "title": "Complete Python NumPy Tutorial",
+          "channel": "Keith Galli",
+          "focus": "Indexing, slicing and boolean masks (use the chapters for those parts).",
+          "start": "0:00",
+          "end": "30:00"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Shape and dimension",
+          "problem": "For `my_list = [2, 3, 4]` and `my_array = np.array([2, 3, 4])`, compare `+` and find the shape.",
+          "steps": [
+            {
+              "md": "`my_array.shape` is (3,): one axis with 3 elements.",
+              "title": "Shape"
+            },
+            {
+              "md": "",
+              "title": "Lists concatenate"
+            },
+            {
+              "md": "",
+              "title": "Arrays add elementwise"
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nmy_list = [2, 3, 4]\nmy_array = np.array([2, 3, 4])\nprint(my_array.shape, my_array.ndim)\nprint(my_list + my_list)\nprint(my_array + my_array)\n```\n\n```text\n(3,) 1\n[2, 3, 4, 2, 3, 4]\n[4 6 8]\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "(3,); concatenation vs addition."
+        },
+        {
+          "type": "worked_example",
+          "title": "Even numbers and their ratio",
+          "problem": "From 25 random integers 5..105 (seed 3), select the evens and compute the ratio of evens to odds.",
+          "steps": [
+            {
+              "md": "`np.random.randint(5, 106, 25)`.",
+              "title": "Generate",
+              "why": "hi is excluded, so 106."
+            },
+            {
+              "md": "`arr[arr % 2 == 0]`.",
+              "title": "Mask"
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nnp.random.seed(3)\narr = np.sort(np.random.randint(5, 106, 25))\nevens = arr[arr % 2 == 0]\nodds = arr[arr % 2 == 1]\nprint(arr)\nprint(len(evens), len(odds), round(len(evens) / len(odds), 3))\n```\n\n```text\n[  5   7   8  15  19  24  25  26  26  27  29  31  43  44  46  49  61  68\n  71  77  79  86  95  98 101]\n9 16 0.562\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "A mask selects the evens in one line."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "grid",
+          "title": "Slice a sensor grid",
+          "language": "python",
+          "md": "The starter builds a 4×5 grid of readings. Print: its shape, the element in row 2 column 3, the whole second\ncolumn, the bottom-right 2×2 block, and all readings above 50. Expected output:\n\n```text\n(4, 5)\n140\n[ 20  70 120 170]\n[[140 150]\n [190 200]]\n[ 60  70  80  90 100 110 120 130 140 150 160 170 180 190 200]\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-grid.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "np-shape",
+            "np-create",
+            "np-index",
+            "np-mask",
+            "np-view",
+            "np-list-add"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "shape",
+              "(rows, cols)"
+            ],
+            [
+              "arange / linspace",
+              "By step, stop excluded / by count, stop included"
+            ],
+            [
+              "arr[r, c]",
+              "Row then column"
+            ],
+            [
+              "Mask",
+              "arr[arr > 3]; combine with &"
+            ],
+            [
+              "Slice",
+              "A view; use .copy()"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Create arrays several ways.",
+            "Index and slice 2D arrays.",
+            "Use masks."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 2.",
+          "problems": [
+            "np-rev-reshape",
+            "np-rev-randint",
+            "np-rev-speed"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Slice a sensor grid",
+          "md": "Full program for **Slice a sensor grid** (try it yourself first):\n\n```python\nimport numpy as np\n\ngrid = np.arange(10, 210, 10).reshape(4, 5)\nprint(grid.shape)\nprint(grid[2, 3])\nprint(grid[:, 1])\nprint(grid[2:4, 3:5])\nprint(grid[grid > 50])\n```\n\nOutput:\n\n```text\n(4, 5)\n140\n[ 20  70 120 170]\n[[140 150]\n [190 200]]\n[ 60  70  80  90 100 110 120 130 140 150 160 170 180 190 200]\n```"
+        }
+      ]
+    }
+  ]
+}

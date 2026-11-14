@@ -1,0 +1,45 @@
+{
+  "title": "Why NumPy?",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "statement": "A main advantage of NumPy arrays over lists is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "they have no shape",
+        "they can mix types freely",
+        "they can't be changed",
+        "fast elementwise math without writing loops"
+      ],
+      "correct": 3,
+      "explanations": [
+        "They do.",
+        "Lists do that; arrays have one type.",
+        "They can.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "",
+    "",
+    ""
+  ],
+  "solution": "Vectorized, fast operations.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

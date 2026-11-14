@@ -1,0 +1,70 @@
+{
+  "title": "Dot product",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "a1": {
+      "int": [
+        -3,
+        6
+      ]
+    },
+    "a2": {
+      "int": [
+        -3,
+        6
+      ]
+    },
+    "a3": {
+      "int": [
+        -3,
+        6
+      ]
+    },
+    "b1": {
+      "int": [
+        -3,
+        6
+      ]
+    },
+    "b2": {
+      "int": [
+        -3,
+        6
+      ]
+    },
+    "b3": {
+      "int": [
+        -3,
+        6
+      ]
+    }
+  },
+  "statement": "Compute $\\mathbf A\\cdot\\mathbf B$ for $\\mathbf A = ([$a1], [$a2], [$a3])$ and $\\mathbf B = ([$b1], [$b2], [$b3])$.\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a1*b1+a2*b2+a3*b3"
+    }
+  },
+  "hints": [
+    "Multiply matching entries.",
+    "Add the three products.",
+    ""
+  ],
+  "solution": "$[$a1]\\cdot[$b1] + [$a2]\\cdot[$b2] + [$a3]\\cdot[$b3]$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$a1]*[$b1]+[$a2]*[$b2]+[$a3]*[$b3]"
+      ],
+      "wrong": [
+        "[$a1]*[$b1]+[$a2]*[$b2]+[$a3]*[$b3]+1"
+      ]
+    }
+  }
+}

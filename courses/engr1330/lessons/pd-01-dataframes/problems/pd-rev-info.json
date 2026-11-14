@@ -1,0 +1,45 @@
+{
+  "title": "First look",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "statement": "Which call shows column types and non-null counts?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`df.head()`",
+        "`df.shape`",
+        "`df.info()`",
+        "`df.describe()`"
+      ],
+      "correct": 2,
+      "explanations": [
+        "First rows.",
+        "Just the size.",
+        "Correct.",
+        "Summary statistics."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "",
+    "",
+    ""
+  ],
+  "solution": "info() lists types and non-null counts.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

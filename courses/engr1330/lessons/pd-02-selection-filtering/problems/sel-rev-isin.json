@@ -1,0 +1,45 @@
+{
+  "title": "isin",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "statement": "`df[df['director'].isin(['Ana Ruiz', 'Fay Lin'])]` is the same as …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`df[['Ana Ruiz', 'Fay Lin']]`",
+        "`df.loc['Ana Ruiz':'Fay Lin']`",
+        "`df[(df['director'] == 'Ana Ruiz') | (df['director'] == 'Fay Lin')]`",
+        "the same with &"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Those aren't columns.",
+        "That slices row labels.",
+        "Correct.",
+        "A director can't be both."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "isin = any of the values.",
+    "",
+    ""
+  ],
+  "solution": "isin is an or over the list.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

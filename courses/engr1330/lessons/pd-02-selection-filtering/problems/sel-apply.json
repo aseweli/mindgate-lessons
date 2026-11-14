@@ -1,0 +1,50 @@
+{
+  "title": "apply",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\ndf['pass'] = df['score'].apply(lambda s: 'yes' if s >= 70 else 'no')\nprint((df['pass'] == 'yes').sum())",
+          "out": "4",
+          "w": "5",
+          "v": 4.0
+        },
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\ndf['double'] = df['score'].apply(lambda s: s * 2)\nprint(df['double'].max())",
+          "out": "182",
+          "w": "91",
+          "v": 182.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "apply runs the function on each value.",
+    "Count or take the max afterwards.",
+    ""
+  ],
+  "solution": "apply transforms each value.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

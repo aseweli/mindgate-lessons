@@ -1,0 +1,45 @@
+{
+  "title": "Reshape",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "statement": "Which reshape of a 3×2 array is valid?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "(4, 2)",
+        "(3, 3)",
+        "(2, 2)",
+        "(2, 3)"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Needs 8.",
+        "Needs 9.",
+        "Needs 4.",
+        "Correct: 6 elements."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Count elements.",
+    "",
+    ""
+  ],
+  "solution": "The new shape must hold the same 6 elements.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

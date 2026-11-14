@@ -1,0 +1,57 @@
+{
+  "title": "Matrix product",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import numpy as np\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\nprint((A @ B)[0])",
+          "out": "[19 22]",
+          "w": "[5 12]"
+        },
+        {
+          "code": "import numpy as np\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\nprint((A * B)[1])",
+          "out": "[21 32]",
+          "w": "[43 50]"
+        },
+        {
+          "code": "import numpy as np\nA = np.array([[1, 2, 3], [4, 5, 6]])\nB = np.array([[1, 2], [3, 4], [5, 6]])\nprint((A @ B).shape)",
+          "out": "(2, 2)",
+          "w": "(3, 3)"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "@ is row × column.",
+    "* is elementwise.",
+    "(m×n)(n×p) → (m×p)."
+  ],
+  "solution": "Compute the requested part.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

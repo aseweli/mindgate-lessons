@@ -1,0 +1,57 @@
+{
+  "title": "sort_values",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\nprint(df.sort_values('score')['name'].tolist()[0])",
+          "out": "D",
+          "w": "A"
+        },
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\nprint(df.sort_values('score', ascending=False)['name'].tolist()[:2])",
+          "out": "['B', 'E']",
+          "w": "['B', 'C']"
+        },
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\nprint(df.sort_values(['team', 'score'])['name'].tolist())",
+          "out": "['A', 'C', 'E', 'D', 'B']",
+          "w": "['A', 'B', 'C', 'D', 'E']"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Ascending by default.",
+    "Ties keep their original order.",
+    "A list sorts by the first column, then the next."
+  ],
+  "solution": "Sort, then read the names.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

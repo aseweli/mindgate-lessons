@@ -1,0 +1,45 @@
+{
+  "title": "Why didn't it change?",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "statement": "```python\ndf = pd.read_csv(\"movies.csv\")\ndf.dropna()\nprint(df.isnull().sum().sum())\n```\n\nIt still prints 2. Why?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "dropna only works on columns",
+        "isnull counts non-missing values",
+        "The file can't be changed",
+        "dropna returns a new DataFrame; write `df = df.dropna()`"
+      ],
+      "correct": 3,
+      "explanations": [
+        "It drops rows by default.",
+        "It counts missing ones.",
+        "df is in memory.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Does dropna change df in place?",
+    "No.",
+    ""
+  ],
+  "solution": "Assign the result: `df = df.dropna()`.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

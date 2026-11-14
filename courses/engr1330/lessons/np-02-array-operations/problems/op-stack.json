@@ -1,0 +1,57 @@
+{
+  "title": "Stacking",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import numpy as np\nprint(np.vstack((np.ones((5, 4)), np.zeros((3, 4)))).shape)",
+          "out": "(8, 4)",
+          "w": "(5, 4)"
+        },
+        {
+          "code": "import numpy as np\nprint(np.hstack((np.ones((8, 2)), np.zeros((8, 4)))).shape)",
+          "out": "(8, 6)",
+          "w": "(8, 2)"
+        },
+        {
+          "code": "import numpy as np\nprint(np.transpose(np.ones((2, 7))).shape)",
+          "out": "(7, 2)",
+          "w": "(2, 7)"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "vstack adds rows.",
+    "hstack adds columns.",
+    "Transpose swaps the dimensions."
+  ],
+  "solution": "Add up rows or columns.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

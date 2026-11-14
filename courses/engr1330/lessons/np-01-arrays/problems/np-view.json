@@ -1,0 +1,57 @@
+{
+  "title": "View or copy?",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import numpy as np\na = np.arange(0, 6)\ns = a[0:3]\ns[:] = 9\nprint(a)",
+          "out": "[9 9 9 3 4 5]",
+          "w": "[0 1 2 3 4 5]"
+        },
+        {
+          "code": "import numpy as np\na = np.arange(0, 6)\nc = a.copy()\nc[0:3] = 9\nprint(a)",
+          "out": "[0 1 2 3 4 5]",
+          "w": "[9 9 9 3 4 5]"
+        },
+        {
+          "code": "import numpy as np\nx = np.array([1, 2, 3])\ny = x\ny[0] = 50\nprint(x)",
+          "out": "[50  2  3]",
+          "w": "[1 2 3]"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Is it a slice (view), an alias or a copy?",
+    "Views and aliases share data.",
+    "copy() doesn't."
+  ],
+  "solution": "Views and aliases change the original; copies don't.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

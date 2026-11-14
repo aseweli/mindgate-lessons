@@ -1,0 +1,45 @@
+{
+  "title": "AB vs BA",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "statement": "For square matrices, is A @ B always equal to B @ A?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Only for 2×2",
+        "No, matrix multiplication is not commutative",
+        "Yes",
+        "Only with integers"
+      ],
+      "correct": 1,
+      "explanations": [
+        "No.",
+        "Correct.",
+        "Try P and Q from Learn.",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "",
+    "",
+    ""
+  ],
+  "solution": "In general AB ≠ BA.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

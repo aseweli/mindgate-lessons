@@ -1,0 +1,62 @@
+{
+  "title": "Masks",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import numpy as np\narr = np.arange(1, 10, 2)\nprint(arr[arr > 3])",
+          "out": "[5 7 9]",
+          "w": "[3 5 7 9]"
+        },
+        {
+          "code": "import numpy as np\nv = np.arange(0, 11)\nprint(len(v[v != 5]))",
+          "out": "10",
+          "w": "11"
+        },
+        {
+          "code": "import numpy as np\nv = np.array([4, -2, 7, 0, -5])\nprint(v[v < 0].sum())",
+          "out": "-7",
+          "w": "-2"
+        },
+        {
+          "code": "import numpy as np\nv = np.arange(10)\nprint(v[(v > 2) & (v % 2 == 0)])",
+          "out": "[4 6 8]",
+          "w": "[2 4 6 8]"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Build the True/False array.",
+    "Keep the True positions.",
+    "& means and."
+  ],
+  "solution": "The mask keeps elements where it is True.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

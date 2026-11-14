@@ -1,0 +1,62 @@
+{
+  "title": "arange and linspace",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import numpy as np\nprint(np.arange(1, 10, 3))",
+          "out": "[1 4 7]",
+          "w": "[1 4 7 10]"
+        },
+        {
+          "code": "import numpy as np\nprint(np.linspace(1, 10, 3))",
+          "out": "[ 1.   5.5 10. ]",
+          "w": "[1. 4. 7.]"
+        },
+        {
+          "code": "import numpy as np\nprint(len(np.arange(0, 2, 0.1)))",
+          "out": "20",
+          "w": "21"
+        },
+        {
+          "code": "import numpy as np\nprint(np.linspace(0, 1, 5)[1])",
+          "out": "0.25",
+          "w": "0.2"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "arange excludes stop.",
+    "linspace includes stop and takes a count.",
+    ""
+  ],
+  "solution": "arange: by step; linspace: by count.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

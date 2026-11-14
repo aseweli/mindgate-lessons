@@ -1,0 +1,238 @@
+{
+  "id": "pd-01-dataframes",
+  "title": "pandas Series and DataFrames: create, read and explore",
+  "short": "DataFrames",
+  "minutes": 50,
+  "difficulty": 2,
+  "objective": "Create Series and DataFrames, read a CSV, explore it with head, info, shape, describe and value_counts, rename columns, and handle missing values and duplicates.",
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "requires": [
+    "np-01-arrays"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Series",
+              "One labeled column of data."
+            ],
+            [
+              "DataFrame",
+              "A table: columns of Series with a shared index."
+            ],
+            [
+              "read_csv",
+              "Load a CSV file into a DataFrame."
+            ],
+            [
+              "head / tail",
+              "First / last rows (5 by default)."
+            ],
+            [
+              "info / describe",
+              "Column types and non-null counts / summary statistics."
+            ],
+            [
+              "value_counts",
+              "Frequency of each value."
+            ],
+            [
+              "NaN",
+              "A missing value."
+            ],
+            [
+              "dropna / fillna",
+              "Remove / replace missing values."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **`.shape()`**: shape is an attribute, not a method: `df.shape`.\n- **Forgetting to assign**: `df.dropna()` doesn't change df unless `df = df.dropna()`.\n- **dropna drops rows by default**: `axis=1` drops columns.\n- **Wrong column name** → KeyError; check `df.columns`.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools. Review items: pandas data structures, reading CSV files, functions to explore the data.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "vmEHCJofslg",
+          "title": "Complete Python Pandas Data Science Tutorial",
+          "channel": "Keith Galli",
+          "focus": "Reading CSVs and exploring a DataFrame (first chapters).",
+          "start": "0:00",
+          "end": "20:00"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Explore a new file",
+          "problem": "For `movies.csv`, report rows × columns, the column names and how many films each director made.",
+          "steps": [
+            {
+              "md": "`df.shape`.",
+              "title": "Shape"
+            },
+            {
+              "md": "`df.columns`.",
+              "title": "Columns"
+            },
+            {
+              "md": "`df['director'].value_counts()`.",
+              "title": "Counts"
+            },
+            {
+              "md": "```python\nimport pandas as pd\n\ndf = pd.read_csv(\"movies.csv\")\nprint(df.shape)\nprint(df[\"director\"].value_counts().head(3))\n```\n\n```text\n(20, 8)\ndirector\nAna Ruiz    5\nBen Cole    4\nDee Park    4\nName: count, dtype: int64\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "Three lines of code to know a dataset."
+        },
+        {
+          "type": "worked_example",
+          "title": "A new column",
+          "problem": "Add a column with the duration in hours (2 decimals) and show the longest film.",
+          "steps": [
+            {
+              "md": "`df['hours'] = (df['duration'] / 60).round(2)`.",
+              "title": "Compute",
+              "why": "Columns compute elementwise like NumPy arrays."
+            },
+            {
+              "md": "```python\nimport pandas as pd\n\ndf = pd.read_csv(\"movies.csv\")\ndf[\"hours\"] = (df[\"duration\"] / 60).round(2)\nprint(df[\"hours\"].max())\n```\n\n```text\n2.65\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "A new column from an existing one."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "explore",
+          "title": "Explore and clean",
+          "language": "python",
+          "md": "Load `movies.csv` (made-up). Print its shape, the number of missing values in `language`, the shape after\ndropping rows with missing values, and the mean `avg_vote` (2 decimals). Expected output:\n\n```text\n(20, 8)\n2\n(18, 8)\n6.98\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-explore.py"
+              }
+            }
+          ],
+          "data": [
+            "movies.csv"
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "pd-shape",
+            "pd-series",
+            "pd-dict-cols",
+            "pd-missing",
+            "pd-assign",
+            "pd-dup"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Series vs DataFrame",
+              "One column vs a table"
+            ],
+            [
+              "df.shape",
+              "(rows, cols), no parentheses"
+            ],
+            [
+              "info / describe",
+              "Types & nulls / statistics"
+            ],
+            [
+              "dropna / fillna",
+              "Remove / replace NaN (assign the result)"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Create a DataFrame from a dict.",
+            "Read and explore a CSV.",
+            "Handle missing values."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 2.",
+          "problems": [
+            "pd-rev-info",
+            "pd-rev-index",
+            "pd-rev-fill"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Explore and clean",
+          "md": "Full program for **Explore and clean** (try it yourself first):\n\n```python\nimport pandas as pd\n\ndf = pd.read_csv(\"movies.csv\")\nprint(df.shape)\nmissing = df[\"language\"].isnull().sum()\nprint(missing)\nclean = df.dropna()\nprint(clean.shape)\nprint(round(df[\"avg_vote\"].mean(), 2))\n```\n\nOutput:\n\n```text\n(20, 8)\n2\n(18, 8)\n6.98\n```"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "id": "np-03-linear-algebra",
+  "title": "Dot and cross products, matrix multiplication and linear systems",
+  "short": "Linear algebra",
+  "minutes": 50,
+  "difficulty": 4,
+  "objective": "Compute dot and cross products, multiply matrices with @ (and know the dimension rule), and solve linear systems with np.linalg.inv and np.linalg.solve.",
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "requires": [
+    "np-02-array-operations"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Dot product",
+              "Sum of products of matching entries; a scalar."
+            ],
+            [
+              "Cross product",
+              "3D vector perpendicular to both."
+            ],
+            [
+              "@",
+              "Matrix multiplication."
+            ],
+            [
+              "Inner dimensions",
+              "Columns of the first = rows of the second."
+            ],
+            [
+              "Inverse",
+              "A⁻¹ with A⁻¹A = I."
+            ],
+            [
+              "np.linalg.solve",
+              "Solves AX = B."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Formulas",
+          "items": [
+            {
+              "label": "Dot",
+              "latex": "\\mathbf A\\cdot\\mathbf B=\\sum a_ib_i=|A||B|\\cos\\theta"
+            },
+            {
+              "label": "Cross",
+              "latex": "\\mathbf A\\times\\mathbf B=[a_2b_3-a_3b_2,\\;a_3b_1-a_1b_3,\\;a_1b_2-a_2b_1]"
+            },
+            {
+              "label": "Shapes",
+              "latex": "(m\\times n)(n\\times p)\\to(m\\times p)"
+            },
+            {
+              "label": "Linear system",
+              "latex": "AX=B\\;\\Rightarrow\\;X=A^{-1}B"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **`*` for matrix multiplication**: use `@`.\n- **Dimension mismatch**: (2×3) @ (2×2) is an error.\n- **Cross product order**: swapping flips the sign.\n- **Singular matrix**: `inv` fails (or gives huge numbers) if rows are multiples of each other.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools. Review item: matrix multiplication / dot product.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "GB9ByFAIAH4",
+          "title": "Complete Python NumPy Tutorial",
+          "channel": "Keith Galli",
+          "focus": "The linear algebra chapter: matmul, determinant, inverse.",
+          "start": "0:00",
+          "end": "30:00"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Matrix product by hand",
+          "problem": "Compute $\\begin{bmatrix}2&4\\\\5&3\\end{bmatrix}\\begin{bmatrix}2&1\\\\1&2\\end{bmatrix}$.",
+          "steps": [
+            {
+              "md": "(2·2 + 4·1, 2·1 + 4·2) = (8, 10).",
+              "title": "Row 1",
+              "why": "Row × column."
+            },
+            {
+              "md": "(5·2 + 3·1, 5·1 + 3·2) = (13, 11).",
+              "title": "Row 2"
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nprint(np.array([[2, 4], [5, 3]]) @ np.array([[2, 1], [1, 2]]))\n```\n\n```text\n[[ 8 10]\n [13 11]]\n```",
+              "title": "Check"
+            }
+          ],
+          "answer": "[[8, 10], [13, 11]]"
+        },
+        {
+          "type": "worked_example",
+          "title": "Three currents",
+          "problem": "Solve 2x + y + z = 9, x + 3y + 2z = 13, 3x + 2y + z = 14.",
+          "steps": [
+            {
+              "md": "A = [[2,1,1],[1,3,2],[3,2,1]], B = [9,13,14].",
+              "title": "Matrix form",
+              "why": "Each row is one equation."
+            },
+            {
+              "md": "`np.linalg.solve(A, B)`.",
+              "title": "Solve"
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nA = np.array([[2, 1, 1], [1, 3, 2], [3, 2, 1]])\nB = np.array([9, 13, 14])\nX = np.linalg.solve(A, B)\nprint(np.round(X, 4))\nprint(np.allclose(A @ X, B))\n```\n\n```text\n[2.5 2.5 1.5]\nTrue\n```",
+              "title": "Complete program",
+              "why": "Check by multiplying back."
+            }
+          ],
+          "answer": "x = 2.5, y = 2.5, z = 1.5."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "mixture",
+          "title": "Acid mixture",
+          "language": "python",
+          "md": "How many ounces of a 30% and a 75% solution make 18 oz of a 45% solution? Set up $A$ and $B$, solve with\n`np.linalg.solve`, and print x and y (2 decimals). Expected output:\n\n```text\n30% solution: 12.0 oz\n75% solution: 6.0 oz\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-mixture.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "la-dot",
+            "la-cross",
+            "la-matmul",
+            "la-shape",
+            "la-mismatch",
+            "la-solve"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Dot",
+              "Sum of products → scalar"
+            ],
+            [
+              "Cross",
+              "Perpendicular vector; order matters"
+            ],
+            [
+              "@ vs *",
+              "Matrix product vs elementwise"
+            ],
+            [
+              "(m×n)(n×p)",
+              "→ (m×p)"
+            ],
+            [
+              "Solve AX = B",
+              "np.linalg.solve(A, B)"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Compute dot and cross products.",
+            "Multiply matrices by hand.",
+            "Solve a linear system."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 2.",
+          "problems": [
+            "la-rev-perp",
+            "la-rev-order",
+            "la-rev-solve"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Acid mixture",
+          "md": "Full program for **Acid mixture** (try it yourself first):\n\n```python\nimport numpy as np\n\nA = np.array([[1, 1], [0.30, 0.75]])\nB = np.array([18, 0.45 * 18])\nx, y = np.linalg.solve(A, B)\nprint(\"30% solution:\", round(x, 2), \"oz\")\nprint(\"75% solution:\", round(y, 2), \"oz\")\n```\n\nOutput:\n\n```text\n30% solution: 12.0 oz\n75% solution: 6.0 oz\n```"
+        }
+      ]
+    }
+  ]
+}

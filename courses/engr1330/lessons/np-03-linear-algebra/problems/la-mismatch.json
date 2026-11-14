@@ -1,0 +1,45 @@
+{
+  "title": "Can they multiply?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "statement": "Which product is **undefined**?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "(3×2) @ (2×4)",
+        "(2×3) @ (2×2)",
+        "(2×2) @ (2×3)",
+        "(2×3) @ (3×2)"
+      ],
+      "correct": 1,
+      "explanations": [
+        "Valid → 3×4.",
+        "Correct: 3 ≠ 2.",
+        "Valid → 2×3.",
+        "Valid → 2×2."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Inner dimensions.",
+    "",
+    ""
+  ],
+  "solution": "Columns of the first must equal rows of the second.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

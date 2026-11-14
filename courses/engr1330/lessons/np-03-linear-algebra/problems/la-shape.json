@@ -1,0 +1,64 @@
+{
+  "title": "Result shape",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "m": {
+      "int": [
+        2,
+        6
+      ]
+    },
+    "n": {
+      "int": [
+        2,
+        6
+      ]
+    },
+    "p": {
+      "int": [
+        2,
+        6
+      ]
+    }
+  },
+  "statement": "A has shape ([$m], [$n]) and B has shape ([$n], [$p]). How many **rows** and **columns** does A @ B have?\n\na) rows =\n\n[_____]{a}\n\nb) columns =\n\n[_____]{b}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "m"
+    },
+    "b": {
+      "type": "number",
+      "value": "p"
+    }
+  },
+  "hints": [
+    "Inner dimensions match ([$n]).",
+    "Outer dimensions give the result.",
+    ""
+  ],
+  "solution": "([$m], [$p]).",
+  "tests": {
+    "a": {
+      "right": [
+        "[$m]"
+      ],
+      "wrong": [
+        "[$m]+[$n]+[$p]"
+      ]
+    },
+    "b": {
+      "right": [
+        "[$p]"
+      ],
+      "wrong": [
+        "[$m]+[$n]+[$p]"
+      ]
+    }
+  }
+}

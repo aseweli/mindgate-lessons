@@ -1,0 +1,45 @@
+{
+  "title": "From a dict",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "statement": "In `pd.DataFrame({'title': [...], 'rating': [...]})`, the dictionary keys become …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "the index",
+        "rows",
+        "values",
+        "columns"
+      ],
+      "correct": 3,
+      "explanations": [
+        "The index is 0, 1, 2 … by default.",
+        "Each list fills a column.",
+        "Keys are labels.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "",
+    "",
+    ""
+  ],
+  "solution": "Keys → column names.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Filters",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\nprint(len(df[df['score'] > 80]))",
+          "out": "3",
+          "w": "2"
+        },
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\nprint(df[(df['score'] > 80) & (df['team'] == 'x')]['name'].tolist())",
+          "out": "['C', 'E']",
+          "w": "['B', 'C', 'E']"
+        },
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\nprint(len(df[(df['score'] < 65) | (df['team'] == 'y')]))",
+          "out": "2",
+          "w": "1"
+        },
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'name': ['A', 'B', 'C', 'D', 'E'], 'score': [72, 91, 85, 60, 91], 'team': ['x', 'y', 'x', 'y', 'x']}, index=[10, 20, 30, 40, 50])\nprint(df[df['name'].isin(['A', 'E'])]['score'].sum())",
+          "out": "163",
+          "w": "72"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Build the True/False column.",
+    "& needs both, | needs either.",
+    "isin checks membership."
+  ],
+  "solution": "Keep the rows where the condition is True.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

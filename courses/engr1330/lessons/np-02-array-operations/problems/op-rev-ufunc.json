@@ -1,0 +1,45 @@
+{
+  "title": "ufunc",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "statement": "`np.log(np.array([1, np.e]))` gives …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "an error",
+        "1.0",
+        "[1. e]",
+        "[0. 1.]"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Arrays are fine.",
+        "Elementwise, not a sum.",
+        "That's the input.",
+        "Correct: natural log of each element."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Elementwise.",
+    "ln(1) = 0, ln(e) = 1.",
+    ""
+  ],
+  "solution": "ufuncs apply to every element.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

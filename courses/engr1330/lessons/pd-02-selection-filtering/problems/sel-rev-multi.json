@@ -1,0 +1,45 @@
+{
+  "title": "Sort by two columns",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "statement": "`df.sort_values(by=['avg_vote', 'year'], ascending=[False, False])` …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "sorts by year first",
+        "filters the rows",
+        "sorts ascending",
+        "sorts by rating (highest first), breaking ties by the newest year"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Rating comes first.",
+        "Sorting keeps all rows.",
+        "Both False → descending.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "First column first.",
+    "",
+    ""
+  ],
+  "solution": "Primary key avg_vote, then year, both descending.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

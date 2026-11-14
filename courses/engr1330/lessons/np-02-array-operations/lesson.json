@@ -1,0 +1,230 @@
+{
+  "id": "np-02-array-operations",
+  "title": "Array math: elementwise operations, axes, sorting and stacking",
+  "short": "Array operations",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Apply arithmetic and universal functions elementwise, aggregate with sum/mean/max/argmax along an axis, sort by axis, stack and transpose arrays.",
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "requires": [
+    "np-01-arrays"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Elementwise",
+              "Applied to each element separately."
+            ],
+            [
+              "ufunc",
+              "Universal function: np.sqrt, np.sin, np.exp …"
+            ],
+            [
+              "axis=0",
+              "Down columns: one result per column."
+            ],
+            [
+              "axis=1",
+              "Across rows: one result per row."
+            ],
+            [
+              "argmax",
+              "Index of the largest element."
+            ],
+            [
+              "vstack / hstack",
+              "Stack vertically / horizontally."
+            ],
+            [
+              "Transpose",
+              "Swap rows and columns."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **axis=0 vs axis=1**: axis=0 collapses the rows, giving one value per **column**.\n- **`A * B` is not matrix multiplication** (that's `@`, next lesson).\n- **argmax without axis** returns a flattened index.\n- **vstack needs the same number of columns.**",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools. Review items: array operations, functionalities, sorting.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "GB9ByFAIAH4",
+          "title": "Complete Python NumPy Tutorial",
+          "channel": "Keith Galli",
+          "focus": "Math, statistics and axis arguments (later chapters).",
+          "start": "0:00",
+          "end": "30:00"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Column and row totals",
+          "problem": "Scores of 3 students on 4 labs are in a 3×4 array. Find each lab's average and each student's total.",
+          "steps": [
+            {
+              "md": "Columns → axis=0.",
+              "title": "Per lab"
+            },
+            {
+              "md": "Rows → axis=1.",
+              "title": "Per student"
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nscores = np.array([[80, 92, 75, 88], [70, 85, 90, 60], [95, 78, 84, 91]])\nprint(scores.mean(axis=0).round(1))\nprint(scores.sum(axis=1))\nprint(\"best student:\", np.argmax(scores.sum(axis=1)))\n```\n\n```text\n[81.7 85.  83.  79.7]\n[335 305 348]\nbest student: 2\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "Lab averages and student totals."
+        },
+        {
+          "type": "worked_example",
+          "title": "Apply a formula to all values",
+          "problem": "Convert temperatures [0, 25, 100] °C to °F without a loop.",
+          "steps": [
+            {
+              "md": "F = C·9/5 + 32 elementwise.",
+              "title": "Formula"
+            },
+            {
+              "md": "```python\nimport numpy as np\n\nc = np.array([0, 25, 100])\nprint(c * 9 / 5 + 32)\n```\n\n```text\n[ 32.  77. 212.]\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "[32. 77. 212.]"
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "ratio",
+          "title": "Even/odd ratio experiment",
+          "language": "python",
+          "md": "Repeat 5 times: draw 25 random integers from 5 to 105, sort them, and record the ratio of evens to odds.\nPrint the 5 ratios (rounded to 2 decimals) and their mean. Expected output:\n\n```text\n[2.12 0.79 0.39 0.92 1.08]\n1.061\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-ratio.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "op-elem",
+            "op-axis",
+            "op-argmax",
+            "op-sort",
+            "op-stack",
+            "op-which-axis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "axis=0",
+              "Down columns (per column)"
+            ],
+            [
+              "axis=1",
+              "Across rows (per row)"
+            ],
+            [
+              "argmax",
+              "Position of the max"
+            ],
+            [
+              "vstack / hstack",
+              "Rows / columns"
+            ],
+            [
+              "A.T",
+              "Transpose"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Apply formulas to whole arrays.",
+            "Use axis correctly.",
+            "Sort and stack arrays."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 2.",
+          "problems": [
+            "op-rev-star",
+            "op-rev-axis1",
+            "op-rev-ufunc"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Even/odd ratio experiment",
+          "md": "Full program for **Even/odd ratio experiment** (try it yourself first):\n\n```python\nimport numpy as np\n\nnp.random.seed(1330)\nratios = []\nfor trial in range(5):\n    arr = np.sort(np.random.randint(5, 106, 25))\n    evens = len(arr[arr % 2 == 0])\n    odds = len(arr[arr % 2 == 1])\n    ratios.append(evens / odds)\nratios = np.array(ratios)\nprint(np.round(ratios, 2))\nprint(round(np.mean(ratios), 3))\n```\n\nOutput:\n\n```text\n[2.12 0.79 0.39 0.92 1.08]\n1.061\n```"
+        }
+      ]
+    }
+  ]
+}

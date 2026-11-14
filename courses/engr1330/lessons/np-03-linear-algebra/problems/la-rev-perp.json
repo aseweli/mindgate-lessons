@@ -1,0 +1,45 @@
+{
+  "title": "Zero dot product",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "statement": "Two nonzero vectors have dot product 0. They are …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "opposite",
+        "equal",
+        "parallel",
+        "perpendicular"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That gives a negative dot.",
+        "No.",
+        "Then |dot| = |A||B|.",
+        "Correct: cos 90° = 0."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "A·B = |A||B|cos θ.",
+    "",
+    ""
+  ],
+  "solution": "cos θ = 0 → 90°.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

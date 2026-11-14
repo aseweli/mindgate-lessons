@@ -1,0 +1,52 @@
+{
+  "title": "Solve a system",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "numpy"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import numpy as np\nA = np.array([[1, 1], [1, -1]])\nB = np.array([10, 2])\nprint(np.linalg.solve(A, B))",
+          "out": "[6. 4.]",
+          "w": "[4. 6.]"
+        },
+        {
+          "code": "import numpy as np\nA = np.array([[2, 0], [0, 4]])\nB = np.array([6, 8])\nprint(np.linalg.solve(A, B))",
+          "out": "[3. 2.]",
+          "w": "[12. 32.]"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Write the equations.",
+    "x + y = 10 and x − y = 2.",
+    ""
+  ],
+  "solution": "Solve AX = B.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

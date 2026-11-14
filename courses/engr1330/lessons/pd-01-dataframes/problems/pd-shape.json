@@ -1,0 +1,52 @@
+{
+  "title": "Shape of a DataFrame",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "pandas"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6]})\nprint(df.shape)",
+          "out": "(3, 2)",
+          "w": "(2, 3)"
+        },
+        {
+          "code": "import pandas as pd\ndf = pd.DataFrame({'x': [1, 2], 'y': [3, 4], 'z': [5, 6]})\nprint(df.shape)",
+          "out": "(2, 3)",
+          "w": "(2, 2)"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "(rows, columns).",
+    "Each key is a column.",
+    ""
+  ],
+  "solution": "Rows are the list length; columns are the keys.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

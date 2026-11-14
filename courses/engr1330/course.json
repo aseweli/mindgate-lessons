@@ -68,14 +68,21 @@
       "title": "Unit 6 · NumPy arrays & linear algebra",
       "from": "2026-10-02",
       "to": "2026-10-07",
-      "lessons": []
+      "lessons": [
+        "np-01-arrays",
+        "np-02-array-operations",
+        "np-03-linear-algebra"
+      ]
     },
     {
       "id": "u07",
       "title": "Unit 7 · Pandas",
       "from": "2026-10-09",
       "to": "2026-10-12",
-      "lessons": []
+      "lessons": [
+        "pd-01-dataframes",
+        "pd-02-selection-filtering"
+      ]
     },
     {
       "id": "u08",

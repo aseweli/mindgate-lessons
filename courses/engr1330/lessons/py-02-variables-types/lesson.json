@@ -1,0 +1,237 @@
+{
+  "id": "py-02-variables-types",
+  "title": "Variables, data types and input/output",
+  "short": "Variables & types",
+  "minutes": 40,
+  "difficulty": 1,
+  "objective": "Name variables legally, use int, float, str and bool, convert between them, and read input and print output.",
+  "tags": [
+    "exam1",
+    "variables"
+  ],
+  "requires": [
+    "py-01-computational-thinking"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Variable",
+              "A name for a value in memory."
+            ],
+            [
+              "Keyword",
+              "Reserved word (if, for, True, def …) that can't be a name."
+            ],
+            [
+              "int / float",
+              "Whole numbers / numbers with a decimal point."
+            ],
+            [
+              "str",
+              "Text in quotes."
+            ],
+            [
+              "bool",
+              "True or False."
+            ],
+            [
+              "Casting",
+              "Converting a type: int(), float(), str()."
+            ],
+            [
+              "Escape sequence",
+              "Backslash code inside a string: \\n, \\t, \\\\."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Doing math on `input()`.** It's a string: `\"2\" + \"3\"` is `\"23\"`. Wrap it in `int()` or `float()`.\n- **Illegal names**: `1class`, `my-var`, `$_class`, `if`.\n- **`int(\"3.7\")`** raises ValueError; use `int(float(\"3.7\"))` (gives 3).\n- **Quotes around a variable name** print the name, not its value.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 1 was in class on Canvas with the Respondus LockDown Browser: multiple choice, about 40 minutes, no AI tools. Its review list: computational-thinking terms, indexing, data types, data structures, input/print, logical and arithmetic operators, strings, flowcharts and pseudocode, variables, sequence, selection, repetition, functions.",
+          "title": "How Exam 1 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "khKv-8q7YmY",
+          "title": "Python Tutorial for Beginners 3: Integers and Floats",
+          "channel": "Corey Schafer",
+          "focus": "Numeric types, casting with int() and float().",
+          "start": "0:00",
+          "end": "11:55"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Valid names",
+          "problem": "Which are legal: `exchange_rate`, `1class`, `is_student`, `$_class`, `myName2`, `for`?",
+          "steps": [
+            {
+              "md": "Letters, digits, underscores only: `$_class` fails.",
+              "title": "Rule 1"
+            },
+            {
+              "md": "Can't start with a digit: `1class` fails.",
+              "title": "Rule 2"
+            },
+            {
+              "md": "Not a keyword: `for` fails.",
+              "title": "Rule 3"
+            },
+            {
+              "md": "```python\nimport keyword\n\nfor n in [\"exchange_rate\", \"1class\", \"is_student\", \"$_class\", \"myName2\", \"for\"]:\n    print(n, n.isidentifier() and not keyword.iskeyword(n))\n```\n\n```text\nexchange_rate True\n1class False\nis_student True\n$_class False\nmyName2 True\nfor False\n```",
+              "title": "Check in Python",
+              "why": "`isidentifier` checks the spelling rules."
+            }
+          ],
+          "answer": "Legal: exchange_rate, is_student, myName2."
+        },
+        {
+          "type": "worked_example",
+          "title": "Sum, product, difference, quotient",
+          "problem": "Read two numbers and print their sum, product, difference and quotient.",
+          "steps": [
+            {
+              "md": "`float(input(...))` for each.",
+              "title": "Read and convert",
+              "why": "input gives strings."
+            },
+            {
+              "md": "+, *, −, /.",
+              "title": "Compute"
+            },
+            {
+              "md": "```python\na = float(\"7\")      # in a real program: float(input(\"a: \"))\nb = float(\"2\")\nprint(\"sum:\", a + b)\nprint(\"product:\", a * b)\nprint(\"difference:\", a - b)\nprint(\"quotient:\", a / b)\n```\n\n```text\nsum: 9.0\nproduct: 14.0\ndifference: 5.0\nquotient: 3.5\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "With 7 and 2: 9.0, 14.0, 5.0, 3.5."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "temp-convert",
+          "title": "Fahrenheit to Celsius",
+          "language": "python",
+          "md": "Read a temperature in °F and print it in °C, rounded to 1 decimal, using $C = (F - 32) \\cdot 5/9$. Expected output for the given input:\n\n```text\nTemperature in F: \n104 F is 40.0 C\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-temp-convert.py"
+              }
+            }
+          ],
+          "stdin": "104\n",
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "var-type",
+            "var-input",
+            "var-legal",
+            "var-reassign",
+            "var-cast-error",
+            "var-print-sep"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "input()",
+              "Always returns a str"
+            ],
+            [
+              "Legal names",
+              "Letters, digits, _; no leading digit; no keywords"
+            ],
+            [
+              "int('3.7')",
+              "ValueError"
+            ],
+            [
+              "print sep/end",
+              "Text between items / at the end"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Spot illegal names.",
+            "Convert input before math.",
+            "Predict print output."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 1.",
+          "problems": [
+            "var-rev-keyword",
+            "var-rev-input",
+            "var-rev-escape"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Fahrenheit to Celsius",
+          "md": "Full program for **Fahrenheit to Celsius** (try it yourself first):\n\n```python\nf = input(\"Temperature in F: \")\nc = (float(f) - 32) * 5 / 9\nprint()\nprint(f, \"F is\", round(c, 1), \"C\")\n```\n\nOutput:\n\n```text\nTemperature in F: \n104 F is 40.0 C\n```"
+        }
+      ]
+    }
+  ]
+}

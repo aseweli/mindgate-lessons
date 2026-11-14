@@ -1,0 +1,45 @@
+{
+  "title": "Hypotenuse",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "operators"
+  ],
+  "statement": "Which expression gives $c = \\sqrt{a^2 + b^2}$?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`(a + b)**2`",
+        "`(a*a + b*b)**0.5`",
+        "`a*a + b*b**0.5`",
+        "`a**2 + b**2**0.5`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "That's not the formula.",
+        "Correct.",
+        "** binds tighter than +, so only `b**0.5` is computed before multiplying by b.",
+        "** is right-associative: 2**0.5 first."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "** happens before +.",
+    "The sum must be inside parentheses.",
+    ""
+  ],
+  "solution": "Group the sum first: `(a*a + b*b)**0.5`.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

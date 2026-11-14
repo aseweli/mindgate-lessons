@@ -1,0 +1,67 @@
+{
+  "title": "Methods",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "strings"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "print('Matador'.upper())",
+          "out": "MATADOR",
+          "w": "Matador"
+        },
+        {
+          "code": "print('train'.replace('t', 'ing'))",
+          "out": "ingrain",
+          "w": "ingtrain"
+        },
+        {
+          "code": "print('a-b-c'.split('-'))",
+          "out": "['a', 'b', 'c']",
+          "w": "a b c"
+        },
+        {
+          "code": "print('banana'.count('a'))",
+          "out": "3",
+          "w": "2"
+        },
+        {
+          "code": "print('banana'.find('n'))",
+          "out": "2",
+          "w": "3"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Each method returns a new value.",
+    "split returns a list.",
+    "find returns the first index."
+  ],
+  "solution": "Apply the method to the string.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

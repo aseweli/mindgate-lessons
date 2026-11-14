@@ -1,0 +1,52 @@
+{
+  "title": "Sum of values",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "d = {'a': 4, 'b': 1, 'c': 12}\nprint(sum(d.values()))",
+          "out": "17",
+          "w": "3"
+        },
+        {
+          "code": "d = {'a': 4, 'b': 1}\nprint(list(d.keys()))",
+          "out": "['a', 'b']",
+          "w": "[4, 1]"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    ".values() gives the values.",
+    ".keys() gives the keys.",
+    ""
+  ],
+  "solution": "values vs keys.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

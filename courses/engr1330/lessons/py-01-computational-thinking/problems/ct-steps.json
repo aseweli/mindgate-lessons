@@ -1,0 +1,45 @@
+{
+  "title": "Which step?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "computational-thinking"
+  ],
+  "statement": "In the computational method, comparing your program's output with a by-hand example is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "verification (step 5)",
+        "defining the problem (step 1)",
+        "CCMR",
+        "gathering information (step 2)"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "That comes first.",
+        "That's about reusing code.",
+        "That's inputs/equations/outputs."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does the hand example check?",
+    "The code.",
+    "The last step."
+  ],
+  "solution": "Testing against the hand example is verification.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

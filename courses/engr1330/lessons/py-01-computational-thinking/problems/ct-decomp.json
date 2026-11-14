@@ -1,0 +1,45 @@
+{
+  "title": "Name the pillar",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "computational-thinking"
+  ],
+  "statement": "Writing a lab report by first planning an introduction, a methods section and a conclusion is an example of …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "an algorithm",
+        "pattern recognition",
+        "decomposition",
+        "abstraction"
+      ],
+      "correct": 2,
+      "explanations": [
+        "It's a split, not ordered instructions.",
+        "Nothing is being reused.",
+        "Correct: one big task split into parts.",
+        "Abstraction filters details."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Splitting, filtering, reusing or ordering?",
+    "Recall the four pillars.",
+    ""
+  ],
+  "solution": "This is decomposition.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

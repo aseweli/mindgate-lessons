@@ -1,0 +1,45 @@
+{
+  "title": "pop",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "statement": "`v = [4, 5, 6]`, `x = v.pop()`. What are x and v?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "x = 6, v = [4, 5, 6]",
+        "x = 4, v = [5, 6]",
+        "x = None, v = [4, 5]",
+        "x = 6, v = [4, 5]"
+      ],
+      "correct": 3,
+      "explanations": [
+        "pop removes it.",
+        "pop() takes the last item.",
+        "pop returns the item.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "No index → last.",
+    "Returned and removed.",
+    ""
+  ],
+  "solution": "pop() removes and returns the last item.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

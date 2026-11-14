@@ -1,0 +1,45 @@
+{
+  "title": "CCMR",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "computational-thinking"
+  ],
+  "statement": "In CCMR, the C after the first C stands for …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Cite the source",
+        "Comment",
+        "Check",
+        "Compile"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: Copy, Cite, Modify, Run.",
+        "No.",
+        "No.",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Copy, ?, Modify, Run.",
+    "Credit the original.",
+    ""
+  ],
+  "solution": "Copy, Cite, Modify, Run.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

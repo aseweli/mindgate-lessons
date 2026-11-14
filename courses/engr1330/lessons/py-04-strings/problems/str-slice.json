@@ -1,0 +1,67 @@
+{
+  "title": "Slicing",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "strings"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "s = 'he ate camel food'\nprint(s[3:6])",
+          "out": "ate",
+          "w": "ate c"
+        },
+        {
+          "code": "s = 'he ate camel food'\nprint(s[:2])",
+          "out": "he",
+          "w": "he a"
+        },
+        {
+          "code": "s = 'Texas Tech'\nprint(s[6:])",
+          "out": "Tech",
+          "w": "Tec"
+        },
+        {
+          "code": "s = 'abcdefgh'\nprint(s[1:7:2])",
+          "out": "bdf",
+          "w": "bdfh"
+        },
+        {
+          "code": "s = 'abcdefgh'\nprint(s[::-2])",
+          "out": "hfdb",
+          "w": "geca"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "End is excluded.",
+    "Step skips characters.",
+    "Negative step walks backwards."
+  ],
+  "solution": "start up to (not including) end, by step.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

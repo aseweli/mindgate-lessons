@@ -1,0 +1,265 @@
+{
+  "id": "py-03-operators-expressions",
+  "title": "Operators, precedence and boolean expressions",
+  "short": "Operators",
+  "minutes": 40,
+  "difficulty": 2,
+  "objective": "Evaluate arithmetic expressions with //, % and ** using operator precedence, and evaluate comparisons and and/or/not.",
+  "tags": [
+    "exam1",
+    "operators"
+  ],
+  "requires": [
+    "py-02-variables-types"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "//",
+              "Floor division: divide and round down."
+            ],
+            [
+              "%",
+              "Remainder (modulus)."
+            ],
+            [
+              "**",
+              "Exponent."
+            ],
+            [
+              "Precedence",
+              "Order: () → ** → * / // % → + −."
+            ],
+            [
+              "Boolean expression",
+              "An expression that is True or False."
+            ],
+            [
+              "and / or / not",
+              "Both / at least one / opposite."
+            ]
+          ]
+        },
+        {
+          "type": "formulas",
+          "title": "Precedence (high to low)",
+          "items": [
+            {
+              "label": "1",
+              "latex": "(\\;)"
+            },
+            {
+              "label": "2",
+              "latex": "**"
+            },
+            {
+              "label": "3",
+              "latex": "*\\;\\;/\\;\\;//\\;\\;\\%"
+            },
+            {
+              "label": "4",
+              "latex": "+\\;\\;-"
+            },
+            {
+              "label": "5",
+              "latex": "==\\;\\;!=\\;\\;<\\;\\;>\\;\\;\\ldots"
+            },
+            {
+              "label": "6",
+              "latex": "\\text{not} \\to \\text{and} \\to \\text{or}"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **`/` gives float**: `10 / 2` is `5.0`, not `5`.\n- **Floor division of negatives**: `-7 // 2` is `-4`.\n- **`**` before `*`**: `2 * 3 ** 2` is 18.\n- **`=` vs `==`**: one assigns, the other compares.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 1 was in class on Canvas with the Respondus LockDown Browser: multiple choice, about 40 minutes, no AI tools. Its review list: computational-thinking terms, indexing, data types, data structures, input/print, logical and arithmetic operators, strings, flowcharts and pseudocode, variables, sequence, selection, repetition, functions.",
+          "title": "How Exam 1 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "khKv-8q7YmY",
+          "title": "Integers and Floats",
+          "channel": "Corey Schafer",
+          "focus": "Arithmetic operators, floor division, modulus and order of operations.",
+          "start": "0:00",
+          "end": "11:55"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Order of evaluation",
+          "problem": "Show the order of operations and the value of x for `x = (3 * 9 * (3 + (9 * 3 / (3))))`.",
+          "steps": [
+            {
+              "md": "(3) = 3; 9 * 3 / 3 = 9.0.",
+              "title": "Innermost parentheses",
+              "why": "`/` makes a float."
+            },
+            {
+              "md": "3 + 9.0 = 12.0.",
+              "title": "Next level"
+            },
+            {
+              "md": "3 * 9 * 12.0 = 324.0.",
+              "title": "Outer product",
+              "why": "Left to right."
+            },
+            {
+              "md": "```python\nx = (3 * 9 * (3 + (9 * 3 / (3))))\nprint(x)\n```\n\n```text\n324.0\n```",
+              "title": "Check"
+            }
+          ],
+          "answer": "324.0"
+        },
+        {
+          "type": "worked_example",
+          "title": "Remainders for even/odd and digits",
+          "problem": "Use `%` and `//` to test if 47 is odd and to split 47 into tens and ones.",
+          "steps": [
+            {
+              "md": "47 % 2 = 1 → odd.",
+              "title": "Odd?",
+              "why": "Even numbers leave remainder 0."
+            },
+            {
+              "md": "47 // 10 = 4, 47 % 10 = 7.",
+              "title": "Digits",
+              "why": "Floor-divide by 10 drops the last digit."
+            },
+            {
+              "md": "```python\nn = 47\nprint(n % 2 == 1)\nprint(n // 10, n % 10)\n```\n\n```text\nTrue\n4 7\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "True; 4 and 7."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "seconds",
+          "title": "Split seconds into h:m:s",
+          "language": "python",
+          "md": "Read a number of seconds and print hours, minutes and seconds using `//` and `%`. Expected output for the input:\n\n```text\nSeconds: \n2 h 3 min 4 s\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-seconds.py"
+              }
+            }
+          ],
+          "stdin": "7384\n",
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "op-mod",
+            "op-prec",
+            "op-bool",
+            "op-neg",
+            "op-aug",
+            "op-hyp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "15 // 2, 15 % 2",
+              "7 and 1"
+            ],
+            [
+              "Precedence",
+              "() → ** → * / // % → + −"
+            ],
+            [
+              "Logic order",
+              "not → and → or"
+            ],
+            [
+              "10 / 2",
+              "5.0 (float)"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Evaluate expressions with all operators.",
+            "Trace augmented assignments.",
+            "Evaluate and/or/not."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 1.",
+          "problems": [
+            "op-rev-div",
+            "op-rev-x",
+            "op-rev-eq"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Split seconds into h:m:s",
+          "md": "Full program for **Split seconds into h:m:s** (try it yourself first):\n\n```python\ntotal = int(input(\"Seconds: \"))\nhours = total // 3600\nminutes = (total % 3600) // 60\nseconds = total % 60\nprint()\nprint(hours, \"h\", minutes, \"min\", seconds, \"s\")\n```\n\nOutput:\n\n```text\nSeconds: \n2 h 3 min 4 s\n```"
+        }
+      ]
+    }
+  ]
+}

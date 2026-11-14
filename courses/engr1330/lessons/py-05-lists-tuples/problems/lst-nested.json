@@ -1,0 +1,57 @@
+{
+  "title": "Nested indexing",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "m = [1, 4, 5, 7, [34, 23, 545, 67, [343, 56, 76]]]\nprint(m[4][3])",
+          "out": "67",
+          "w": "545"
+        },
+        {
+          "code": "m = [1, 4, 5, 7, [34, 23, 545, 67, [343, 56, 76]]]\nprint(m[4][4][1])",
+          "out": "56",
+          "w": "343"
+        },
+        {
+          "code": "m = [[1, 2], [3, 4], [5, 6]]\nprint(m[2][0] + m[0][1])",
+          "out": "7",
+          "w": "8"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Index the outer list first.",
+    "Then the inner one.",
+    ""
+  ],
+  "solution": "Index from the outside in.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

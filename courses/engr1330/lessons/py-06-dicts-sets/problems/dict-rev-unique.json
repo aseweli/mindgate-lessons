@@ -1,0 +1,45 @@
+{
+  "title": "Unique values",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "statement": "Which gives the number of different values in list v?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`v.unique()`",
+        "`len(set(v))`",
+        "`set(len(v))`",
+        "`len(v)`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "Lists have no unique().",
+        "Correct.",
+        "Error.",
+        "Counts duplicates."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which structure drops duplicates?",
+    "",
+    ""
+  ],
+  "solution": "A set keeps one of each value.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

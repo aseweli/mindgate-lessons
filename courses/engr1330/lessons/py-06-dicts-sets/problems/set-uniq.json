@@ -1,0 +1,57 @@
+{
+  "title": "Sets",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "print(len({1, 2, 2, 3, 3, 3}))",
+          "out": "3",
+          "w": "6"
+        },
+        {
+          "code": "a = {1, 2, 3}\nb = {3, 4}\nprint(len(a | b))",
+          "out": "4",
+          "w": "5"
+        },
+        {
+          "code": "a = {1, 2, 3}\nb = {3, 4}\nprint(a & b)",
+          "out": "{3}",
+          "w": "{1, 2, 3, 4}"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Sets drop duplicates.",
+    "| is union, & is intersection.",
+    ""
+  ],
+  "solution": "Duplicates disappear in a set.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

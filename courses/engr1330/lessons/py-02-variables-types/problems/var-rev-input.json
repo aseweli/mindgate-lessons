@@ -1,0 +1,45 @@
+{
+  "title": "Number of hours",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "variables"
+  ],
+  "statement": "`h = input('Hours: ')`, the user types 8. What is `type(h)`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "float",
+        "int",
+        "bool",
+        "str"
+      ],
+      "correct": 3,
+      "explanations": [
+        "No.",
+        "Only after int(h).",
+        "No.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does input return?",
+    "",
+    ""
+  ],
+  "solution": "input always returns a str.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

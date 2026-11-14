@@ -1,0 +1,45 @@
+{
+  "title": "Escape sequence",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "variables"
+  ],
+  "statement": "Which string, when printed, shows two words on separate lines?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`'Hello World'`",
+        "`'Hello\\nWorld'`",
+        "`'Hello\\tWorld'`",
+        "`'Hello/nWorld'`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "One line.",
+        "Correct: \\n is a newline.",
+        "\\t is a tab.",
+        "Forward slash isn't an escape."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Backslash codes.",
+    "n for newline.",
+    ""
+  ],
+  "solution": "`\\n` starts a new line.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

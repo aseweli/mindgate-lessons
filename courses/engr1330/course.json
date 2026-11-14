@@ -17,14 +17,22 @@
       "title": "Unit 1 · Computational thinking & Python basics",
       "from": "2026-08-24",
       "to": "2026-09-02",
-      "lessons": []
+      "lessons": [
+        "py-01-computational-thinking",
+        "py-02-variables-types",
+        "py-03-operators-expressions",
+        "py-04-strings"
+      ]
     },
     {
       "id": "u02",
       "title": "Unit 2 · Data structures",
       "from": "2026-09-04",
       "to": "2026-09-04",
-      "lessons": []
+      "lessons": [
+        "py-05-lists-tuples",
+        "py-06-dicts-sets"
+      ]
     },
     {
       "id": "u03",

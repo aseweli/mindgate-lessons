@@ -1,0 +1,57 @@
+{
+  "title": "Nested dict",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "inv = {'ford': {'mustang': [2022, 2000, 2013], 'escape': [1999, 2021]}}\nprint(inv['ford']['escape'][0])",
+          "out": "1999",
+          "w": "2021"
+        },
+        {
+          "code": "d = {'key': [20, 25, 25, {'innerkey': [11, 22, 33]}]}\nprint(d['key'][3]['innerkey'][2])",
+          "out": "33",
+          "w": "22"
+        },
+        {
+          "code": "d = {'a': {'b': {'c': 'deep'}}}\nprint(d['a']['b']['c'][1])",
+          "out": "e",
+          "w": "deep"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Outer key first.",
+    "Then the next key or index.",
+    "Keep going inward."
+  ],
+  "solution": "Peel one layer per bracket.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

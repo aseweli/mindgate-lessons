@@ -1,0 +1,67 @@
+{
+  "title": "What does this print? (logic)",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "operators"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "x = 7\nprint(x > 5 and x < 10)",
+          "out": "True",
+          "w": "False"
+        },
+        {
+          "code": "x = 7\nprint(x < 5 or x == 7)",
+          "out": "True",
+          "w": "False"
+        },
+        {
+          "code": "print(not 3 > 2)",
+          "out": "False",
+          "w": "True"
+        },
+        {
+          "code": "print(True or False and False)",
+          "out": "True",
+          "w": "False"
+        },
+        {
+          "code": "x = 4\nprint(x % 2 == 0 and not x > 5)",
+          "out": "True",
+          "w": "False"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Evaluate comparisons first.",
+    "not, then and, then or.",
+    ""
+  ],
+  "solution": "Comparisons first, then not, and, or.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

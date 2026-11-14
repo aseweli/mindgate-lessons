@@ -1,0 +1,45 @@
+{
+  "title": "Length of a slice",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "strings"
+  ],
+  "statement": "How many characters are in `s[2:9]` if s is long enough?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "9",
+        "8",
+        "6",
+        "7"
+      ],
+      "correct": 3,
+      "explanations": [
+        "No.",
+        "End is excluded.",
+        "No.",
+        "Correct: 9 − 2."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "end − start.",
+    "",
+    ""
+  ],
+  "solution": "9 − 2 = 7 characters.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Legal name",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "variables"
+  ],
+  "statement": "Which is a legal Python variable name?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`class`",
+        "`total_2`",
+        "`2total`",
+        "`total-2`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "Keyword.",
+        "Correct.",
+        "Starts with a digit.",
+        "`-` isn't allowed."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Letters, digits, underscores.",
+    "Not starting with a digit.",
+    "Not a keyword."
+  ],
+  "solution": "`total_2` follows all the rules.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

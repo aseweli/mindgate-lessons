@@ -1,0 +1,45 @@
+{
+  "title": "Name the pillar",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "computational-thinking"
+  ],
+  "statement": "Noticing that every uploaded photo needs the same name, date and compression steps is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "an algorithm",
+        "pattern recognition",
+        "abstraction",
+        "decomposition"
+      ],
+      "correct": 1,
+      "explanations": [
+        "The algorithm comes after spotting the pattern.",
+        "Correct.",
+        "Close, but the point is the shared steps.",
+        "Not splitting a problem."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Splitting, filtering, reusing or ordering?",
+    "Recall the four pillars.",
+    ""
+  ],
+  "solution": "This is pattern recognition.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

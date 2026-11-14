@@ -1,0 +1,45 @@
+{
+  "title": "Name the pillar",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "computational-thinking"
+  ],
+  "statement": "\"Fill the kettle, boil it, pour into a cup, add the tea bag, steep 3 minutes, remove the bag\" is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "abstraction",
+        "an algorithm",
+        "pattern recognition",
+        "decomposition"
+      ],
+      "correct": 1,
+      "explanations": [
+        "No details are filtered.",
+        "Correct: ordered steps.",
+        "Nothing repeated.",
+        "It's the steps themselves, in order."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Splitting, filtering, reusing or ordering?",
+    "Recall the four pillars.",
+    ""
+  ],
+  "solution": "This is an algorithm.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

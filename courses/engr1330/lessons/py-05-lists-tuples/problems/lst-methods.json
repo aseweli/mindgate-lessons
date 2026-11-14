@@ -1,0 +1,62 @@
+{
+  "title": "List methods",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "v = [1, 2, 3]\nv.append(4)\nv.insert(0, 9)\nprint(v)",
+          "out": "[9, 1, 2, 3, 4]",
+          "w": "[1, 2, 3, 4, 9]"
+        },
+        {
+          "code": "v = [5, 6, 7, 8]\nx = v.pop(1)\nprint(v, x)",
+          "out": "[5, 7, 8] 6",
+          "w": "[5, 7, 8] 7"
+        },
+        {
+          "code": "v = [3, 1, 3, 2]\nv.remove(3)\nprint(v)",
+          "out": "[1, 3, 2]",
+          "w": "[1, 2]"
+        },
+        {
+          "code": "v = [4, 1, 3]\nw = sorted(v)\nprint(v, w)",
+          "out": "[4, 1, 3] [1, 3, 4]",
+          "w": "[1, 3, 4] [1, 3, 4]"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "append adds at the end; insert at an index.",
+    "pop(i) removes item i and returns it.",
+    "remove deletes the first match; sorted returns a new list."
+  ],
+  "solution": "Trace each method.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

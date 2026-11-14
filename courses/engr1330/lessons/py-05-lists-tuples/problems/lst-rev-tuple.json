@@ -1,0 +1,45 @@
+{
+  "title": "Tuple",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "statement": "What happens with `t = (1, 2, 3)` then `t[0] = 9`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "t becomes (9, 2, 3)",
+        "IndexError",
+        "Nothing",
+        "TypeError: tuples are immutable"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That's a list behavior.",
+        "Index 0 exists.",
+        "It raises an error.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Can tuples change?",
+    "",
+    ""
+  ],
+  "solution": "Tuples can't be modified.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

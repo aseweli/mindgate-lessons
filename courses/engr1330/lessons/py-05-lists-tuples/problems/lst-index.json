@@ -1,0 +1,62 @@
+{
+  "title": "Index and slice",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "v = [10, 20, 30, 40, 50]\nprint(v[1:4])",
+          "out": "[20, 30, 40]",
+          "w": "[10, 20, 30]"
+        },
+        {
+          "code": "v = [10, 20, 30, 40, 50]\nprint(v[-2])",
+          "out": "40",
+          "w": "50"
+        },
+        {
+          "code": "v = [10, 20, 30, 40, 50]\nprint(v[::2])",
+          "out": "[10, 30, 50]",
+          "w": "[10, 20]"
+        },
+        {
+          "code": "v = [10, 20, 30, 40, 50]\nprint(v[3:])",
+          "out": "[40, 50]",
+          "w": "[30, 40, 50]"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Index 0 is the first item.",
+    "End is excluded.",
+    ""
+  ],
+  "solution": "Same rules as strings.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

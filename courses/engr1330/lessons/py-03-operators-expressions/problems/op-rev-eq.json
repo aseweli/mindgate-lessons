@@ -1,0 +1,45 @@
+{
+  "title": "= vs ==",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "operators"
+  ],
+  "statement": "What does `x == 5` do?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Prints 5",
+        "Stores 5 in x",
+        "Compares x with 5 and gives True or False",
+        "Raises an error"
+      ],
+      "correct": 2,
+      "explanations": [
+        "No.",
+        "That's `x = 5`.",
+        "Correct.",
+        "Not if x exists."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "One = or two?",
+    "",
+    ""
+  ],
+  "solution": "`==` compares; `=` assigns.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

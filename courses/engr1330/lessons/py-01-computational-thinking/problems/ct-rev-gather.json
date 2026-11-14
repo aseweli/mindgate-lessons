@@ -1,0 +1,45 @@
+{
+  "title": "Gather information",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "computational-thinking"
+  ],
+  "statement": "In step 2 (gather information) you identify …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "who wrote the original code",
+        "the final answer",
+        "the inputs, governing equations or principles, and required outputs",
+        "bugs in the code"
+      ],
+      "correct": 2,
+      "explanations": [
+        "That's citing in CCMR.",
+        "That's later.",
+        "Correct.",
+        "Nothing is coded yet."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What do you need before solving?",
+    "",
+    ""
+  ],
+  "solution": "Inputs, governing principles and outputs.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

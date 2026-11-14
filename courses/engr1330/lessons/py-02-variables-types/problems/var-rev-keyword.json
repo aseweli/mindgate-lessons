@@ -1,0 +1,45 @@
+{
+  "title": "Keyword",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "variables"
+  ],
+  "statement": "Why is `if = 2` an error?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "2 must be in quotes",
+        "Names must be longer",
+        "`if` is a reserved keyword",
+        "Variables must be uppercase"
+      ],
+      "correct": 2,
+      "explanations": [
+        "No.",
+        "Length isn't the issue.",
+        "Correct.",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is `if` special?",
+    "Reserved.",
+    ""
+  ],
+  "solution": "Keywords can't be variable names.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

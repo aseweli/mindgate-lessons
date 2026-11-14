@@ -1,0 +1,62 @@
+{
+  "title": "Indexing",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "strings"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "s = 'computational'\nprint(s[3])",
+          "out": "p",
+          "w": "m"
+        },
+        {
+          "code": "s = 'computational'\nprint(s[-2])",
+          "out": "a",
+          "w": "l"
+        },
+        {
+          "code": "s = 'engineering'\nprint(s[0] + s[-1])",
+          "out": "eg",
+          "w": "en"
+        },
+        {
+          "code": "s = 'python'\nprint(s[len(s) - 1])",
+          "out": "n",
+          "w": "o"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Index 0 is the first character.",
+    "−1 is the last.",
+    "Count carefully."
+  ],
+  "solution": "Count from 0 (or from −1 at the end).\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

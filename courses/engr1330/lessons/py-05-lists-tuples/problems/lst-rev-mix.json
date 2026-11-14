@@ -1,0 +1,45 @@
+{
+  "title": "Mixed types",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "statement": "Can a Python list hold `[2.3, 'data', True, [1, 2]]`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Only numbers and strings",
+        "Yes, lists can mix types and nest",
+        "Only without the inner list",
+        "No, all items must be the same type"
+      ],
+      "correct": 1,
+      "explanations": [
+        "Any objects.",
+        "Correct.",
+        "Nesting is fine.",
+        "That's a NumPy array rule."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Lists vs arrays.",
+    "",
+    ""
+  ],
+  "solution": "Lists hold any objects, including other lists.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

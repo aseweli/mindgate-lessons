@@ -1,0 +1,57 @@
+{
+  "title": "Membership and repetition",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "strings"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "print('tech' in 'Texas Tech')",
+          "out": "False",
+          "w": "True"
+        },
+        {
+          "code": "print('ab' * 3)",
+          "out": "ababab",
+          "w": "ab3"
+        },
+        {
+          "code": "print('Tech' in 'Texas Tech' and len('Tech') == 4)",
+          "out": "True",
+          "w": "False"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "`in` is case-sensitive.",
+    "`*` repeats a string.",
+    ""
+  ],
+  "solution": "Case matters for `in`.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

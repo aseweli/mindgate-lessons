@@ -1,0 +1,50 @@
+{
+  "title": "Counting",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "c = {}\nfor ch in 'banana':\n    c[ch] = c.get(ch, 0) + 1\nprint(c['a'])",
+          "out": "3",
+          "w": "1",
+          "v": 3.0
+        },
+        {
+          "code": "c = {}\nfor w in 'a b a c a'.split():\n    c[w] = c.get(w, 0) + 1\nprint(len(c))",
+          "out": "3",
+          "w": "5",
+          "v": 3.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "get(key, 0) starts each count at 0.",
+    "Each occurrence adds 1.",
+    ""
+  ],
+  "solution": "Count each key's occurrences.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

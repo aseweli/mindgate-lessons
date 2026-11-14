@@ -1,0 +1,45 @@
+{
+  "title": "Value of x",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "operators"
+  ],
+  "statement": "What is x after `x = 2 % 2 + 2 * 2 - 2 / 2`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "5.0",
+        "1.0",
+        "3",
+        "3.0"
+      ],
+      "correct": 3,
+      "explanations": [
+        "% binds like *.",
+        "Check the order.",
+        "/ makes it a float.",
+        "Correct: 0 + 4 − 1.0."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "2 % 2 = 0.",
+    "2 * 2 = 4, 2 / 2 = 1.0.",
+    "0 + 4 − 1.0."
+  ],
+  "solution": "0 + 4 − 1.0 = 3.0.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Unchanged",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "strings"
+  ],
+  "statement": "After `s = 'abc'` and `s.upper()`, what is s?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "'abc'",
+        "None",
+        "'ABC'",
+        "an error"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: the new string wasn't saved.",
+        "No.",
+        "Only if you write s = s.upper().",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Do methods change s?",
+    "Strings are immutable.",
+    ""
+  ],
+  "solution": "upper returns a new string; s is still 'abc'.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

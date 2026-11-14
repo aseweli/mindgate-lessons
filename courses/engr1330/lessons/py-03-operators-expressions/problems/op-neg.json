@@ -1,0 +1,57 @@
+{
+  "title": "Negative floor division",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "operators"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "print(-7 // 2)",
+          "out": "-4",
+          "w": "-3"
+        },
+        {
+          "code": "print(-7 % 2)",
+          "out": "1",
+          "w": "-1"
+        },
+        {
+          "code": "print(7 // -2)",
+          "out": "-4",
+          "w": "-3"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "// rounds **down**.",
+    "Down for negatives is away from 0.",
+    "a == (a // b) * b + a % b."
+  ],
+  "solution": "Floor division rounds toward −∞.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

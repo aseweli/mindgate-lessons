@@ -1,0 +1,45 @@
+{
+  "title": "Name the pillar",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "computational-thinking"
+  ],
+  "statement": "Describing a book in an online store only by title, authors, ISBN and category is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "decomposition",
+        "abstraction",
+        "verification",
+        "pattern recognition"
+      ],
+      "correct": 1,
+      "explanations": [
+        "No problem is being split.",
+        "Correct: keep what matters, drop cover color etc.",
+        "That's step 5 of the method.",
+        "Not about similarities."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Splitting, filtering, reusing or ordering?",
+    "Recall the four pillars.",
+    ""
+  ],
+  "solution": "This is abstraction.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

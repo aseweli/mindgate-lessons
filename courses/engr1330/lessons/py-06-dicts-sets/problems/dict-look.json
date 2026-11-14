@@ -1,0 +1,57 @@
+{
+  "title": "Look up",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "d = {'A': 123, 'B': 222, 'C': 'Lubbock'}\nprint(d['B'])",
+          "out": "222",
+          "w": "B"
+        },
+        {
+          "code": "d = {'x': 1, 'y': 2}\nd['x'] = 10\nprint(d['x'] + d['y'])",
+          "out": "12",
+          "w": "3"
+        },
+        {
+          "code": "d = {'a': 5}\nd['b'] = 7\nprint(len(d))",
+          "out": "2",
+          "w": "1"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "d[key] gives the value.",
+    "Assigning to a key adds or updates it.",
+    ""
+  ],
+  "solution": "Look up by key.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

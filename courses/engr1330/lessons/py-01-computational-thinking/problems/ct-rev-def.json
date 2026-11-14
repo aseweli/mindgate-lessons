@@ -1,0 +1,45 @@
+{
+  "title": "Definition",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "computational-thinking"
+  ],
+  "statement": "Computational thinking is best described as …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "memorizing syntax",
+        "writing code in Python",
+        "an approach to solving problems as steps a computer could carry out",
+        "using a computer quickly"
+      ],
+      "correct": 2,
+      "explanations": [
+        "No.",
+        "That's programming.",
+        "Correct.",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is it just coding?",
+    "No.",
+    ""
+  ],
+  "solution": "CT is a problem-solving approach; programming expresses it.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

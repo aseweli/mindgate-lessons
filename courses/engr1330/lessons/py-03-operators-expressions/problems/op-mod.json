@@ -1,0 +1,67 @@
+{
+  "title": "Floor division and remainder",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "operators"
+  ],
+  "vars": {
+    "b": {
+      "int": [
+        3,
+        9
+      ]
+    },
+    "q": {
+      "int": [
+        2,
+        9
+      ]
+    },
+    "r": {
+      "int": [
+        1,
+        2
+      ]
+    },
+    "a": {
+      "expr": "b*q+r"
+    }
+  },
+  "statement": "a = [$a], b = [$b]. Evaluate:\n\na) `a // b` =\n\n[______]{x}\n\nb) `a % b` =\n\n[______]{y}",
+  "answers": {
+    "x": {
+      "type": "number",
+      "value": "q"
+    },
+    "y": {
+      "type": "number",
+      "value": "a-b*q"
+    }
+  },
+  "hints": [
+    "How many whole b's fit in a?",
+    "That's a // b.",
+    "The leftover is a % b."
+  ],
+  "solution": "$[$a] = [$b] \\times [$q] + ([$a]-[$b]\\cdot[$q])$.",
+  "tests": {
+    "x": {
+      "right": [
+        "[$q]"
+      ],
+      "wrong": [
+        "[$a]/[$b]"
+      ]
+    },
+    "y": {
+      "right": [
+        "[$a]-[$b]*[$q]"
+      ],
+      "wrong": [
+        "[$a]-[$b]*[$q]+[$b]"
+      ]
+    }
+  }
+}

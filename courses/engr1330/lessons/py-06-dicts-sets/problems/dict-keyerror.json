@@ -1,0 +1,45 @@
+{
+  "title": "Which line fails?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "statement": "```python\nstock = {\"bolts\": 40, \"nuts\": 25}\nstock[\"washers\"] = 10\nprint(stock[\"screws\"])\nprint(stock[\"bolts\"])\n```\n\nWhich line raises an error?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Line 3: KeyError, there is no 'screws' key",
+        "Line 1",
+        "Line 2",
+        "Line 4"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Fine.",
+        "Adds a key.",
+        "Never reached."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which keys exist?",
+    "bolts, nuts, washers.",
+    ""
+  ],
+  "solution": "'screws' isn't a key → KeyError on line 3.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

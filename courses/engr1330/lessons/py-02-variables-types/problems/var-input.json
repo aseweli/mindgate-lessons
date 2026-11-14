@@ -1,0 +1,52 @@
+{
+  "title": "Input is a string",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "variables"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "a = input()\nb = input()\nprint(a + b)",
+          "out": "53",
+          "w": "8"
+        },
+        {
+          "code": "a = input()\nb = input()\nprint(int(a) + int(b))",
+          "out": "8",
+          "w": "53"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "What type does input() return?",
+    "A string.",
+    "+ on strings joins them."
+  ],
+  "solution": "`input()` returns strings; `+` joins strings but adds ints.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

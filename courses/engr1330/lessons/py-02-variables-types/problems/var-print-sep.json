@@ -1,0 +1,57 @@
+{
+  "title": "print with sep",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "variables"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "print(1, 2, 3, sep='-')",
+          "out": "1-2-3",
+          "w": "1 2 3"
+        },
+        {
+          "code": "print('a', 'b', sep='')",
+          "out": "ab",
+          "w": "a b"
+        },
+        {
+          "code": "print(2, 4, sep=', ')",
+          "out": "2, 4",
+          "w": "2 4"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "sep replaces the space between items.",
+    "Default sep is ' '.",
+    ""
+  ],
+  "solution": "`sep` is placed between items.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

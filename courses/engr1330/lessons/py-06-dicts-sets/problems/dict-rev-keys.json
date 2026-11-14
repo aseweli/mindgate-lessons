@@ -1,0 +1,45 @@
+{
+  "title": "Duplicate keys",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "statement": "What is `{'a': 1, 'a': 2}`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "An error",
+        "`{'a': 1}`",
+        "`{'a': 2}`",
+        "`{'a': 1, 'a': 2}`"
+      ],
+      "correct": 2,
+      "explanations": [
+        "No error.",
+        "The later value replaces it.",
+        "Correct: keys are unique; the last wins.",
+        "Keys can't repeat."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Keys are unique.",
+    "",
+    ""
+  ],
+  "solution": "The second value overwrites the first.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

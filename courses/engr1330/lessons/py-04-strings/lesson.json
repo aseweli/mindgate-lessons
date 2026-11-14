@@ -1,0 +1,231 @@
+{
+  "id": "py-04-strings",
+  "title": "Strings: indexing, slicing and methods",
+  "short": "Strings",
+  "minutes": 40,
+  "difficulty": 2,
+  "objective": "Index and slice strings (including negative indices and steps), and use len, upper, lower, replace, split, find and in.",
+  "tags": [
+    "exam1",
+    "strings"
+  ],
+  "requires": [
+    "py-02-variables-types"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Index",
+              "Position of a character; first is 0, last is −1."
+            ],
+            [
+              "Slice",
+              "s[start:end:step]; end is excluded."
+            ],
+            [
+              "Immutable",
+              "Can't be changed in place."
+            ],
+            [
+              "Method",
+              "A function attached to a value: s.upper()."
+            ],
+            [
+              "in",
+              "True if a substring occurs."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Off by one**: `s[1]` is the **second** character; `s[0:3]` has 3 characters (0, 1, 2).\n- **Index past the end**: `s[len(s)]` is an IndexError (slices never are).\n- **Expecting methods to change s**: `s.upper()` returns a new string; `s` is unchanged unless reassigned.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 1 was in class on Canvas with the Respondus LockDown Browser: multiple choice, about 40 minutes, no AI tools. Its review list: computational-thinking terms, indexing, data types, data structures, input/print, logical and arithmetic operators, strings, flowcharts and pseudocode, variables, sequence, selection, repetition, functions.",
+          "title": "How Exam 1 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "k9TUPpGqYTo",
+          "title": "Python Tutorial for Beginners 2: Strings",
+          "channel": "Corey Schafer",
+          "focus": "Indexing, slicing and the common string methods.",
+          "start": "0:00",
+          "end": "21:11"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Slice a part number",
+          "problem": "From `pid = 'TX-2026-0451'` get the prefix, the year, the last 4 digits and the reversed ID.",
+          "steps": [
+            {
+              "md": "`pid[0:2]` → 'TX'.",
+              "title": "Prefix",
+              "why": "Indices 0 and 1."
+            },
+            {
+              "md": "`pid[3:7]` → '2026'.",
+              "title": "Year",
+              "why": "Count the dash at index 2."
+            },
+            {
+              "md": "`pid[-4:]`.",
+              "title": "Last 4",
+              "why": "Negative start counts from the end."
+            },
+            {
+              "md": "```python\npid = 'TX-2026-0451'\nprint(pid[0:2], pid[3:7], pid[-4:], pid[::-1])\n```\n\n```text\nTX 2026 0451 1540-6202-XT\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "TX 2026 0451 1540-6202-XT"
+        },
+        {
+          "type": "worked_example",
+          "title": "Palindrome check",
+          "problem": "Is 'Racecar' a palindrome ignoring case?",
+          "steps": [
+            {
+              "md": "`.lower()` → 'racecar'.",
+              "title": "Normalize",
+              "why": "Comparisons are case-sensitive."
+            },
+            {
+              "md": "`w[::-1]`.",
+              "title": "Reverse"
+            },
+            {
+              "md": "```python\nw = \"Racecar\".lower()\nprint(w == w[::-1])\n```\n\n```text\nTrue\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "True"
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "initials",
+          "title": "Initials and reversal",
+          "language": "python",
+          "md": "Read a full name like `Ada Lovelace`. Print the initials in uppercase, the name in all caps, and the name\nreversed. Expected output for the given input:\n\n```text\nFull name: \nAL\nADA LOVELACE\necalevol ada\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-initials.py"
+              }
+            }
+          ],
+          "stdin": "ada lovelace\n",
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "str-index",
+            "str-slice",
+            "str-methods",
+            "str-immut",
+            "str-in",
+            "str-index-error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "s[0], s[-1]",
+              "First and last characters"
+            ],
+            [
+              "s[a:b]",
+              "From a up to b − 1"
+            ],
+            [
+              "s[::-1]",
+              "Reversed"
+            ],
+            [
+              "Immutable",
+              "s[0] = 'x' is a TypeError"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Index and slice with negatives and steps.",
+            "Use the common methods.",
+            "Explain immutability."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 1.",
+          "problems": [
+            "str-rev-rev",
+            "str-rev-len",
+            "str-rev-upper"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Initials and reversal",
+          "md": "Full program for **Initials and reversal** (try it yourself first):\n\n```python\nname = input(\"Full name: \")\nparts = name.split(\" \")\ninitials = (parts[0][0] + parts[1][0]).upper()\nprint()\nprint(initials)\nprint(name.upper())\nprint(name[::-1])\n```\n\nOutput:\n\n```text\nFull name: \nAL\nADA LOVELACE\necalevol ada\n```"
+        }
+      ]
+    }
+  ]
+}

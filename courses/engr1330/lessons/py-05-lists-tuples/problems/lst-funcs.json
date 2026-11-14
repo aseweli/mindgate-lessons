@@ -1,0 +1,56 @@
+{
+  "title": "Functions on lists",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "print(sum(range(0, 101, 5)))",
+          "out": "1050",
+          "w": "1000",
+          "v": 1050.0
+        },
+        {
+          "code": "print(len(list(range(3, 15, 4))))",
+          "out": "3",
+          "w": "4",
+          "v": 3.0
+        },
+        {
+          "code": "print(max([3, 9, 1]) - min([3, 9, 1]))",
+          "out": "8",
+          "w": "9",
+          "v": 8.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "range(start, stop, step) stops before stop.",
+    "sum, len, max, min.",
+    ""
+  ],
+  "solution": "Build the range, then apply the function.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Reassignment",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "variables"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "x = 5\ny = x\nx = 9\nprint(y)",
+          "out": "5",
+          "w": "9"
+        },
+        {
+          "code": "a = 'red'\nb = a\na = 'blue'\nprint(b)",
+          "out": "red",
+          "w": "blue"
+        },
+        {
+          "code": "n = 1\nn = n + 4\nprint(n)",
+          "out": "5",
+          "w": "1"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Trace the lines in order.",
+    "A copy happens when the line runs.",
+    "Later changes don't affect earlier copies."
+  ],
+  "solution": "Values are copied at assignment time.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

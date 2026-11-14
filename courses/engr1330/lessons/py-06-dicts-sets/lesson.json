@@ -1,0 +1,223 @@
+{
+  "id": "py-06-dicts-sets",
+  "title": "Dictionaries and sets",
+  "short": "Dicts & sets",
+  "minutes": 40,
+  "difficulty": 2,
+  "objective": "Create and look up dictionaries (including nested ones), update and loop over them, count with a dict, and use sets for unique values.",
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "requires": [
+    "py-05-lists-tuples"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Dictionary",
+              "Mapping of unique keys to values: {key: value}."
+            ],
+            [
+              "Key",
+              "What you look up (must be unique)."
+            ],
+            [
+              "KeyError",
+              "Error for a key that isn't there."
+            ],
+            [
+              ".items() / .keys() / .values()",
+              "Pairs / keys / values for looping."
+            ],
+            [
+              "Set",
+              "Unordered collection of unique items."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Indexing a dict by position**: `d[0]` looks for the **key** 0.\n- **Missing key** → KeyError; use `in` or `.get()`.\n- **Expecting set order**: sets have no positions; `s[0]` is an error.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 1 was in class on Canvas with the Respondus LockDown Browser: multiple choice, about 40 minutes, no AI tools. Its review list: computational-thinking terms, indexing, data types, data structures, input/print, logical and arithmetic operators, strings, flowcharts and pseudocode, variables, sequence, selection, repetition, functions. A review exercise asks how many items a shopping-list dictionary needs and how many are unique.",
+          "title": "How Exam 1 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "daefaLgNkw0",
+          "title": "Python Tutorial for Beginners 5: Dictionaries",
+          "channel": "Corey Schafer",
+          "focus": "Adding, updating, get() and looping with items().",
+          "start": "0:00",
+          "end": "9:59"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Word frequency",
+          "problem": "Write `word_freq(text)` returning a dict of word counts.",
+          "steps": [
+            {
+              "md": "`text.lower().split()` gives the words.",
+              "title": "Split"
+            },
+            {
+              "md": "`counts[w] = counts.get(w, 0) + 1`.",
+              "title": "Count",
+              "why": "get avoids KeyError for the first time."
+            },
+            {
+              "md": "```python\ndef word_freq(text):\n    counts = {}\n    for w in text.lower().split():\n        counts[w] = counts.get(w, 0) + 1\n    return counts\n\nprint(word_freq(\"Data is data and data is fun\"))\n```\n\n```text\n{'data': 3, 'is': 2, 'and': 1, 'fun': 1}\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "{'data': 3, 'is': 2, 'and': 1, 'fun': 1}"
+        },
+        {
+          "type": "worked_example",
+          "title": "Anagrams",
+          "problem": "Write `is_anagram(w1, w2)`.",
+          "steps": [
+            {
+              "md": "Same letters, same counts: compare sorted letters.",
+              "title": "Idea"
+            },
+            {
+              "md": "```python\ndef is_anagram(w1, w2):\n    return sorted(w1.lower()) == sorted(w2.lower())\n\nprint(is_anagram(\"listen\", \"silent\"), is_anagram(\"cat\", \"act\"), is_anagram(\"cat\", \"car\"))\n```\n\n```text\nTrue True False\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "True True False"
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "shopping",
+          "title": "Shopping list totals",
+          "language": "python",
+          "md": "Given the dictionary in the starter, print the total number of items and how many different items there are.\nThen add `\"bread\": 2` and print the new totals. Expected output:\n\n```text\n19 4\n21 5\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-shopping.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "dict-look",
+            "dict-nested",
+            "dict-keyerror",
+            "set-uniq",
+            "dict-count",
+            "dict-values"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "d[key]",
+              "Value for key (KeyError if missing)"
+            ],
+            [
+              "d.get(key, default)",
+              "Safe lookup"
+            ],
+            [
+              "Counting",
+              "c[k] = c.get(k, 0) + 1"
+            ],
+            [
+              "set(v)",
+              "Unique values"
+            ],
+            [
+              "a & b, a | b",
+              "Intersection, union"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Look up nested data.",
+            "Count with a dict.",
+            "Use sets for unique values."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 1.",
+          "problems": [
+            "dict-rev-get",
+            "dict-rev-unique",
+            "dict-rev-keys"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Shopping list totals",
+          "md": "Full program for **Shopping list totals** (try it yourself first):\n\n```python\nshopping = {\"apples\": 4, \"milk\": 1, \"eggs\": 12, \"rice\": 2}\ntotal = sum(shopping.values())\nunique = len(shopping)\nprint(total, unique)\nshopping[\"bread\"] = 2\nprint(sum(shopping.values()), len(shopping))\n```\n\nOutput:\n\n```text\n19 4\n21 5\n```"
+        }
+      ]
+    }
+  ]
+}

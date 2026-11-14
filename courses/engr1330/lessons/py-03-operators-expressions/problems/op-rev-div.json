@@ -1,0 +1,45 @@
+{
+  "title": "Type of a quotient",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "operators"
+  ],
+  "statement": "What is `type(8 / 4)`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "bool",
+        "int",
+        "str",
+        "float"
+      ],
+      "correct": 3,
+      "explanations": [
+        "No.",
+        "`/` always gives a float.",
+        "No.",
+        "Correct: 2.0."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does / return?",
+    "",
+    ""
+  ],
+  "solution": "`/` always returns a float.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

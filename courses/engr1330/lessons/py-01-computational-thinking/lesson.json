@@ -1,0 +1,245 @@
+{
+  "id": "py-01-computational-thinking",
+  "title": "Computational thinking and problem solving",
+  "short": "Computational thinking",
+  "minutes": 30,
+  "difficulty": 1,
+  "objective": "Name and apply the four pillars of computational thinking and the five steps of the computational problem-solving method.",
+  "tags": [
+    "exam1",
+    "computational-thinking"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Computational thinking",
+              "Expressing solutions as steps a computer can carry out."
+            ],
+            [
+              "Decomposition",
+              "Breaking a problem into smaller parts."
+            ],
+            [
+              "Pattern recognition",
+              "Finding similarities so one solution can be reused."
+            ],
+            [
+              "Abstraction",
+              "Keeping only the important characteristics."
+            ],
+            [
+              "Algorithm",
+              "Ordered, step-by-step instructions that solve a problem."
+            ],
+            [
+              "Program",
+              "An algorithm written in a programming language."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Mixing up abstraction and decomposition.** Decomposition splits the problem; abstraction filters out details.\n- **Skipping the hand example.** Without it, step 5 (verify) has nothing to compare to.\n- **Thinking CT = programming.** CT is the problem-solving approach; code is one way to express it.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 1 was in class on Canvas with the Respondus LockDown Browser: multiple choice, about 40 minutes, no AI tools. Its review list: computational-thinking terms, indexing, data types, data structures, input/print, logical and arithmetic operators, strings, flowcharts and pseudocode, variables, sequence, selection, repetition, functions.",
+          "title": "How Exam 1 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "rL8X2mlNHPM",
+          "title": "Intro to Algorithms",
+          "channel": "CrashCourse",
+          "focus": "What makes a set of steps an algorithm, with sorting as the example.",
+          "start": "0:00",
+          "end": "11:44"
+        },
+        {
+          "type": "video",
+          "youtube": "SrlYkx41wEE",
+          "title": "Clarifying the '5 Whys' Problem-Solving Method",
+          "channel": "Lean Enterprise Institute",
+          "focus": "Defining the real problem before solving it (step 1).",
+          "start": "0:00",
+          "end": "3:20"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Apply the pillars: a meeting scheduler",
+          "problem": "Students request meeting times (start, end, name). Schedule as many non-overlapping meetings as possible.",
+          "steps": [
+            {
+              "md": "Two steps: schedule one request; remove the requests that conflict with it. Repeat.",
+              "title": "Decomposition"
+            },
+            {
+              "md": "Each round is the same: look at the unscheduled requests and pick the best one.",
+              "title": "Pattern",
+              "why": "One loop handles every round."
+            },
+            {
+              "md": "A request is just (start, end, name); room color or topic don't matter.",
+              "title": "Abstraction"
+            },
+            {
+              "md": "Pick the request that ends earliest, schedule it, drop overlaps, repeat.",
+              "title": "Algorithm"
+            },
+            {
+              "md": "```python\nrequests = [(9, 11, \"Ana\"), (10, 12, \"Ben\"), (11, 13, \"Cy\"), (13, 14, \"Dee\"), (12, 15, \"Eli\")]\nschedule = []\nremaining = sorted(requests, key=lambda r: r[1])     # by end time\nwhile remaining:\n    first = remaining.pop(0)\n    schedule.append(first[2])\n    remaining = [r for r in remaining if r[0] >= first[1]]\nprint(schedule)\n```\n\n```text\n['Ana', 'Cy', 'Dee']\n```",
+              "title": "Complete program",
+              "why": "Each pass schedules one meeting and removes the conflicts."
+            }
+          ],
+          "answer": "Ana, Cy, Dee."
+        },
+        {
+          "type": "worked_example",
+          "title": "The five steps: area of a ring",
+          "problem": "Compute the area of a washer with outer radius R and inner radius r.",
+          "steps": [
+            {
+              "md": "Area of the metal between two circles.",
+              "title": "Define"
+            },
+            {
+              "md": "Inputs R, r; principle: circle area = πr²; output: area.",
+              "title": "Gather"
+            },
+            {
+              "md": "R = 2, r = 1: π(4 − 1) = 3π ≈ 9.4248.",
+              "title": "Hand example",
+              "why": "Something to test against."
+            },
+            {
+              "md": "```python\nimport math\n\nR, r = 2, 1\narea = math.pi * (R**2 - r**2)\nprint(round(area, 4))\n```\n\n```text\n9.4248\n```",
+              "title": "Implement and verify",
+              "why": "Matches the hand value."
+            }
+          ],
+          "answer": "π(R² − r²)."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "mean5",
+          "title": "Mean of five numbers",
+          "language": "python",
+          "md": "Read five numbers (one per line in the Input tab), then print their mean. Check against a hand calculation.\nExpected output for the given input:\n\n```text\nNumber 1: Number 2: Number 3: Number 4: Number 5: \nmean: 6.0\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-mean5.py"
+              }
+            }
+          ],
+          "stdin": "4\n8.5\n6\n10\n1.5\n",
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "ct-decomp",
+            "ct-abstr",
+            "ct-pattern",
+            "ct-algo",
+            "ct-steps",
+            "ct-mean"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Four pillars",
+              "Decomposition, pattern recognition, abstraction, algorithms"
+            ],
+            [
+              "Five steps",
+              "Define, gather, solve by hand, implement, verify"
+            ],
+            [
+              "CCMR",
+              "Copy, Cite, Modify, Run"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Name the pillar in an example.",
+            "List the five steps.",
+            "Turn a small problem into a program."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 1.",
+          "problems": [
+            "ct-rev-def",
+            "ct-rev-gather",
+            "ct-rev-ccmr"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Mean of five numbers",
+          "md": "Full program for **Mean of five numbers** (try it yourself first):\n\n```python\nnum1 = float(input(\"Number 1: \"))\nnum2 = float(input(\"Number 2: \"))\nnum3 = float(input(\"Number 3: \"))\nnum4 = float(input(\"Number 4: \"))\nnum5 = float(input(\"Number 5: \"))\nmean = (num1 + num2 + num3 + num4 + num5) / 5\nprint()\nprint(\"mean:\", mean)\n```\n\nOutput:\n\n```text\nNumber 1: Number 2: Number 3: Number 4: Number 5: \nmean: 6.0\n```"
+        }
+      ]
+    }
+  ]
+}

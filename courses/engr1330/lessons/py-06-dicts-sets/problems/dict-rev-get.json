@@ -1,0 +1,45 @@
+{
+  "title": "Safe lookup",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "statement": "Which returns 0 instead of raising an error when 'z' isn't a key?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`d['z']`",
+        "`d.get('z', 0)`",
+        "`d.keys('z')`",
+        "`d[0]`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "KeyError.",
+        "Correct.",
+        "No such usage.",
+        "Looks up key 0."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which method has a default?",
+    "get.",
+    ""
+  ],
+  "solution": "`d.get('z', 0)`.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

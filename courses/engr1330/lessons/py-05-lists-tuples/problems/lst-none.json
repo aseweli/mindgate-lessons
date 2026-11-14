@@ -1,0 +1,45 @@
+{
+  "title": "Which line breaks it?",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "statement": "```python\nv = [1, 2, 3]\nv = v.append(4)\nprint(len(v))\n```\n\nWhich line causes the error?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Line 3: v is None after line 2, so len(v) fails",
+        "Line 1",
+        "Line 2 raises an error itself",
+        "No line; it prints 4"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: append returns None.",
+        "Fine.",
+        "It runs; it just stores None.",
+        "It raises TypeError."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does append return?",
+    "None.",
+    "Then len(None)."
+  ],
+  "solution": "`v = v.append(4)` stores None; `len(None)` raises TypeError on line 3.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Reverse",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "strings"
+  ],
+  "statement": "Which slice reverses a string s?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`s[-1:0]`",
+        "`s[-1]`",
+        "`s[::1]`",
+        "`s[::-1]`"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Empty.",
+        "The last character only.",
+        "The same string.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Step −1.",
+    "",
+    ""
+  ],
+  "solution": "`s[::-1]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "id": "py-05-lists-tuples",
+  "title": "Lists and tuples",
+  "short": "Lists & tuples",
+  "minutes": 45,
+  "difficulty": 2,
+  "objective": "Create, index, slice and modify lists (append, insert, pop, del), use nested lists and list functions, and explain how tuples differ.",
+  "tags": [
+    "exam1",
+    "data-structures"
+  ],
+  "requires": [
+    "py-04-strings"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "List",
+              "Ordered, mutable collection in [ ]."
+            ],
+            [
+              "Tuple",
+              "Ordered, immutable collection in ( )."
+            ],
+            [
+              "append / insert",
+              "Add at the end / at an index."
+            ],
+            [
+              "pop / del / remove",
+              "Remove by index (returning it) / by index / by value."
+            ],
+            [
+              "Nested list",
+              "A list inside a list; index with several brackets."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **`lst = lst.append(x)`** sets lst to None: append changes the list and returns None.\n- **Off-by-one in slices**: `v[1:3]` has items 1 and 2.\n- **Changing a tuple** raises TypeError.\n- **`b = a` doesn't copy**: both names point to the same list; use `a.copy()`.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 1 was in class on Canvas with the Respondus LockDown Browser: multiple choice, about 40 minutes, no AI tools. Its review list: computational-thinking terms, indexing, data types, data structures, input/print, logical and arithmetic operators, strings, flowcharts and pseudocode, variables, sequence, selection, repetition, functions.",
+          "title": "How Exam 1 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "W8KRzm-HUcc",
+          "title": "Python Tutorial for Beginners 4: Lists, Tuples, and Sets",
+          "channel": "Corey Schafer",
+          "focus": "List methods, slicing and how tuples differ.",
+          "start": "0:00",
+          "end": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Common elements",
+          "problem": "Write `common(list1, list2)` returning the items in both lists (no repeats).",
+          "steps": [
+            {
+              "md": "Go through list1 and keep x if `x in list2` and not already kept.",
+              "title": "Loop"
+            },
+            {
+              "md": "```python\ndef common(list1, list2):\n    out = []\n    for x in list1:\n        if x in list2 and x not in out:\n            out.append(x)\n    return out\n\nprint(common([1, 2, 2, 3, 5], [2, 5, 7]))\n```\n\n```text\n[2, 5]\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "[2, 5]"
+        },
+        {
+          "type": "worked_example",
+          "title": "Alias vs copy",
+          "problem": "Show the difference between `b = a` and `c = a.copy()`.",
+          "steps": [
+            {
+              "md": "Changing b changes a.",
+              "title": "Alias",
+              "why": "Same list."
+            },
+            {
+              "md": "c is independent.",
+              "title": "Copy"
+            },
+            {
+              "md": "```python\na = [1, 2, 3]\nb = a\nc = a.copy()\nb.append(4)\nprint(a, c)\n```\n\n```text\n[1, 2, 3, 4] [1, 2, 3]\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "a becomes [1, 2, 3, 4]; c stays [1, 2, 3]."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "min-list",
+          "title": "Minimum and count not equal",
+          "language": "python",
+          "md": "Write `smallest(lst)` (no `min()`) and `num_diff(lst, v)`, which counts items not equal to v. Expected output:\n\n```text\n-2\n3\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-min-list.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "lst-index",
+            "lst-methods",
+            "lst-nested",
+            "lst-alias",
+            "lst-none",
+            "lst-funcs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "append / insert / pop",
+              "End / position / remove-and-return"
+            ],
+            [
+              "lst = lst.append(x)",
+              "Bug: lst becomes None"
+            ],
+            [
+              "Tuple",
+              "Immutable list"
+            ],
+            [
+              "b = a",
+              "Same list, not a copy"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Index nested lists.",
+            "Predict list methods.",
+            "Explain list vs tuple."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 1.",
+          "problems": [
+            "lst-rev-tuple",
+            "lst-rev-pop",
+            "lst-rev-mix"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Minimum and count not equal",
+          "md": "Full program for **Minimum and count not equal** (try it yourself first):\n\n```python\ndef smallest(lst):\n    best = lst[0]\n    for x in lst:\n        if x < best:\n            best = x\n    return best\n\ndef num_diff(lst, v):\n    count = 0\n    for x in lst:\n        if x != v:\n            count += 1\n    return count\n\nd = [1, 2, 1, 3, 5]\nprint(smallest([7, 3, 9, -2, 4]))\nprint(num_diff(d, 1))\n```\n\nOutput:\n\n```text\n-2\n3\n```"
+        }
+      ]
+    }
+  ]
+}

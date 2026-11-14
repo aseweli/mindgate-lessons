@@ -1,0 +1,62 @@
+{
+  "title": "What does this print? (type)",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "variables"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "print(type(3.0))",
+          "out": "<class 'float'>",
+          "w": "<class 'int'>"
+        },
+        {
+          "code": "print(type('42'))",
+          "out": "<class 'str'>",
+          "w": "<class 'int'>"
+        },
+        {
+          "code": "print(type(10 / 2))",
+          "out": "<class 'float'>",
+          "w": "<class 'int'>"
+        },
+        {
+          "code": "print(type(True))",
+          "out": "<class 'bool'>",
+          "w": "<class 'str'>"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "What does the literal look like?",
+    "Quotes → str; a decimal point or `/` → float.",
+    ""
+  ],
+  "solution": "Check the literal or the operator.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

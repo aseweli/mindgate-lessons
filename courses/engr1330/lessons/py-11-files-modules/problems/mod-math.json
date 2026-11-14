@@ -1,0 +1,57 @@
+{
+  "title": "math functions",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "files",
+    "modules"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "import math\nprint(math.floor(7.8) + math.ceil(2.1))",
+          "out": "10",
+          "w": "9",
+          "v": 10.0
+        },
+        {
+          "code": "from math import factorial\nprint(factorial(5))",
+          "out": "120",
+          "w": "25",
+          "v": 120.0
+        },
+        {
+          "code": "import math as m\nprint(m.gcd(12, 18))",
+          "out": "6",
+          "w": "3",
+          "v": 6.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "floor rounds down, ceil up.",
+    "factorial(5) = 120.",
+    "gcd is the greatest common divisor."
+  ],
+  "solution": "Apply the math function.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

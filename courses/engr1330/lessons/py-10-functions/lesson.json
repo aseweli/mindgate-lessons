@@ -1,0 +1,240 @@
+{
+  "id": "py-10-functions",
+  "title": "Functions, return values and scope",
+  "short": "Functions",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Define and call functions with parameters and default values, return results (and know why print isn't return), and tell local from global variables.",
+  "tags": [
+    "exam1",
+    "functions"
+  ],
+  "requires": [
+    "py-09-for-loops"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Parameter",
+              "Name in the def line."
+            ],
+            [
+              "Argument",
+              "Value passed in the call."
+            ],
+            [
+              "return",
+              "Sends a value back; ends the function."
+            ],
+            [
+              "None",
+              "What a function returns without return."
+            ],
+            [
+              "Default argument",
+              "A parameter value used when none is passed."
+            ],
+            [
+              "Local / global",
+              "Defined inside a function / at the top level."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **print instead of return**: then `result = f(...)` is None and `result + 1` fails.\n- **Default before non-default**: `def f(a=2, b):` is a SyntaxError.\n- **Using a local variable outside** → NameError.\n- **Forgetting to call**: `f` is the function; `f()` runs it.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 1 was in class on Canvas with the Respondus LockDown Browser: multiple choice, about 40 minutes, no AI tools. Review exercises: numDiffVal(list, value), find_common_elements, word frequency, minimum of a list, is_anagram.",
+          "title": "How Exam 1 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "NSbOtYzIQI0",
+          "title": "How To Use Functions In Python",
+          "channel": "CS Dojo",
+          "focus": "Parameters and return values.",
+          "start": "0:00",
+          "end": "14:55"
+        },
+        {
+          "type": "video",
+          "youtube": "9Os0o3wzS_I",
+          "title": "Python Tutorial for Beginners 8: Functions",
+          "channel": "Corey Schafer",
+          "focus": "Defaults, return vs print, and scope.",
+          "start": "0:00",
+          "end": "21:47"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "numDiffVal",
+          "problem": "Write `numDiffVal(lst, v)` returning how many items are not equal to v. `numDiffVal([1, 2, 1, 3, 5], 1)` should be 3.",
+          "steps": [
+            {
+              "md": "Start at 0.",
+              "title": "Counter"
+            },
+            {
+              "md": "`if x != v: count += 1`.",
+              "title": "Loop and compare"
+            },
+            {
+              "md": "Not print.",
+              "title": "Return",
+              "why": "So the caller can use it."
+            },
+            {
+              "md": "```python\ndef numDiffVal(lst, v):\n    count = 0\n    for x in lst:\n        if x != v:\n            count += 1\n    return count\n\nd = [1, 2, 1, 3, 5]\nprint(numDiffVal(d, 1))\n```\n\n```text\n3\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "3"
+        },
+        {
+          "type": "worked_example",
+          "title": "Max of three",
+          "problem": "Write `max_three(a, b, c)` without max().",
+          "steps": [
+            {
+              "md": "best = a.",
+              "title": "Assume the first"
+            },
+            {
+              "md": "Replace best if b or c is bigger.",
+              "title": "Compare"
+            },
+            {
+              "md": "```python\ndef max_three(a, b, c):\n    best = a\n    if b > best:\n        best = b\n    if c > best:\n        best = c\n    return best\n\nprint(max_three(5, 7, 19), max_three(9, 2, 4))\n```\n\n```text\n19 9\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "19 and 9."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "prism",
+          "title": "Volume of a rectangular prism",
+          "language": "python",
+          "md": "Write `volume(length, width, height=1)` returning the volume, then print `volume(5, 2, 10)`, `volume(6, 5, 3)`\nand `volume(4, 4)` (default height). Expected output:\n\n```text\n100\n90\n16\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-prism.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "fn-call",
+            "fn-none",
+            "fn-type-error",
+            "fn-scope",
+            "fn-default",
+            "fn-loop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "No return",
+              "Function returns None"
+            ],
+            [
+              "Defaults",
+              "After non-default parameters"
+            ],
+            [
+              "Local variable",
+              "Only inside its function"
+            ],
+            [
+              "Call",
+              "f() runs; f is just the function"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Write functions with return.",
+            "Predict calls with defaults.",
+            "Explain scope."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 1.",
+          "problems": [
+            "fn-rev-ret",
+            "fn-rev-local",
+            "fn-rev-param"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Volume of a rectangular prism",
+          "md": "Full program for **Volume of a rectangular prism** (try it yourself first):\n\n```python\ndef volume(length, width, height=1):\n    return length * width * height\n\nprint(volume(5, 2, 10))\nprint(volume(6, 5, 3))\nprint(volume(4, 4))\n```\n\nOutput:\n\n```text\n100\n90\n16\n```"
+        }
+      ]
+    }
+  ]
+}

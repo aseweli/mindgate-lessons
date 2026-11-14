@@ -1,0 +1,45 @@
+{
+  "title": "Which line fails?",
+  "difficulty": 3,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "statement": "```python\ntotal = 0\nfor i in range(0, 100.0, 5):\n    total += i\nprint(total)\n```\n\nWhich line raises an error?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Line 2: range needs integers (TypeError)",
+        "Line 1",
+        "Line 3",
+        "Line 4"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Fine.",
+        "Never reached.",
+        "Never reached."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Look at range's arguments.",
+    "100.0 is a float.",
+    ""
+  ],
+  "solution": "`range(0, 100.0, 5)` raises TypeError: use 100.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

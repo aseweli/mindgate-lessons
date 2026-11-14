@@ -1,0 +1,43 @@
+{
+  "title": "Sum of odds",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "vars": {
+    "k": {
+      "int": [
+        3,
+        12
+      ]
+    },
+    "n": {
+      "expr": "2*k"
+    }
+  },
+  "statement": "What does this print?\n\n```python\nn = [$n]\ns = 0\nfor i in range(1, n + 1, 2):\n    s += i\nprint(s)\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "k^2"
+    }
+  },
+  "hints": [
+    "range(1, n + 1, 2) gives the odd numbers up to n.",
+    "How many odd numbers is that?",
+    "The sum of the first k odd numbers is k²."
+  ],
+  "solution": "The odd numbers 1..[$n] are [$k] numbers and add up to $[$k]^2$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$k]^2"
+      ],
+      "wrong": [
+        "[$k]^2+[$n]"
+      ]
+    }
+  }
+}

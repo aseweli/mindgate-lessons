@@ -1,0 +1,46 @@
+{
+  "title": "Add without erasing",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "files",
+    "modules"
+  ],
+  "statement": "Which mode adds text to the end of an existing file?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "'a'",
+        "'r'",
+        "'w'",
+        "'x'"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Read only.",
+        "Erases.",
+        "Creates only if missing."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "",
+    "",
+    ""
+  ],
+  "solution": "'a' appends.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

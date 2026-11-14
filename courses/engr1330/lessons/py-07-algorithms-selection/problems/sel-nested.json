@@ -1,0 +1,52 @@
+{
+  "title": "Nested if",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "selection"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "a, b, c = 4, 9, 2\nif a > b:\n    if a > c:\n        print('a')\n    else:\n        print('c')\nelif b > c:\n    print('b')\nelse:\n    print('c')",
+          "out": "b",
+          "w": "a"
+        },
+        {
+          "code": "a, b, c = 8, 3, 10\nif a > b:\n    if a > c:\n        print('a')\n    else:\n        print('c')\nelif b > c:\n    print('b')\nelse:\n    print('c')",
+          "out": "c",
+          "w": "a"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Outer condition first.",
+    "Then the inner one.",
+    ""
+  ],
+  "solution": "Follow the outer if, then the inner one.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

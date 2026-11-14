@@ -1,0 +1,46 @@
+{
+  "title": "Which line fails?",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "files",
+    "modules"
+  ],
+  "statement": "```python\nf = open(\"notes.txt\", \"w\")\nf.write(\"hello\")\ntext = f.read()\nf.close()\n```\n\nWhich line raises an error?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Line 3: a file opened for writing can't be read",
+        "Line 1",
+        "Line 2",
+        "Line 4"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct (io.UnsupportedOperation).",
+        "Fine.",
+        "Writing is allowed.",
+        "Never reached."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What mode is it?",
+    "'w'.",
+    "read needs 'r'."
+  ],
+  "solution": "Reading needs mode 'r'.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

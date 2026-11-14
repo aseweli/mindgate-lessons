@@ -1,0 +1,45 @@
+{
+  "title": "Outside access",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "functions"
+  ],
+  "statement": "A variable created inside a function is used after the call at the top level. Result?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "TypeError",
+        "It works",
+        "It is None",
+        "NameError: it is local to the function"
+      ],
+      "correct": 3,
+      "explanations": [
+        "It's a NameError.",
+        "Locals vanish after the call.",
+        "It doesn't exist.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Scope.",
+    "",
+    ""
+  ],
+  "solution": "Locals don't exist outside their function.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

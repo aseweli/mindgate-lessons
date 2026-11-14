@@ -1,0 +1,46 @@
+{
+  "title": "import as",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "files",
+    "modules"
+  ],
+  "statement": "After `import numpy as np`, how do you call array()?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`numpy.array(...)`",
+        "`as.array(...)`",
+        "`np.array(...)`",
+        "`array(...)`"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Only the alias np is defined.",
+        "No.",
+        "Correct.",
+        "Not imported by itself."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "The alias replaces the name.",
+    "",
+    ""
+  ],
+  "solution": "Use the alias: np.array.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

@@ -39,21 +39,29 @@
       "title": "Unit 3 · Algorithms, selection & loops",
       "from": "2026-09-09",
       "to": "2026-09-18",
-      "lessons": []
+      "lessons": [
+        "py-07-algorithms-selection",
+        "py-08-while-loops",
+        "py-09-for-loops"
+      ]
     },
     {
       "id": "u04",
       "title": "Unit 4 · Functions",
       "from": "2026-09-21",
       "to": "2026-09-21",
-      "lessons": []
+      "lessons": [
+        "py-10-functions"
+      ]
     },
     {
       "id": "u05",
       "title": "Unit 5 · Files & external modules",
       "from": "2026-09-25",
       "to": "2026-09-25",
-      "lessons": []
+      "lessons": [
+        "py-11-files-modules"
+      ]
     },
     {
       "id": "u06",

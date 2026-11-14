@@ -1,0 +1,56 @@
+{
+  "title": "Value after the loop",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "x = 1\nwhile x < 50:\n    x = x * 3\nprint(x)",
+          "out": "81",
+          "w": "27",
+          "v": 81.0
+        },
+        {
+          "code": "x = 100\nwhile x > 10:\n    x = x // 2\nprint(x)",
+          "out": "6",
+          "w": "12",
+          "v": 6.0
+        },
+        {
+          "code": "s = 0\ni = 1\nwhile s < 20:\n    s += i\n    i += 1\nprint(s)",
+          "out": "21",
+          "w": "20",
+          "v": 21.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "Trace until the condition is False.",
+    "The last value makes it False.",
+    ""
+  ],
+  "solution": "The loop stops at the first value that fails the condition.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

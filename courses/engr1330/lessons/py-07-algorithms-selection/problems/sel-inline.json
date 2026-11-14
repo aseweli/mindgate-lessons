@@ -1,0 +1,52 @@
+{
+  "title": "Inline if",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "selection"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "k = 0\nv = 12 if k == 0 else 13\nprint(v)",
+          "out": "12",
+          "w": "13"
+        },
+        {
+          "code": "k = 4\nprint('even' if k % 2 == 0 else 'odd')",
+          "out": "even",
+          "w": "odd"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "`a if cond else b`.",
+    "Is cond True?",
+    ""
+  ],
+  "solution": "The inline if picks a when the condition holds, otherwise b.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Which line is wrong?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "selection"
+  ],
+  "statement": "```python\nx = 10\nif x = 10:\n    print(\"ten\")\n```\n\nWhich line has the error?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Line 2: use `==` to compare",
+        "Line 1",
+        "Line 3",
+        "No error"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: SyntaxError.",
+        "Assignment is fine.",
+        "Fine, if line 2 were valid.",
+        "`=` can't be used in a condition."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Assign vs compare.",
+    "",
+    ""
+  ],
+  "solution": "`if x = 10:` is a SyntaxError; write `if x == 10:`.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

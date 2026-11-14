@@ -1,0 +1,45 @@
+{
+  "title": "while or for?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "statement": "Which task needs indefinite iteration?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Print the squares of 1 to 100",
+        "Keep adding popcorn until the bag weighs at least 2 pounds",
+        "Record each person's age in a line of 20",
+        "Loop over every letter of a word"
+      ],
+      "correct": 1,
+      "explanations": [
+        "Known count: for.",
+        "Correct.",
+        "Known count.",
+        "for over the string."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Is the number of repetitions known?",
+    "",
+    ""
+  ],
+  "solution": "Stopping on a condition, not a count, is a while loop.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

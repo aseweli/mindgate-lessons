@@ -1,0 +1,52 @@
+{
+  "title": "continue",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "n = 7\nout = []\nwhile n > 0:\n    n -= 1\n    if n == 4:\n        continue\n    out.append(n)\nprint(out)",
+          "out": "[6, 5, 3, 2, 1, 0]",
+          "w": "[6, 5]"
+        },
+        {
+          "code": "total = 0\nk = 0\nwhile k < 6:\n    k += 1\n    if k % 2 == 0:\n        continue\n    total += k\nprint(total)",
+          "out": "9",
+          "w": "21"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "continue skips the rest of this pass.",
+    "The loop goes on.",
+    ""
+  ],
+  "solution": "Skipped values are not appended/added.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

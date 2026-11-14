@@ -1,0 +1,57 @@
+{
+  "title": "Which branch?",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "selection"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "x = 7\nif x > 5:\n    print('big')\nelse:\n    print('small')",
+          "out": "big",
+          "w": "small"
+        },
+        {
+          "code": "x = 15\ny = 12\nif x == y:\n    print('equal')\nelif x > y:\n    print('x greater')\nelse:\n    print('x smaller')",
+          "out": "x greater",
+          "w": "x smaller"
+        },
+        {
+          "code": "n = 9\nif n % 2 == 0:\n    print('even')\nelse:\n    print('odd')",
+          "out": "odd",
+          "w": "even"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Evaluate the condition.",
+    "Only one branch runs.",
+    ""
+  ],
+  "solution": "Evaluate each condition in order; the first True branch runs.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

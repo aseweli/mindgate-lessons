@@ -1,0 +1,57 @@
+{
+  "title": "Local or global?",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "functions"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "x = 5\ndef f():\n    x = 10\n    return x\nf()\nprint(x)",
+          "out": "5",
+          "w": "10"
+        },
+        {
+          "code": "x = 5\ndef f():\n    return x + 1\nprint(f())",
+          "out": "6",
+          "w": "5"
+        },
+        {
+          "code": "x = 5\ndef f():\n    global x\n    x = 10\nf()\nprint(x)",
+          "out": "10",
+          "w": "5"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Is x assigned inside the function?",
+    "Assignment makes a local unless declared global.",
+    ""
+  ],
+  "solution": "A local x doesn't change the global one (unless `global x`).\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

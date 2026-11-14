@@ -1,0 +1,45 @@
+{
+  "title": "Flowchart symbol",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "selection"
+  ],
+  "statement": "In a flowchart, which shape represents a decision (yes/no)?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Parallelogram",
+        "Diamond",
+        "Oval",
+        "Rectangle"
+      ],
+      "correct": 1,
+      "explanations": [
+        "Input/output.",
+        "Correct.",
+        "Start/end.",
+        "Processing."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Decisions branch.",
+    "",
+    ""
+  ],
+  "solution": "Diamonds are decisions.",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

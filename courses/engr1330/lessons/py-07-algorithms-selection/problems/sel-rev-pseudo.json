@@ -1,0 +1,45 @@
+{
+  "title": "Pseudocode keyword",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "selection"
+  ],
+  "statement": "Which pseudocode construct is a loop with its condition at the bottom?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "IF-THEN-ELSE",
+        "SEQUENCE",
+        "REPEAT-UNTIL",
+        "WHILE"
+      ],
+      "correct": 2,
+      "explanations": [
+        "Not a loop.",
+        "Not a loop.",
+        "Correct.",
+        "Condition at the top."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Six constructs.",
+    "",
+    ""
+  ],
+  "solution": "REPEAT-UNTIL tests at the bottom.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

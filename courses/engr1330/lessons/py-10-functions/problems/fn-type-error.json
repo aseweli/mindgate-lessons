@@ -1,0 +1,45 @@
+{
+  "title": "Which line fails?",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "functions"
+  ],
+  "statement": "```python\ndef area(w, h):\n    print(w * h)\n\na = area(3, 4)\ntotal = a + 10\n```\n\nWhich line raises an error?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Line 5: a is None, so None + 10 is a TypeError",
+        "Line 2",
+        "Line 4",
+        "Line 1"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Printing works.",
+        "The call works; it just returns None.",
+        "The def is fine."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does area return?",
+    "None.",
+    ""
+  ],
+  "solution": "area prints but returns None; `None + 10` fails on line 5.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

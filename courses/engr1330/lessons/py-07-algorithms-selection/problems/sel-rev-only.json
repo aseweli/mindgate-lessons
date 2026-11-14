@@ -1,0 +1,45 @@
+{
+  "title": "How many branches run?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "selection"
+  ],
+  "statement": "In an if-elif-elif-else chain where two conditions are True, how many blocks run?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "None",
+        "All of them",
+        "Two",
+        "One: the first True branch"
+      ],
+      "correct": 3,
+      "explanations": [
+        "No.",
+        "No.",
+        "elif stops after the first match.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "",
+    "",
+    ""
+  ],
+  "solution": "Only the first True branch runs.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

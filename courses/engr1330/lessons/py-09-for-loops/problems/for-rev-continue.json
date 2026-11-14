@@ -1,0 +1,45 @@
+{
+  "title": "continue in a for",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "statement": "`for w in ['Rick', 'Summer', 'Morty']:` with `if 'e' in w: continue` then `print(w)`. What prints?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Rick and Morty",
+        "Nothing",
+        "All three",
+        "Summer"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: Summer contains 'e'.",
+        "Only one is skipped.",
+        "continue skips Summer.",
+        "That's the one skipped."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Which names contain 'e'?",
+    "Summer.",
+    ""
+  ],
+  "solution": "Summer is skipped; Rick and Morty print.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

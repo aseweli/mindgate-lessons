@@ -1,0 +1,57 @@
+{
+  "title": "What does this print?",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "functions"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "def f(x):\n    return 2 * x + 1\nprint(f(3) + f(0))",
+          "out": "8",
+          "w": "7"
+        },
+        {
+          "code": "def g(a, b=10):\n    return a - b\nprint(g(4), g(4, 1))",
+          "out": "-6 3",
+          "w": "-6 -9"
+        },
+        {
+          "code": "def h():\n    return 'hi'\nprint(h() * 2)",
+          "out": "hihi",
+          "w": "hi2"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Substitute the arguments.",
+    "Defaults apply when an argument is missing.",
+    ""
+  ],
+  "solution": "Evaluate each call, then the expression.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

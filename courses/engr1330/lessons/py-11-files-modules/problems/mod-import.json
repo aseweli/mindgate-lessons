@@ -1,0 +1,46 @@
+{
+  "title": "Calling a module function",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "files",
+    "modules"
+  ],
+  "statement": "After `import math`, which line computes √2?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`import sqrt(2)`",
+        "`math.sqrt(2)`",
+        "`math(sqrt, 2)`",
+        "`sqrt(2)`"
+      ],
+      "correct": 1,
+      "explanations": [
+        "Invalid.",
+        "Correct.",
+        "No.",
+        "NameError: sqrt isn't imported by itself."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Dot notation.",
+    "module.function",
+    ""
+  ],
+  "solution": "Use `math.sqrt(2)` (or `from math import sqrt`).",
+  "tests": {
+    "a": {
+      "right": [
+        "1"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

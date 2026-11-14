@@ -1,0 +1,62 @@
+{
+  "title": "What is the list?",
+  "difficulty": 1,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "print(list(range(5, 20, 3)))",
+          "out": "[5, 8, 11, 14, 17]",
+          "w": "[5, 8, 11, 14, 17, 20]"
+        },
+        {
+          "code": "print(list(range(4)))",
+          "out": "[0, 1, 2, 3]",
+          "w": "[1, 2, 3, 4]"
+        },
+        {
+          "code": "print(list(range(10, 0, -3)))",
+          "out": "[10, 7, 4, 1]",
+          "w": "[10, 7, 4, 1, 0]"
+        },
+        {
+          "code": "print(list(range(2, 2)))",
+          "out": "[]",
+          "w": "[2]"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Start, then add step.",
+    "Stop is excluded.",
+    "range(a, a) is empty."
+  ],
+  "solution": "List the values before stop.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

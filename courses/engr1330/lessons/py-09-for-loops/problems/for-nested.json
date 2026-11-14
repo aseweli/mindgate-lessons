@@ -1,0 +1,47 @@
+{
+  "title": "Nested loop count",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "vars": {
+    "r": {
+      "int": [
+        2,
+        6
+      ]
+    },
+    "c": {
+      "int": [
+        3,
+        8
+      ]
+    }
+  },
+  "statement": "How many stars does this print?\n\n```python\nfor i in range([$r]):\n    for j in range([$c]):\n        print(\"*\", end=\" \")\n    print()\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "r*c"
+    }
+  },
+  "hints": [
+    "The inner loop runs [$c] times per row.",
+    "There are [$r] rows.",
+    "Multiply."
+  ],
+  "solution": "[$r] × [$c] stars.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$r]*[$c]"
+      ],
+      "wrong": [
+        "[$r]*[$c]+[$r]"
+      ]
+    }
+  },
+  "exam": true
+}

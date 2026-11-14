@@ -1,0 +1,43 @@
+{
+  "title": "Function with a loop",
+  "difficulty": 4,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "functions"
+  ],
+  "vars": {
+    "n": {
+      "int": [
+        3,
+        20
+      ],
+      "not": [
+        10
+      ]
+    }
+  },
+  "statement": "What does this print?\n\n```python\ndef sum_func(n=10):\n    s = 0\n    for i in range(n + 1):\n        s = s + i\n    return s\n\nprint(sum_func([$n]))\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "n*(n+1)/2"
+    }
+  },
+  "hints": [
+    "The argument [$n] replaces the default.",
+    "Sum 0..[$n].",
+    "n(n + 1)/2."
+  ],
+  "solution": "$[$n]([$n]+1)/2$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$n]*([$n]+1)/2"
+      ],
+      "wrong": [
+        "55"
+      ]
+    }
+  }
+}

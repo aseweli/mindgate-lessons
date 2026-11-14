@@ -1,0 +1,46 @@
+{
+  "title": "Sum in a loop",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "vars": {
+    "n": {
+      "int": [
+        4,
+        30
+      ]
+    }
+  },
+  "statement": "What does this print?\n\n```python\ntotal = 0\nfor i in range(1, [$n] + 1):\n    total += i\nprint(total)\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "n*(n+1)/2",
+      "feedback": [
+        {
+          "answer": "n*(n-1)/2",
+          "message": "range(1, n + 1) includes n."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "i goes 1 to [$n].",
+    "Sum 1 + 2 + … + [$n].",
+    "n(n + 1)/2."
+  ],
+  "solution": "$1 + \\dots + [$n] = [$n]([$n]+1)/2$.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$n]*([$n]+1)/2"
+      ],
+      "wrong": [
+        "[$n]*([$n]-1)/2"
+      ]
+    }
+  }
+}

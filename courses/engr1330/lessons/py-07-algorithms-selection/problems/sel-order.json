@@ -1,0 +1,52 @@
+{
+  "title": "Order of elif",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "selection"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "s = 95\nif s >= 60:\n    print('D or better')\nelif s >= 90:\n    print('A')\nelse:\n    print('F')",
+          "out": "D or better",
+          "w": "A"
+        },
+        {
+          "code": "t = 30\nif t > 10:\n    print('warm')\nelif t > 25:\n    print('hot')\nelse:\n    print('cold')",
+          "out": "warm",
+          "w": "hot"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Which condition is checked first?",
+    "Is it already True?",
+    "Later branches are skipped."
+  ],
+  "solution": "The first true condition wins, even if a later one is more specific.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

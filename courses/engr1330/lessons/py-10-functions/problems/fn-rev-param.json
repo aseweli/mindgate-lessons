@@ -1,0 +1,45 @@
+{
+  "title": "Parameter vs argument",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "functions"
+  ],
+  "statement": "In `def area(w, h)` called as `area(3, 4)`, 3 is …\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "an argument",
+        "a parameter",
+        "a global",
+        "a return value"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "w is the parameter.",
+        "No.",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Def line vs call.",
+    "",
+    ""
+  ],
+  "solution": "Values in the call are arguments.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

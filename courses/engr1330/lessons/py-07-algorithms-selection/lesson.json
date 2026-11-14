@@ -1,0 +1,235 @@
+{
+  "id": "py-07-algorithms-selection",
+  "title": "Algorithms, pseudocode and selection (if / elif / else)",
+  "short": "Algorithms & selection",
+  "minutes": 45,
+  "difficulty": 2,
+  "objective": "Describe an algorithm with a flowchart or pseudocode, and write sequential and selection structures: if, if-else, if-elif-else, nested if and the inline if.",
+  "tags": [
+    "exam1",
+    "selection"
+  ],
+  "requires": [
+    "py-03-operators-expressions"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Algorithm",
+              "Finite, well-defined steps that solve a problem."
+            ],
+            [
+              "Flowchart",
+              "Diagram of an algorithm; diamonds are decisions."
+            ],
+            [
+              "Pseudocode",
+              "Plain-language algorithm using SEQUENCE, IF-THEN-ELSE, WHILE, FOR …"
+            ],
+            [
+              "Sequential structure",
+              "Statements run in order."
+            ],
+            [
+              "Selection structure",
+              "if / elif / else chooses a path."
+            ],
+            [
+              "Inline if",
+              "`a if condition else b`."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Missing colon or indentation** → SyntaxError / IndentationError.\n- **Order of elif**: `if score >= 60 ... elif score >= 90` never reaches the second branch for 95.\n- **`=` in a condition**: `if x = 5:` is a SyntaxError; use `==`.\n- **Overlapping ranges**: \"61 to 80 inclusive\" is `61 <= s <= 80`.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 1 was in class on Canvas with the Respondus LockDown Browser: multiple choice, about 40 minutes, no AI tools. A review exercise: speed ≤ 60 → 'No Ticket', 61–80 → 'Small Ticket', ≥ 81 → 'Big Ticket'.",
+          "title": "How Exam 1 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "HhBrkpTqzqg",
+          "title": "Programming Basics: Pseudocode",
+          "channel": "5toCode",
+          "focus": "Writing pseudocode before code.",
+          "start": "0:00",
+          "end": "5:00"
+        },
+        {
+          "type": "video",
+          "youtube": "AWek49wXGzI",
+          "title": "How to Use If Else Statements in Python",
+          "channel": "CS Dojo",
+          "focus": "if, elif, else and how only the first true branch runs.",
+          "start": "0:00",
+          "end": "19:44"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Speeding ticket",
+          "problem": "Write `ticket(speed)`: 60 or less → 'No Ticket', 61–80 → 'Small Ticket', 81 or more → 'Big Ticket'.",
+          "steps": [
+            {
+              "md": "IF speed <= 60 THEN No Ticket ELSE IF speed <= 80 THEN Small Ticket ELSE Big Ticket ENDIF.",
+              "title": "Pseudocode",
+              "why": "Plan first."
+            },
+            {
+              "md": "Test the lowest range first so each elif only sees larger speeds.",
+              "title": "Order matters"
+            },
+            {
+              "md": "```python\ndef ticket(speed):\n    if speed <= 60:\n        return \"No Ticket\"\n    elif speed <= 80:\n        return \"Small Ticket\"\n    else:\n        return \"Big Ticket\"\n\nfor s in [55, 60, 61, 80, 81]:\n    print(s, ticket(s))\n```\n\n```text\n55 No Ticket\n60 No Ticket\n61 Small Ticket\n80 Small Ticket\n81 Big Ticket\n```",
+              "title": "Complete program",
+              "why": "Test the boundaries 60/61 and 80/81."
+            }
+          ],
+          "answer": "Boundaries handled correctly."
+        },
+        {
+          "type": "worked_example",
+          "title": "East or west",
+          "problem": "Given `choice`, set `goeast = True` if it is 'e' and `gowest = True` if it is 'w'; other values change nothing.",
+          "steps": [
+            {
+              "md": "",
+              "title": "Start both False",
+              "why": "Default when choice is something else."
+            },
+            {
+              "md": "```python\nfor choice in ['e', 'w', 'x']:\n    goeast = False\n    gowest = False\n    if choice == 'e':\n        goeast = True\n    elif choice == 'w':\n        gowest = True\n    print(choice, goeast, gowest)\n```\n\n```text\ne True False\nw False True\nx False False\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "Only the matching flag becomes True."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "piecewise",
+          "title": "A piecewise function",
+          "language": "python",
+          "md": "Read x. Print y where y = x if x < 1; y = x² if 1 ≤ x < 2; y = x + 2 if x ≥ 2. Expected output for the input:\n\n```text\nx: \nx = 1.5 y = 2.25\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-piecewise.py"
+              }
+            }
+          ],
+          "stdin": "1.5\n",
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "sel-branch",
+            "sel-order",
+            "sel-nested",
+            "sel-inline",
+            "sel-syntax",
+            "sel-flow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "Flowchart diamond",
+              "Decision"
+            ],
+            [
+              "if / elif / else",
+              "First true branch only"
+            ],
+            [
+              "Inline if",
+              "a if cond else b"
+            ],
+            [
+              "Pseudocode",
+              "SEQUENCE, IF-THEN-ELSE, CASE, WHILE, REPEAT-UNTIL, FOR"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Write pseudocode for a small task.",
+            "Trace if-elif chains.",
+            "Handle range boundaries."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 1.",
+          "problems": [
+            "sel-rev-range",
+            "sel-rev-pseudo",
+            "sel-rev-only"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: A piecewise function",
+          "md": "Full program for **A piecewise function** (try it yourself first):\n\n```python\nx = float(input(\"x: \"))\nif x < 1:\n    y = x\nelif x < 2:\n    y = x ** 2\nelse:\n    y = x + 2\nprint()\nprint(\"x =\", x, \"y =\", y)\n```\n\nOutput:\n\n```text\nx: \nx = 1.5 y = 2.25\n```"
+        }
+      ]
+    }
+  ]
+}

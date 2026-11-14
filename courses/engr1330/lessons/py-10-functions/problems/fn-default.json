@@ -1,0 +1,45 @@
+{
+  "title": "Default order",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "functions"
+  ],
+  "statement": "Which definition is a SyntaxError?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`def f(a=2, b):`",
+        "`def f(a, b=2):`",
+        "`def f(a=1, b=2):`",
+        "`def f():`"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct: non-default after default.",
+        "Valid.",
+        "Valid.",
+        "Valid."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Defaults go last.",
+    "",
+    ""
+  ],
+  "solution": "A parameter without a default can't follow one with a default.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "title": "enumerate",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "for i, p in enumerate(['dusty', 'aspen', 'merrimee']):\n    last = (i, p)\nprint(last)",
+          "out": "(2, 'merrimee')",
+          "w": "(3, 'merrimee')"
+        },
+        {
+          "code": "words = ['a', 'bb', 'ccc']\nt = 0\nfor i, w in enumerate(words):\n    t += i * len(w)\nprint(t)",
+          "out": "8",
+          "w": "6"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "enumerate starts at 0.",
+    "Trace each pair.",
+    ""
+  ],
+  "solution": "Indexes start at 0.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

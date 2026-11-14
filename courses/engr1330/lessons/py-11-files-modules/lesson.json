@@ -1,0 +1,237 @@
+{
+  "id": "py-11-files-modules",
+  "title": "Files and external modules",
+  "short": "Files & modules",
+  "minutes": 45,
+  "difficulty": 2,
+  "objective": "Create, read, append to and delete files with open() and its modes, list a folder with os/pathlib, and import modules (import, from-import, as) such as math and random.",
+  "tags": [
+    "exam2",
+    "files",
+    "modules"
+  ],
+  "requires": [
+    "py-10-functions"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "open(name, mode)",
+              "Connection to a file; modes 'r', 'w', 'a'."
+            ],
+            [
+              "close()",
+              "Ends the connection (writes are saved)."
+            ],
+            [
+              "with",
+              "Closes the file automatically."
+            ],
+            [
+              "os.remove",
+              "Deletes a file."
+            ],
+            [
+              "Module",
+              "A file of Python code you import."
+            ],
+            [
+              "from m import x",
+              "Import one name from a module."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **'w' erases** an existing file; use 'a' to add.\n- **Reading a file opened with 'a' or 'w'** fails (io.UnsupportedOperation).\n- **Using a variable from a commented-out line** (`#text = f.read()`) → NameError.\n- **`sqrt(2)` after `import math`**: write `math.sqrt(2)` (or `from math import sqrt`).",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 2 was multiple choice, about 40 minutes, no AI tools; its review list starts with file systems, os operations and open() modes.",
+          "title": "How Exam 2 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "aequTxAvQq4",
+          "title": "Python Tutorial for Beginners: File handling",
+          "channel": "Telusko",
+          "focus": "open modes, read and write.",
+          "start": "0:00",
+          "end": "12:13"
+        },
+        {
+          "type": "video",
+          "youtube": "CqvZ3vGoGs0",
+          "title": "Python Tutorial for Beginners 9: Import Modules",
+          "channel": "Corey Schafer",
+          "focus": "import, from-import, as, and the standard library.",
+          "start": "0:00",
+          "end": "21:57"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Favorite quotation file",
+          "problem": "Create quote.txt with one line, append a second line, then read and print it.",
+          "steps": [
+            {
+              "md": "open with 'w'.",
+              "title": "Write",
+              "why": "Creates the file."
+            },
+            {
+              "md": "open with 'a' and write '\\n' + text.",
+              "title": "Append",
+              "why": "Adds without erasing."
+            },
+            {
+              "md": "open with 'r' and read().",
+              "title": "Read"
+            },
+            {
+              "md": "```python\nwith open(\"quote.txt\", \"w\") as f:\n    f.write(\"Keep your friends close\")\nwith open(\"quote.txt\", \"a\") as f:\n    f.write(\"\\nAnd that's something I wish I had said\")\nwith open(\"quote.txt\") as f:\n    print(f.read())\n```\n\n```text\nKeep your friends close\nAnd that's something I wish I had said\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "Two lines."
+        },
+        {
+          "type": "worked_example",
+          "title": "What does 'a' do twice?",
+          "problem": "Each run of a program appends 'hello' to file.txt. After 3 runs, what does reading it give?",
+          "steps": [
+            {
+              "md": "Nothing is erased.",
+              "title": "Append adds"
+            },
+            {
+              "md": "```python\nimport os\n\nif os.path.exists(\"file.txt\"):\n    os.remove(\"file.txt\")\nfor run in range(3):\n    f = open(\"file.txt\", \"a\")\n    f.write(\"hello\")\n    f.close()\nprint(open(\"file.txt\").read())\n```\n\n```text\nhellohellohello\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "hellohellohello"
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "log-file",
+          "title": "Write and read a log",
+          "language": "python",
+          "md": "Write the readings 21.5, 22.0 and 23.4 to `log.txt`, one per line. Then read the file back, convert each line\nto a float, and print the lines and their average. Expected output:\n\n```text\n3 lines\naverage: 22.3\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-log-file.py"
+              }
+            }
+          ],
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "file-w",
+            "file-append",
+            "file-read-mode",
+            "mod-import",
+            "mod-math",
+            "file-lines"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "'r' / 'w' / 'a'",
+              "Read / write (erase first) / append"
+            ],
+            [
+              "Three steps",
+              "open, read or write, close"
+            ],
+            [
+              "with open(...)",
+              "Closes automatically"
+            ],
+            [
+              "import m as x",
+              "Use x.function()"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Create, read, append and delete files.",
+            "Import modules three ways."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 2.",
+          "problems": [
+            "file-rev-add",
+            "file-rev-del",
+            "file-rev-as"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Write and read a log",
+          "md": "Full program for **Write and read a log** (try it yourself first):\n\n```python\nreadings = [21.5, 22.0, 23.4]\nwith open(\"log.txt\", \"w\") as f:\n    for r in readings:\n        f.write(str(r) + \"\\n\")\n\nwith open(\"log.txt\", \"r\") as f:\n    lines = f.readlines()\nvalues = [float(line) for line in lines]\nprint(len(lines), \"lines\")\nprint(\"average:\", sum(values) / max(len(values), 1))\n```\n\nOutput:\n\n```text\n3 lines\naverage: 22.3\n```"
+        }
+      ]
+    }
+  ]
+}

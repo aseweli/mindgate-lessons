@@ -1,0 +1,229 @@
+{
+  "id": "py-08-while-loops",
+  "title": "While loops, break/continue and try/except",
+  "short": "While loops",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Write sentinel-controlled while loops and input-validation loops, use break and continue, avoid infinite loops, and trap errors with try/except.",
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "requires": [
+    "py-07-algorithms-selection"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Indefinite iteration",
+              "Repeat while a condition holds; the count isn't known in advance."
+            ],
+            [
+              "Sentinel",
+              "A value that signals the loop to stop."
+            ],
+            [
+              "Infinite loop",
+              "A loop whose condition never becomes False."
+            ],
+            [
+              "break",
+              "Exit the loop now."
+            ],
+            [
+              "continue",
+              "Skip to the next pass."
+            ],
+            [
+              "try / except",
+              "Run code and handle an error instead of crashing."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **Forgetting to update the loop variable** → infinite loop.\n- **Updating in the wrong direction** (`counter + 1` when the condition needs it to shrink).\n- **Off-by-one**: `< 5` vs `<= 5` runs one fewer/more time.\n- **`continue` before the update**: if the update comes after `continue`, it's skipped forever.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 1 was in class on Canvas with the Respondus LockDown Browser: multiple choice, about 40 minutes, no AI tools. A review exercise: keep asking for a number until it's above 100.",
+          "title": "How Exam 1 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "jSs58VZVLw8",
+          "title": "Python 3 programming tutorial: While Loop",
+          "channel": "sentdex",
+          "focus": "Condition checked before each pass; make sure it eventually becomes False.",
+          "start": "0:00",
+          "end": "5:55"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Factorial with while",
+          "problem": "Compute n! for n = 5 with a while loop.",
+          "steps": [
+            {
+              "md": "factorial = 1, x = 5.",
+              "title": "Start",
+              "why": "1 is the neutral start for a product."
+            },
+            {
+              "md": "Multiply, then decrease x.",
+              "title": "Loop while x > 1",
+              "why": "Decreasing x ends the loop."
+            },
+            {
+              "md": "```python\nx = 5\nfactorial = 1\nwhile x > 1:\n    factorial = factorial * x\n    x -= 1\nprint(factorial)\n```\n\n```text\n120\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "120"
+        },
+        {
+          "type": "worked_example",
+          "title": "Fix the division by zero",
+          "problem": "This loop computes x/(x−1) for x from 10 down past 1. Make it stop safely before dividing by zero.",
+          "steps": [
+            {
+              "md": "x − 1 is 0 when x = 1.",
+              "title": "Find the danger"
+            },
+            {
+              "md": "`if x - 1 == 0: break` before dividing.",
+              "title": "Guard with break"
+            },
+            {
+              "md": "```python\nx = 4\nwhile x > -2:\n    if x - 1 == 0:\n        break\n    print(x, round(x / (x - 1), 3))\n    x -= 1\nprint(\"Good bye!\")\n```\n\n```text\n4 1.333\n3 1.5\n2 2.0\nGood bye!\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "Stops at x = 1."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "above100",
+          "title": "Keep asking for a number above 100",
+          "language": "python",
+          "md": "Keep asking for a number until the user enters one **above 100**, then print it and how many tries it took.\nThe Input tab holds three answers. Expected output:\n\n```text\nPlease enter a number above 100: Please enter a number above 100: Please enter a number above 100: \nReceived 105 after 3 tries\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-above100.py"
+              }
+            }
+          ],
+          "stdin": "87\n98\n105\n",
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "wh-count",
+            "wh-break",
+            "wh-continue",
+            "wh-value",
+            "wh-infinite",
+            "wh-try"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "while",
+              "Checks the condition before every pass"
+            ],
+            [
+              "break / continue",
+              "Leave the loop / skip to the next pass"
+            ],
+            [
+              "Infinite loop",
+              "The condition never becomes False"
+            ],
+            [
+              "try / except",
+              "Handle an error and keep going"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Trace while loops.",
+            "Write an input-validation loop.",
+            "Use try/except."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 1.",
+          "problems": [
+            "wh-rev-zero",
+            "wh-rev-bc",
+            "wh-rev-when"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Keep asking for a number above 100",
+          "md": "Full program for **Keep asking for a number above 100** (try it yourself first):\n\n```python\ntries = 0\nwhile True:\n    n = int(input(\"Please enter a number above 100: \"))\n    tries += 1\n    if n > 100:\n        break\nprint()\nprint(\"Received\", n, \"after\", tries, \"tries\")\n```\n\nOutput:\n\n```text\nPlease enter a number above 100: Please enter a number above 100: Please enter a number above 100: \nReceived 105 after 3 tries\n```"
+        }
+      ]
+    }
+  ]
+}

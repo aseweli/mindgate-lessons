@@ -1,0 +1,45 @@
+{
+  "title": "break vs continue",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "statement": "Which statement skips only the rest of the current pass?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "continue",
+        "return",
+        "pass",
+        "break"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Correct.",
+        "Leaves a function.",
+        "Does nothing.",
+        "That ends the whole loop."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "",
+    "",
+    ""
+  ],
+  "solution": "continue skips to the next pass; break ends the loop.",
+  "tests": {
+    "a": {
+      "right": [
+        "0"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

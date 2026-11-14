@@ -1,0 +1,46 @@
+{
+  "title": "Mode 'w'",
+  "difficulty": 1,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "files",
+    "modules"
+  ],
+  "statement": "A file already has 10 lines. What happens after `open('data.txt', 'w')` then `close()`?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "An error: it exists",
+        "The file is deleted",
+        "The 10 lines are kept",
+        "The file is now empty"
+      ],
+      "correct": 3,
+      "explanations": [
+        "'w' doesn't mind.",
+        "It still exists, empty.",
+        "That's 'a'.",
+        "Correct: 'w' erases first."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does 'w' do to existing content?",
+    "",
+    ""
+  ],
+  "solution": "'w' truncates the file.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

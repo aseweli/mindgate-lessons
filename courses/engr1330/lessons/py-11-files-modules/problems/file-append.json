@@ -1,0 +1,53 @@
+{
+  "title": "Append and read",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "files",
+    "modules"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "open('t.txt', 'w').close()\nfor i in range(3):\n    f = open('t.txt', 'a')\n    f.write('ab')\n    f.close()\nprint(open('t.txt').read())",
+          "out": "ababab",
+          "w": "ab"
+        },
+        {
+          "code": "f = open('t.txt', 'w')\nf.write('one')\nf.close()\nf = open('t.txt', 'w')\nf.write('two')\nf.close()\nprint(open('t.txt').read())",
+          "out": "two",
+          "w": "onetwo"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "'a' adds; 'w' erases first.",
+    "Trace each open.",
+    ""
+  ],
+  "solution": "Append keeps adding; write starts over.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

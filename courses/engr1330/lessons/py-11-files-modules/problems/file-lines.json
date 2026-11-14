@@ -1,0 +1,51 @@
+{
+  "title": "Count lines",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "files",
+    "modules"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "with open('c.txt', 'w') as f:\n    f.write('a\\nb\\nc\\n')\nwith open('c.txt') as f:\n    print(len(f.readlines()))",
+          "out": "3",
+          "w": "4",
+          "v": 3.0
+        },
+        {
+          "code": "with open('c.txt', 'w') as f:\n    f.write('x y z')\nwith open('c.txt') as f:\n    print(len(f.read().split()))",
+          "out": "3",
+          "w": "1",
+          "v": 3.0
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c.v"
+    }
+  },
+  "hints": [
+    "readlines gives one item per line.",
+    "split() splits on spaces.",
+    ""
+  ],
+  "solution": "Count the pieces.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

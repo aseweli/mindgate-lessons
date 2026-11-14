@@ -1,0 +1,46 @@
+{
+  "title": "Delete a file",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam2",
+    "files",
+    "modules"
+  ],
+  "statement": "Which line deletes data.txt?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`os.getcwd('data.txt')`",
+        "`open('data.txt', 'd')`",
+        "`os.remove('data.txt')`",
+        "`del 'data.txt'`"
+      ],
+      "correct": 2,
+      "explanations": [
+        "getcwd returns the folder.",
+        "No such mode.",
+        "Correct (after `import os`).",
+        "No."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "os module.",
+    "",
+    ""
+  ],
+  "solution": "`os.remove(path)`.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

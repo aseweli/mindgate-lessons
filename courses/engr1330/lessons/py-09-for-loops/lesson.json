@@ -1,0 +1,233 @@
+{
+  "id": "py-09-for-loops",
+  "title": "For loops, range and nested loops",
+  "short": "For loops",
+  "minutes": 45,
+  "difficulty": 3,
+  "objective": "Loop over lists, strings and range(start, stop, step), use enumerate, build accumulators (sums, counts) and nested loops (patterns, tables).",
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "requires": [
+    "py-08-while-loops"
+  ],
+  "tabs": [
+    {
+      "id": "learn",
+      "title": "Learn",
+      "blocks": [
+        {
+          "type": "markdown",
+          "md": {
+            "file": "learn.md"
+          }
+        },
+        {
+          "type": "terms",
+          "items": [
+            [
+              "Definite iteration",
+              "Loop over a known collection or count."
+            ],
+            [
+              "range(a, b, s)",
+              "a, a+s, … stopping before b."
+            ],
+            [
+              "enumerate",
+              "Gives (index, item) pairs."
+            ],
+            [
+              "Accumulator",
+              "Variable updated each pass (total, count)."
+            ],
+            [
+              "Nested loop",
+              "A loop inside a loop."
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "warn",
+          "md": "- **range stops early**: `range(1, 10)` ends at 9; use `range(1, n + 1)` for 1..n.\n- **Float in range**: `range(0, 100.0, 1)` is a TypeError.\n- **Resetting the accumulator inside the loop** gives only the last value.\n- **Forgetting `print()` after the inner loop** puts all stars on one line.",
+          "title": "Classic mistakes"
+        },
+        {
+          "type": "callout",
+          "style": "exam",
+          "md": "Exam 1 was in class on Canvas with the Respondus LockDown Browser: multiple choice, about 40 minutes, no AI tools. Review exercises: sum of odd numbers 1..n, a rectangle of stars with r rows and c columns.",
+          "title": "How Exam 1 tested this"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "Watch",
+      "blocks": [
+        {
+          "type": "video",
+          "youtube": "OnDr4J2UXSA",
+          "title": "Introduction to For Loops in Python",
+          "channel": "CS Dojo",
+          "focus": "for over lists and range, with accumulators.",
+          "start": "0:00",
+          "end": "10:21"
+        },
+        {
+          "type": "video",
+          "youtube": "94UHCEmprCY",
+          "title": "Python For Loops",
+          "channel": "Programming with Mosh",
+          "focus": "range, nested loops and break.",
+          "start": "0:00",
+          "end": "14:41"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "blocks": [
+        {
+          "type": "worked_example",
+          "title": "Travel time table",
+          "problem": "For a 100 km trip, print the time at speeds 10, 20, …, 50 km/h, one decimal.",
+          "steps": [
+            {
+              "md": "time = distance / speed.",
+              "title": "Formula"
+            },
+            {
+              "md": "`range(10, 51, 10)`.",
+              "title": "Loop speeds",
+              "why": "Stop is 51 so 50 is included."
+            },
+            {
+              "md": "```python\ndef travel_time(distance, speed):\n    return distance / speed\n\nfor v in range(10, 51, 10):\n    print(\"at\", v, \"km/h:\", round(travel_time(100, v), 1), \"hours\")\n```\n\n```text\nat 10 km/h: 10.0 hours\nat 20 km/h: 5.0 hours\nat 30 km/h: 3.3 hours\nat 40 km/h: 2.5 hours\nat 50 km/h: 2.0 hours\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "10, 5, 3.3, 2.5, 2 hours."
+        },
+        {
+          "type": "worked_example",
+          "title": "Multiplication table",
+          "problem": "Print rows `n x m = product` for n = 1..3 and m = 1..3.",
+          "steps": [
+            {
+              "md": "",
+              "title": "Outer over n"
+            },
+            {
+              "md": "Runs fully for each n.",
+              "title": "Inner over m"
+            },
+            {
+              "md": "```python\nfor n in range(1, 4):\n    for m in range(1, 4):\n        print(n, \"x\", m, \"=\", n * m)\n```\n\n```text\n1 x 1 = 1\n1 x 2 = 2\n1 x 3 = 3\n2 x 1 = 2\n2 x 2 = 4\n2 x 3 = 6\n3 x 1 = 3\n3 x 2 = 6\n3 x 3 = 9\n```",
+              "title": "Complete program"
+            }
+          ],
+          "answer": "9 lines."
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "blocks": [
+        {
+          "type": "editor",
+          "id": "triangle",
+          "title": "Star triangle and sum of evens",
+          "language": "python",
+          "md": "Read a height h. Print a triangle of stars with rows 1..h, then the sum of the even numbers from 0 to h.\nExpected output for the input:\n\n```text\nHeight: \n* \n* * \n* * * \n* * * * \n* * * * * \nsum of evens: 6\n```",
+          "files": [
+            {
+              "name": "main.py",
+              "code": {
+                "file": "starter-triangle.py"
+              }
+            }
+          ],
+          "stdin": "5\n",
+          "open": true
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Practice",
+      "blocks": [
+        {
+          "type": "problem_set",
+          "title": "Practice in order",
+          "intro": "",
+          "problems": [
+            "for-range",
+            "for-sum",
+            "for-odd",
+            "for-nested",
+            "for-enum",
+            "for-float"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Exam review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "title": "Recall",
+          "cards": [
+            [
+              "range(a, b, s)",
+              "a up to but not including b"
+            ],
+            [
+              "Accumulator",
+              "Initialize before the loop"
+            ],
+            [
+              "Nested loops",
+              "Inner runs fully per outer pass"
+            ],
+            [
+              "enumerate",
+              "(index, item) from 0"
+            ]
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "ready",
+          "title": "Ready when I can…",
+          "items": [
+            "Predict range lists.",
+            "Write sum and count loops.",
+            "Print star patterns."
+          ]
+        },
+        {
+          "type": "problem_set",
+          "title": "Exam-style questions",
+          "intro": "Multiple choice, like Exam 1.",
+          "problems": [
+            "for-rev-stop",
+            "for-rev-reset",
+            "for-rev-continue"
+          ]
+        },
+        {
+          "type": "callout",
+          "style": "ok",
+          "title": "Solution: Star triangle and sum of evens",
+          "md": "Full program for **Star triangle and sum of evens** (try it yourself first):\n\n```python\nh = int(input(\"Height: \"))\nprint()\nfor row in range(1, h + 1):\n    for col in range(row):\n        print(\"*\", end=\" \")\n    print()\nsum_evens = 0\nfor i in range(h + 1):\n    if i % 2 == 0:\n        sum_evens += i\nprint(\"sum of evens:\", sum_evens)\n```\n\nOutput:\n\n```text\nHeight: \n* \n* * \n* * * \n* * * * \n* * * * * \nsum of evens: 6\n```"
+        }
+      ]
+    }
+  ]
+}

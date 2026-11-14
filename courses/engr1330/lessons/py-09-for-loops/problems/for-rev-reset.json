@@ -1,0 +1,45 @@
+{
+  "title": "Accumulator bug",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "statement": "```python\nfor x in [3, 4, 5]:\n    total = 0\n    total += x\nprint(total)\n```\n\nWhat does it print?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "12",
+        "3",
+        "0",
+        "5"
+      ],
+      "correct": 3,
+      "explanations": [
+        "That needs total = 0 before the loop.",
+        "No.",
+        "x is added after the reset.",
+        "Correct: total is reset every pass."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Where is total set to 0?",
+    "Inside the loop.",
+    ""
+  ],
+  "solution": "The reset inside the loop leaves only the last value: 5.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

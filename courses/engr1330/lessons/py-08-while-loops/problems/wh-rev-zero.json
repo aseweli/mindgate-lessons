@@ -1,0 +1,45 @@
+{
+  "title": "Never runs",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "statement": "`n = 0` then `while n > 0: ...`. How many times does the body run?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Forever",
+        "Error",
+        "1",
+        "0"
+      ],
+      "correct": 3,
+      "explanations": [
+        "No.",
+        "No.",
+        "A while loop doesn't run once automatically.",
+        "Correct: the condition is checked first."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "When is the condition checked?",
+    "",
+    ""
+  ],
+  "solution": "False at the start → the body never runs.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

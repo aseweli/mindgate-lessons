@@ -1,0 +1,45 @@
+{
+  "title": "Why return?",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "functions"
+  ],
+  "statement": "Why use return instead of print inside a function you'll compute with?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "print is not allowed in functions",
+        "return also prints",
+        "return gives the caller a value it can store and compute with",
+        "print is slower"
+      ],
+      "correct": 2,
+      "explanations": [
+        "It is allowed.",
+        "It doesn't.",
+        "Correct.",
+        "Not the reason."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "What does the caller get from print?",
+    "None.",
+    ""
+  ],
+  "solution": "Only return passes a value back.",
+  "tests": {
+    "a": {
+      "right": [
+        "2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

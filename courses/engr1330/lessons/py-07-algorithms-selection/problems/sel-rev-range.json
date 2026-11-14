@@ -1,0 +1,45 @@
+{
+  "title": "Inclusive range",
+  "difficulty": 2,
+  "minutes": 1,
+  "tags": [
+    "exam1",
+    "selection"
+  ],
+  "statement": "Which condition means \"speed between 61 and 80 inclusive\"?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "`61 < speed < 80`",
+        "`speed == 61 and speed == 80`",
+        "`speed >= 61 or speed <= 80`",
+        "`61 <= speed <= 80`"
+      ],
+      "correct": 3,
+      "explanations": [
+        "Excludes 61 and 80.",
+        "Never True.",
+        "Always True.",
+        "Correct."
+      ],
+      "shuffle": false
+    }
+  },
+  "hints": [
+    "Inclusive → <=.",
+    "Both conditions must hold.",
+    ""
+  ],
+  "solution": "`61 <= speed <= 80`.",
+  "tests": {
+    "a": {
+      "right": [
+        "3"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

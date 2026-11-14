@@ -1,0 +1,52 @@
+{
+  "title": "break",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "n = 7\nout = []\nwhile n > 0:\n    n -= 1\n    if n == 4:\n        break\n    out.append(n)\nprint(out)",
+          "out": "[6, 5]",
+          "w": "[6, 5, 4]"
+        },
+        {
+          "code": "j = 0\nfor i in range(0, 5):\n    j += 2\n    if j == 6:\n        break\nprint(j)",
+          "out": "6",
+          "w": "10"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Trace each pass.",
+    "break exits immediately.",
+    ""
+  ],
+  "solution": "Stop at the break.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

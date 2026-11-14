@@ -1,0 +1,72 @@
+{
+  "title": "How many times?",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "vars": {
+    "p": {
+      "pick": [
+        {
+          "n": 10,
+          "s": 1,
+          "c": 10
+        },
+        {
+          "n": 10,
+          "s": 3,
+          "c": 4
+        },
+        {
+          "n": 20,
+          "s": 5,
+          "c": 4
+        },
+        {
+          "n": 7,
+          "s": 2,
+          "c": 4
+        },
+        {
+          "n": 12,
+          "s": 4,
+          "c": 3
+        }
+      ]
+    },
+    "n": {
+      "expr": "p.n"
+    },
+    "s": {
+      "expr": "p.s"
+    },
+    "c": {
+      "expr": "p.c"
+    }
+  },
+  "statement": "How many times does `print` run?\n\n```python\nk = 0\nwhile k < [$n]:\n    print(k)\n    k += [$s]\n```\n\n[______]{a}",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "c"
+    }
+  },
+  "hints": [
+    "List the values of k.",
+    "Start 0, add [$s] each time.",
+    "Stop when k reaches [$n] or more."
+  ],
+  "solution": "k takes [$c] values (0, [$s], …) below [$n].",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c]"
+      ],
+      "wrong": [
+        "[$c]+1"
+      ]
+    }
+  }
+}

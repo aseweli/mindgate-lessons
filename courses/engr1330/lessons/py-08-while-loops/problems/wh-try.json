@@ -1,0 +1,52 @@
+{
+  "title": "try / except",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam1",
+    "loops"
+  ],
+  "vars": {
+    "c": {
+      "pick": [
+        {
+          "code": "out = []\nfor y in [2, 1, 0, -1]:\n    try:\n        out.append(4 // y)\n    except ZeroDivisionError:\n        out.append('x')\nprint(out)",
+          "out": "[2, 4, 'x', -4]",
+          "w": "[2, 4, -4]"
+        },
+        {
+          "code": "try:\n    v = int('12a')\nexcept ValueError:\n    v = -1\nprint(v)",
+          "out": "-1",
+          "w": "12"
+        }
+      ]
+    }
+  },
+  "statement": "What does this program print?\n\n```python\n[$c.code]\n```\n\nType it exactly as Python prints it.\n\n[______________]{a}",
+  "answers": {
+    "a": {
+      "type": "text",
+      "accept": [
+        "[$c.out]"
+      ],
+      "case_sensitive": true,
+      "ignore_punctuation": false
+    }
+  },
+  "hints": [
+    "Which call fails?",
+    "except handles it.",
+    "The loop continues."
+  ],
+  "solution": "The failing step goes to except; everything else runs normally.\n\nIt prints `[$c.out]`.",
+  "tests": {
+    "a": {
+      "right": [
+        "[$c.out]"
+      ],
+      "wrong": [
+        "[$c.w]"
+      ]
+    }
+  }
+}

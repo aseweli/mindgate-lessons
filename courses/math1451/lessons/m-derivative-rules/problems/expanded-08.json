@@ -1,0 +1,52 @@
+{
+  "title": "Derivative of a negative power · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Differentiate $[$a]/x^3$.\n\n[__________]{a}",
+  "hints": [
+    "Write $ax^{-3}$.",
+    "Multiply by $-3$.",
+    "Decrease the exponent by one."
+  ],
+  "solution": "$D(ax^{-3})=-3ax^{-4}$, with $a=[$a]$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "-3*a/x^4",
+      "feedback": [
+        {
+          "answer": "3*a/x^2",
+          "message": "Decrease the exponent by one."
+        }
+      ],
+      "vars": {
+        "x": [
+          1.0,
+          5.0
+        ]
+      }
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(-3*([$a])/x^4)+x-x"
+      ],
+      "wrong": [
+        "3*([$a])/x^2"
+      ]
+    }
+  }
+}

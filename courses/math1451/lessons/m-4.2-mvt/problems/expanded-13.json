@@ -1,0 +1,51 @@
+{
+  "title": "MVT with a square root endpoint · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find the MVT point for $\\sqrt{x}$ on $[0,[$a]^2]$.\n\n[__________]{a}",
+  "hints": [
+    "A derivative at the left endpoint is unnecessary.",
+    "The secant slope is $1/a$.",
+    "Solve $1/(2\\sqrt c)=1/a$."
+  ],
+  "solution": "The root function is continuous on the closed interval and differentiable inside. Matching the slopes gives $c=[$a]^2/4$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a^2/4",
+      "feedback": [
+        {
+          "answer": "a^2/2",
+          "message": "Solve $1/(2\\sqrt c)=1/a$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])^2/4))/2"
+      ],
+      "wrong": [
+        "([$a])^2/2"
+      ]
+    }
+  }
+}

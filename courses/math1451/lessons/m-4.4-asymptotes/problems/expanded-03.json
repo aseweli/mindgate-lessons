@@ -1,0 +1,51 @@
+{
+  "title": "Left-side pole",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to[$a]^-}[$a]/(x-[$a])$.\n\n[__________]{a}",
+  "hints": [
+    "The numerator is positive.",
+    "The denominator approaches zero from below.",
+    "The ratio diverges negatively."
+  ],
+  "solution": "Positive $[$a]$ over $0^-$ gives $-\\infty$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-INF",
+      "feedback": [
+        {
+          "answer": "INF",
+          "message": "The ratio diverges negatively."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "-INF"
+      ],
+      "wrong": [
+        "INF"
+      ]
+    }
+  }
+}

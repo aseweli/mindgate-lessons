@@ -1,0 +1,51 @@
+{
+  "title": "Positive product with fixed sum · Set 2",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Two nonnegative numbers sum to $2([$a])+4$. What is their maximum product?\n\n[__________]{a}",
+  "hints": [
+    "Write one number in terms of the other.",
+    "The product is a downward-opening quadratic.",
+    "The two numbers are equal at its vertex."
+  ],
+  "solution": "$P=x(2[$a]+4-x)$ is maximized at $x=[$a]+2$. The maximum is $([$a]+2)^2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(a+2)^2",
+      "feedback": [
+        {
+          "answer": "(2*a+4)^2",
+          "message": "The two numbers are equal at its vertex."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*((([$a])+2)^2))/2"
+      ],
+      "wrong": [
+        "(2*([$a])+4)^2"
+      ]
+    }
+  }
+}

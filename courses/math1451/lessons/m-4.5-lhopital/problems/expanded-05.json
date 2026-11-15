@@ -1,0 +1,51 @@
+{
+  "title": "Log an indeterminate power",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to+\\infty}(1+[$a]/x)^x$.\n\n[__________]{a}",
+  "hints": [
+    "Take the log of the positive expression.",
+    "With $t=1/x$, find the limit of $\\ln(1+at)/t$.",
+    "Exponentiate the log limit."
+  ],
+  "solution": "L’Hôpital on the log gives $[$a]/(1+[$a]t)\\to[$a]$. The original limit is $e^{[$a]}$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "exp(a)",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "Exponentiate the log limit."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(exp(([$a]))))/2"
+      ],
+      "wrong": [
+        "([$a])"
+      ]
+    }
+  }
+}

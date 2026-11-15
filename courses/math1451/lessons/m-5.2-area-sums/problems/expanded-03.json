@@ -1,0 +1,51 @@
+{
+  "title": "A finite midpoint sum",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Compute $M_2$ for $f(x)=x^2$ on $[0,4([$a])]$.\n\n[__________]{a}",
+  "hints": [
+    "The width is $2a$.",
+    "Midpoints are $a$ and $3a$.",
+    "Multiply their squared-height sum by $2a$."
+  ],
+  "solution": "$M_2=2([$a])(([$a])^2+(3[$a])^2)=20([$a])^3$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "20*a^3",
+      "feedback": [
+        {
+          "answer": "40*a^3",
+          "message": "Multiply their squared-height sum by $2a$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(20*([$a])^3))/2"
+      ],
+      "wrong": [
+        "40*([$a])^3"
+      ]
+    }
+  }
+}

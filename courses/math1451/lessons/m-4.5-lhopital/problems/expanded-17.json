@@ -1,0 +1,51 @@
+{
+  "title": "Rewrite a product at zero · Set 3",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to0^+}x^{[$a]}\\ln x$.\n\n[__________]{a}",
+  "hints": [
+    "Rewrite as $\\ln x/x^{-a}$.",
+    "Check the infinite-over-infinite magnitude form.",
+    "Evaluate the derivative quotient."
+  ],
+  "solution": "The derivative quotient is $(1/x)/(-[$a]x^{-[$a]-1})=-x^{[$a]}/[$a]$, which tends to zero.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "0",
+      "feedback": [
+        {
+          "answer": "-INF",
+          "message": "Evaluate the derivative quotient."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(0))/2"
+      ],
+      "wrong": [
+        "-INF"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Fence along one wall · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "With $4([$a])$ m of fencing and one side along an existing wall, find the optimal perpendicular side length.\n\n[__________]{a}",
+  "hints": [
+    "Two equal perpendicular sides use fencing.",
+    "Substitute the long side $4a-2x$.",
+    "Maximize the area on the feasible interval."
+  ],
+  "solution": "$A=4([$a])x-2x^2$ on $[0,2[$a]]$. Its derivative changes from positive to negative at $x=[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "2*a",
+          "message": "Maximize the area on the feasible interval."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "2*([$a])"
+      ]
+    }
+  }
+}

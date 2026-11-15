@@ -1,0 +1,56 @@
+{
+  "title": "Domain with a radical and a pole",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "b": {
+      "pick": [
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Enter the domain of $\\sqrt{x-[$a]}/(x-[$b])$ in interval notation.\n\n[__________]{a}",
+  "hints": [
+    "The radical needs nonnegative input.",
+    "The denominator excludes $x=b$.",
+    "Include the radical’s endpoint and exclude the pole."
+  ],
+  "solution": "The domain is $[[$a],[$b])\\cup([$b],\\infty)$ because the square root permits zero but the denominator cannot be zero.",
+  "answers": {
+    "a": {
+      "type": "interval",
+      "value": "[[$a],[$b]) U ([$b],inf)",
+      "feedback": [
+        {
+          "answer": "([$a],[$b]) U ([$b],inf)",
+          "message": "Include the radical’s endpoint and exclude the pole."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[[$a],[$b]) U ([$b],inf)"
+      ],
+      "wrong": [
+        "([$a],[$b]) U ([$b],inf)"
+      ]
+    }
+  }
+}

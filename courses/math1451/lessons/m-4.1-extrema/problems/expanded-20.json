@@ -1,0 +1,51 @@
+{
+  "title": "Unequal endpoint values and a cusp · Set 3",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Find the absolute maximum value of $|x-[$a]|+3$ on $[-1,2([$a])+4]$.\n\n[__________]{a}",
+  "hints": [
+    "The cusp is a minimum.",
+    "Evaluate the left and right endpoints in the original function.",
+    "Choose the endpoint farther from the cusp."
+  ],
+  "solution": "The left value is $[$a]+4$ and the right value is $[$a]+7$, so the right endpoint gives the maximum.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a+7",
+      "feedback": [
+        {
+          "answer": "a+4",
+          "message": "Choose the endpoint farther from the cusp."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])+7))/2"
+      ],
+      "wrong": [
+        "([$a])+4"
+      ]
+    }
+  }
+}

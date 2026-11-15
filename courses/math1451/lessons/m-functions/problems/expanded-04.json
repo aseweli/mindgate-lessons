@@ -1,0 +1,52 @@
+{
+  "title": "Restricted square inverse",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Find the inverse of $f(x)=(x-[$a])^2$ for $x\\ge[$a]$.\n\n[__________]{a}",
+  "hints": [
+    "The restriction sets the sign of $x-a$.",
+    "Take the square root of the output.",
+    "Use the nonnegative root before adding the shift."
+  ],
+  "solution": "Since $x-[$a]\\ge0$, $x-[$a]=\\sqrt y$. Therefore $f^{-1}(x)=[$a]+\\sqrt x$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "a+sqrt(x)",
+      "feedback": [
+        {
+          "answer": "a-sqrt(x)",
+          "message": "Use the nonnegative root before adding the shift."
+        }
+      ],
+      "vars": {
+        "x": [
+          1.0,
+          7.0
+        ]
+      }
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(([$a])+sqrt(x))+x-x"
+      ],
+      "wrong": [
+        "([$a])-sqrt(x)"
+      ]
+    }
+  }
+}

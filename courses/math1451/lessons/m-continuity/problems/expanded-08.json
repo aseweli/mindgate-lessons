@@ -1,0 +1,53 @@
+{
+  "title": "Change logarithm base",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3,
+        4,
+        6
+      ]
+    }
+  },
+  "statement": "Evaluate $\\log_{[$a]^2}([$a]^3)$.\n\n[__________]{a}",
+  "hints": [
+    "The logarithm is an exponent.",
+    "If its value is $y$, set $([$a]^2)^y=[$a]^3$.",
+    "Equate the exponents of the same positive base."
+  ],
+  "solution": "$2y=3$, so the logarithm equals $3/2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "3/2",
+      "feedback": [
+        {
+          "answer": "2/3",
+          "message": "Equate the exponents of the same positive base."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(3/2))/2"
+      ],
+      "wrong": [
+        "2/3"
+      ]
+    }
+  }
+}

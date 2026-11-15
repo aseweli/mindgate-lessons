@@ -1,0 +1,52 @@
+{
+  "title": "Moving limits, one with a square",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Differentiate $\\int_x^{[$a]x^2}e^t\\,dt$.\n\n[__________]{a}",
+  "hints": [
+    "The upper and lower limits each contribute.",
+    "The upper chain factor is $2ax$.",
+    "The lower contribution is negative."
+  ],
+  "solution": "The derivative is $2([$a])x e^{[$a]x^2}-e^x$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "2*a*x*exp(a*x^2)-exp(x)",
+      "feedback": [
+        {
+          "answer": "exp(a*x^2)-exp(x)",
+          "message": "The lower contribution is negative."
+        }
+      ],
+      "vars": {
+        "x": [
+          -1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*([$a])*x*exp(([$a])*x^2)-exp(x))+x-x"
+      ],
+      "wrong": [
+        "exp(([$a])*x^2)-exp(x)"
+      ]
+    }
+  }
+}

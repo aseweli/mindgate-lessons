@@ -1,0 +1,46 @@
+{
+  "title": "A log derivative inside a fraction · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find $\\int x/(x^2+[$a])\\,dx$. Include $C$.\n\n[__________]{a}",
+  "hints": [
+    "Let $u=x^2+a$.",
+    "The differential includes $2x\\,dx$.",
+    "Integrate $1/u$ with a one-half outside."
+  ],
+  "solution": "$\\tfrac12\\ln(x^2+[$a])+C$ differentiates to the integrand.",
+  "answers": {
+    "a": {
+      "type": "formula_c",
+      "value": "ln(x^2+a)/2",
+      "feedback": [
+        {
+          "answer": "ln(x^2+a)",
+          "message": "Integrate $1/u$ with a one-half outside."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(ln(x^2+([$a]))/2)+7+C"
+      ],
+      "wrong": [
+        "(ln(x^2+([$a])))+C"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Exponential remainder · Set 3",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to0}(e^{[$a]x}-1-[$a]x)/x^2$.\n\n[__________]{a}",
+  "hints": [
+    "Check the original $0/0$.",
+    "The first derivative quotient is still $0/0$.",
+    "Differentiate again and keep both inner factors."
+  ],
+  "solution": "The successive quotients are $([$a]e^{[$a]x}-[$a])/(2x)$ and $[$a]^2e^{[$a]x}/2$. The second tends to $[$a]^2/2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a^2/2",
+      "feedback": [
+        {
+          "answer": "a/2",
+          "message": "Differentiate again and keep both inner factors."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])^2/2))/2"
+      ],
+      "wrong": [
+        "([$a])/2"
+      ]
+    }
+  }
+}

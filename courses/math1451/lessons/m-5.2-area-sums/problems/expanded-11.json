@@ -1,0 +1,51 @@
+{
+  "title": "Sum with a constant term · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Evaluate $\\sum_{i=1}^{4}([$a]i+3)$.\n\n[__________]{a}",
+  "hints": [
+    "Split the sum.",
+    "The first four positive integers sum to ten.",
+    "The constant appears four times."
+  ],
+  "solution": "The sum is $10([$a])+4(3)$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "10*a+12",
+      "feedback": [
+        {
+          "answer": "10*a+3",
+          "message": "The constant appears four times."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(10*([$a])+12))/2"
+      ],
+      "wrong": [
+        "10*([$a])+3"
+      ]
+    }
+  }
+}

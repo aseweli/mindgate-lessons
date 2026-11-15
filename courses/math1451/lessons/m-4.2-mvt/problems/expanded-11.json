@@ -1,0 +1,51 @@
+{
+  "title": "Average velocity forces an instant · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        9
+      ]
+    }
+  },
+  "statement": "A smooth position function moves from 12 m at time 1 s to $12+[$a]$ m at time 5 s. Find the velocity guaranteed at some intermediate instant.\n\n[__________]{a}",
+  "hints": [
+    "Average velocity is displacement over elapsed time.",
+    "Elapsed time is four seconds.",
+    "MVT guarantees the same instantaneous slope somewhere inside."
+  ],
+  "solution": "The displacement is $[$a]$ m, so the guaranteed velocity is $[$a]/4$ m/s.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a/4",
+      "feedback": [
+        {
+          "answer": "a/5",
+          "message": "MVT guarantees the same instantaneous slope somewhere inside."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])/4))/2"
+      ],
+      "wrong": [
+        "([$a])/5"
+      ]
+    }
+  }
+}

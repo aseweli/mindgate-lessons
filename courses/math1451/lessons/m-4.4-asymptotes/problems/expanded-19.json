@@ -1,0 +1,51 @@
+{
+  "title": "Negative-infinity square root · Set 3",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to-\\infty}\\sqrt{[$a]^2x^2+4}/x$.\n\n[__________]{a}",
+  "hints": [
+    "Extract $\\sqrt{x^2}=|x|$.",
+    "For negative $x$, $|x|/x=-1$.",
+    "Take the limit of the remaining square root."
+  ],
+  "solution": "The ratio equals $(|x|/x)\\sqrt{[$a]^2+4/x^2}$ and tends to $-[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-a",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "Take the limit of the remaining square root."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(-([$a])))/2"
+      ],
+      "wrong": [
+        "([$a])"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Match a quadratic branch to a constant · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        6
+      ]
+    }
+  },
+  "statement": "For $f(x)=x^2+1$ when $x<[$a]$ and $f(x)=k$ when $x\\ge[$a]$, find $k$ making $f$ continuous.\n\n[__________]{a}",
+  "hints": [
+    "Read the left branch.",
+    "Evaluate its limit at the join.",
+    "Match that value to the assigned right-branch value."
+  ],
+  "solution": "The left limit is $[$a]^2+1$ and the right limit and function value are $k$, so $k=[$a]^2+1$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a^2+1",
+      "feedback": [
+        {
+          "answer": "a+1",
+          "message": "Match that value to the assigned right-branch value."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])^2+1))/2"
+      ],
+      "wrong": [
+        "([$a])+1"
+      ]
+    }
+  }
+}

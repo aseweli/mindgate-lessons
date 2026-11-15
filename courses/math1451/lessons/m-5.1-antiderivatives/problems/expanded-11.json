@@ -1,0 +1,46 @@
+{
+  "title": "Check the sine sign · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find $\\int ([$a]\\sin x+\\cos x)\\,dx$. Include $C$.\n\n[__________]{a}",
+  "hints": [
+    "Find which derivative produces sine.",
+    "Cosine differentiates to negative sine.",
+    "Sine differentiates to cosine."
+  ],
+  "solution": "The antiderivative is $-[$a]\\cos x+\\sin x+C$.",
+  "answers": {
+    "a": {
+      "type": "formula_c",
+      "value": "-a*cos(x)+sin(x)",
+      "feedback": [
+        {
+          "answer": "a*cos(x)+sin(x)",
+          "message": "Sine differentiates to cosine."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(-([$a])*cos(x)+sin(x))+7+C"
+      ],
+      "wrong": [
+        "(([$a])*cos(x)+sin(x))+C"
+      ]
+    }
+  }
+}

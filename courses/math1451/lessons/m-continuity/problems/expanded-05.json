@@ -1,0 +1,51 @@
+{
+  "title": "Solve a shifted exponential",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        3,
+        4
+      ]
+    }
+  },
+  "statement": "Solve $e^{3x-[$a]}=e^2$ for $x$.\n\n[__________]{a}",
+  "hints": [
+    "Exponentiation with base $e$ is one-to-one.",
+    "Equate the exponents.",
+    "Add the shift before dividing by 3."
+  ],
+  "solution": "$3x-[$a]=2$, so $x=([$a]+2)/3$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "(a+2)/3",
+      "feedback": [
+        {
+          "answer": "(a-2)/3",
+          "message": "Add the shift before dividing by 3."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*((([$a])+2)/3))/2"
+      ],
+      "wrong": [
+        "(([$a])-2)/3"
+      ]
+    }
+  }
+}

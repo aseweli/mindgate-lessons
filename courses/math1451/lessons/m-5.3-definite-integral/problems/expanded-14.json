@@ -1,0 +1,51 @@
+{
+  "title": "Bound an integral by comparison · Set 2",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "For every $x\\in[1,5]$, suppose $1\\le f(x)\\le[$a]$. Find the largest possible value of $\\int_1^5f(x)\\,dx$.\n\n[__________]{a}",
+  "hints": [
+    "Use the constant upper bound.",
+    "Multiply the height by the interval length.",
+    "The constant function with that height attains the bound."
+  ],
+  "solution": "$\\int_1^5 f\\le \\int_1^5[$a]\\,dx=4([$a])$, with equality for $f\\equiv[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "4*a",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "The constant function with that height attains the bound."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(4*([$a])))/2"
+      ],
+      "wrong": [
+        "([$a])"
+      ]
+    }
+  }
+}

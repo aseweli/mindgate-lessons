@@ -1,0 +1,51 @@
+{
+  "title": "Implicit product term · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "At $(1,2)$, find $y'$ for $xy+[$a]y=2+2([$a])$.\n\n[__________]{a}",
+  "hints": [
+    "Apply the product rule to $xy$.",
+    "Collect both terms containing $y'$.",
+    "Divide by $x+a$."
+  ],
+  "solution": "$y+(x+[$a])y'=0$. Substituting $(1,2)$ gives $-2/(1+[$a])$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-2/(1+a)",
+      "feedback": [
+        {
+          "answer": "-2/a",
+          "message": "Divide by $x+a$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(-2/(1+([$a]))))/2"
+      ],
+      "wrong": [
+        "-2/([$a])"
+      ]
+    }
+  }
+}

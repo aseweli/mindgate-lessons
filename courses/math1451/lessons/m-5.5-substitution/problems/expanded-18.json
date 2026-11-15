@@ -1,0 +1,51 @@
+{
+  "title": "Exponential with decreasing bounds · Set 3",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\int_0^1 e^{[$a]-x}\\,dx$.\n\n[__________]{a}",
+  "hints": [
+    "Set $u=a-x$.",
+    "New bounds run from $a$ down to $a-1$.",
+    "The differential adds a minus sign."
+  ],
+  "solution": "The integral is $-\\int_{[$a]}^{[$a]-1}e^u\\,du=e^{[$a]}-e^{[$a]-1}$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "exp(a)-exp(a-1)",
+      "feedback": [
+        {
+          "answer": "exp(a-1)-exp(a)",
+          "message": "The differential adds a minus sign."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(exp(([$a]))-exp(([$a])-1)))/2"
+      ],
+      "wrong": [
+        "exp(([$a])-1)-exp(([$a]))"
+      ]
+    }
+  }
+}

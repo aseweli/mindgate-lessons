@@ -1,0 +1,51 @@
+{
+  "title": "Recognize a jump · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        6
+      ]
+    }
+  },
+  "statement": "Find the two-sided limit at $x=0$ for $f(x)=x+[$a]$ on $x<0$ and $f(x)=x-[$a]$ on $x>0$.\n\n[__________]{a}",
+  "hints": [
+    "Read the branch on each side.",
+    "The left limit is positive and the right is negative.",
+    "A two-sided limit requires equality."
+  ],
+  "solution": "The one-sided limits are $[$a]$ and $-[$a]$. They are different, so the two-sided limit does not exist.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "DNE",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "A two-sided limit requires equality."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "DNE"
+      ],
+      "wrong": [
+        "([$a])"
+      ]
+    }
+  }
+}

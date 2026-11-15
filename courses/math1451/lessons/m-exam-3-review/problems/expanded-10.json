@@ -1,0 +1,51 @@
+{
+  "title": "Mean value point for a cubic · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find the MVT point for $x^3$ on $[0,[$a]]$.\n\n[__________]{a}",
+  "hints": [
+    "State the continuity and differentiability of polynomials.",
+    "Find the endpoint secant slope.",
+    "Match it to $3c^2$ in the open interval."
+  ],
+  "solution": "The slope is $[$a]^2$. Solve $3c^2=[$a]^2$ and take the positive root $[$a]/\\sqrt3$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a/sqrt(3)",
+      "feedback": [
+        {
+          "answer": "a/3",
+          "message": "Match it to $3c^2$ in the open interval."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])/sqrt(3)))/2"
+      ],
+      "wrong": [
+        "([$a])/3"
+      ]
+    }
+  }
+}

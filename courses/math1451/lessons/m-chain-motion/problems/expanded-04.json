@@ -1,0 +1,51 @@
+{
+  "title": "Speed when velocity is negative",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "For $s(t)=t^2-[$a]t$, find speed at $t=1$.\n\n[__________]{a}",
+  "hints": [
+    "Differentiate position.",
+    "At one second the velocity is $2-a$.",
+    "Speed is the magnitude."
+  ],
+  "solution": "Since $[$a]>2$, speed is $|2-[$a]|=[$a]-2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a-2",
+      "feedback": [
+        {
+          "answer": "2-a",
+          "message": "Speed is the magnitude."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])-2))/2"
+      ],
+      "wrong": [
+        "2-([$a])"
+      ]
+    }
+  }
+}

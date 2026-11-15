@@ -1,0 +1,51 @@
+{
+  "title": "Removable limit at a shifted input · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to[$a]}(x^2-[$a]^2)/(2x-2([$a]))$.\n\n[__________]{a}",
+  "hints": [
+    "Factor the numerator and denominator.",
+    "Cancel the common zero factor.",
+    "Retain the factor of two underneath."
+  ],
+  "solution": "The quotient reduces to $(x+[$a])/2$ away from the hole, so the limit is $[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "2*a",
+          "message": "Retain the factor of two underneath."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "2*([$a])"
+      ]
+    }
+  }
+}

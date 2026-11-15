@@ -1,0 +1,51 @@
+{
+  "title": "A rectangle under a parabola · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "A rectangle has its base on the $x$-axis and upper corners at $(\\pm x,3([$a])^2-x^2)$. Give its maximum area.\n\n[__________]{a}",
+  "hints": [
+    "Multiply the full width $2x$ by the height.",
+    "Differentiate the cubic objective.",
+    "Compare the positive critical point with the zero-area endpoints."
+  ],
+  "solution": "$A=2x(3[$a]^2-x^2)$ has derivative $6([$a]^2-x^2)$. The maximum occurs at $x=[$a]$ and is $4([$a])^3$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "4*a^3",
+      "feedback": [
+        {
+          "answer": "2*a^3",
+          "message": "Compare the positive critical point with the zero-area endpoints."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(4*([$a])^3))/2"
+      ],
+      "wrong": [
+        "2*([$a])^3"
+      ]
+    }
+  }
+}

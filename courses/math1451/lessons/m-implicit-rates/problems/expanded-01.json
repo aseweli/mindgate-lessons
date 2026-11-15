@@ -1,0 +1,51 @@
+{
+  "title": "Slope on a level curve",
+  "difficulty": 1,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "At $(1,2)$, find $dy/dx$ on $[$a]x^2+y^2=[$a]+4$.\n\n[__________]{a}",
+  "hints": [
+    "Differentiate each squared term.",
+    "The $y$ term contributes $2yy'$.",
+    "Isolate the derivative before substituting."
+  ],
+  "solution": "$2([$a])x+2yy'=0$, so $y'=-[$a]/2$ at $(1,2)$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-a/2",
+      "feedback": [
+        {
+          "answer": "a/2",
+          "message": "Isolate the derivative before substituting."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(-([$a])/2))/2"
+      ],
+      "wrong": [
+        "([$a])/2"
+      ]
+    }
+  }
+}

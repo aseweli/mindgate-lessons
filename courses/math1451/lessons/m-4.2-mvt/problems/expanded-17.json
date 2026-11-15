@@ -1,0 +1,51 @@
+{
+  "title": "A bound from a derivative · Set 3",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "If $|f'(x)|\\le[$a]$ on $(1,6)$ and $f$ is continuous on $[1,6]$, find the sharp upper bound on $|f(6)-f(1)|$.\n\n[__________]{a}",
+  "hints": [
+    "Apply MVT.",
+    "The interval length is five.",
+    "Multiply the bound on slope by the length."
+  ],
+  "solution": "$|f(6)-f(1)|=5|f'(c)|\\le5([$a])$. A line of slope $[$a]$ attains the bound.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "5*a",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "Multiply the bound on slope by the length."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(5*([$a])))/2"
+      ],
+      "wrong": [
+        "([$a])"
+      ]
+    }
+  }
+}

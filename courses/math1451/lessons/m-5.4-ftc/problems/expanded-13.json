@@ -1,0 +1,51 @@
+{
+  "title": "Evaluate a changing rate at an instant · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "If $H(x)=\\int_{x}^{x^2+[$a]}\\sqrt{1+t^2}\\,dt$, find $H'(1)$.\n\n[__________]{a}",
+  "hints": [
+    "Differentiate the two boundaries separately.",
+    "The upper speed is 2 at $x=1$.",
+    "Subtract the lower term evaluated at 1."
+  ],
+  "solution": "By the FTC and chain rule, $H'(1)=2\\sqrt{1+(1+[$a])^2}-\\sqrt2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "2*sqrt(1+(1+a)^2)-sqrt(2)",
+      "feedback": [
+        {
+          "answer": "sqrt(1+(1+a)^2)-sqrt(2)",
+          "message": "Subtract the lower term evaluated at 1."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(2*sqrt(1+(1+([$a]))^2)-sqrt(2)))/2"
+      ],
+      "wrong": [
+        "sqrt(1+(1+([$a]))^2)-sqrt(2)"
+      ]
+    }
+  }
+}

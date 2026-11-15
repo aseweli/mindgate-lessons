@@ -1,0 +1,50 @@
+{
+  "title": "Best rectangle for a fixed perimeter · Set 3",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        8
+      ]
+    }
+  },
+  "statement": "A rectangle has perimeter $4([$a])$ m. Find its maximum area in square meters.\n\n[__________]{a}",
+  "hints": [
+    "If one side is $x$, the other is $2a-x$.",
+    "Write the area as a downward-opening quadratic.",
+    "Check the vertex is in the feasible interval."
+  ],
+  "solution": "$A=x(2[$a]-x)$ is maximized at $x=[$a]$ on $[0,2[$a]]$. The area is $[$a]^2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a^2",
+      "feedback": [
+        {
+          "answer": "2*a^2",
+          "message": "Check the vertex is in the feasible interval."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])^2))/2"
+      ],
+      "wrong": [
+        "2*([$a])^2"
+      ]
+    }
+  }
+}

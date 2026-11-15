@@ -1,0 +1,51 @@
+{
+  "title": "Cube volume rate",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "A cube has edge length $[$a]$ cm increasing at 2 cm/s. Find $dV/dt$ in cm$^3$/s.\n\n[__________]{a}",
+  "hints": [
+    "Write $V=s^3$.",
+    "Differentiate with respect to time.",
+    "Include the edge-length rate."
+  ],
+  "solution": "$dV/dt=3s^2(ds/dt)=3([$a])^2(2)$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "6*a^2",
+      "feedback": [
+        {
+          "answer": "3*a^2",
+          "message": "Include the edge-length rate."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(6*([$a])^2))/2"
+      ],
+      "wrong": [
+        "3*([$a])^2"
+      ]
+    }
+  }
+}

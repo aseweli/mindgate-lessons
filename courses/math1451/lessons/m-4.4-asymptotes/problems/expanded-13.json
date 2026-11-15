@@ -1,0 +1,51 @@
+{
+  "title": "Different horizontal asymptotes · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Give the value of $y$ for the horizontal asymptote of $([$a]x+1)/\\sqrt{x^2+4}$ as $x\\to-\\infty$.\n\n[__________]{a}",
+  "hints": [
+    "The denominator behaves like $|x|$.",
+    "For negative $x$, $x/|x|=-1$.",
+    "The constant term in the numerator vanishes after rescaling."
+  ],
+  "solution": "Divide by $|x|$ to get $(-[$a]+1/|x|)/\\sqrt{1+4/x^2}$, whose limit is $-[$a]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-a",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "The constant term in the numerator vanishes after rescaling."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(-([$a])))/2"
+      ],
+      "wrong": [
+        "([$a])"
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "A product with a base other than e · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        5,
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Differentiate the function $x([$a])^x$.\n\n[__________]{a}",
+  "hints": [
+    "The outer operation is multiplication.",
+    "The derivative of $a^x$ has a logarithm factor.",
+    "Add the contribution from differentiating $x$."
+  ],
+  "solution": "The two terms are $([$a])^x$ and $x([$a])^x\\ln([$a])$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "a^x*(1+x*ln(a))",
+      "feedback": [
+        {
+          "answer": "a^x*(1+x)",
+          "message": "Add the contribution from differentiating $x$."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(([$a])^x*(1+x*ln(([$a]))))+x-x"
+      ],
+      "wrong": [
+        "([$a])^x*(1+x)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Log as a zero-over-zero form · Set 4",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to0}\\ln(1+[$a]x)/(2x)$.\n\n[__________]{a}",
+  "hints": [
+    "The original quotient has form $0/0$.",
+    "Differentiate the two pieces separately.",
+    "Keep the coefficient from differentiating inside the log."
+  ],
+  "solution": "L’Hôpital gives $\\lim_{x\\to0}[$a]/(2(1+[$a]x))=[$a]/2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a/2",
+      "feedback": [
+        {
+          "answer": "1/2",
+          "message": "Keep the coefficient from differentiating inside the log."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])/2))/2"
+      ],
+      "wrong": [
+        "1/2"
+      ]
+    }
+  }
+}

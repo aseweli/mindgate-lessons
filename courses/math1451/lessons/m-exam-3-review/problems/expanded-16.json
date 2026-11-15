@@ -1,0 +1,51 @@
+{
+  "title": "Decide if a missing point is a pole · Set 3",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Find the finite limit of $(x^2-[$a]^2)/(x^2-[$a]x)$ as $x\\to[$a]$.\n\n[__________]{a}",
+  "hints": [
+    "Factor both polynomials.",
+    "Cancel $x-a$ off the point.",
+    "Substitute into $(x+a)/x$."
+  ],
+  "solution": "The reduced quotient at the approached point gives $([$a]+[$a])/[$a]=2$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "2",
+      "feedback": [
+        {
+          "answer": "0",
+          "message": "Substitute into $(x+a)/x$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(2))/2"
+      ],
+      "wrong": [
+        "0"
+      ]
+    }
+  }
+}

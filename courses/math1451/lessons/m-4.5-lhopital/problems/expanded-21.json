@@ -1,0 +1,51 @@
+{
+  "title": "Identify a case where L’Hôpital does not apply · Set 3",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to0^-}([$a]+\\sin x)/x$.\n\n[__________]{a}",
+  "hints": [
+    "The numerator tends to a positive constant.",
+    "This does not have form $0/0$.",
+    "Read the sign of the denominator from the approach direction."
+  ],
+  "solution": "As the positive numerator is divided by $0^-$, the quotient tends to $-\\infty$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-INF",
+      "feedback": [
+        {
+          "answer": "1",
+          "message": "Read the sign of the denominator from the approach direction."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "-INF"
+      ],
+      "wrong": [
+        "1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Undo a power chain",
+  "difficulty": 1,
+  "minutes": 3,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2
+      ]
+    }
+  },
+  "statement": "Find $\\int ([$a]x+1)^4\\,dx$. Include $C$.\n\n[__________]{a}",
+  "hints": [
+    "Set $u=ax+1$.",
+    "Then $du=a\\,dx$.",
+    "Keep the $1/a$ factor after integrating the power."
+  ],
+  "solution": "The integral is $(1/[$a])\\int u^4\\,du=(1+[$a]x)^5/(5\\cdot[$a])+C$.",
+  "answers": {
+    "a": {
+      "type": "formula_c",
+      "value": "(a*x+1)^5/(5*a)",
+      "feedback": [
+        {
+          "answer": "(a*x+1)^5/5",
+          "message": "Keep the $1/a$ factor after integrating the power."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "((([$a])*x+1)^5/(5*([$a])))+7+C"
+      ],
+      "wrong": [
+        "((([$a])*x+1)^5/5)+C"
+      ]
+    }
+  }
+}

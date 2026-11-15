@@ -1,0 +1,46 @@
+{
+  "title": "Derivative with a nested product · Set 3",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Differentiate $x^2e^{[$a]x}$.\n\n[__________]{a}",
+  "hints": [
+    "Start with the product rule.",
+    "The leading power contributes one term.",
+    "Apply the chain rule to the exponential contribution."
+  ],
+  "solution": "The result is $2xe^{[$a]x}+[$a]x^2e^{[$a]x}$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "exp(a*x)*(2*x+a*x^2)",
+      "feedback": [
+        {
+          "answer": "exp(a*x)*2*x",
+          "message": "Apply the chain rule to the exponential contribution."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(exp(([$a])*x)*(2*x+([$a])*x^2))+x-x"
+      ],
+      "wrong": [
+        "exp(([$a])*x)*2*x"
+      ]
+    }
+  }
+}

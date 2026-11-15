@@ -1,0 +1,52 @@
+{
+  "title": "Indeterminate power and logarithm · Set 2",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        5,
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to+\\infty}(1-[$a]/x)^x$.\n\n[__________]{a}",
+  "hints": [
+    "Take logs once the base is positive.",
+    "Let $t=1/x$.",
+    "The log limit comes from $\\ln(1-at)/t$."
+  ],
+  "solution": "Its derivative quotient has limit $-[$a]$, and exponentiating gives $e^{-[$a]}$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "exp(-a)",
+      "feedback": [
+        {
+          "answer": "exp(a)",
+          "message": "The log limit comes from $\\ln(1-at)/t$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(exp(-([$a]))))/2"
+      ],
+      "wrong": [
+        "exp(([$a]))"
+      ]
+    }
+  }
+}

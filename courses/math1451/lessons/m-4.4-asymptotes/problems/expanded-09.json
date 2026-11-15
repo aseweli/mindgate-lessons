@@ -1,0 +1,51 @@
+{
+  "title": "Recognize a removable discontinuity · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find the height of the hole of $(x^2-[$a]^2)/(x-[$a])$.\n\n[__________]{a}",
+  "hints": [
+    "Factor the numerator.",
+    "Cancel the shared factor away from the excluded point.",
+    "Evaluate the reduced formula at that input for the hole height."
+  ],
+  "solution": "The reduced expression $x+[$a]$ has limit $2([$a])$ at the excluded point.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "2*a",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "Evaluate the reduced formula at that input for the hole height."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(2*([$a])))/2"
+      ],
+      "wrong": [
+        "([$a])"
+      ]
+    }
+  }
+}

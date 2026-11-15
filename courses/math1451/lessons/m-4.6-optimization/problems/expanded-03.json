@@ -1,0 +1,51 @@
+{
+  "title": "Cut an open-top square box",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "A square sheet has side length $6([$a])$ inches. Find the corner cut size that maximizes box volume.\n\n[__________]{a}",
+  "hints": [
+    "A cut removes $2x$ from each base dimension.",
+    "Write $V=x(6a-2x)^2$.",
+    "Compare its only interior critical point against the zero-volume endpoints."
+  ],
+  "solution": "$V'=(6[$a]-2x)(6[$a]-6x)$, so $x=[$a]$ gives positive volume and the endpoints $0,3[$a]$ give zero.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "3*a",
+          "message": "Compare its only interior critical point against the zero-volume endpoints."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "3*([$a])"
+      ]
+    }
+  }
+}

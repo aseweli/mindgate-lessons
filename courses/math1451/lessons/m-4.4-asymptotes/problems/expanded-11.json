@@ -1,0 +1,46 @@
+{
+  "title": "Slant asymptote by division · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Give the slant asymptote of $(x^2+3)/(x-[$a])$ as a function of $x$.\n\n[__________]{a}",
+  "hints": [
+    "Divide the polynomials.",
+    "The quotient starts with $x$.",
+    "Choose a constant that cancels the linear remainder."
+  ],
+  "solution": "The function is $x+[$a]+([$a]^2+3)/(x-[$a])$, so the last term tends to zero.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "x+a",
+      "feedback": [
+        {
+          "answer": "x-a",
+          "message": "Choose a constant that cancels the linear remainder."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(x+([$a]))+x-x"
+      ],
+      "wrong": [
+        "x-([$a])"
+      ]
+    }
+  }
+}

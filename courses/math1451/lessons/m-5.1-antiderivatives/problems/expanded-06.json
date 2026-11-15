@@ -1,0 +1,46 @@
+{
+  "title": "An inverse tangent antiderivative",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Find $\\int [$a]/(1+x^2)\\,dx$. Include $C$.\n\n[__________]{a}",
+  "hints": [
+    "Recognize a derivative from inverse trig.",
+    "Arctangent has denominator $1+x^2$ in its derivative.",
+    "Keep the constant multiplier outside."
+  ],
+  "solution": "The antiderivative is $[$a]\\arctan x+C$. Differentiating confirms it.",
+  "answers": {
+    "a": {
+      "type": "formula_c",
+      "value": "a*arctan(x)",
+      "feedback": [
+        {
+          "answer": "a/(1+x^2)",
+          "message": "Keep the constant multiplier outside."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(([$a])*arctan(x))+7+C"
+      ],
+      "wrong": [
+        "(([$a])/(1+x^2))+C"
+      ]
+    }
+  }
+}

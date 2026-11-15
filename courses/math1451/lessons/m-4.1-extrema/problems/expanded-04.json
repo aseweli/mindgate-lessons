@@ -1,0 +1,51 @@
+{
+  "title": "A cusp gives the minimum",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        4
+      ]
+    }
+  },
+  "statement": "Find the absolute minimum value of $3+|2x-[$a]|$ on $[0,6]$.\n\n[__________]{a}",
+  "hints": [
+    "Consider where the absolute value vanishes.",
+    "Check that input is in the interval.",
+    "The answer is the value, rather than the input."
+  ],
+  "solution": "At $x=[$a]/2$ the absolute value is zero. The minimum is $3$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "3",
+      "feedback": [
+        {
+          "answer": "a/2",
+          "message": "The answer is the value, rather than the input."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(3))/2"
+      ],
+      "wrong": [
+        "([$a])/2"
+      ]
+    }
+  }
+}

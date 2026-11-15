@@ -1,0 +1,51 @@
+{
+  "title": "Exact area from right endpoints",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Use a limiting right sum to find the area under $f(x)=x^2$ on $[0,[$a]]$.\n\n[__________]{a}",
+  "hints": [
+    "Samples are $ai/n$.",
+    "Include width $a/n$.",
+    "Use $\\sum i^2=n(n+1)(2n+1)/6$."
+  ],
+  "solution": "$R_n=([$a])^3n(n+1)(2n+1)/(6n^3)$, so the area is $([$a])^3/3$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a^3/3",
+      "feedback": [
+        {
+          "answer": "a^2/3",
+          "message": "Use $\\sum i^2=n(n+1)(2n+1)/6$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])^3/3))/2"
+      ],
+      "wrong": [
+        "([$a])^2/3"
+      ]
+    }
+  }
+}

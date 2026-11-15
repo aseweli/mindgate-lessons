@@ -1,0 +1,51 @@
+{
+  "title": "Conjugate a shifted radical",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Evaluate $\\lim_{x\\to0}(\\sqrt{[$a]^2+x}-[$a])/x$.\n\n[__________]{a}",
+  "hints": [
+    "Multiply by the conjugate.",
+    "The difference of squares leaves $x$.",
+    "At zero the remaining denominator is twice the positive constant."
+  ],
+  "solution": "Cancel $x$ to obtain $1/(\\sqrt{[$a]^2+x}+[$a])$, which tends to $1/(2\\cdot[$a])$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "1/(2*a)",
+      "feedback": [
+        {
+          "answer": "1/a",
+          "message": "At zero the remaining denominator is twice the positive constant."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(1/(2*([$a]))))/2"
+      ],
+      "wrong": [
+        "1/([$a])"
+      ]
+    }
+  }
+}

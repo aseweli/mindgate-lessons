@@ -1,0 +1,46 @@
+{
+  "title": "Moving lower limit · Set 2",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Differentiate $G(x)=\\int_{[$a]x}^{3}\\sin t\\,dt$.\n\n[__________]{a}",
+  "hints": [
+    "A fixed upper bound contributes zero.",
+    "The lower bound contributes negatively.",
+    "Multiply by $a$ from the chain rule."
+  ],
+  "solution": "$G'(x)=-[$a]\\sin([$a]x)$.",
+  "answers": {
+    "a": {
+      "type": "formula",
+      "value": "-a*sin(a*x)",
+      "feedback": [
+        {
+          "answer": "a*sin(a*x)",
+          "message": "Multiply by $a$ from the chain rule."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(-([$a])*sin(([$a])*x))+x-x"
+      ],
+      "wrong": [
+        "([$a])*sin(([$a])*x)"
+      ]
+    }
+  }
+}

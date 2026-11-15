@@ -1,0 +1,52 @@
+{
+  "title": "Select the correct optimization candidate · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "final"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        5,
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Minimize the total surface area of a closed cylinder of volume $2\\pi([$a])^3$; give the optimal height.\n\n[__________]{a}",
+  "hints": [
+    "Use the volume to eliminate height.",
+    "The area derivative vanishes at $r=a$.",
+    "Substitute that radius into the volume equation to recover height."
+  ],
+  "solution": "$S(r)=2\\pi r^2+4\\pi([$a])^3/r$ decreases below $r=[$a]$ and increases above it. Then $h=2([$a])$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "2*a",
+      "feedback": [
+        {
+          "answer": "a",
+          "message": "Substitute that radius into the volume equation to recover height."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(2*([$a])))/2"
+      ],
+      "wrong": [
+        "([$a])"
+      ]
+    }
+  }
+}

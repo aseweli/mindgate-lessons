@@ -1,0 +1,52 @@
+{
+  "title": "Log plus polynomial · Set 3",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "Find $\\int ([$a]/x+2x)\\,dx$ for $x>0$. Include $C$.\n\n[__________]{a}",
+  "hints": [
+    "Integrate each term separately.",
+    "The reciprocal uses the logarithm rule.",
+    "The polynomial part gives $x^2$."
+  ],
+  "solution": "The result is $[$a]\\ln x+x^2+C$.",
+  "answers": {
+    "a": {
+      "type": "formula_c",
+      "value": "a*ln(x)+x^2",
+      "feedback": [
+        {
+          "answer": "a/x+x^2",
+          "message": "The polynomial part gives $x^2$."
+        }
+      ],
+      "vars": {
+        "x": [
+          1.0,
+          5.0
+        ]
+      }
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(([$a])*ln(x)+x^2)+7+C"
+      ],
+      "wrong": [
+        "(([$a])/x+x^2)+C"
+      ]
+    }
+  }
+}

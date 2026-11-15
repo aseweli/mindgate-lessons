@@ -1,0 +1,51 @@
+{
+  "title": "Difference quotient at a point",
+  "difficulty": 1,
+  "minutes": 3,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Use the derivative definition to find the slope of $f(x)=3x^2+1$ at $x=[$a]$.\n\n[__________]{a}",
+  "hints": [
+    "Write $[f(a+h)-f(a)]/h$.",
+    "Expand the square and cancel.",
+    "The surviving constant is $6a$."
+  ],
+  "solution": "The quotient simplifies to $6([$a])+3h$ for $h\\ne0$. Its limit is $6([$a])$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "6*a",
+      "feedback": [
+        {
+          "answer": "3*a",
+          "message": "The surviving constant is $6a$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(6*([$a])))/2"
+      ],
+      "wrong": [
+        "3*([$a])"
+      ]
+    }
+  }
+}

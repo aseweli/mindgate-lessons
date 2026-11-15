@@ -1,0 +1,46 @@
+{
+  "title": "Increasing and decreasing intervals",
+  "difficulty": 3,
+  "minutes": 5,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3
+      ]
+    }
+  },
+  "statement": "Where is $f'(x)>0$ for $f(x)=x^3-3([$a])^2x$? Give the intervals.\n\n[__________]{a}",
+  "hints": [
+    "Factor $f'(x)$ into two linear factors.",
+    "Test the sign outside the two roots.",
+    "The product is positive outside, negative inside."
+  ],
+  "solution": "$f'(x)=3(x-[$a])(x+[$a])$. It is positive on $(-\\infty,-[$a])\\cup([$a],\\infty)$.",
+  "answers": {
+    "a": {
+      "type": "interval",
+      "value": "(-inf,-[$a]) U ([$a],inf)",
+      "feedback": [
+        {
+          "answer": "(-[$a],[$a])",
+          "message": "The product is positive outside, negative inside."
+        }
+      ]
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(-inf,-[$a]) U ([$a],inf)"
+      ],
+      "wrong": [
+        "(-[$a],[$a])"
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Compare the candidate heights · Set 2",
+  "difficulty": 2,
+  "minutes": 4,
+  "tags": [
+    "exam3"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        4,
+        5
+      ]
+    }
+  },
+  "statement": "Find the absolute minimum height of $x^3-3([$a])^2x$ on $[-2([$a]),2([$a])]$.\n\n[__________]{a}",
+  "hints": [
+    "Differentiate and find interior candidates.",
+    "Include both endpoints.",
+    "Enter the minimum height, even if more than one input attains it."
+  ],
+  "solution": "Test $-2a,-a,a,2a$. The heights are $-2a^3,2a^3,-2a^3,2a^3$, so the minimum is $-2([$a])^3$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "-2*a^3",
+      "feedback": [
+        {
+          "answer": "-a",
+          "message": "Enter the minimum height, even if more than one input attains it."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(-2*([$a])^3))/2"
+      ],
+      "wrong": [
+        "-([$a])"
+      ]
+    }
+  }
+}

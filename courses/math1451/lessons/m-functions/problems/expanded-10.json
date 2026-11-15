@@ -1,0 +1,61 @@
+{
+  "title": "Find a translated graph’s vertex",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        2,
+        3,
+        5,
+        8
+      ]
+    },
+    "b": {
+      "pick": [
+        1,
+        4,
+        6,
+        9
+      ]
+    }
+  },
+  "statement": "For $y=(x-[$a])^2-[$b]$, enter the $x$-coordinate of the vertex.\n\n[__________]{a}",
+  "hints": [
+    "A square has minimum zero.",
+    "Find where the expression inside the square is zero.",
+    "Solve $x-[$a]=0$."
+  ],
+  "solution": "The square vanishes at $x=[$a]$, where the vertex height is $-[$b]$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a",
+      "feedback": [
+        {
+          "answer": "-a",
+          "message": "Solve $x-[$a]=0$."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])))/2"
+      ],
+      "wrong": [
+        "-([$a])"
+      ]
+    }
+  }
+}

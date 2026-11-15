@@ -1,0 +1,52 @@
+{
+  "title": "Distance through a turn · Set 2",
+  "difficulty": 5,
+  "minutes": 7,
+  "tags": [
+    "exam2"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        5,
+        7,
+        8
+      ]
+    }
+  },
+  "statement": "If $s(t)=(t-[$a])^2$ on $[0,[$a]+2]$, find the total distance traveled.\n\n[__________]{a}",
+  "hints": [
+    "Velocity vanishes at $t=a$.",
+    "Break the trip into two monotone legs.",
+    "Add both absolute position changes."
+  ],
+  "solution": "Position goes from $[$a]^2$ to $0$ and then to $4$, so distance is $[$a]^2+4$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "a^2+4",
+      "feedback": [
+        {
+          "answer": "4-a^2",
+          "message": "Add both absolute position changes."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(([$a])^2+4))/2"
+      ],
+      "wrong": [
+        "4-([$a])^2"
+      ]
+    }
+  }
+}

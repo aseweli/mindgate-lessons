@@ -1,0 +1,51 @@
+{
+  "title": "Reference-angle signs · Set 2",
+  "difficulty": 4,
+  "minutes": 6,
+  "tags": [
+    "exam1"
+  ],
+  "exact": true,
+  "vars": {
+    "a": {
+      "pick": [
+        6,
+        8
+      ]
+    }
+  },
+  "statement": "Evaluate $\\cos(2\\pi-\\pi/[$a])$.\n\n[__________]{a}",
+  "hints": [
+    "The angle is in Quadrant IV.",
+    "The reference angle is $\\pi/a$.",
+    "Cosine is positive in Quadrant IV."
+  ],
+  "solution": "Cosine is even and $2\\pi$-periodic, so the value is $\\cos(\\pi/[$a])$.",
+  "answers": {
+    "a": {
+      "type": "number",
+      "value": "cos(pi/a)",
+      "feedback": [
+        {
+          "answer": "-cos(pi/a)",
+          "message": "Cosine is positive in Quadrant IV."
+        }
+      ],
+      "allow": [
+        "DNE",
+        "INF"
+      ],
+      "tol": 1e-08
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "(2*(cos(pi/([$a]))))/2"
+      ],
+      "wrong": [
+        "-cos(pi/([$a]))"
+      ]
+    }
+  }
+}

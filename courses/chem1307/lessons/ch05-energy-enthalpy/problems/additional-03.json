@@ -1,0 +1,57 @@
+{
+  "title": "Reaction heat from an amount",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "A reaction has $\\Delta H=-248$ kJ as written and consumes 2 mol of A per written reaction. At constant pressure, find the signed heat for $[$n]$ mol A.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "-248*n/2",
+      "units": "kJ",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "-248*n",
+          "message": "The tabulated heat corresponds to two moles of A."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Read the coefficient on A.",
+    "Convert moles A to reaction extent.",
+    "The tabulated heat corresponds to two moles of A."
+  ],
+  "solution": "The reaction extent is $[$n]/2$ on the written basis. The heat is $-248([$n]/2)$ kJ.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "pick": [
+        0.425,
+        0.775,
+        1.35,
+        1.65
+      ]
+    },
+    "key": {
+      "expr": "-248*n/2"
+    },
+    "distractor": {
+      "expr": "-248*n"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] kJ"
+      ],
+      "wrong": [
+        "[$distractor:.10e] kJ"
+      ]
+    }
+  }
+}

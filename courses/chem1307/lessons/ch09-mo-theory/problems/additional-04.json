@@ -1,0 +1,34 @@
+{
+  "title": "Oxygen loses one π* electron",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "How many unpaired valence electrons are predicted in O₂⁺?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "One",
+        "Two",
+        "Zero",
+        "Three"
+      ],
+      "correct": 0,
+      "explanations": [
+        "A single electron is left in the π* pair.",
+        "This is for neutral oxygen.",
+        "One remaining electron cannot form a pair.",
+        "Ionization removes rather than adds electrons."
+      ]
+    }
+  },
+  "hints": [
+    "Start with two singly occupied π* orbitals in O₂.",
+    "Remove one electron from a highest occupied π* orbital.",
+    "One singly occupied orbital remains."
+  ],
+  "solution": "Start with two singly occupied π* orbitals in O₂. Remove one electron from a highest occupied π* orbital. One singly occupied orbital remains. A single electron is left in the π* pair."
+}

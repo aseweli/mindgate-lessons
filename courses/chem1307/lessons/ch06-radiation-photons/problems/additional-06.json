@@ -1,0 +1,34 @@
+{
+  "title": "Threshold work function",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "If metal B has twice metal A’s work function, how do their threshold frequencies compare?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "B has twice the threshold frequency.",
+        "B has half the threshold frequency.",
+        "Both thresholds are equal.",
+        "No threshold can be compared."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Threshold frequency is proportional to the work function.",
+        "This reverses the proportionality.",
+        "Their work functions differ.",
+        "The ratio of work functions suffices."
+      ]
+    }
+  },
+  "hints": [
+    "The threshold photon energy equals the work function.",
+    "h is common to both metals.",
+    "Divide each work function by h."
+  ],
+  "solution": "The threshold photon energy equals the work function. h is common to both metals. Divide each work function by h. Threshold frequency is proportional to the work function."
+}

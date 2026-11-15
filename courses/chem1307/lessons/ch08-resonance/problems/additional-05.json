@@ -1,0 +1,34 @@
+{
+  "title": "Formal charge versus polarity",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "In the standard H–Cl Lewis structure, Cl has formal charge zero. Why can it still carry a partial negative charge?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Formal and partial charge describe different electron assignments.",
+        "Both charges must be zero.",
+        "Chlorine gains an entire electron in HCl.",
+        "The formal charge on H must be −1."
+      ],
+      "correct": 0,
+      "explanations": [
+        "Cl receives more density despite its zero formal charge.",
+        "A zero formal charge does not imply equal sharing.",
+        "The H–Cl bond is polar covalent.",
+        "Hydrogen has zero formal charge in this Lewis drawing."
+      ]
+    }
+  },
+  "hints": [
+    "Formal charge assigns an even split of each bond pair.",
+    "Partial charge reflects unequal electron density.",
+    "Chlorine attracts the shared pair more strongly."
+  ],
+  "solution": "Formal charge assigns an even split of each bond pair. Partial charge reflects unequal electron density. Chlorine attracts the shared pair more strongly. Cl receives more density despite its zero formal charge."
+}

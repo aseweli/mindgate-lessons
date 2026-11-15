@@ -1,0 +1,34 @@
+{
+  "title": "Hydrogen-like species",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "Which ion fits a one-electron Bohr model with Z=3?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Li²⁺",
+        "Li⁺",
+        "He⁺",
+        "H⁻"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Lithium has three protons and this ion has one electron.",
+        "It has two electrons.",
+        "It has one electron but Z=2.",
+        "It has two electrons and Z=1."
+      ]
+    }
+  },
+  "hints": [
+    "Start from nuclear charge 3.",
+    "Count electrons after ionization.",
+    "One electron remains after losing two."
+  ],
+  "solution": "Start from nuclear charge 3. Count electrons after ionization. One electron remains after losing two. Lithium has three protons and this ion has one electron."
+}

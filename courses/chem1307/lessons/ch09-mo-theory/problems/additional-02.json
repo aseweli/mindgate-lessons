@@ -1,0 +1,34 @@
+{
+  "title": "Full pi subshell magnetism",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "How many unpaired electrons does a fully occupied doubly degenerate π set contain?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Zero",
+        "One",
+        "Two",
+        "Four"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Both orbitals are paired.",
+        "A set with three electrons would give one.",
+        "Two electrons in a degenerate pair can be unpaired.",
+        "A single orbital cannot hold two parallel-spin electrons."
+      ]
+    }
+  },
+  "hints": [
+    "There are two separate orbitals.",
+    "Full occupancy means four electrons.",
+    "Each orbital holds an opposite-spin pair."
+  ],
+  "solution": "There are two separate orbitals. Full occupancy means four electrons. Each orbital holds an opposite-spin pair. Both orbitals are paired."
+}

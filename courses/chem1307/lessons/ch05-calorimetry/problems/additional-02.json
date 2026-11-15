@@ -1,0 +1,57 @@
+{
+  "title": "Bomb heat per mole",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "A bomb calorimeter with heat capacity 9.72 kJ/K warms by $[$t]$ K when 0.0600 mol of fuel burns. Find the combustion internal-energy change per mole of fuel.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "-9.72*t/.06",
+      "units": "kJ/mol",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "9.72*t/.06",
+          "message": "Reverse the calorimeter sign before dividing by moles."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Multiply the calibrated heat capacity by ΔT.",
+    "The fuel supplied that energy.",
+    "Reverse the calorimeter sign before dividing by moles."
+  ],
+  "solution": "The calorimeter gains $9.72([$t])$ kJ, so $\\Delta E_\\mathrm{comb}=-9.72([$t])/0.0600$ kJ/mol.",
+  "exam": false,
+  "vars": {
+    "t": {
+      "pick": [
+        1.15,
+        1.55,
+        1.85,
+        2.35
+      ]
+    },
+    "key": {
+      "expr": "-9.72*t/.06"
+    },
+    "distractor": {
+      "expr": "9.72*t/.06"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] kJ/mol"
+      ],
+      "wrong": [
+        "[$distractor:.10e] kJ/mol"
+      ]
+    }
+  }
+}

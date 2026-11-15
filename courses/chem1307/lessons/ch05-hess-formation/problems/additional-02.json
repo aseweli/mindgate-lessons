@@ -1,0 +1,65 @@
+{
+  "title": "Formation data with two product moles",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "For $\\ce{2A(g) + X2(g) -> 2AX(g)}$, use hypothetical formation enthalpies $\\Delta H_f^\\circ(\\ce{A})=[$a]$ kJ/mol and $\\Delta H_f^\\circ(\\ce{AX})=-[$p]$ kJ/mol. X₂ is in its elemental reference state. Find $\\Delta H^\\circ$.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "-2*p-2*a",
+      "units": "kJ",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "-p-a",
+          "message": "Include both coefficients of two before subtracting."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Write the products and reactants sums separately.",
+    "Use zero for the stated elemental reference state.",
+    "Include both coefficients of two before subtracting."
+  ],
+  "solution": "The product sum is $-2([$p])$, and the reactant sum is $2([$a])+0$. Their difference is $-2([$p])-2([$a])$ kJ.",
+  "exam": false,
+  "vars": {
+    "a": {
+      "pick": [
+        72,
+        86,
+        114,
+        136
+      ]
+    },
+    "p": {
+      "pick": [
+        142,
+        157,
+        173,
+        190
+      ]
+    },
+    "key": {
+      "expr": "-2*p-2*a"
+    },
+    "distractor": {
+      "expr": "-p-a"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] kJ"
+      ],
+      "wrong": [
+        "[$distractor:.10e] kJ"
+      ]
+    }
+  }
+}

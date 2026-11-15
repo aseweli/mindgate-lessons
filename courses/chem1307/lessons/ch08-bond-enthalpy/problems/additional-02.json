@@ -1,0 +1,57 @@
+{
+  "title": "Diatomic halide exchange",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "For $\\ce{H2 + Br2 -> 2HBr}$, use $D(\\mathrm{H-H})=436$, $D(\\mathrm{Br-Br})=193$, $D(\\mathrm{H-Br})=[$d]$ kJ/mol. Find the estimated heat for the written reaction.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "436+193-2*d",
+      "units": "kJ",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "2*d-436-193",
+          "message": "Subtract formed from broken."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Inventory both reactant bonds.",
+    "Multiply H–Br by two.",
+    "Subtract formed from broken."
+  ],
+  "solution": "$436+193-2([$d])$ kJ. The two H–Br bonds correspond to the product coefficient.",
+  "exam": false,
+  "vars": {
+    "d": {
+      "pick": [
+        355,
+        362,
+        369,
+        375
+      ]
+    },
+    "key": {
+      "expr": "436+193-2*d"
+    },
+    "distractor": {
+      "expr": "2*d-436-193"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] kJ"
+      ],
+      "wrong": [
+        "[$distractor:.10e] kJ"
+      ]
+    }
+  }
+}

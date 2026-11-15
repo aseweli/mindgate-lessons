@@ -1,0 +1,34 @@
+{
+  "title": "A Hess intermediate used twice",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "Given $\\ce{A -> B}$ with $\\Delta H=-35$ kJ and $\\ce{2B -> C}$ with $\\Delta H=+84$ kJ, find the heat for $\\ce{2A -> C}$.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "+14 kJ",
+        "+49 kJ",
+        "−14 kJ",
+        "+154 kJ"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Two copies of the first step cancel two B.",
+        "The first step was included only once.",
+        "This is the reverse net reaction.",
+        "The first step was given the wrong sign."
+      ]
+    }
+  },
+  "hints": [
+    "Match the amount of B formed and consumed.",
+    "Scale only the first equation.",
+    "Add the signed heats."
+  ],
+  "solution": "Double the first step to create two B and $-70$ kJ. Add the unmodified second step: $-70+84=14$ kJ."
+}

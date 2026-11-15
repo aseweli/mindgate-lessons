@@ -1,0 +1,34 @@
+{
+  "title": "Compare light and matter",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "At fixed wavelength, which relation gives an electromagnetic photon’s energy in vacuum?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "E=hc/λ",
+        "E=hλ/c",
+        "E=hcλ",
+        "E=c/λ"
+      ],
+      "correct": 0,
+      "explanations": [
+        "The relation combines c=λν with E=hν.",
+        "That is not Planck’s energy relation.",
+        "Wavelength belongs in the denominator.",
+        "This gives frequency without converting to energy."
+      ]
+    }
+  },
+  "hints": [
+    "Connect wavelength to frequency using c.",
+    "Planck’s relation multiplies frequency by h.",
+    "Substitute c/λ."
+  ],
+  "solution": "Connect wavelength to frequency using c. Planck’s relation multiplies frequency by h. Substitute c/λ. The relation combines c=λν with E=hν."
+}

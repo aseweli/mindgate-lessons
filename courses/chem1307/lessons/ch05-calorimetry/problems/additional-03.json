@@ -1,0 +1,57 @@
+{
+  "title": "Condensing vapor",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "At its boiling point, $[$n]$ mol vapor condenses. Its molar enthalpy of vaporization is 31.4 kJ/mol. What is the signed heat of condensation?\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "-31.4*n",
+      "units": "kJ",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "31.4*n",
+          "message": "Reverse the sign for condensation."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Identify the direction of phase change.",
+    "The table gives vaporization.",
+    "Reverse the sign for condensation."
+  ],
+  "solution": "Condensation reverses vaporization, so $q=-31.4([$n])$ kJ.",
+  "exam": false,
+  "vars": {
+    "n": {
+      "pick": [
+        0.24,
+        0.46,
+        0.725,
+        1.25
+      ]
+    },
+    "key": {
+      "expr": "-31.4*n"
+    },
+    "distractor": {
+      "expr": "31.4*n"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] kJ"
+      ],
+      "wrong": [
+        "[$distractor:.10e] kJ"
+      ]
+    }
+  }
+}

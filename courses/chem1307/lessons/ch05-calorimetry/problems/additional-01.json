@@ -1,0 +1,57 @@
+{
+  "title": "Cooling a metal sample",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "A $[$m]$ g metal sample cools from 85.0 °C to 45.0 °C. Its specific heat is 0.385 J/(g·K). Find the sample’s signed heat.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "-40*.385*m",
+      "units": "J",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "40*.385*m",
+          "message": "Cooling gives a negative signed heat."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Use the sample as the system.",
+    "Compute final minus initial temperature.",
+    "Cooling gives a negative signed heat."
+  ],
+  "solution": "$\\Delta T=45.0-85.0=-40.0$ K, so $q=([$m])(0.385)(-40.0)$ J.",
+  "exam": false,
+  "vars": {
+    "m": {
+      "pick": [
+        32.5,
+        44.2,
+        58.6,
+        77.4
+      ]
+    },
+    "key": {
+      "expr": "-40*.385*m"
+    },
+    "distractor": {
+      "expr": "40*.385*m"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] J"
+      ],
+      "wrong": [
+        "[$distractor:.10e] J"
+      ]
+    }
+  }
+}

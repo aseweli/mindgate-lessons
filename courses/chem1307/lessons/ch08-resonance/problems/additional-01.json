@@ -1,0 +1,136 @@
+{
+  "title": "Draw a carbonate resonance contributor",
+  "difficulty": 4,
+  "minutes": 3,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Draw one Lewis contributor of $\\ce{CO3^2-}$. Show the lone pairs.\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "lewis",
+      "formula": "CO3^2-",
+      "structures": [
+        {
+          "atoms": [
+            {
+              "el": "C",
+              "lp": 0
+            },
+            {
+              "el": "O",
+              "lp": 2
+            },
+            {
+              "el": "O",
+              "lp": 3
+            },
+            {
+              "el": "O",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "el": "C",
+              "lp": 0
+            },
+            {
+              "el": "O",
+              "lp": 3
+            },
+            {
+              "el": "O",
+              "lp": 2
+            },
+            {
+              "el": "O",
+              "lp": 3
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "el": "C",
+              "lp": 0
+            },
+            {
+              "el": "O",
+              "lp": 3
+            },
+            {
+              "el": "O",
+              "lp": 3
+            },
+            {
+              "el": "O",
+              "lp": 2
+            }
+          ],
+          "bonds": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              2
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "hints": [
+    "The charge adds two electrons.",
+    "Connect all three O atoms to carbon.",
+    "Convert one lone pair into a double bond."
+  ],
+  "solution": "Use 24 valence electrons. The double-bonded O has charge zero and the single-bonded O atoms each have −1. Carbon’s octet is complete.",
+  "exam": false
+}

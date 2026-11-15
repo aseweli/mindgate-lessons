@@ -1,0 +1,34 @@
+{
+  "title": "Formal charge on ammonium nitrogen",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "In NH₄⁺, what is the formal charge on the nitrogen with four single bonds and zero lone pairs?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "+1",
+        "0",
+        "−1",
+        "+4"
+      ],
+      "correct": 0,
+      "explanations": [
+        "5−0−4=+1.",
+        "This would make the formal charges sum to zero.",
+        "This reverses the subtraction.",
+        "Four is the assigned bonding-electron count."
+      ]
+    }
+  },
+  "hints": [
+    "Nitrogen contributes five valence electrons.",
+    "It is assigned one electron per bond.",
+    "Subtract the four assigned electrons."
+  ],
+  "solution": "Nitrogen contributes five valence electrons. It is assigned one electron per bond. Subtract the four assigned electrons. 5−0−4=+1."
+}

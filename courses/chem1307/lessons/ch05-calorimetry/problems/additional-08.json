@@ -1,0 +1,34 @@
+{
+  "title": "Energy across two stages",
+  "difficulty": 2,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "A sample melts by absorbing 3.40 kJ at its melting point. Then the liquid absorbs another 0.85 kJ to warm. What is the total for the stated process?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "4.25 kJ",
+        "2.55 kJ",
+        "3.40 kJ",
+        "0.85 kJ"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Add fusion and sensible heating.",
+        "Warming is also positive here.",
+        "This excludes warming the liquid.",
+        "This excludes melting."
+      ]
+    }
+  },
+  "hints": [
+    "Treat the phase change and warming separately.",
+    "Both are positive.",
+    "Keep both terms in the total."
+  ],
+  "solution": "Both steps absorb heat, so $q=3.40+0.85=4.25$ kJ."
+}

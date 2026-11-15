@@ -1,0 +1,57 @@
+{
+  "title": "Wavelength from blue-light frequency",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "Find the wavelength in nm when the frequency is $[$f]\\times10^{14}$ Hz. Use $c=2.998\\times10^8$ m/s.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "quantity",
+      "value": "2.998e3/f",
+      "units": "nm",
+      "sigfigs": 3,
+      "feedback": [
+        {
+          "answer": "2.998e-6/f",
+          "message": "Multiply the meter result by 10⁹."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Solve c=λν for wavelength.",
+    "First find meters.",
+    "Multiply the meter result by 10⁹."
+  ],
+  "solution": "$\\lambda=2.998\\times10^8/([$f]\\times10^{14})$ m; multiply by $10^9$ nm/m.",
+  "exam": false,
+  "vars": {
+    "f": {
+      "pick": [
+        6.05,
+        6.25,
+        6.45,
+        6.65
+      ]
+    },
+    "key": {
+      "expr": "2.998e3/f"
+    },
+    "distractor": {
+      "expr": "2.998e-6/f"
+    }
+  },
+  "tests": {
+    "a": {
+      "right": [
+        "[$key:.10e] nm"
+      ],
+      "wrong": [
+        "[$distractor:.10e] nm"
+      ]
+    }
+  }
+}

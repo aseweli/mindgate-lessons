@@ -1,0 +1,34 @@
+{
+  "title": "Density versus probability",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam2",
+    "final"
+  ],
+  "statement": "What does integrating |ψ|² over a region of space give for a normalized one-electron orbital?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "The probability of finding the electron in that region",
+        "The exact electron orbit",
+        "The kinetic energy",
+        "The wavelength of light emitted"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Integration converts density into a dimensionless probability.",
+        "A quantum orbital is not a specified trajectory.",
+        "That is not obtained from this integral alone.",
+        "A transition energy is needed for that."
+      ]
+    }
+  },
+  "hints": [
+    "|ψ|² is a density.",
+    "Summing density over a region produces a probability.",
+    "Whole-space integration equals one."
+  ],
+  "solution": "|ψ|² is a density. Summing density over a region produces a probability. Whole-space integration equals one. Integration converts density into a dimensionless probability."
+}

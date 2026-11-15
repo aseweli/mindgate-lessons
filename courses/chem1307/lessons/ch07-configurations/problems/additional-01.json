@@ -1,0 +1,39 @@
+{
+  "title": "Copper(I) configuration",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Enter the ground-state electron configuration of Cu⁺.\n\n[________]{a}",
+  "answers": {
+    "a": {
+      "type": "econfig",
+      "value": "[Ar]3d10",
+      "feedback": [
+        {
+          "answer": "[Ar]3d9 4s1",
+          "message": "Remove the 4s electron first."
+        }
+      ]
+    }
+  },
+  "hints": [
+    "Start with the observed Cu exception.",
+    "Cu⁺ has 28 electrons.",
+    "Remove the 4s electron first."
+  ],
+  "solution": "Neutral Cu is $[\\mathrm{Ar}]3d^{10}4s^1$. The first ionization removes 4s, leaving a full 3d subshell.",
+  "exam": false,
+  "tests": {
+    "a": {
+      "right": [
+        "1s2 2s2 2p6 3s2 3p6 3d10"
+      ],
+      "wrong": [
+        "[Ar]3d9 4s1"
+      ]
+    }
+  }
+}

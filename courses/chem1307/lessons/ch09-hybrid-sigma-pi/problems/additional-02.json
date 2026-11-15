@@ -1,0 +1,34 @@
+{
+  "title": "Triple bond and p orbitals",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "How many unhybridized p orbitals on each carbon form the two pi components of acetylene?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "Two",
+        "One",
+        "Zero",
+        "Three"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Each supplies one perpendicular pi overlap.",
+        "That suffices for a double bond, not a triple.",
+        "sp hybridization leaves two p orbitals.",
+        "One p orbital already contributes to the sp hybrids."
+      ]
+    }
+  },
+  "hints": [
+    "Each carbon has two electron domains.",
+    "Its two sp hybrids use only one p orbital.",
+    "The remaining two p orbitals form distinct pi overlaps."
+  ],
+  "solution": "Each carbon has two electron domains. Its two sp hybrids use only one p orbital. The remaining two p orbitals form distinct pi overlaps. Each supplies one perpendicular pi overlap."
+}

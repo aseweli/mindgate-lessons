@@ -1,0 +1,34 @@
+{
+  "title": "Compare bonds before rotating",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "Around which bond in CH₃–CH=CH₂ can the molecule rotate without losing a pi overlap?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "The bond connecting CH₃ to CH",
+        "The C=C bond",
+        "Both carbon–carbon bonds equally",
+        "Neither carbon–carbon bond"
+      ],
+      "correct": 0,
+      "explanations": [
+        "It is an ordinary single bond.",
+        "Twisting it weakens the side-on overlap.",
+        "The double bond has the higher rotational barrier.",
+        "Single-bond rotation is possible."
+      ]
+    }
+  },
+  "hints": [
+    "The carbon skeleton contains one C–C single and one C=C double bond.",
+    "A double bond includes an aligned p-orbital overlap.",
+    "Rotation about the single bond preserves that overlap."
+  ],
+  "solution": "The carbon skeleton contains one C–C single and one C=C double bond. A double bond includes an aligned p-orbital overlap. Rotation about the single bond preserves that overlap. It is an ordinary single bond."
+}

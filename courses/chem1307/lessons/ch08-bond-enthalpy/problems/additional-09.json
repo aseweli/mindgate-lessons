@@ -1,0 +1,34 @@
+{
+  "title": "Convert a reaction-wide value to a sample",
+  "difficulty": 3,
+  "minutes": 2,
+  "tags": [
+    "exam3",
+    "final"
+  ],
+  "statement": "A written gas reaction produces two moles of product and is estimated to release 174 kJ. How much signed heat corresponds to 0.500 mol product?\n\n[_]{a}",
+  "answers": {
+    "a": {
+      "type": "choice",
+      "choices": [
+        "−43.5 kJ",
+        "−87.0 kJ",
+        "+43.5 kJ",
+        "−348 kJ"
+      ],
+      "correct": 0,
+      "explanations": [
+        "Multiply −174 by one quarter.",
+        "This gives the per-mole value, not the half-mole heat.",
+        "The release sign is reversed.",
+        "This doubles the written reaction rather than reducing it."
+      ]
+    }
+  },
+  "hints": [
+    "Treat the estimate as per written reaction.",
+    "Determine the fraction 0.500/2.",
+    "Preserve the release sign."
+  ],
+  "solution": "Treat the estimate as per written reaction. Determine the fraction 0.500/2. Preserve the release sign. Multiply −174 by one quarter."
+}
